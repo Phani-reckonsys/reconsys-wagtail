@@ -1,0 +1,85 @@
+.company-logo {
+    position: fixed;
+    top: 1.9rem;
+    left: 1.9rem;
+    z-index: 5000;
+  }
+  
+  nav.c-dark {
+    background: #232020;
+  }
+  nav.c-dark .navigation-wrapper {
+    border-left: 1px solid #544e4e !important;
+    border-bottom: 1px solid #544e4e !important;
+  }
+  nav.c-dark .navigation-wrapper .contactus {
+    border-left: 1px solid #544e4e !important;
+  }
+  nav .nav-mobile {
+    display: none;
+  }
+  nav .navigation-wrapper {
+    margin-left: 6.5rem;
+    border-left: 1px solid #cac8c8;
+    border-bottom: 1px solid #cac8c8;
+    height: 6.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .navigation-wrapper h3 {
+    margin-left: 5.4rem;
+    font-family: "Satoshi-Black";
+  }
+  nav .navigation-wrapper .close-menu {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    border: 1px solid #333;
+  }
+  nav .navigation-wrapper .close-menu svg {
+    transition: transform 0.3s ease-in-out;
+  }
+  nav .navigation-wrapper .close-menu:hover {
+    color: #f0493e;
+    border: 1.5px solid #f0493e;
+  }
+  nav .navigation-wrapper .close-menu:hover svg {
+    transform: rotate(90deg);
+  }
+  nav .navigation-wrapper .close-menu:hover svg path {
+    stroke: #f0493e;
+  }
+  nav .navigation-wrapper .navigation {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .navigation-wrapper .navigation h5:first-child {
+    display: none;
+  }
+  nav .navigation-wrapper .navigation h5 a .menu-arrow {
+    display: none;
+  }
+  nav .navigation-wrapper .navigation h5:hover a {
+    color: #f0493e;
+  }
+  nav .navigation-wrapper .navigation h5:hover a svg path {
+    stroke: #f0493e;
+  }
+  nav .navigation-wrapper .contactus {
+    padding: 2rem 2.8rem;
+    border-left: 1px solid #cac8c8;
+  }
+  nav .navigation-wrapper .contactus a svg {
+    display: none;
+  }
+  nav .navigation-wrapper .contactus:hover a {
+    color: #f0493e;
+  }
