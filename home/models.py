@@ -62,6 +62,7 @@ class HomeServiceCard(Orderable):
 class HomeProcessCard(Orderable):
     pointer_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     line_svg = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    dotted_mesh = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     point1 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     point2 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -69,4 +70,4 @@ class HomeProcessCard(Orderable):
     point4 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "process_cards")
-    panels = [FieldPanel('pointer_icon'),FieldPanel('point1'), FieldPanel('point2'), FieldPanel('point3'), FieldPanel('point4'), FieldPanel('title')]
+    panels = [FieldPanel('pointer_icon'),FieldPanel('point1'), FieldPanel('point2'), FieldPanel('point3'), FieldPanel('point4'), FieldPanel('title'), FieldPanel('dotted_mesh')]
