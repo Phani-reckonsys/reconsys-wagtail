@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load wagtailcore_tags components %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -12,12 +13,15 @@ Delete the line below if you're just getting started and want to remove the welc
 <link rel="stylesheet" href="{% static 'component_css/navbar.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/herosection.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/banner.css' %}">
+<link rel="stylesheet" href="{% static 'component_css/servicesoffered.css' %}">
+<link rel="stylesheet" href="{% static 'component_css/businesshelped.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
-{% include "components/navbar.html" %}
+{% navbar %}
 {% include "components/herosection.html" %}
 {% include "componentservice/banner.html"%}
 {% include "componentservice/servicesoffered.html"%}
+{% include "componentservice/businesshelped.html"%}
 
 {% endblock content %}

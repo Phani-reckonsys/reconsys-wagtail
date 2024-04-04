@@ -1,0 +1,46 @@
+.accordians-section .accordians-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.8rem;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+.accordians-section .accordians-wrapper .custom-accordian {
+    flex-basis: 45%;
+    display: flex;
+    gap: 2.4rem;
+    width: 100%;
+    align-items: center;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-bottom: 1px solid #949494;
+    padding: 18px 0px;
+  }
+.accordians-section .accordians-wrapper .custom-accordian.up {
+    align-items: flex-start;
+  }
+.accordians-section .accordians-wrapper .custom-accordian .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+.accordians-section .accordians-wrapper .custom-accordian .content .custom-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+.accordians-section .accordians-wrapper .custom-accordian .content .custom-question .accordian-plus {
+    transition: transform 0.5s ease-in-out;
+  }
+.accordians-section .accordians-wrapper .custom-accordian .content .custom-question .accordian-plus.rotate {
+    transform: rotate(45deg);
+  }
+.accordians-section .accordians-wrapper .custom-accordian .content .custom-answer {
+    display: none;
+  }
+.accordians-section .accordians-wrapper .custom-accordian .content .custom-answer.active {
+    display: block;
+  }
