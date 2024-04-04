@@ -1,0 +1,23 @@
+.services-stats-section {
+    position: relative;
+  }
+ .services-stats-section .geometric-circle {
+    position: absolute;
+    top: -13rem;
+    left: -5rem;
+  }
+.services-stats-section .geometric-rectangle {
+    position: absolute;
+    top: 10rem;
+    right: 5.4rem;
+  }
+.services-stats-section .stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+.services-stats-section .stats-wrapper .stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }

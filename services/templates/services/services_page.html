@@ -15,6 +15,11 @@ Delete the line below if you're just getting started and want to remove the welc
 <link rel="stylesheet" href="{% static 'component_css/banner.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/servicesoffered.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/businesshelped.css' %}">
+<link rel="stylesheet" href="{% static 'component_css/engagmentmodel.css' %}">
+<link rel="stylesheet" href="{% static 'component_css/datasection.css' %}">
+<link rel="stylesheet" href="{% static 'component_css/testimonials.css' %}">
+<link rel="stylesheet" href="{% static 'component_css/faqsection.css' %}">
+
 {% endblock extra_css %}
 
 {% block content %}
@@ -23,5 +28,9 @@ Delete the line below if you're just getting started and want to remove the welc
 {% include "componentservice/banner.html"%}
 {% include "componentservice/servicesoffered.html"%}
 {% include "componentservice/businesshelped.html"%}
+{% include "componentservice/engagmentmodel.html"%}
+{% include "componentservice/datasection.html"%}
+{% include "componentservice/testimonials.html"%}
+{% include "componentservice/faqsection.html"%}
 
 {% endblock content %}

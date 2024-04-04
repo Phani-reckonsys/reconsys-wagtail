@@ -1,0 +1,16 @@
+.engagment-section .engagment-body .engagement-cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+  .engagment-section .engagment-body .engagement-cards-wrapper .engagment-card {
+    width: 38rem;
+  }
+  .engagment-section .engagment-body .engagement-cards-wrapper .engagment-card img {
+    width: 100%;
+    height: auto;
+  }
+  .engagment-section .engagment-body .engagement-cards-wrapper .engagment-card h4, .engagment-section .engagment-body .engagement-cards-wrapper .engagment-card p {
+    padding-left: 2rem;
+  }

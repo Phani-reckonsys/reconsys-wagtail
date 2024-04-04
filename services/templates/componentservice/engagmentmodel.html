@@ -1,0 +1,32 @@
+  {%load wagtailimages_tags%}
+
+<section>
+        <div class="sidebar pt-20">
+            <h5 class="t-20">Our Engagement Model</h5>
+        </div>
+        <!-- Engagmnt model section starts -->
+        <div class="engagment-section pl-54 pr-54 pt-100 pb-180">
+            <h4 class="mb-20">
+                {{page.engagment_title}}
+            </h4>
+            <h2 class="w-70 mb-54">
+                {{page.engagment_subtitle}}
+            </h2>
+            <div class="engagment-body">
+                <div class="engagement-cards-wrapper">
+                {% for engagment_card in page.cardengagment%}
+                    <div class="engagment-card">
+                        {% image engagment_card.cover_image class="mb-22" max-3000x1500%}
+                        <h4 class="mb-16">
+                        {{engagment_card.title}}
+                        </h4>
+                        <p>
+                         {{engagment_card.subtitle}}
+                        </p>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Engagmnt model section End -->
+    </section>
