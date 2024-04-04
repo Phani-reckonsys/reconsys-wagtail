@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% load wagtailcore_tags components %}
-
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -17,8 +15,9 @@ Delete the line below if you're just getting started and want to remove the welc
 {% endblock extra_css %}
 
 {% block content %}
-{% navbar %}
+{% include "components/navbar.html" %}
 {% include "components/herosection.html" %}
-{% include "components/homecontent.html"%}
+{% include "componentservice/banner.html"%}
+{% include "componentservice/servicesoffered.html"%}
 
 {% endblock content %}

@@ -1,4 +1,4 @@
-.services-main {
+ .services-main {
     background-color: #333;
   }
   .services-main .software-services {
@@ -282,6 +282,17 @@
   .industries-section .industries-main .sector-card-container .sector-card-group-wrapper .sector-card-group .sector-card .sector-card-content ul li svg {
     width: 1.7rem;
     height: auto;
+  }
+
+  .industries-section .industries-main .sector-card-container .sector-card-group-wrapper .sector-card-group .sector-card .sector-card-footer {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .industries-section .industries-main .sector-card-container .sector-card-group-wrapper .sector-card-group .sector-card .sector-card-footer img{
+    display: inline-flex;
+
   }
 
   .why-reckonsys-main{
