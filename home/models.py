@@ -2,7 +2,7 @@ from django.db import models
 from wagtail.models import Page, Orderable, ClusterableModel
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
-from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel
+from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
 
 
 class HomePage(Page):
@@ -10,12 +10,14 @@ class HomePage(Page):
     home_service_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_service_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_service_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    home_service_button_text = models.CharField(max_length= 255, blank = True, help_text= "card title")
+    home_service_button_icon = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete= models.SET_NULL, related_name = "+")
     # process section content
     home_process_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_process_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_technology_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_technology_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    dotted_mesh = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     # Rating Section Content
     home_rating_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_rating_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -27,7 +29,12 @@ class HomePage(Page):
     home_industries_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_industries_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_industries_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    # HomePage images
+    # Why Reckonsys
+    home_whyreckonsys_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    home_whyreckonsys_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    home_whyreckonsys_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+
+    # images
     image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     casestudies_saascard_image = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     great_place_to_work_badge = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
@@ -38,17 +45,21 @@ class HomePage(Page):
     blogs_clutchreview = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     # Adding field panels
     
-    content_panels = [TitleFieldPanel('title'),FieldPanel('home_service_title'),FieldPanel('home_service_subtitle'), FieldPanel('home_service_content'), FieldPanel('home_process_title'),FieldPanel('home_process_subtitle'), FieldPanel('home_process_content'), FieldPanel('home_process_technology_title'), FieldPanel('home_process_technology_content'), FieldPanel('home_rating_title'), FieldPanel('home_rating_subtitle'), FieldPanel('home_rating_testimonial_title'), FieldPanel('home_rating_testimonial_content'), FieldPanel('home_rating_testimonial_name'), FieldPanel('home_rating_testimonial_designation')]
+    content_panels = [TitleFieldPanel('title'),  ]
     image_panels = [FieldPanel('image'), FieldPanel('enquirebot_cofounder_image'), FieldPanel('casestudies_saascard_image'), FieldPanel('casestudies_seniorcentriccard_image'), FieldPanel('blogs_crmemail'), FieldPanel('blogs_solvingcrmemail'), FieldPanel('blogs_clutchreview'), FieldPanel('great_place_to_work_badge')]
-    service_card_panels = [InlinePanel('service_cards', label='label')]
-    process_card_panels = [InlinePanel('process_cards', label='label')]
-    industries_section_panel = [FieldPanel('home_industries_title'), FieldPanel('home_industries_subtitle'), FieldPanel('home_industries_content'), InlinePanel('industries_cards', label='label') ]
+    services_offered_panels = [FieldPanel('home_service_title'),FieldPanel('home_service_subtitle'), FieldPanel('home_service_content'),MultiFieldPanel(heading = "Service Button", children=(FieldPanel('home_service_button_text'), FieldPanel('home_service_button_icon') )), InlinePanel('service_cards', label='Service Card')]
+    process_followed_panels = [FieldPanel('home_process_title'),FieldPanel('home_process_subtitle'), FieldPanel('home_process_technology_title'), FieldPanel('home_process_technology_content'), FieldPanel('dotted_mesh'), InlinePanel('process_cards', label='label'), InlinePanel('technologies_stack', label='Technologies Stack')]
+    rating_panels =  [FieldPanel('home_rating_title'), FieldPanel('home_rating_subtitle'), FieldPanel('home_rating_testimonial_title'), FieldPanel('home_rating_testimonial_content'), FieldPanel('home_rating_testimonial_name'), FieldPanel('home_rating_testimonial_designation')]
+    industries_section_panel = [FieldPanel('home_industries_title'), FieldPanel('home_industries_subtitle'), FieldPanel('home_industries_content'), InlinePanel('industries_cards', label='card') ]
+    whyreckonsys_section_panel = [FieldPanel('home_whyreckonsys_title'), FieldPanel('home_whyreckonsys_subtitle'), FieldPanel('home_whyreckonsys_content'), InlinePanel('whyreckonsys_cards', label='card') ]
     edit_handler = TabbedInterface([
         ObjectList(image_panels, heading= 'images'),
         ObjectList(content_panels, heading='Content'),
-        ObjectList(service_card_panels, heading='ServiceCards'),
-        ObjectList(process_card_panels, heading='ProcessCards'),
+        ObjectList(services_offered_panels, heading='Service  Offered'),
+        ObjectList(process_followed_panels, heading='Process Followed'),
         ObjectList(industries_section_panel, heading='IndustriesSection'),
+        ObjectList(rating_panels, heading='Rating'),
+        ObjectList(whyreckonsys_section_panel, heading='Why Reckonsys'),
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
     @property
@@ -62,6 +73,14 @@ class HomePage(Page):
     @property
     def cardindustries(self):
         return self.industries_cards.all()
+    
+    @property
+    def stacktechnologies(self):
+        return self.technologies_stack.all()
+
+    @property
+    def cardswhyreckonsys(self):
+        return self.whyreckonys_cards.all()
 
 class HomeServiceCard(Orderable):
     card_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
@@ -74,7 +93,6 @@ class HomeServiceCard(Orderable):
 class HomeProcessCard(Orderable):
     pointer_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     line_svg = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    dotted_mesh = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     point1 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     point2 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -82,7 +100,25 @@ class HomeProcessCard(Orderable):
     point4 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "process_cards")
-    panels = [FieldPanel('pointer_icon'),FieldPanel('point1'), FieldPanel('point2'), FieldPanel('point3'), FieldPanel('point4'), FieldPanel('title'), FieldPanel('dotted_mesh')]
+    panels = [FieldPanel('pointer_icon'),FieldPanel('point1'), FieldPanel('point2'), FieldPanel('point3'), FieldPanel('point4'), FieldPanel('title')]
+
+class TechnologiesStack(ClusterableModel):
+    title = models.CharField(max_length = 255, blank = True, help_text = "Technology Stack Group Name")
+
+    page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "technologies_stack")
+    panels = [FieldPanel('title'), InlinePanel('technologies',  label="Techologies")]
+
+    @property
+    def technology(self):
+        return self.technologies.all()
+
+class technologies(Orderable):
+    icon = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete= models.SET_NULL, related_name = "+")
+
+    page = ParentalKey(TechnologiesStack, on_delete = models.CASCADE, related_name = "technologies")
+    panels = [FieldPanel('icon')]
+
+
 
 class IndustriesSectionCard(ClusterableModel):
     card_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
@@ -104,6 +140,11 @@ class IndusrtrialSectionCardPoint(Orderable):
     indusrtrial_section_card = ParentalKey(IndustriesSectionCard, on_delete = models.CASCADE, related_name = "industries_cards_point")
     panels = [FieldPanel('pointer_icon'), FieldPanel('point')]
 
+class HomeWhyReckonsyCard(Orderable):
+    image= models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    description = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
+    page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "whyreckonsys_cards")
+    panels = [FieldPanel('image'), FieldPanel('description')]
 
 
