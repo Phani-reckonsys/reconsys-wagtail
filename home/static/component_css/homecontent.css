@@ -303,6 +303,13 @@
         flex-basis: 50%;
     }
   
+  .case-studies-main .case-studies-header {
+    display: flex;
+    align-items: center;
+  }
+  .case-studies-main .case-studies-header .right{
+    display: flex;
+  }
   .case-studies-main .cards-container {
     overflow-x: hidden;
   }

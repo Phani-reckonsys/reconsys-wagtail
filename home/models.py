@@ -91,7 +91,7 @@ class HomePage(Page):
 
     @property
     def cardswhyreckonsys(self):
-        return self.whyreckonys_cards.all()
+        return self.whyreckonsys_cards.all()
     
     @property
     def cardscasestudy(self):
