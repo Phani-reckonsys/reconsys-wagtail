@@ -6,23 +6,16 @@
         <div class="row herosection">
           <div class="herosection-content">
             <div class='category-heading'>
-              <h4 class="mb-22 lh-110 active">Top Software Development Company</h4>
-              <h4 class="mb-22 lh-110">Top Software Development Company</h4>
-              <h4 class="mb-22 lh-110">Top Software Development Company</h4>
+            {% for herosection in page.home_herosection.all %}
+              <h4 class="mb-22 lh-110">{{herosection.home_herosection.herosection_title}}</h4>
+            {% endfor %}
             </div>
             <div class="main-heading w-80">
-              <h1 class="mb-36 hero active">
-                We build custom Software solutions that are simple to use and
-                deliver Real results
-              </h1>
+              {% for herosection in page.home_herosection.all %}
               <h1 class="mb-36 hero">
-                We build custom Software solutions that are simple to use and
-                deliver Real results
+               {{herosection.home_herosection.herosection_subtitle}}
               </h1>
-              <h1 class="mb-36 hero">
-                We build custom Software solutions that are simple to use and
-                deliver Real results
-              </h1>
+               {% endfor %}
             </div>
             <a href="./contactus.html" class="primary-btn fix-width"
               >Get Quote
@@ -41,9 +34,9 @@
               </svg>
             </a>
             <div class="hero-carousel-indicator-group">
-              <div class="active"></div>
-              <div></div>
-              <div></div>
+             {% for herosection in page.home_herosection.all %}
+              <div ></div>
+              {% endfor %}
             </div>
           </div>
           <div class="geometric-shapes">

@@ -12,7 +12,11 @@ class Navbar(models.Model):
 
 @register_snippet
 class Herosection(models.Model):
-    panels = []
+    herosection_title = models.CharField(max_length = 500, blank=True, help_text = "Services Navigation Link")
+    herosection_subtitle = models.CharField(max_length = 500, blank=True, help_text = "Services Navigation Link")
+
+    panels = [FieldPanel('herosection_title'),FieldPanel('herosection_subtitle')]
+    
 
 
     

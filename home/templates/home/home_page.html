@@ -22,3 +22,7 @@ Delete the line below if you're just getting started and want to remove the welc
 {% include "components/homecontent.html"%}
 
 {% endblock content %}
+
+{% block extra_js%}
+    <script src="{% static 'js/home.js' %}"></script>
+{% endblock extra_js%}
