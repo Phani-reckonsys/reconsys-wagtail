@@ -10,8 +10,8 @@
 Delete the line below if you're just getting started and want to remove the welcome screen!
 {% endcomment %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
-<link rel="stylesheet" href="{% static 'component_css/navbar.css' %}">
-<link rel="stylesheet" href="{% static 'component_css/herosection.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/herosection.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/banner.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/servicesoffered.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/businesshelped.css' %}">
@@ -24,7 +24,7 @@ Delete the line below if you're just getting started and want to remove the welc
 
 {% block content %}
 {% navbar %}
-{% include "components/herosection.html" %}
+{% include "snippets/herosection.html" %}
 {% include "componentservice/banner.html"%}
 {% include "componentservice/servicesoffered.html"%}
 {% include "componentservice/businesshelped.html"%}

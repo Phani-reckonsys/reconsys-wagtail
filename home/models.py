@@ -1,11 +1,15 @@
 from django.db import models
-from wagtail.models import Page, Orderable, ClusterableModel
+from wagtail.models import Page, Orderable, ClusterableModel, StreamField
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-
+from components.blocks import HeroSectionBlock
 
 class HomePage(Page):
+    herosection = StreamField(
+        [('herosecion', HeroSectionBlock())
+         
+        ], null = True)
     # services section content
     home_service_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_service_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -51,7 +55,7 @@ class HomePage(Page):
     blogs_clutchreview = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     # Adding field panels
     
-    content_panels = [TitleFieldPanel('title')]
+    content_panels = [TitleFieldPanel('title'), FieldPanel('herosection')]
     herosection_panels = [InlinePanel('home_herosection', label='herosection content')]
     image_panels = [FieldPanel('image'), FieldPanel('enquirebot_cofounder_image'), FieldPanel('casestudies_saascard_image'), FieldPanel('casestudies_seniorcentriccard_image'), FieldPanel('blogs_crmemail'), FieldPanel('blogs_solvingcrmemail'), FieldPanel('blogs_clutchreview'), FieldPanel('great_place_to_work_badge')]
     services_offered_panels = [FieldPanel('home_service_title'),FieldPanel('home_service_subtitle'), FieldPanel('home_service_content'),MultiFieldPanel(heading = "Service Button", children=(FieldPanel('home_service_button_text'), FieldPanel('home_service_button_icon') )), InlinePanel('service_cards', label='Service Card')]
@@ -62,7 +66,8 @@ class HomePage(Page):
     casestudies_panel = [FieldPanel('home_casestudies_title'), FieldPanel('home_casestudies_subtitle'), InlinePanel('casestudies_cards', label='case studies card') ]  
     testimonial_panel = [FieldPanel('home_testimonials_title'), FieldPanel('home_testimonials_subtitle'), InlinePanel('testimonial_cards', label='testimonial card') ]  
     edit_handler = TabbedInterface([
-        ObjectList(image_panels, heading= 'images'),
+        ObjectList(content_panels, heading= 'Content'),
+        ObjectList(image_panels, heading= 'Images'),
         ObjectList(herosection_panels, heading= 'Herosecion'),
         ObjectList(services_offered_panels, heading='Service  Offered'),
         ObjectList(process_followed_panels, heading='Process Followed'),

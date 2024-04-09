@@ -96,9 +96,11 @@
           </svg>
         </div>
         <div class="navigation">
+        {% for navitem in navitems %}
           <h5>
-            <a href="./index.html"
-              >Home
+            <a href="{{navitem.link.get_url}}"
+              >
+              {{navitem.name}}
               <svg
                 class="menu-arrow"
                 width="28"
@@ -115,98 +117,7 @@
               </svg>
             </a>
           </h5>
-          <h5 id="services-btn">
-            <a href="#">
-              {{navbar.service_nav}}
-              <svg
-                width="11"
-                height="7"
-                viewBox="0 0 11 7"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.5 1.5L5.5 5.5L9.5 1.5"
-                  stroke="#333333"
-                  stroke-width="2"
-                />
-              </svg>
-            </a>
-          </h5>
-          <h5>
-            <a href="./our-works.html"
-              >{{navbar.ourworks_nav}}
-              <svg
-                class="menu-arrow"
-                width="28"
-                height="11"
-                viewBox="0 0 28 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 1H25L17.9577 10"
-                  stroke="#333333"
-                  stroke-width="2"
-                />
-              </svg>
-            </a>
-          </h5>
-          <h5>
-            <a href="./blogs.html"
-              >Blogs
-              <svg
-                class="menu-arrow"
-                width="28"
-                height="11"
-                viewBox="0 0 28 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 1H25L17.9577 10"
-                  stroke="#333333"
-                  stroke-width="2"
-                />
-              </svg>
-            </a>
-          </h5>
-          <h5>
-            <a href="./career.html"
-              >Careers<svg
-                class="menu-arrow"
-                width="28"
-                height="11"
-                viewBox="0 0 28 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 1H25L17.9577 10"
-                  stroke="#333333"
-                  stroke-width="2"
-                />
-              </svg>
-            </a>
-          </h5>
-          <h5>
-            <a href="#"
-              >About Us<svg
-                class="menu-arrow"
-                width="28"
-                height="11"
-                viewBox="0 0 28 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 1H25L17.9577 10"
-                  stroke="#333333"
-                  stroke-width="2"
-                />
-              </svg>
-            </a>
-          </h5>
+          {% endfor %}
         </div>
         <h5 class="contactus">
           <a href="./contactus.html"

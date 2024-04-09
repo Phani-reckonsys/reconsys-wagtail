@@ -1,24 +1,23 @@
 from django.db import models
-from wagtail.admin.panels import FieldPanel
+from wagtail.admin.panels import FieldPanel, PageChooserPanel, InlinePanel
 from wagtail.snippets.models import register_snippet
+from wagtail.models import Orderable, ParentalKey, ClusterableModel
 
 @register_snippet
-class Navbar(models.Model):
+class Navbar(ClusterableModel):
     # navbar content variables
-    service_nav = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    ourworks_nav = models.CharField(max_length = 255, blank=True, help_text = "OurWorks Navigation Link")
-    panels = [FieldPanel('service_nav'),FieldPanel('ourworks_nav')]
+    panels = [InlinePanel('navitems', heading='navbar')]
 
+class NavItem(Orderable, models.Model):
+    name = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
 
-@register_snippet
-class Herosection(models.Model):
-    herosection_title = models.CharField(max_length = 500, blank=True, help_text = "Services Navigation Link")
-    herosection_subtitle = models.CharField(max_length = 500, blank=True, help_text = "Services Navigation Link")
+    navbar = ParentalKey(Navbar, on_delete = models.CASCADE, related_name="navitems")
+    panels = [FieldPanel("name"), PageChooserPanel("link")
+]
 
-    panels = [FieldPanel('herosection_title'),FieldPanel('herosection_subtitle')]
-    
 @register_snippet
 class Footer(models.Model):
    pass
 
-    
+  
