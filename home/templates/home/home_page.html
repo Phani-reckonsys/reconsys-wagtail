@@ -11,15 +11,17 @@
 Delete the line below if you're just getting started and want to remove the welcome screen!
 {% endcomment %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
-<link rel="stylesheet" href="{% static 'component_css/navbar.css' %}">
-<link rel="stylesheet" href="{% static 'component_css/herosection.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/footer.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/herosection.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/homecontent.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
 {% navbar %}
-{% include "components/herosection.html" %}
+{% include "snippets/herosection.html" %}
 {% include "components/homecontent.html"%}
+{% footer %}
 
 {% endblock content %}
 

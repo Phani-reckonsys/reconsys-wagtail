@@ -17,6 +17,8 @@ class Herosection(models.Model):
 
     panels = [FieldPanel('herosection_title'),FieldPanel('herosection_subtitle')]
     
-
+@register_snippet
+class Footer(models.Model):
+   pass
 
     

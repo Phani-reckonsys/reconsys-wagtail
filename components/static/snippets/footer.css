@@ -1,0 +1,45 @@
+.custom-footer {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100%;
+  }
+  .custom-footer .navigation-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .custom-footer .navigation-footer .custom-col {
+    display: flex;
+    flex-direction: column;
+  }
+  .custom-footer .navigation-footer .custom-col:nth-last-child(2) {
+    gap: 2.2rem;
+  }
+  .custom-footer .navigation-footer .custom-col:last-child {
+    gap: 2rem;
+  }
+  .custom-footer .navigation-footer .custom-col .newsletter-subscription {
+    display: flex;
+    justify-content: space-between;
+    width: 36rem;
+  }
+  .custom-footer .navigation-footer .custom-col .newsletter-subscription input {
+    width: 29rem;
+    display: flex;
+    padding: 1.6rem;
+    align-items: center;
+    gap: 10px;
+    border: 0.5px solid #3F3F3F;
+    background: #0C0B0B;
+  }
+  .custom-footer .navigation-footer .custom-col .newsletter-subscription input::-moz-placeholder {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+  .custom-footer .navigation-footer .custom-col .newsletter-subscription input::placeholder {
+    color: #fff;
+    font-size: 1.6rem;
+  }
