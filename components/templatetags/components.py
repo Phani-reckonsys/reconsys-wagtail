@@ -1,5 +1,5 @@
 from django import template
-from components.models import Navbar, Herosection, Footer
+from components.models import Navbar, Contact, Footer
 register = template.Library()
 # ...
 # Advert snippets
@@ -9,6 +9,13 @@ def navbar(context):
     return {
         'navbar': navbar,
         'navitems': navbar.navitems.all(),
+        'request': context['request'],
+    }
+
+@register.inclusion_tag('snippets/contact.html', takes_context=True)
+def contact(context):
+    return {
+        'contact': Contact.objects.first(),
         'request': context['request'],
     }
 

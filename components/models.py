@@ -20,4 +20,8 @@ class NavItem(Orderable, models.Model):
 class Footer(models.Model):
    pass
 
+@register_snippet
+class Contact(models.Model):
+   pass
+
   

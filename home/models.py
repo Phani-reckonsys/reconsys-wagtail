@@ -55,8 +55,8 @@ class HomePage(Page):
     blogs_clutchreview = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     # Adding field panels
     
-    content_panels = [TitleFieldPanel('title'), FieldPanel('herosection')]
-    herosection_panels = [InlinePanel('home_herosection', label='herosection content')]
+    content_panels = [TitleFieldPanel('title')]
+    herosection_panels = [FieldPanel('herosection')]
     image_panels = [FieldPanel('image'), FieldPanel('enquirebot_cofounder_image'), FieldPanel('casestudies_saascard_image'), FieldPanel('casestudies_seniorcentriccard_image'), FieldPanel('blogs_crmemail'), FieldPanel('blogs_solvingcrmemail'), FieldPanel('blogs_clutchreview'), FieldPanel('great_place_to_work_badge')]
     services_offered_panels = [FieldPanel('home_service_title'),FieldPanel('home_service_subtitle'), FieldPanel('home_service_content'),MultiFieldPanel(heading = "Service Button", children=(FieldPanel('home_service_button_text'), FieldPanel('home_service_button_icon') )), InlinePanel('service_cards', label='Service Card')]
     process_followed_panels = [FieldPanel('home_process_title'),FieldPanel('home_process_subtitle'), FieldPanel('home_process_technology_title'), FieldPanel('home_process_technology_content'), FieldPanel('dotted_mesh'), InlinePanel('process_cards', label='label'), InlinePanel('technologies_stack', label='Technologies Stack')]
@@ -68,7 +68,7 @@ class HomePage(Page):
     edit_handler = TabbedInterface([
         ObjectList(content_panels, heading= 'Content'),
         ObjectList(image_panels, heading= 'Images'),
-        ObjectList(herosection_panels, heading= 'Herosecion'),
+        ObjectList(herosection_panels, heading= 'Herosection'),
         ObjectList(services_offered_panels, heading='Service  Offered'),
         ObjectList(process_followed_panels, heading='Process Followed'),
         ObjectList(industries_section_panel, heading='IndustriesSection'),
@@ -171,11 +171,6 @@ class HomeWhyReckonsyCard(Orderable):
     page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "whyreckonsys_cards")
     panels = [FieldPanel('image'), FieldPanel('description')]
 
-class HomeHeroSection(Orderable, models.Model): 
-    home_herosection = models.ForeignKey('components.Herosection', on_delete = models.CASCADE, related_name = '+', null=True, blank = True)
-
-    page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "home_herosection")
-    panels = [FieldPanel('home_herosection')]
 
 class HomeCaseStudiesCard(Orderable):
     cover_image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")

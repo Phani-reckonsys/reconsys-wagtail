@@ -12,18 +12,18 @@ Delete the line below if you're just getting started and want to remove the welc
 {% endcomment %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/contact.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/footer.css' %}">
-<link rel="stylesheet" href="{% static 'snippets/herosection.css' %}">
+<link rel="stylesheet" href="{% static 'blocks/herosection.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/homecontent.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
-{% navbar %}
-{{ page.herosection}}
-{% include "snippets/herosection.html" %}
-{% include "components/homecontent.html"%}
-{% footer %}
-
+    {% navbar %}
+    {{page.herosection}}
+    {% include "components/homecontent.html"%}
+    {% contact %}
+    {% footer %}
 {% endblock content %}
 
 {% block extra_js%}
