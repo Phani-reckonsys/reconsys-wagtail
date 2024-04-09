@@ -45,3 +45,11 @@ class OurMissionBlock(StructBlock):
 
     class Meta: 
         template = "blocks/ourmission.html"
+
+
+class OurVisionBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+
+    class Meta: 
+        template = "blocks/ourvision.html"
