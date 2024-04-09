@@ -1,0 +1,21 @@
+.servicespage-wrapper .our-vision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32rem;
+  }
+  .servicespage-wrapper .our-vision h2 {
+    text-align: center;
+  }
+  .servicespage-wrapper .our-vision .vision-gallery {
+    display: flex;
+    justify-content: space-between;
+  }
+  .servicespage-wrapper .our-vision .vision-gallery img {
+    width: 48%;
+    height: auto;
+  }
+  .servicespage-wrapper .our-vision .vision-gallery img:last-child {
+    position: relative;
+    top: 9rem;
+  }

@@ -1,0 +1,25 @@
+{%load wagtailimages_tags%}
+
+<!--Our Mission starts -->
+    <section>
+        <div class="sidebar">
+            <h5>About us</h5>
+        </div>
+        <div class="servicespage-wrapper  w-container">
+
+             <!-- Our Mission Starts -->
+             <div class="our-mission ml-54 mr-54 pt-100 pb-164">
+                <h3 class="lh-110 mb-30">
+                {{self.title}}
+                </h3>
+                <h2 class="w-70 mb-72">
+                    {{self.subtitle}}
+                </h2>
+                <!-- cover image after herosection -->
+                {% image self.cover_image max-4000x2000 class="w-100"%}
+                <!-- cover image after herosection -->       
+             </div>
+            <!-- Our Mission Ends -->
+        </div>
+    </section>
+    <!--Our Mission Ends -->

@@ -36,3 +36,12 @@ class HeroSectionBlock(StructBlock):
         template = "blocks/herosection.html"
 
 
+
+
+class OurMissionBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    cover_image = ImageChooserBlock(required=False)
+
+    class Meta: 
+        template = "blocks/ourmission.html"

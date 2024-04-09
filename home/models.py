@@ -3,7 +3,7 @@ from wagtail.models import Page, Orderable, ClusterableModel, StreamField
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -196,7 +196,8 @@ class HomeTestimonialCard(Orderable):
 
 class AboutusPage(Page):
     body = StreamField(
-        [('herosecion', HeroSectionBlock())
+        [('herosecion', HeroSectionBlock()),
+         ('ourmission', OurMissionBlock())
          
         ], null = True)
     
