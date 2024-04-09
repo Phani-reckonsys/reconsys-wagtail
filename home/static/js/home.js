@@ -1,30 +1,4 @@
-// hero section
-const categoryHeadings = document.querySelectorAll(
-    ".herosection .category-heading > *"
-  );
-  const mainHeadings = document.querySelectorAll(
-    ".herosection .main-heading > *"
-  );
-  const headingIndicator = document.querySelectorAll(
-    ".hero-carousel-indicator-group > *"
-  );
-  
-  let currentHeading = 0;
-  
-  const setActiveHeading = (index) => {
-    currentHeading = (index + 3) % 3;
-    categoryHeadings.forEach((entry) => entry.classList.remove("active"));
-    mainHeadings.forEach((entry) => entry.classList.remove("active"));
-    headingIndicator.forEach((entry) => entry.classList.remove("active"));
-  
-    categoryHeadings[currentHeading].classList.add("active");
-    mainHeadings[currentHeading].classList.add("active");
-    headingIndicator[currentHeading].classList.add("active");
-  };
-  
-  setInterval(() => setActiveHeading(currentHeading + 1), 5000);
 
-  setActiveHeading(currentHeading);
   
   //industries section corousel'
   

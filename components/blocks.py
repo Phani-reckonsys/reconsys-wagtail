@@ -4,6 +4,7 @@ from wagtail.blocks import (
     RichTextBlock,
     StreamBlock,
     StructBlock,
+    BooleanBlock
 )
 from wagtail.models import StreamField
 from wagtail.embeds.blocks import EmbedBlock
@@ -17,6 +18,7 @@ class HeroTitleBlock(StructBlock):
 
 class HeroSectionBlock(StructBlock):
     titles = StreamBlock([('title', HeroTitleBlock())])
+    include_quick_testimonials = BooleanBlock(required=False)
 
     class Meta:
         icon = "title"

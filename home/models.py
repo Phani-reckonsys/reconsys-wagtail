@@ -191,3 +191,19 @@ class HomeTestimonialCard(Orderable):
 
     page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "testimonial_cards")
     panels = [FieldPanel('name'), FieldPanel('designation'), FieldPanel('content')]
+
+
+
+class AboutusPage(Page):
+    body = StreamField(
+        [('herosecion', HeroSectionBlock())
+         
+        ], null = True)
+    
+    body_panels = [FieldPanel('body')]
+
+    edit_handler = TabbedInterface([
+        ObjectList(Page.content_panels, heading= 'Content'),
+        ObjectList(body_panels, heading= 'Body'),
+        ObjectList(Page.promote_panels, heading='Promote'),
+    ])

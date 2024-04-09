@@ -1,10 +1,15 @@
 from django.db import models
-from wagtail.models import Page, Orderable, ClusterableModel
+from wagtail.models import Page, Orderable, ClusterableModel,StreamField
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel
+from components.blocks import HeroSectionBlock
 # Create your models here.
 class ServicesPage(Page):
+    body = StreamField(
+        [('herosecion', HeroSectionBlock()),('herosecion2', HeroSectionBlock())
+         
+        ], null = True)
     # banner section
     banner_title = models.CharField(max_length = 255, blank=True, help_text = "Banner section title")
     # Services Offered Section
@@ -29,6 +34,7 @@ class ServicesPage(Page):
     faqsection_title_bottom = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     # Panels
     banner_panels = [FieldPanel('banner_title'), InlinePanel('banner_row', label = 'label')]
+    body_panels = [FieldPanel('body')]
     servicesoffered_panels = [FieldPanel('servicesoffered_title'),FieldPanel('servicesoffered_content'), InlinePanel('services_offered', label = 'label')]
     businesshelped_panels = [FieldPanel('businesshelped_title'), FieldPanel('businesshelped_subtitle'), InlinePanel('business_helped_card')]
     engagmentmodel_panels = [FieldPanel('engagment_title'), FieldPanel('engagment_subtitle'), InlinePanel('engagment_card')]
@@ -37,6 +43,7 @@ class ServicesPage(Page):
     testimonial_panels = [FieldPanel('testimonial_content'), FieldPanel('testimonial_name'), FieldPanel('testimonial_designation'), FieldPanel('testimonial_avatar')]
     edit_handler = TabbedInterface([
         ObjectList(banner_panels, heading='Banner'),
+        ObjectList(body_panels, heading='Body'),
         ObjectList(servicesoffered_panels, heading='Services Offered'),
         ObjectList(businesshelped_panels, heading='Business Helped'),
         ObjectList(engagmentmodel_panels, heading='Engagment Model'),
