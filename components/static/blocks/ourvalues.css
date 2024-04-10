@@ -1,0 +1,6 @@
+.servicespage-wrapper .our-values .typography {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }

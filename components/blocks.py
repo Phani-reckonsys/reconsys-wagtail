@@ -46,10 +46,29 @@ class OurMissionBlock(StructBlock):
     class Meta: 
         template = "blocks/ourmission.html"
 
+class Images(StructBlock):
+    image = ImageChooserBlock(required=False)
+
+class Gallerys(StreamBlock):
+    gallerys = StreamBlock([('images', Images())])
+
 
 class OurVisionBlock(StructBlock):
+    gallery = StreamBlock([('gallerys', Gallerys())])
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
 
     class Meta: 
         template = "blocks/ourvision.html"
+
+
+class OurValuesBlock(StructBlock):
+    title = CharBlock(classname='title', required=True)
+    word1 = CharBlock(classname='word1', required=True)
+    word2 = CharBlock(classname='word2', required=True)
+    word3 = CharBlock(classname='word3', required=True)
+    word4 = CharBlock(classname='word4', required=True)
+    word5 = CharBlock(classname='word5', required=True)
+
+    class Meta:
+        template = "blocks/ourvalues.html"
