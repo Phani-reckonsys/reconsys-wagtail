@@ -1,0 +1,21 @@
+.blog-section .blog-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .blog-section .blog-cards-wrapper .blog-card {
+    min-width: 39.2rem;
+    width: 30%;
+    margin-bottom: 10rem;
+  }
+  .blog-section .blog-cards-wrapper .blog-card:hover {
+    box-shadow: 1px 1px 4px 4px #f7f7f7;
+    transform: scale(1.005);
+  }
+  .blog-section .blog-cards-wrapper .blog-card img {
+    width: 100%;
+    height: auto;
+  }
+  .blog-section .blog-cards-wrapper .blog-card p:first-of-type {
+    color: #D2112B;
+  }

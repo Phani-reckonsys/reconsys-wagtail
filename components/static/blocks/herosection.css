@@ -2,7 +2,7 @@
     padding-top: 12.2rem;
   }
   .herosection-wrapper .herosection {
-    border-bottom: 1px solid #cac8c8;
+    display: flex;
   }
   .herosection-wrapper .herosection div .category-heading h4 {
     display: none;
@@ -37,19 +37,21 @@
     background-color: #f0493e;
   }
   .herosection-wrapper .herosection div.geometric-shapes {
+    margin-left: auto;
     position: relative;
   }
   .herosection-wrapper .herosection div.geometric-shapes .geometric-connection {
     position: absolute;
     right: -5.4rem;
-    bottom: 5rem;
+    top: 0rem;
   }
   .herosection-wrapper .herosection div.geometric-shapes .geometric-wave {
     position: absolute;
-    bottom: 11rem;
-    right: 30rem;
+    top: 40rem;
+    right: 15rem;
   }
   .herosection-wrapper .quick-testimonials {
+    border-top: 1px solid #CCC7C7;
     padding: 5rem 0;
   }
   .herosection-wrapper .quick-testimonials h5 {

@@ -1,3 +1,6 @@
+    {%load wagtailimages_tags%}
+
+    
     <!-- Herosection starts -->
     <section>
         <div class="sidebar">
@@ -59,33 +62,23 @@
              <div class="carousel-section mr-54 pb-100">
                 <div class="left">
                     <div class="carousal-image-wrapper">
+                        {% for card in self.cards %}
                             <div class="carousal-image">
-                                <img src="./res/images/blogs-carousel-1.png" alt="">
+                                    {% image card.value.image max-3000x1500%}
                             </div>
-                            <div class="carousal-image">
-                                <img src="./res/images/blogs-carousel-1.png" alt="">
-                            </div>
-                            <div class="carousal-image">
-                                <img src="./res/images/blogs-carousel-1.png" alt="">
-                            </div>
+                        {% endfor %}       
                     </div>
                 </div>
                 <div class="right">
                     <div class="carousal-content-container">
-                        <div class="carousal-content-wrapper">
-                            <div class="carousal-content">
-                                <p class="ft-32 mb-40">Brython: Python's Leap into the Browser World</p>
-                                <p>Brython is a bit like a magician transforming Python code into something the browser can understand. When you write Python code for Brython, it gets converted into JavaScript on the fly. It's like having a Python-ese to JavaScript translator. This means you can now use Python's elegant syntax and powerful features right in your web pages.</p>
+                            <div class="carousal-content-wrapper">
+                                {% for card in self.cards %}
+                                <div class="carousal-content">
+                                    <p class="ft-32 mb-40">{{card.value.title}}</p>
+                                    <p>{{card.value.subtitle}}</p>
+                                </div>
+                                {% endfor %} 
                             </div>
-                            <div class="carousal-content">
-                                <p class="ft-32 mb-40">Bridging the Gap: Mastering Two-Way CRM-Email Integration with AWS and Python</p>
-                                <p>In our interactions with customers via a CRM, we often found ourselves deviating between CRM chats and direct emails. This deviation scattered information, with conversations about a single lead dispersed over multiple platforms, leading to reporting inconsistencies.</p>
-                            </div>
-                            <div class="carousal-content">
-                                <p class="ft-32 mb-40">Solving the CRM-Email Conundrum: A Seamless Two-Way Integration</p>
-                                <p>In the dynamic realm of digital communication, we often encountered a recurring challenge. While interacting with customers via our CRM, we sometimes oscillated between direct CRM chats and traditional emails. This led to scattered information, with conversations about a single lead dispersed across multiple platforms, ultimately resulting in reporting inconsistencies.</p>
-                            </div>
-                        </div>
                     </div>
                     <div class="carousal-controls">
                         <p class="numbering">01/03</p>

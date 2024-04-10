@@ -110,9 +110,37 @@ class OurTestimonialBlock(StructBlock):
         template = "blocks/ourtestimonial.html"
 
 
-class BlogsHerosection(StructBlock):
+class BlogsHerosectionCards(StructBlock):
+    image = ImageChooserBlock(required = False)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
 
+
+class BlogsHerosection(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    cards = StreamBlock([('blogsherosectioncards', BlogsHerosectionCards())])
+
     class Meta: 
         template = "blocks/blogsherosection.html"
+
+class BlogsWrapperCard(StructBlock):
+    image = ImageChooserBlock(required = False)
+    title = CharBlock(classname="title", required=True)
+    category = CharBlock(classname="subtitle", required=True)
+    info = CharBlock(classname="subtitle", required=True)
+
+
+class BlogsWrapperBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    cards = StreamBlock([('blogswrappercard', BlogsWrapperCard())])
+
+    class Meta: 
+        template = "blocks/blogswrapper.html"
+
+
+class CoverImageBlock(StructBlock):
+    image = ImageChooserBlock(required = False)
+
+    class Meta: 
+        template = "blocks/coverimage.html"

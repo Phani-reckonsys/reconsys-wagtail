@@ -1,0 +1,22 @@
+{%load wagtailimages_tags%}
+
+<section>
+        <div class="sidebar">
+            <h5 class="t-20">Articles & Blogs</h5>
+        </div>
+        <div class="blog-section pl-54 pr-54 pb-180 pt-100 w-container">
+            <h2 class="spline-sans mb-64">{{self.title}}</h2>
+            <div class="blog-cards-wrapper">
+                <!-- Blog 1 Starts -->
+                {% for card in self.cards %}
+                <div class="blog-card">
+                    {% image card.value.image max-3000x1500 class="mb-14"%}
+                    <p class="ft-14 mb-26 lh-110">{{card.value.category}}</p>
+                    <p class="ft-24 fw-500 mb-28 lh-110">{{card.value.title}}</p>
+                    <p class="ft-16 lh-110">{{card.value.info}}</p>
+                </div>
+                {% endfor %}
+                <!-- Blog 1 ends -->
+            </div>
+        </div>
+    </section>
