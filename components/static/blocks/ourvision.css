@@ -7,15 +7,30 @@
   .servicespage-wrapper .our-vision h2 {
     text-align: center;
   }
-  .servicespage-wrapper .our-vision .vision-gallery {
+
+  .servicespage-wrapper .our-vision .vision-gallery-container{
     display: flex;
     justify-content: space-between;
   }
-  .servicespage-wrapper .our-vision .vision-gallery img {
+
+  .servicespage-wrapper .our-vision .vision-gallery-container .vision-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     width: 48%;
-    height: auto;
+    height: fit-content;
   }
-  .servicespage-wrapper .our-vision .vision-gallery img:last-child {
-    position: relative;
-    top: 9rem;
+
+  .servicespage-wrapper .our-vision .vision-gallery-container .vision-gallery img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .servicespage-wrapper .our-vision .vision-gallery-container .vision-gallery .inner-container{
+    width: 30%;
+  }
+
+  .servicespage-wrapper .our-vision .vision-gallery-container .vision-gallery .inner-container img{
+    width: 100%;
+    object-fit: cover;
   }

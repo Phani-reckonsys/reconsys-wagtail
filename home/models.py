@@ -3,7 +3,7 @@ from wagtail.models import Page, Orderable, ClusterableModel, StreamField
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection
 
 class HomePage(Page):
     herosection = StreamField(
@@ -201,6 +201,52 @@ class AboutusPage(Page):
          ('ourvision', OurVisionBlock()),
          ('ourvalues', OurValuesBlock()),
          ('ourjourney', OurJourneyBlock()),
+         ('ourgallery', OurGalleryBlock()),
+         ('ourtestimonial', OurTestimonialBlock()),
+         
+        ], null = True)
+    
+    body_panels = [FieldPanel('body')]
+
+    edit_handler = TabbedInterface([
+        ObjectList(Page.content_panels, heading= 'Content'),
+        ObjectList(body_panels, heading= 'Body'),
+        ObjectList(Page.promote_panels, heading='Promote'),
+    ])
+
+
+class BlogPage(Page):
+    body = StreamField(
+        [('herosecion', HeroSectionBlock()),
+         ('ourmission', OurMissionBlock()),
+         ('ourvision', OurVisionBlock()),
+         ('ourvalues', OurValuesBlock()),
+         ('ourjourney', OurJourneyBlock()),
+         ('ourgallery', OurGalleryBlock()),
+         ('ourtestimonial', OurTestimonialBlock()),
+         ('blogsherosection', BlogsHerosection()),
+
+
+        ], null = True)
+    
+    body_panels = [FieldPanel('body')]
+
+    edit_handler = TabbedInterface([
+        ObjectList(Page.content_panels, heading= 'Content'),
+        ObjectList(body_panels, heading= 'Body'),
+        ObjectList(Page.promote_panels, heading='Promote'),
+    ])
+
+class CareerPage(Page):
+    body = StreamField(
+        [('herosecion', HeroSectionBlock()),
+         ('ourmission', OurMissionBlock()),
+         ('ourvision', OurVisionBlock()),
+         ('ourvalues', OurValuesBlock()),
+         ('ourjourney', OurJourneyBlock()),
+         ('ourgallery', OurGalleryBlock()),
+         ('ourtestimonial', OurTestimonialBlock()),
+         ('blogsherosection', BlogsHerosection()),
          
         ], null = True)
     

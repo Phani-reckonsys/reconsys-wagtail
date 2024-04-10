@@ -1,0 +1,24 @@
+{%load wagtailimages_tags%}
+
+ <!-- Life at Reckonsys section Starts -->
+    <section>
+        <div class="sidebar">
+            <h5 class="t-20">Life at Reckonsys</h5>
+        </div>
+        <div class="life-at-reckonsys-main ml-54 pb-180 w-container">
+            <div class="header mb-64">
+                <h2 class="spline-sans"><span class="gradient-text">Life at Reckonsys</span></h2>
+            </div>
+            <div class="gallery-container">
+                {% for gallery in self.gallery %}
+                    <div class="gallery-wrapper">
+                       {% for image in gallery.value %}
+                            {% image image max-3000x1500 class="image"%}
+                       {% endfor %}
+                    </div>
+                {% endfor %}
+               
+            </div>
+        </div>
+    </section>
+    <!-- Life at Reckonsys section ends -->

@@ -1,0 +1,26 @@
+{%load wagtailimages_tags%}
+
+<!-- Testimonial section Starts -->
+
+     <section>
+        <div class="sidebar">
+            <h5>About</h5>
+        </div>
+        <!-- Services page testimonial starts -->
+        <div class="reckonsys-testimonial-section pl-54  pr-54 w-container">
+            <div class="testimonial-wrapper pb-180 bb">
+                <div class="left">
+                    {% image self.image class="w-100" max-3000x1500%}
+                </div>
+                <div class="right">
+                    <p class="mb-40 w-80 ft-26 mt-30"> {{self.content}}</p>
+                    <h4 class="ft-22 mb-8 ft-900">Sathish Visanagiri</h4>
+                    <h6 >CEO, Reckonsys</h6>
+                </div>
+                {% image self.svg max-3000x1500 class="quotes" %}
+            </div>
+        
+        </div>
+        <!-- Services page testimonial Ends -->
+    </section>
+    <!-- Testimonial section ends -->

@@ -12,14 +12,30 @@
                 <h2 class="w-70 mb-72">
                     {{self.subtitle}}
                 </h2>
-                <div class="vision-gallery">
-                    {% for gallery in self.gallerys%}
-                    <div class="gallery-container">
-                        {% for image in self.images %}
-                            {% image image max-3000x1500 class="inner-image"%}
-                        {% endfor %}
+                <div class="vision-gallery-container">
+                    <div class="vision-gallery">
+                        {% image self.cover_image max-3000x1500 class="w-100"%}
                     </div>
-                    {% endfor %}
+                    <div class="vision-gallery">
+                        <div class="inner-container">
+                        {% image self.image1 max-3000x1500 class="w-100"%}
+                        </div>
+                        <div class="inner-container">
+                        {% image self.image2 max-3000x1500 class="w-100"%}
+                        </div>
+                        <div class="inner-container">
+                        {% image self.image3 max-3000x1500 class="w-100"%}
+                        </div>
+                        <div class="inner-container">
+                        {% image self.image4 max-3000x1500 class="w-100"%}
+                        </div>
+                        <div class="inner-container">
+                        {% image self.image5 max-3000x1500 class="w-100"%}
+                        </div>
+                        <div class="inner-container">
+                        {% image self.image6 max-3000x1500 class="w-100"%}
+                        </div>
+                    </div>
                 </div>
              </div>
             <!-- Our Vision Ends-->

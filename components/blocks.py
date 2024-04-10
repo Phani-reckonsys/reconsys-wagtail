@@ -5,7 +5,8 @@ from wagtail.blocks import (
     StreamBlock,
     StructBlock,
     BooleanBlock,
-    PageChooserBlock
+    PageChooserBlock,
+    ListBlock
 )
 from wagtail.models import StreamField
 from wagtail.embeds.blocks import EmbedBlock
@@ -46,17 +47,18 @@ class OurMissionBlock(StructBlock):
     class Meta: 
         template = "blocks/ourmission.html"
 
-class Images(StructBlock):
-    image = ImageChooserBlock(required=False)
-
-class Gallerys(StreamBlock):
-    gallerys = StreamBlock([('images', Images())])
-
 
 class OurVisionBlock(StructBlock):
-    gallery = StreamBlock([('gallerys', Gallerys())])
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
+    cover_image = ImageChooserBlock(required=False)
+    image1 = ImageChooserBlock(required=False)
+    image2 = ImageChooserBlock(required=False)
+    image3 = ImageChooserBlock(required=False)
+    image4 = ImageChooserBlock(required=False)
+    image5 = ImageChooserBlock(required=False)
+    image6 = ImageChooserBlock(required=False)
+
 
     class Meta: 
         template = "blocks/ourvision.html"
@@ -86,3 +88,31 @@ class OurJourneyBlock(StructBlock):
 
     class Meta:
         template = "blocks/ourjourney.html"
+
+
+
+
+class OurGalleryBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    gallery = StreamBlock([('gallery', ListBlock(ImageChooserBlock()))])
+
+    class Meta:
+        template = "blocks/ourgallery.html"
+
+
+
+class OurTestimonialBlock(StructBlock):
+    image = ImageChooserBlock(required = False)
+    content = CharBlock(classname="content", required=True)
+    svg = ImageChooserBlock(required = False)
+    
+    class Meta: 
+        template = "blocks/ourtestimonial.html"
+
+
+class BlogsHerosection(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+
+    class Meta: 
+        template = "blocks/blogsherosection.html"

@@ -1,0 +1,74 @@
+.servicespage-wrapper .herosection{
+    display: flex;
+}
+
+.servicespage-wrapper .herosection div.geometric-shapes {
+    position: relative;
+  }
+  .servicespage-wrapper .herosection div.geometric-shapes .blog-geometric-connection {
+    position: absolute;
+    right: -20.4rem;
+    top: -5rem;
+  }
+  .servicespage-wrapper .herosection div.geometric-shapes .blog-geometric-wave {
+    position: absolute;
+    top: 0rem;
+    right: -5rem;
+  }
+
+ .servicespage-wrapper .carousel-section {
+    display: flex;
+    gap: 5rem;
+  }
+  .servicespage-wrapper .carousel-section .left {
+    flex-basis: 55%;
+    overflow-x: hidden;
+  }
+  .servicespage-wrapper .carousel-section .left .carousal-image-wrapper {
+    display: flex;
+    width: 300%;
+    transition: transform 0.3s ease-in-out;
+  }
+  .servicespage-wrapper .carousel-section .left .carousal-image-wrapper .carousal-image {
+    width: 71.8rem;
+  }
+  .servicespage-wrapper .carousel-section .left .carousal-image-wrapper .carousal-image img {
+    width: 100%;
+    height: auto;
+  }
+  .servicespage-wrapper .carousel-section .right {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    flex-basis: 45%;
+    overflow-x: hidden;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper {
+    display: flex;
+    gap: 3rem;
+    width: 300%;
+    transition: transform 0.3s ease-in-out;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper .carousal-content {
+    min-width: 55rem;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-controls {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator {
+    height: 0.4rem;
+    width: 4.5rem;
+    background-color: #333;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator.active {
+    width: 13rem;
+    background-color: #C01111;
+  }

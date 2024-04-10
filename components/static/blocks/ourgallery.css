@@ -1,0 +1,13 @@
+.life-at-reckonsys-main .gallery-container{
+    overflow-x: scroll;
+}
+
+.life-at-reckonsys-main .gallery-container .gallery-wrapper{
+    display: flex;
+    gap: 2rem;
+}
+
+.life-at-reckonsys-main .gallery-container .gallery-wrapper .image{
+    height: 25rem;
+    object-fit: cover;
+}
