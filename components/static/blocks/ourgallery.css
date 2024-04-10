@@ -5,6 +5,7 @@
 .life-at-reckonsys-main .gallery-container .gallery-wrapper{
     display: flex;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .life-at-reckonsys-main .gallery-container .gallery-wrapper .image{

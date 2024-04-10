@@ -9,16 +9,15 @@
             <div class="header mb-64">
                 <h2 class="spline-sans"><span class="gradient-text">Life at Reckonsys</span></h2>
             </div>
-            <div class="gallery-container">
-                {% for gallery in self.gallery %}
+            {% for gallery in self.gallery %}
+                <div class="gallery-container">
                     <div class="gallery-wrapper">
                        {% for image in gallery.value %}
                             {% image image max-3000x1500 class="image"%}
                        {% endfor %}
                     </div>
-                {% endfor %}
-               
-            </div>
+                </div>
+            {% endfor %}
         </div>
     </section>
     <!-- Life at Reckonsys section ends -->

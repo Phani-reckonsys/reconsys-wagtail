@@ -1,0 +1,14 @@
+.culture .gallery-container{
+    overflow-x: scroll;
+}
+
+.culture .gallery-container .gallery-wrapper{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.culture .gallery-container .gallery-wrapper .image{
+    height: 25rem;
+    object-fit: cover;
+}

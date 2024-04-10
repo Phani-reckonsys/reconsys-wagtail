@@ -144,3 +144,11 @@ class CoverImageBlock(StructBlock):
 
     class Meta: 
         template = "blocks/coverimage.html"
+
+class CultureBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    gallery = StreamBlock([('gallery', ListBlock(ImageChooserBlock()))])
+
+    class Meta:
+        template = "blocks/culture.html"
