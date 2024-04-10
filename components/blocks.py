@@ -72,3 +72,17 @@ class OurValuesBlock(StructBlock):
 
     class Meta:
         template = "blocks/ourvalues.html"
+
+
+class OurJourneyCard(StructBlock):
+    image = ImageChooserBlock(required = False)
+    title = CharBlock(classname = "title", required=True)
+    subtitle = CharBlock(classname = "subtitle", required=True)
+
+class OurJourneyBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    ourjourneycards = StreamBlock([('ourjourneycard', OurJourneyCard())])
+
+    class Meta:
+        template = "blocks/ourjourney.html"

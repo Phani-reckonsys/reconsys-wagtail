@@ -1,0 +1,30 @@
+{%load wagtailimages_tags%}
+<!-- our process section starts -->
+    <section>
+        <div class="sidebar dark-section">
+            <h5 class="color-white t-15">Our Journey</h5>
+        </div>
+        <div class="our-process-main our-journey-main pl-54 pr-54 pt-100 pb-180 w-container c-dark">
+            <h3 class="lh-110 mb-30 color-white">{{self.title}}</h3>
+            <h2 class="color-light-white lh-125 mb-84 w-80">{{self.subtitle}}</h2>
+            </p>
+                        
+            <div class="line-slider mb-40">
+                <div class="slider-marker"></div>
+            </div>
+            <div class="our-journey-card-container">
+                <div class="our-journey-card-wrapper">
+                {% for card in self.ourjourneycards %}
+                    <div class="our-journey-card">
+                        {% image card.value.image max-3000x1500 class="mb-64"%}
+                        <h3 class="color-light-white mb-24 lh-145">{{card.value.title}}</h3>
+                        <p class="ft-16 color-light-white">
+                        {{card.value.subtitle}}
+                        </p>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our process section ends -->

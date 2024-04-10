@@ -3,7 +3,7 @@ from wagtail.models import Page, Orderable, ClusterableModel, StreamField
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -200,6 +200,7 @@ class AboutusPage(Page):
          ('ourmission', OurMissionBlock()),
          ('ourvision', OurVisionBlock()),
          ('ourvalues', OurValuesBlock()),
+         ('ourjourney', OurJourneyBlock()),
          
         ], null = True)
     
