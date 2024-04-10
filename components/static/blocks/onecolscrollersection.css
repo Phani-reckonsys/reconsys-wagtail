@@ -1,0 +1,16 @@
+.career-main {
+    display: flex;
+  }
+  .career-main .left {
+    flex-basis: 40%;
+  }
+  .career-main .left .left-wrapper {
+    position: sticky;
+    top: 7rem;
+  }
+  .career-main .right {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

@@ -152,3 +152,16 @@ class CultureBlock(StructBlock):
 
     class Meta:
         template = "blocks/culture.html"
+
+class ImageTitleCombo(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    image = ImageChooserBlock(required=True)
+
+class OneColScrollerSection(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    content = CharBlock(classname="subtitle", required=True)
+    cards = StreamBlock([('image', ImageTitleCombo())])
+
+    class Meta:
+        template = "blocks/onecolscrollersection.html"
