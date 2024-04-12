@@ -178,3 +178,13 @@ class BenifitsBlock(StructBlock):
     
     class Meta:
         template = "blocks/benifitsgrid.html"
+
+#OurWorks Herosection Block
+class OurWorksHerosectionBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="title", required=True)
+    content = CharBlock(classname="title", required=True)
+    image = ImageChooserBlock(required=False)
+
+    class Meta: 
+        template = "blocks/ourworksherosection.html"

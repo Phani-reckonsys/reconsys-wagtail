@@ -6,6 +6,10 @@ section {
     background: #232020;
   }
 
+  section > .theme-darkgreen{
+    background: #172125;
+  }
+
   section > .c-cream {
     background-color: #f3f3f3;
   }
@@ -23,6 +27,11 @@ section {
 
   section > .sidebar.dark-section {
     background: #232020;
+    border-right: 1px solid #544e4e;
+  }
+
+  section > .theme-darkgreen {
+    background: #172125;
     border-right: 1px solid #544e4e;
   }
 

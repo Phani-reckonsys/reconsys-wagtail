@@ -1,0 +1,13 @@
+.ourwork-herosection-wrapper > .herosection {
+    display: flex;
+}
+
+.ourwork-herosection-wrapper > .herosection > .ourworks-heroimage-container {
+   position: relative;
+}
+
+.ourwork-herosection-wrapper > .herosection > .ourworks-heroimage-container > .ourworks-heroimage{
+    position: absolute;
+     top: 0;
+     left: 0;
+ }
