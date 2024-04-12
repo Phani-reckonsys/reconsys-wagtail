@@ -13,7 +13,7 @@ from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
 
 
-#-----------Basic Blocks section------------
+#-----------Basic Blocks Starts------------
 #Primary button Basic Block
 class PrimaryButtonBlock(StructBlock): 
     title = CharBlock(classname = "title", required = True)
@@ -48,9 +48,10 @@ class ImageTitleCombo(StructBlock):
     title = CharBlock(classname="title", required=True)
     image = ImageChooserBlock(required=True)
 
+#----------Basic Blocks Ends------------------
 
 
-#-----------Main Blocks Section Starts--------------
+#-----------Main Blocks Starts----------------
 
 #Herosection Block
 class HeroSectionBlock(StructBlock):
@@ -126,22 +127,16 @@ class OurTestimonialBlock(StructBlock):
     class Meta: 
         template = "blocks/ourtestimonial.html"
 
-
-class BlogsHerosectionCards(StructBlock):
-    image = ImageChooserBlock(required = False)
-    title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
-
-
+#Herosection Blogs Page Block
 class BlogsHerosection(StructBlock):
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
-    cards = StreamBlock([('blogsherosectioncards', BlogsHerosectionCards())])
+    cards = StreamBlock([('blogsherosectioncards', CardBasicBlock())])
 
     class Meta: 
         template = "blocks/blogsherosection.html"
 
-
+#Blogs container Section Block
 class BlogsWrapperBlock(StructBlock):
     title = CharBlock(classname="title", required=True)
     cards = StreamBlock([('blogswrappercard', BlogsCard())])
@@ -149,13 +144,14 @@ class BlogsWrapperBlock(StructBlock):
     class Meta: 
         template = "blocks/blogswrapper.html"
 
-
+#Cover Image Block
 class CoverImageBlock(StructBlock):
     image = ImageChooserBlock(required = False)
 
     class Meta: 
         template = "blocks/coverimage.html"
 
+#Culture Block
 class CultureBlock(StructBlock):
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
@@ -164,8 +160,7 @@ class CultureBlock(StructBlock):
     class Meta:
         template = "blocks/culture.html"
 
-
-
+#One Column Scroller Block
 class OneColScrollerSection(StructBlock):
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
@@ -174,3 +169,12 @@ class OneColScrollerSection(StructBlock):
 
     class Meta:
         template = "blocks/onecolscrollersection.html"
+
+#Benifits Grid Block
+class BenifitsBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    cards = StreamBlock([('Benifitcard', CardBasicBlock())])
+    
+    class Meta:
+        template = "blocks/benifitsgrid.html"

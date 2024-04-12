@@ -7,96 +7,16 @@
             <h5 class="t-30">Benefits of working in Reckonsys</h5>
         </div>
         <div class="wellness-main w-container pl-54 pr-54 mr-54 pt-190 pb-260">
-            <h4 class="mb-22">Benefits of working in Reckonsys</h4>
-            <h2 class="w-80 mb-140">We help bring out the best in employees by providing them with the <span class="gradient-text">Best Opportunities</span>  and challenges needed for growth.</h2>
+            <h4 class="mb-22">{{self.title}}</h4>
+            <h2 class="w-80 mb-140">{{self.subtitle}}</h2>
             <div class="wellness-card-wrapper w-90">
+            {% for card in self.cards %}
                 <div class="wellness-card one">
-                    <svg class="mb-30" width="75" height="88" viewBox="0 0 75 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_5585_3131)">
-                        <path d="M45.2422 39.9023L49.0258 42.1296" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M48.625 28.394L52.885 27.9043" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M42.0156 17.617L44.689 14.2627" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M32.1484 10.6162L32.2155 14.903" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M19.4297 14.0312L22.2339 17.2749" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M11.8281 27.9648L16.1015 28.3338" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M15.6641 41.9619L19.4276 39.9023" stroke="#4C3737" stroke-width="2.17267" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M26.9844 50.2441H37.7181" stroke="#4C3737" stroke-width="2.17267" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M1.16825 70.6984C1.16825 70.6984 0.846242 66.2908 4.98209 64.3856C6.03199 63.9025 7.17916 63.6812 8.33303 63.6845L63.5481 63.8254V1.00611H7.97077C7.97077 1.00611 1.17496 0.714291 1.16825 9.11345C1.15819 17.6535 1.16825 71.9294 1.16825 71.9294C1.16825 71.9294 -0.730277 86.7621 8.53429 86.9063C17.7989 87.0506 63.5515 86.97 63.5515 86.97" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M2.10938 72.8223H53.7857" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M66.554 84.3428C61.9318 84.3428 58.1783 80.5893 58.1783 75.9671V67.5914H66.554C71.1762 67.5914 74.9297 71.3449 74.9297 75.9671C74.9297 80.5893 71.1762 84.3428 66.554 84.3428Z" fill="#F5918C"/>
-                        <path d="M25.9635 40.1507C23.2331 38.1784 21.4922 34.7503 21.4922 31.1243C21.4922 25.1235 26.3559 20.2598 32.3568 20.2598C38.3576 20.2598 43.2213 25.1235 43.2213 31.1243C43.2213 34.6665 42.0641 37.5948 39.441 39.5772L38.7132 40.1507" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10"/>
-                        <path d="M38.8742 39.8154V46.2188L25.8394 46.0444L25.7891 39.8154" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10"/>
-                        <path d="M2.67969 79.8086H54.4935" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_5585_3131">
-                        <rect width="74.935" height="88" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                        
-                    <h2 class="ft-32 mb-30">Health</h2>
-                    <p>We provide Medical Insurance for you and your family. You take care of your work and we take care of you and your family’s health. We also provide Personal Accident Insurance for all our team members..</p>
+                    {% image card.value.image max-3000x1500 class="mb-30" %}  
+                    <h2 class="ft-32 mb-30">{{card.value.title}}</h2>
+                    <p>{{card.value.subtitle}}</p>
                 </div>
-                <div class="wellness-card two">
-                    <svg class="mb-30" width="97" height="88" viewBox="0 0 97 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_5057_3387)">
-                        <path d="M77.1095 76.4404C72.3714 76.4404 68.5237 72.5928 68.5237 67.8546V59.2689H77.1095C81.8477 59.2689 85.6953 63.1165 85.6953 67.8546C85.6953 72.5928 81.8477 76.4404 77.1095 76.4404Z" fill="#F5918C"/>
-                        <path d="M7.21094 44.8309H17.3853L20.6621 37.5964L26.8823 55.2321L35.021 32.3975L38.5248 43.8131H47.4544" stroke="#333333" stroke-width="3.11804" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M80.1799 54.9671C82.2499 52.7459 84.3233 50.4834 86.3588 48.2072C91.2208 42.771 94.2466 36.8672 95.3469 30.6608C96.3303 25.118 95.6873 19.5925 93.4936 14.6789C91.6953 10.656 88.9377 7.25534 85.5233 4.83811C81.9989 2.34524 77.9381 1.02832 73.7741 1.02832C68.9431 1.02832 64.0709 2.82319 59.6868 6.22037C55.4576 9.49376 51.6753 14.201 48.4191 20.232C45.1629 14.201 41.3806 9.4972 37.1513 6.22037C32.7639 2.82319 27.895 1.02832 23.064 1.02832M79.4716 55.727C79.7089 55.4726 79.9461 55.2181 80.1868 54.9637M23.0571 1.03176C18.8966 1.03176 14.8324 2.34868 11.3114 4.83811C7.89361 7.2519 5.13942 10.656 3.34112 14.6755C1.14395 19.5856 0.504405 25.1146 1.4878 30.6574C2.5881 36.8637 5.61393 42.7675 10.4759 48.2037C27.5649 67.3043 47.1434 85.4145 47.3394 85.5968L48.4191 86.5939L49.4987 85.5968C49.6088 85.497 55.8083 79.7617 64.2428 71.3788M64.9373 70.6911L64.2462 71.3788C64.4732 71.1519 64.7035 70.9215 64.9373 70.6911Z" stroke="#333333" stroke-width="3.11804" stroke-miterlimit="10"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_5057_3387">
-                        <rect width="96.823" height="88" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                    <h2 class="ft-32 mb-30">Wealth</h2>
-                    <p>We offer competitive salaries because we recognize  the value you add is often priceless. We encourage our team members to attain financial freedom by paid access to our exclusive online mutual fund platform.</p>
-                </div>
-                <div class="wellness-card three">
-                    <svg class="mb-30" width="81" height="88" viewBox="0 0 81 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_5585_3155)">
-                        <path d="M68.8508 88.0039C64.3966 88.0039 60.7797 84.3869 60.7797 79.9328V71.8617H68.8508C73.3049 71.8617 76.9219 75.4787 76.9219 79.9328C76.9219 84.3869 73.3049 88.0039 68.8508 88.0039Z" fill="#F5918C"/>
-                        <path d="M62.5738 49.8398C57.5831 56.6407 49.5313 61.056 40.4485 61.056C32.4356 61.056 25.2275 57.62 20.2109 52.1413" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M51.9031 35.8853C54.7879 35.8853 57.1266 33.5467 57.1266 30.6619C57.1266 27.7771 54.7879 25.4385 51.9031 25.4385C49.0183 25.4385 46.6797 27.7771 46.6797 30.6619C46.6797 33.5467 49.0183 35.8853 51.9031 35.8853Z" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M28.0516 35.8853C30.9364 35.8853 33.275 33.5467 33.275 30.6619C33.275 27.7771 30.9364 25.4385 28.0516 25.4385C25.1667 25.4385 22.8281 27.7771 22.8281 30.6619C22.8281 33.5467 25.1667 35.8853 28.0516 35.8853Z" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M54.997 77.1621C50.4944 78.9463 45.5845 79.9289 40.4483 79.9289C18.6431 79.9289 0.96875 62.2546 0.96875 40.4493C0.96875 18.6441 18.6431 0.969727 40.4483 0.969727C62.2536 0.969727 79.9279 18.6441 79.9279 40.4493C79.9279 50.4049 76.2431 59.5006 70.1631 66.4437" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_5585_3155">
-                        <rect width="80.8986" height="88" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                        
-                    <h2 class="ft-32 mb-30">Happiness</h2>
-                    <p>We work hard, and at the same time, we want you to have a life outside of work. We are always looking for ways to make our workplace a happier one so that you don’t have to experience the Monday Morning Blues.</p>
-                </div>
-                <div class="wellness-card four">
-                    <svg class="mb-30" width="86" height="88" viewBox="0 0 86 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_5585_3166)">
-                        <path d="M78.8323 71.459C75.2562 71.459 72.3522 68.555 72.3522 64.9788V58.4987H78.8323C82.4085 58.4987 85.3125 61.4027 85.3125 64.9788C85.3125 68.555 82.4085 71.459 78.8323 71.459Z" fill="#F5918C"/>
-                        <path d="M50.7812 0.77832V15.5657" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M43.7188 4.69434V14.3718" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
-                        <path d="M47.2542 33.7525C51.1527 33.7525 54.3131 30.5922 54.3131 26.6937C54.3131 22.7951 51.1527 19.6348 47.2542 19.6348C43.3557 19.6348 40.1953 22.7951 40.1953 26.6937C40.1953 30.5922 43.3557 33.7525 47.2542 33.7525Z" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10"/>
-                        <path d="M36.9375 41.6421C36.9375 41.6421 48.8442 38.7978 57.5692 41.6421" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10"/>
-                        <path d="M31.0604 34.8422C31.0604 34.8422 25.1823 27.9494 12.5723 31.4762C15.3517 36.4979 17.9158 42.0542 17.9158 42.0542C17.9158 42.0542 11.3967 50.9245 6.16218 53.3821C3.06354 54.0232 0.390498 52.7411 0.818703 59.1538C1.24691 65.5665 1.11974 69.2672 5.52117 69.3062C9.04802 71.2292 22.8596 81.7475 28.4081 87.0442H32.563L36.3286 80.4213" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10"/>
-                        <path d="M33.6016 79.1885C33.6016 79.1885 45.1579 82.1755 57.5603 79.1885" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10"/>
-                        <path d="M76.8698 56.3618C76.5895 51.3868 75.0168 45.4517 70.2962 40.0874C63.3125 34.0095 59.5625 33.75 59.5625 33.75" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10"/>
-                        <path d="M54.9297 79.7386L60.2446 87.1945L64.55 86.9065L72.3459 73.0586" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10"/>
-                        <path d="M28.3438 36.9025C28.3438 36.9025 29.8048 34.4267 35.2184 33.752" stroke="#4C3737" stroke-width="3" stroke-miterlimit="10"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_5585_3166">
-                        <rect width="85.3088" height="88" fill="white"/>
-                        </clipPath>
-                        </defs>
-                        </svg>
-                        
-                    <h2 class="ft-32 mb-30">Knowledge</h2>
-                    <p>We offer an annual learning allowance to our team members for their professional development. We value your individual growth, as it is essential for our organization's growth.</p>
-                </div>
+            {% endfor %}
             </div>
         </div>
     </section>
