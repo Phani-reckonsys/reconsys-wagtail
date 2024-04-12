@@ -3,37 +3,39 @@
 <!-- Herosection starts -->
 <section>
   <div class="sidebar theme-darkgreen"></div>
-  <div class="ourwork-display pl-54 pr-54 pt-100 pb-180 w-container theme-darkgreen">
-        <h2 class="color-white mb-22 ">{{self.title}}</h2>
-        <p class="mb-40 color-light-white ft-20 w-70">
+  <div class="ourwork-display pt-100 pb-180 w-container theme-darkgreen">
+        <h2 class="pl-54 color-white mb-22 w-70 mb-64">{{self.title}}</h2>
+        <p class="pl-54 color-light-white ft-20 w-60 mb-72">
           {{self.subtitle}}
         </p>
-        <div class="category-container">
+        <div class="category-container pl-54  mb-120">
         <div class="category-wrapper">
-            {% for catergorytitle in self.catergorytitles %}
-                Users in 3 months
+            {% for categorytitle in self.categorytitles %}
+                {% for title in categorytitle.value %}
+                <p class="color-white">{{title}}</p>
+                {% endfor %}
             {% endfor %}
         </div>
         </div>
         {% for card in self.cards %}
-            <div class="our-works-card">
+            <div class="our-works-card {{card.value.bgcolor}}">
                 <div class="content">
-                    <h2 class="color-white">
+                    <h2 class="color-white w-80 mb-36">
                    {{card.value.title}}
                     </h2>
                     <p
-                    class="color-white opacity8"
+                    class="color-light-white opacity8 w-90 mb-54"
                     >
                     {{card.value.subtitle}}
                     </p>
                     <div class="stats-group">
                         <div class="stat">
-                            <h3>{{card.value.label1}}</h3>
-                            <p>{{card.value.data1}}</p>
+                            <h3 class="color-white mb-8">{{card.value.data1}}</h3>
+                            <p class="color-white">{{card.value.label1}}</p>
                         </div>
                         <div class="stat">
-                            <h3>{{card.value.label2}}</h3>
-                            <p>{{card.value.data2}}</p>
+                            <h3 class="color-white mb-8">{{card.value.data2}}</h3>
+                            <p class="color-white">{{card.value.label2}}</p>
                         </div>
                     </div>
                 </div>

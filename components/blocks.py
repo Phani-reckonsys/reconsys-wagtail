@@ -198,12 +198,13 @@ class OurWorkCard(StructBlock):
     data1 =CharBlock(clasname="data1", required=True)
     data2 =CharBlock(clasname="data2", required=True)
     image =ImageChooserBlock(required=False)
+    bgcolor = CharBlock(clasname="BackgroundColor", required=True)
 
 #OurWorks Display
 class OurWorksDisplayBlock(StructBlock):
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
-    categorytitles = StreamBlock([("category", ListBlock(CharBlock()))])
+    categorytitles = StreamBlock([("categories", ListBlock(CharBlock()))])
     cards = StreamBlock([("OurWorkCards", OurWorkCard())])
 
     class Meta:

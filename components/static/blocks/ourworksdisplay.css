@@ -1,0 +1,51 @@
+.ourwork-display > .category-container{
+    overflow-x: scroll;
+}
+
+.ourwork-display > .category-container > .category-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.ourwork-display > .our-works-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9rem 0 12rem 5.5rem;
+}
+.ourwork-display > .our-works-card.blue {
+    background-color: #0529AA;
+}
+
+.ourwork-display > .our-works-card.green {
+    background-color: #087561;
+}
+
+.ourwork-display > .our-works-card.paleblue {
+    background-color: #084775;
+}
+
+.ourwork-display > .our-works-card.pirple {
+    background-color: #2F2189;
+}
+
+.ourwork-display > .our-works-card.red {
+    background-color: #C01919;
+}
+
+.ourwork-display > .our-works-card.darkpink {
+    background-color: #7A1E55;
+}
+
+.ourwork-display > .our-works-card.brown {
+    background-color: #855836;
+}
+
+
+
+.ourwork-display > .our-works-card > .content > .stats-group{
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
