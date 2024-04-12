@@ -13,4 +13,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 5rem;
+  }
+
+  .career-main .right h2{
+    background: linear-gradient(180deg, #EF7160 0%, #941209 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 2rem;
+    margin-bottom: 19rem;
   }
