@@ -1,0 +1,51 @@
+{%load wagtailimages_tags%}
+
+<!-- Herosection starts -->
+<section>
+  <div class="sidebar theme-darkgreen"></div>
+  <div class="ourwork-display pl-54 pr-54 pt-100 pb-180 w-container theme-darkgreen">
+        <h2 class="color-white mb-22 ">{{self.title}}</h2>
+        <p class="mb-40 color-light-white ft-20 w-70">
+          {{self.subtitle}}
+        </p>
+        <div class="category-container">
+        <div class="category-wrapper">
+            {% for catergorytitle in self.catergorytitles %}
+                Users in 3 months
+            {% endfor %}
+        </div>
+        </div>
+        {% for card in self.cards %}
+            <div class="our-works-card">
+                <div class="content">
+                    <h2 class="color-white">
+                   {{card.value.title}}
+                    </h2>
+                    <p
+                    class="color-white opacity8"
+                    >
+                    {{card.value.subtitle}}
+                    </p>
+                    <div class="stats-group">
+                        <div class="stat">
+                            <h3>{{card.value.label1}}</h3>
+                            <p>{{card.value.data1}}</p>
+                        </div>
+                        <div class="stat">
+                            <h3>{{card.value.label2}}</h3>
+                            <p>{{card.value.data2}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-wrapper">
+                    {% image card.value.image max-3000x1500 class="card-image"%}
+                </div>
+            </div>
+        {% endfor %}
+        
+    </div>
+  </div>
+</section>
+<!-- Herosection Ends -->
+
+

@@ -188,3 +188,23 @@ class OurWorksHerosectionBlock(StructBlock):
 
     class Meta: 
         template = "blocks/ourworksherosection.html"
+
+
+class OurWorkCard(StructBlock):
+    title =CharBlock(clasname="title", required=True)
+    subtitle =CharBlock(clasname="title", required=True)
+    label1 =CharBlock(clasname="data title 1", required=True)
+    label2 =CharBlock(clasname="data title 2", required=True)
+    data1 =CharBlock(clasname="data1", required=True)
+    data2 =CharBlock(clasname="data2", required=True)
+    image =ImageChooserBlock(required=False)
+
+#OurWorks Display
+class OurWorksDisplayBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="title", required=True)
+    categorytitles = StreamBlock([("category", ListBlock(CharBlock()))])
+    cards = StreamBlock([("OurWorkCards", OurWorkCard())])
+
+    class Meta:
+        template = "blocks/ourworksdisplay.html"
