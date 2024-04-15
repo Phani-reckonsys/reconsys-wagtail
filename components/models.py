@@ -5,6 +5,7 @@ from wagtail.models import Orderable, ParentalKey, ClusterableModel
 
 @register_snippet
 class Navbar(ClusterableModel):
+    
     Contact_page = models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
     Contact_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
 

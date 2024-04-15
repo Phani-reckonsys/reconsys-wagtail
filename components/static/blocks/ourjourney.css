@@ -20,7 +20,8 @@
   }
 
   .our-journey-main .our-journey-card-container{
-    overflow-x: scroll;
+    overflow-x: hidden;
+    position: relative;
   }
 
   .our-journey-main .our-journey-card-container .our-journey-card-wrapper {
