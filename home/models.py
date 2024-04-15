@@ -3,7 +3,7 @@ from wagtail.models import Page, Orderable, ClusterableModel, StreamField
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -53,6 +53,11 @@ class HomePage(Page):
     blogs_crmemail = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     blogs_solvingcrmemail = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     blogs_clutchreview = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
+    body = StreamField([
+        ("hometesimonials", HomeTestimonialsBlock())
+
+        ], null=True)
     # Adding field panels
     
     content_panels = [TitleFieldPanel('title')]
@@ -65,6 +70,7 @@ class HomePage(Page):
     whyreckonsys_section_panel = [FieldPanel('home_whyreckonsys_title'), FieldPanel('home_whyreckonsys_subtitle'), FieldPanel('home_whyreckonsys_content'), InlinePanel('whyreckonsys_cards', label='card') ]
     casestudies_panel = [FieldPanel('home_casestudies_title'), FieldPanel('home_casestudies_subtitle'), InlinePanel('casestudies_cards', label='case studies card') ]  
     testimonial_panel = [FieldPanel('home_testimonials_title'), FieldPanel('home_testimonials_subtitle'), InlinePanel('testimonial_cards', label='testimonial card') ]  
+    body_panel = [FieldPanel('body')]
     edit_handler = TabbedInterface([
         ObjectList(content_panels, heading= 'Content'),
         ObjectList(image_panels, heading= 'Images'),
@@ -76,6 +82,7 @@ class HomePage(Page):
         ObjectList(whyreckonsys_section_panel, heading='Why Reckonsys'),
         ObjectList(casestudies_panel, heading='case studies'),
         ObjectList(testimonial_panel, heading='Testimonial'),
+        ObjectList(body_panel, heading='Body'),
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
     @property

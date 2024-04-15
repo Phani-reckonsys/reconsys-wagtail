@@ -1,0 +1,46 @@
+  <!-- Testimonials section starts -->
+    <section class="testimonials-section">
+      <div class="sidebar">
+        <h5 class="t-15">Testimonials</h5>
+      </div>
+      <div class="testimonials-main pl-54 pr-54 pt-100 w-container c-cream">
+        <div
+          class="testimonials-header d-flex flex-column align-items-center mb-84"
+        >
+          <h4 class="mb-16">{{self.title}}</h4>
+          <h2 class="w-75 text-center">
+            {{self.subtitle}}
+          </h2>
+        </div>
+        <div class="testimonials-container">
+        {% for card in self.testimonialcards %}
+            <div class="testimonial-card">
+                <h3 class="bb pb-33 mb-12">
+                {{card.value.review}}
+                </h3>
+                <div class="testimonial-profile">
+                <div class="testimonial-avatar"></div>
+                <div class="profile-content">
+                    <h5 class="ft-16">{{card.value.name}}</h5>
+                    <p class="ft-16">{{card.value.designation}}</p>
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+          <div class="testimonial-gradient"></div>
+          <a href="#" class="outline-btn testimonial-button"
+            >View More
+            <svg
+              width="27"
+              height="11"
+              viewBox="0 0 27 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 1H25L17.9577 10" stroke="#333333" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial section ends -->

@@ -7,7 +7,7 @@ from components.blocks import HeroSectionBlock
 # Create your models here.
 class ServicesPage(Page):
     body = StreamField(
-        [('herosecion', HeroSectionBlock()),('herosecion2', HeroSectionBlock())
+        [('herosection', HeroSectionBlock())
          
         ], null = True)
     # banner section

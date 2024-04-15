@@ -48,6 +48,12 @@ class ImageTitleCombo(StructBlock):
     title = CharBlock(classname="title", required=True)
     image = ImageChooserBlock(required=True)
 
+#Testimonial Card Basic Block
+class TestimonialCard(StructBlock):
+    review = CharBlock(classname="title", required=True)
+    Name = CharBlock(classname="title", required=True)
+    designation = CharBlock(classname="title", required=True)
+
 #----------Basic Blocks Ends------------------
 
 
@@ -60,9 +66,22 @@ class HeroSectionBlock(StructBlock):
     primary_button = StreamBlock([('button', PrimaryButtonBlock())])
     image_cover = ImageChooserBlock(required=False)
     image_decor = ImageChooserBlock(required= False)
+
     class Meta:
         icon = "title"
         template = "blocks/herosection.html"
+
+# HomePage Testimonail section
+class HomeTestimonialsBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="title", required=True)
+    testimonialcards = StreamBlock([('testimonialcard', TestimonialCard())])
+
+    class Meta:
+        template = "blocks/hometestimonials.html"
+
+
+    
 
 #OurMission Block
 class OurMissionBlock(StructBlock):
