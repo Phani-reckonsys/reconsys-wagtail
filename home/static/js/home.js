@@ -1,4 +1,19 @@
+const body = document.querySelector("body");
 
+//navbar interactivity part starts
+const menuBars = document.querySelector(".menu-bars");
+const mobileMenu = document.querySelector(".navigation-wrapper");
+const closeMenu = document.querySelector(".close-menu")
+
+menuBars.addEventListener("click",(event)=> {
+    mobileMenu.classList.add("menu-open")
+    body.style.overflow = "hidden";
+ });
+
+ closeMenu.addEventListener("click",(event)=> {
+    mobileMenu.classList.remove("menu-open");
+    body.style.overflow = "scroll";
+ });
   
   //industries section corousel'
   

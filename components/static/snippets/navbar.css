@@ -31,6 +31,10 @@
     margin-left: 5.4rem;
     font-family: "Satoshi-Black";
   }
+  nav .navigation-wrapper .half-logo{
+    display: flex;
+    margin-top: 2px;
+  }
   nav .navigation-wrapper .close-menu {
     display: none;
     cursor: pointer;

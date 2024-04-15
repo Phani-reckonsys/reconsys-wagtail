@@ -36,16 +36,16 @@
   .herosection-wrapper .herosection div .hero-carousel-indicator-group div.active {
     background-color: #f0493e;
   }
-  .herosection-wrapper .herosection div.geometric-shapes {
+  .herosection-wrapper .herosection .geometric-shapes {
     margin-left: auto;
     position: relative;
   }
-  .herosection-wrapper .herosection div.geometric-shapes .geometric-connection {
+  .herosection-wrapper .herosection .geometric-shapes .geometric-connection {
     position: absolute;
     right: -5.4rem;
     top: 0rem;
   }
-  .herosection-wrapper .herosection div.geometric-shapes .geometric-wave {
+  .herosection-wrapper .herosection .geometric-shapes .geometric-wave {
     position: absolute;
     top: 40rem;
     right: 15rem;
@@ -65,4 +65,170 @@
   }
   .herosection-wrapper .quick-testimonials .client-logos svg {
     display: inline-block;
+  }
+
+  @media only screen and (max-width: 992px) {
+    .herosection-wrapper {
+      overflow-x: hidden;
+    }
+    .herosection-wrapper .herosection div h1 {
+      font-size: 5rem;
+    }
+    .herosection-wrapper .herosection div .hero-carousel-indicator-group {
+      margin-top: 7.2rem;
+      margin-bottom: 7rem !important;
+      display: flex;
+      gap: 2rem;
+    }
+    .herosection-wrapper .herosection div .hero-carousel-indicator-group div {
+      width: 5.4rem;
+      height: 2px;
+      background-color: #333;
+    }
+    .herosection-wrapper .herosection div .hero-carousel-indicator-group div.active {
+      background-color: #f0493e;
+    }
+    .herosection-wrapper .herosection .geometric-shapes {
+      height: 25rem;
+      position: relative;
+    }
+    .herosection-wrapper .herosection .geometric-shapes .geometric-connection {
+      height: 50rem;
+      right: -12.6rem;
+    }
+    .herosection-wrapper .herosection .geometric-shapes .geometric-wave {
+      position: absolute;
+      bottom: 11rem;
+      right: 25rem;
+      width: 20rem;
+    }
+    .herosection-wrapper .quick-testimonials {
+      padding: 5rem 0;
+    }
+    .herosection-wrapper .quick-testimonials h5 {
+      margin-bottom: 2.6rem;
+    }
+    .herosection-wrapper .quick-testimonials .client-logos {
+      display: flex;
+      align-items: center;
+      gap: 3.3rem;
+    }
+    .herosection-wrapper .quick-testimonials .client-logos svg {
+      display: inline-block;
+    }
+    
+  }
+  @media only screen and (max-width: 768px) {
+    .herosection-wrapper {
+      padding-top: 8rem;
+    }
+    .herosection-wrapper .herosection {
+      flex-direction: column;
+      border-bottom: 1px solid #cac8c8;
+    }
+    .herosection-wrapper .herosection div h1 {
+      font-size: 5rem;
+    }
+    .herosection-wrapper .herosection div .hero-carousel-indicator-group {
+      margin-top: 7.2rem;
+      margin-bottom: 7rem !important;
+      display: flex;
+      gap: 2rem;
+    }
+    .herosection-wrapper .herosection div .hero-carousel-indicator-group div {
+      width: 5.4rem;
+      height: 2px;
+      background-color: #333;
+    }
+    .herosection-wrapper .herosection div .hero-carousel-indicator-group div.active {
+      background-color: #f0493e;
+    }
+    .herosection-wrapper .herosection .geometric-shapes {
+      height: 40rem;
+      position: relative;
+    }
+    .herosection-wrapper .herosection .geometric-shapes .geometric-connection {
+      height: 40rem;
+      width: auto;
+      position: absolute;
+      right: -3.6rem;
+    }
+    .herosection-wrapper .herosection .geometric-shapes .geometric-wave {
+      position: absolute;
+      top: 25rem;
+      right: 25rem;
+      width: 30rem;
+    }
+    .herosection-wrapper .quick-testimonials {
+      padding: 5rem 0;
+    }
+    .herosection-wrapper .quick-testimonials h5 {
+      margin-bottom: 2.6rem;
+    }
+    .herosection-wrapper .quick-testimonials .client-logos {
+      display: flex;
+      align-items: center;
+      gap: 3.3rem;
+    }
+    .herosection-wrapper .quick-testimonials .client-logos svg {
+      display: inline-block;
+    }
+    .services-main .software-services {
+      padding-top: 6rem;
+      flex-direction: column;
+    }
+    
+  }
+  @media only screen and (max-width: 576px) {
+    .herosection-wrapper {
+      padding-top: 8rem;
+    }
+    .herosection-wrapper .herosection {
+      border-bottom: 1px solid #cac8c8;
+    }
+    .herosection-wrapper .herosection div .hero-carousel-indicator-group {
+      margin-top: 7.2rem;
+      margin-bottom: 7rem !important;
+      display: flex;
+      gap: 2rem;
+    }
+    .herosection-wrapper .herosection div .hero-carousel-indicator-group div {
+      width: 5.4rem;
+      height: 2px;
+      background-color: #333;
+    }
+    .herosection-wrapper .herosection div .hero-carousel-indicator-group div.active {
+      background-color: #f0493e;
+    }
+    .herosection-wrapper .herosection .geometric-shapes {
+      height: 40rem;
+      position: relative;
+    }
+    .herosection-wrapper .herosection .geometric-shapes .geometric-connection {
+      height: 35rem;
+      width: auto;
+      position: absolute;
+      right: -3.6rem;
+    }
+    .herosection-wrapper .herosection .geometric-shapes .geometric-wave {
+      position: absolute;
+      top: 25rem;
+      right: 18rem;
+      width: 13rem;
+    }
+    .herosection-wrapper .quick-testimonials {
+      padding: 5rem 0;
+    }
+    .herosection-wrapper .quick-testimonials h5 {
+      margin-bottom: 2.6rem;
+    }
+    .herosection-wrapper .quick-testimonials .client-logos {
+      display: flex;
+      align-items: center;
+      gap: 3.3rem;
+    }
+    .herosection-wrapper .quick-testimonials .client-logos svg {
+      display: inline-block;
+    }
+    
   }
