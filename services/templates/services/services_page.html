@@ -19,6 +19,9 @@ Delete the line below if you're just getting started and want to remove the welc
 <link rel="stylesheet" href="{% static 'component_css/datasection.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/testimonials.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/faqsection.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/contact.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/footer.css' %}">
+
 
 {% endblock extra_css %}
 
@@ -32,5 +35,6 @@ Delete the line below if you're just getting started and want to remove the welc
 {% include "componentservice/datasection.html"%}
 {% include "componentservice/testimonials.html"%}
 {% include "componentservice/faqsection.html"%}
-
+{% contact %}
+{% footer %}
 {% endblock content %}

@@ -336,7 +336,10 @@
   }
   .case-studies-main .cards-container .cards-wrapper .case-study-card .content .data-value-wrapper {
     display: flex;
-    gap: 2rem;
+    gap: 2%;
+  }
+  .case-studies-main .cards-container .cards-wrapper .case-study-card .content .data-value-wrapper .data-value{
+    flex-basis: 49%;
   }
   .case-studies-main .cards-container .cards-wrapper .case-study-card .image-wrapper {
     flex-basis: 50%;

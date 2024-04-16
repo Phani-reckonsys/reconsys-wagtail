@@ -33,6 +33,7 @@ class ServicesPage(Page):
     faqsection_title_top = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     faqsection_title_bottom = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     # Panels
+    content_panels = [TitleFieldPanel('title')]
     banner_panels = [FieldPanel('banner_title'), InlinePanel('banner_row', label = 'label')]
     body_panels = [FieldPanel('body')]
     servicesoffered_panels = [FieldPanel('servicesoffered_title'),FieldPanel('servicesoffered_content'), InlinePanel('services_offered', label = 'label')]
@@ -42,6 +43,7 @@ class ServicesPage(Page):
     faqsection_panels = [FieldPanel('faqsection_title_top'), FieldPanel('faqsection_title_bottom'), InlinePanel('faqsection_faq')]
     testimonial_panels = [FieldPanel('testimonial_content'), FieldPanel('testimonial_name'), FieldPanel('testimonial_designation'), FieldPanel('testimonial_avatar')]
     edit_handler = TabbedInterface([
+        ObjectList(content_panels, heading= 'Content'),
         ObjectList(banner_panels, heading='Banner'),
         ObjectList(body_panels, heading='Body'),
         ObjectList(servicesoffered_panels, heading='Services Offered'),
@@ -49,7 +51,8 @@ class ServicesPage(Page):
         ObjectList(engagmentmodel_panels, heading='Engagment Model'),
         ObjectList(datasection_panels, heading='Data Section'),
         ObjectList(testimonial_panels, heading='Testimonial Section'),
-        ObjectList(faqsection_panels, heading='FAQ Section')
+        ObjectList(faqsection_panels, heading='FAQ Section'),
+        ObjectList(Page.promote_panels, heading='Promote'),
     ])
     @property
     def rowbanner(self):

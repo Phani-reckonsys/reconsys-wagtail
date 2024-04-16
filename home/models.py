@@ -183,12 +183,12 @@ class HomeCaseStudiesCard(Orderable):
     title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     data1 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    data2 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     label1 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    data2 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     label2 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "casestudies_cards")
-    panels = [FieldPanel('cover_image'),FieldPanel('title'), FieldPanel('subtitle'), FieldPanel('data1'), FieldPanel('data2'), FieldPanel('label1'), FieldPanel('label2')]
+    panels = [FieldPanel('cover_image'),FieldPanel('title'), FieldPanel('subtitle'), FieldPanel('data1'), FieldPanel('label1'), FieldPanel('data2'), FieldPanel('label2')]
 
 class HomeTestimonialCard(Orderable):
     name = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
