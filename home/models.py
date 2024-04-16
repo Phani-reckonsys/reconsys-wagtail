@@ -63,10 +63,9 @@ class HomePage(Page):
     
     content_panels = [TitleFieldPanel('title')]
     herosection_panels = [FieldPanel('herosection')]
-    image_panels = [FieldPanel('image'), FieldPanel('enquirebot_cofounder_image'), FieldPanel('casestudies_saascard_image'), FieldPanel('casestudies_seniorcentriccard_image'), FieldPanel('blogs_crmemail'), FieldPanel('blogs_solvingcrmemail'), FieldPanel('blogs_clutchreview'), FieldPanel('great_place_to_work_badge')]
     services_offered_panels = [FieldPanel('home_service_title'),FieldPanel('home_service_subtitle'), FieldPanel('home_service_content'),MultiFieldPanel(heading = "Service Button", children=(FieldPanel('home_service_button_text'), FieldPanel('home_service_button_icon') )), InlinePanel('service_cards', label='Service Card')]
     process_followed_panels = [FieldPanel('home_process_title'),FieldPanel('home_process_subtitle'), FieldPanel('home_process_technology_title'), FieldPanel('home_process_technology_content'), FieldPanel('dotted_mesh'), InlinePanel('process_cards', label='label'), InlinePanel('technologies_stack', label='Technologies Stack')]
-    rating_panels =  [FieldPanel('home_rating_title'), FieldPanel('home_rating_subtitle'), FieldPanel('home_rating_testimonial_title'), FieldPanel('home_rating_testimonial_content'), FieldPanel('home_rating_testimonial_name'), FieldPanel('home_rating_testimonial_designation')]
+    rating_panels =  [FieldPanel('home_rating_title'), FieldPanel('home_rating_subtitle'), FieldPanel('great_place_to_work_badge'), FieldPanel('home_rating_testimonial_title'), FieldPanel('home_rating_testimonial_content'), FieldPanel('home_rating_testimonial_name'), FieldPanel('home_rating_testimonial_designation'), FieldPanel('enquirebot_cofounder_image')]
     industries_section_panel = [FieldPanel('home_industries_title'), FieldPanel('home_industries_subtitle'), FieldPanel('home_industries_content'), InlinePanel('industries_cards', label='card') ]
     whyreckonsys_section_panel = [FieldPanel('home_whyreckonsys_title'), FieldPanel('home_whyreckonsys_subtitle'), FieldPanel('home_whyreckonsys_content'), InlinePanel('whyreckonsys_cards', label='card') ]
     casestudies_panel = [FieldPanel('home_casestudies_title'), FieldPanel('home_casestudies_subtitle'), InlinePanel('casestudies_cards', label='case studies card') ]  
@@ -74,7 +73,6 @@ class HomePage(Page):
     body_panel = [FieldPanel('body')]
     edit_handler = TabbedInterface([
         ObjectList(content_panels, heading= 'Content'),
-        ObjectList(image_panels, heading= 'Images'),
         ObjectList(herosection_panels, heading= 'Herosection'),
         ObjectList(services_offered_panels, heading='Service  Offered'),
         ObjectList(process_followed_panels, heading='Process Followed'),

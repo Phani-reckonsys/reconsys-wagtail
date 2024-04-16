@@ -1,10 +1,11 @@
 .blog-section .blog-cards-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 3vw;
   }
   .blog-section .blog-cards-wrapper .blog-card {
     min-width: 39.2rem;
+    width: 32vw;
     width: 30%;
     margin-bottom: 10rem;
   }

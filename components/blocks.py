@@ -213,6 +213,7 @@ class OurWorksHerosectionBlock(StructBlock):
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
     content = CharBlock(classname="title", required=True)
+    primary_button = StreamBlock([('button', PrimaryButtonBlock())])
     image = ImageChooserBlock(required=False)
 
     class Meta: 

@@ -1,0 +1,6 @@
+{%load wagtailimages_tags%}
+
+<a href="{{self.link.get_url}}" class="primary-btn">
+    {{self.title}}
+    {% image self.icon max-300x200%}
+</a>

@@ -13,20 +13,9 @@
         <p class="mb-40 color-light-white ft-20 w-70">
           {{self.content}}
         </p>
-        <a
-          href="#"
-          class="primary-btn min-width-29 justify-content-between mt-40"
-          >Work with us
-          <svg
-            width="28"
-            height="11"
-            viewBox="0 0 28 11"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0 1H25L17.9577 10" stroke="#F7F5F4" stroke-width="2" />
-          </svg>
-        </a>
+        {% for button in self.primary_button  %}
+            {{button}}
+        {% endfor %}
       </div>
       <div class="ourworks-heroimage-container">
         {% image self.image max-3000x1500 class="ourworks-heroimage"%}
