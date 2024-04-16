@@ -65,46 +65,16 @@
                 <a href="#" class="color-light-white">{{socialitem.name}}</a>
               </h3>
             {% endfor %}
-              
-              
-              <h3 class="color-light-white ft-16 mb-16 f-400">
-                <a href="#"></a>LinkedIn
-              </h3>
-              <h3 class="color-light-white ft-16 mb-16 f-400">
-                <a href="#"></a>Instagram
-              </h3>
-              <h3 class="color-light-white ft-16 mb-16 f-400">
-                <a href="#"></a>Youtube
-              </h3>
             </div>
             <div class="custom-col">
               <h3 class="color-white ft-16 mb-22 ft-900">Company</h3>
-              <a href="./services.html"
-                ><h3 class="color-light-white ft-16 mb-16 f-400">
-                  Services
-                </h3></a
-              >
-              <a href="./our-works.html"
-                ><h3 class="color-light-white ft-16 mb-16 f-400">
-                  Our Work
-                </h3></a
-              >
-              <a href="./aboutus.html"
-                ><h3 class="color-light-white ft-16 mb-16 f-400">
-                  About Us
-                </h3></a
-              >
-              <a href="./blogs.html"
-                ><h3 class="color-light-white ft-16 mb-16 f-400">Blogs</h3></a
-              >
-              <a href="./career.html"
-                ><h3 class="color-light-white ft-16 mb-16 f-400">Careers</h3></a
-              >
-              <a href="#"
-                ><h3 class="color-light-white ft-16 mb-16 f-400">
-                  Privacy Policy
-                </h3></a
-              >
+              {% for footeritem in footeritems %}
+                <a href="./services.html">
+                  <h3 class="color-light-white ft-16 mb-16 f-400">
+                    {{footeritem.name}}
+                  </h3> 
+                </a>
+              {% endfor %}
             </div>
             <div class="custom-col">
               <h4 class="color-white">
