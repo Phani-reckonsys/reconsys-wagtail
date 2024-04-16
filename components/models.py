@@ -21,8 +21,25 @@ class NavItem(Orderable, models.Model):
 
 
 @register_snippet
-class Footer(models.Model):
-   pass
+class Footer(ClusterableModel):
+
+    # navbar content variables
+    panels = [InlinePanel('socialitems', heading='socialitems'), InlinePanel('footeritems', heading='footeritems')]
+
+class SocialItems(Orderable, models.Model):
+    name = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
+    url = models.URLField(null=True, blank=True)
+
+    navbar = ParentalKey(Footer, on_delete = models.CASCADE, related_name="socialitems")
+    panels = [FieldPanel("name"), FieldPanel("url")]
+
+class FooterItems(Orderable, models.Model):
+    name = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
+    url = models.URLField(null=True, blank=True)
+
+    navbar = ParentalKey(Footer, on_delete = models.CASCADE, related_name="footeritems")
+    panels = [FieldPanel("name"), FieldPanel("url")]
+
 
 @register_snippet
 class Contact(models.Model):

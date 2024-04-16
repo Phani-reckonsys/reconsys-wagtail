@@ -21,7 +21,10 @@ def contact(context):
 
 @register.inclusion_tag('snippets/footer.html', takes_context=True)
 def footer(context):
+    footer = Footer.objects.first()
     return {
         'footer': Footer.objects.first(),
+        'footeritems': footer.footeritems.all(),
+        'socialitems': footer.socialitems.all(),
         'request': context['request'],
     }
