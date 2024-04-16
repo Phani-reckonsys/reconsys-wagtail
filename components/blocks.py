@@ -6,7 +6,8 @@ from wagtail.blocks import (
     StructBlock,
     BooleanBlock,
     PageChooserBlock,
-    ListBlock
+    ListBlock,
+    URLBlock,
 )
 from wagtail.models import StreamField
 from wagtail.embeds.blocks import EmbedBlock
@@ -40,8 +41,9 @@ class TitleGroupBasicBlock(StructBlock):
 class BlogsCard(StructBlock):
     image = ImageChooserBlock(required = False)
     title = CharBlock(classname="title", required=True)
-    category = CharBlock(classname="subtitle", required=True)
-    info = CharBlock(classname="subtitle", required=True)
+    category = CharBlock(classname="category", required=True)
+    info = CharBlock(classname="info", required=True)
+    link = URLBlock(classname="link", required=True)
 
 #ImageTitle Combo Basic Block
 class ImageTitleCombo(StructBlock):
@@ -80,6 +82,14 @@ class HomeTestimonialsBlock(StructBlock):
     class Meta:
         template = "blocks/hometestimonials.html"
 
+# HomePage Blogs Section
+class HomeBlogsBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="title", required=True)
+    blogcard = StreamBlock([('blogcard', BlogsCard())])
+
+    class Meta:
+        template = "blocks/homeblogs.html"
 
     
 

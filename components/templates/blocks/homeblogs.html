@@ -1,0 +1,42 @@
+{%load wagtailimages_tags%}    
+    
+    <!--Blogs section starts -->
+    <section class="blogs-section">
+      <div class="sidebar">
+        <h5>Blogs</h5>
+      </div>
+      <div class="blogs-main pl-54 pr-54 pt-100 pb-180 w-container">
+        <div class="blogs-header d-flex flex-column align-items-center mb-84">
+          <h4 class="mb-16 lh-110">{{self.title}}</h4>
+          <h2 class="w-70 text-center">
+            {{self.subtitle}}
+          </h2>
+        </div>
+        <div class="blogs-container mb-72">
+        {% for card in self.blogcard %}
+        <a href = "{{card.value.link}}" class="blog-card">
+            {% comment %} <img src="./res/images/crm-technology.png" alt="" class="mb-16" /> {% endcomment %}
+            {% image card.value.image class='mb-16' max-3000x1500%}
+            <h6 class="mb-8 gradient-text">{{card.value.category}}</h6>
+            <h4 class="mb-16 ft-1">
+             {{card.value.title}}
+            </h4>
+            <p>{{card.value.info}}</p>
+          </a>
+        {% endfor %}
+        </div>
+        <a href="./blogs.html" class="outline-btn m-auto">
+          View all Blogs
+          <svg
+            width="27"
+            height="11"
+            viewBox="0 0 27 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 1H25L17.9577 10" stroke="#333333" />
+          </svg>
+        </a>
+      </div>
+    </section>
+    <!-- Blogs section Ends -->
