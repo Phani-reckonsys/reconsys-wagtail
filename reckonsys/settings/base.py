@@ -62,6 +62,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "reckonsys.urls"
 
+SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
