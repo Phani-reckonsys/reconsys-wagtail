@@ -3,6 +3,8 @@ services:
   wagtail:
     build: .
     restart: always
+    ports:
+      - 8000:8000
     volumes:
       - /www/wagtail_data/media:/app/media
       - /www/wagtail_data/db.sqlite3:/app/db.sqlite3
