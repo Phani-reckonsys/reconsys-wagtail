@@ -1,5 +1,5 @@
 from django import template
-from components.models import Navbar, Contact, Footer, NavbarGreen
+from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey
 register = template.Library()
 # ...
 # Advert snippets
@@ -18,6 +18,15 @@ def navbargreen(context):
     return {
         'navbargreen': navbargreen,
         'navitemsgreen': navbargreen.navitemsgreen.all(),
+        'request': context['request'],
+    }
+
+@register.inclusion_tag('snippets/navbargrey.html', takes_context=True)
+def navbargrey(context):
+    navbargrey  = NavbarGrey.objects.first()
+    return {
+        'navbargrey': navbargrey,
+        'navitemsgrey': navbargrey.navitemsgrey.all(),
         'request': context['request'],
     }
 
