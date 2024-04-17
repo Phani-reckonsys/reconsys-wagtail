@@ -62,7 +62,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "reckonsys.urls"
 
-SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"
+CSRF_TRUSTED_ORIGINS=["https://reckonsys-wagtail-qa-alb-606896497.ap-south-1.elb.amazonaws.com"]
+USE_X_FORWARDED_HOST = True
 
 TEMPLATES = [
     {
