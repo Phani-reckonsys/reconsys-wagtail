@@ -46,4 +46,19 @@ class FooterItems(Orderable, models.Model):
 class Contact(models.Model):
    pass
 
-  
+@register_snippet
+class NavbarGreen(ClusterableModel):
+    Home_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    Contact_page = models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
+    Contact_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    bgcolor = models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
+
+    # navbar content variables
+    panels = [InlinePanel('navitemsgreen', heading='navbargreen'), FieldPanel("Contact_page"), FieldPanel("bgcolor"), PageChooserPanel("Contact_page_link"), PageChooserPanel("Home_page_link")]
+
+class NavItemGreen(Orderable, models.Model):
+    name = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
+    link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
+    navbar = ParentalKey(NavbarGreen, on_delete = models.CASCADE, related_name="navitemsgreen")
+    panels = [FieldPanel("name"), PageChooserPanel("link")] 
