@@ -240,3 +240,9 @@ class OurWorksDisplayBlock(StructBlock):
 
     class Meta:
         template = "blocks/ourworksdisplay.html"
+
+class ContactUsTestimonialBlock(StructBlock):
+    testimonialcards = StreamBlock([('testimonialcard', TestimonialCard())])
+
+    class Meta:
+        template = "blocks/contactustestimonial.html"

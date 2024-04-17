@@ -3,7 +3,7 @@ from wagtail.models import Page, Orderable, ClusterableModel, StreamField
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -208,7 +208,7 @@ class HomeTestimonialCard(Orderable):
 
 class AboutusPage(Page):
     body = StreamField(
-        [('herosecion', HeroSectionBlock()),
+        [('herosection', HeroSectionBlock()),
          ('ourmission', OurMissionBlock()),
          ('ourvision', OurVisionBlock()),
          ('ourvalues', OurValuesBlock()),
@@ -229,7 +229,7 @@ class AboutusPage(Page):
 
 class BlogPage(Page):
     body = StreamField(
-        [('herosecion', HeroSectionBlock()),
+        [('herosection', HeroSectionBlock()),
          ('ourmission', OurMissionBlock()),
          ('ourvision', OurVisionBlock()),
          ('ourvalues', OurValuesBlock()),
@@ -251,7 +251,7 @@ class BlogPage(Page):
 
 class CareerPage(Page):
     body = StreamField(
-        [('herosecion', HeroSectionBlock()),
+        [('herosection', HeroSectionBlock()),
          ('ourmission', OurMissionBlock()),
          ('ourvision', OurVisionBlock()),
          ('ourvalues', OurValuesBlock()),
@@ -277,7 +277,7 @@ class CareerPage(Page):
 
 class OurworksPage(Page):
     body = StreamField(
-        [('herosecion', HeroSectionBlock()),
+        [('herosection', HeroSectionBlock()),
          ('ourmission', OurMissionBlock()),
          ('ourvision', OurVisionBlock()),
          ('ourvalues', OurValuesBlock()),
@@ -291,6 +291,34 @@ class OurworksPage(Page):
          ('BenifitsBlock', BenifitsBlock()),
          ('OurworksHerosection', OurWorksHerosectionBlock()),
          ('OurworksDisplay', OurWorksDisplayBlock()),
+         
+        ], null = True)
+    
+    body_panels = [FieldPanel('body')]
+
+    edit_handler = TabbedInterface([
+        ObjectList(Page.content_panels, heading= 'Content'),
+        ObjectList(body_panels, heading= 'Body'),
+        ObjectList(Page.promote_panels, heading='Promote'),
+    ])
+
+class ContactusPage(Page):
+    body = StreamField(
+        [('herosection', HeroSectionBlock()),
+         ('ourmission', OurMissionBlock()),
+         ('ourvision', OurVisionBlock()),
+         ('ourvalues', OurValuesBlock()),
+         ('ourjourney', OurJourneyBlock()),
+         ('ourgallery', OurGalleryBlock()),
+         ('ourtestimonial', OurTestimonialBlock()),
+         ('blogsherosection', BlogsHerosection()),
+         ('coverImage', CoverImageBlock()),
+         ('culture', CultureBlock()),
+         ('onecolscrollersection', OneColScrollerSection()),
+         ('BenifitsBlock', BenifitsBlock()),
+         ('OurworksHerosection', OurWorksHerosectionBlock()),
+         ('OurworksDisplay', OurWorksDisplayBlock()),
+         ('ContactusTesimonial', ContactUsTestimonialBlock()),
          
         ], null = True)
     

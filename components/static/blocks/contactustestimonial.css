@@ -1,0 +1,12 @@
+.contactustestimonial-wrapper .contactus-testimonial {
+    display: flex;
+    margin-bottom: 19rem;
+    justify-content: space-between;
+  }
+  .contactustestimonial-wrapper .contactus-testimonial .rating-cards {
+    width: 28.4rem;
+  }
+  .contactustestimonial-wrapper .contactus-testimonial .rating-cards.clutch-rating {
+    background: #171616;
+    padding: 2.8rem 6.2rem 3.5rem 2.4rem;
+  }

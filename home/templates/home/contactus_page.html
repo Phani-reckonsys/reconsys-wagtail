@@ -22,12 +22,13 @@ Delete the line below if you're just getting started and want to remove the welc
 <link rel="stylesheet" href="{% static 'blocks/ourtestimonial.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/blogsherosection.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/blogswrapper.css' %}">
+<link rel="stylesheet" href="{% static 'blocks/contactustestimonial.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
     {% navbar %}
-    {{page.body}}
     {% contact %}
+    {{page.body}}
     {% footer %}
 {% endblock content %}
 
