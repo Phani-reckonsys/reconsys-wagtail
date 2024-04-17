@@ -96,11 +96,17 @@ class ServicesOffered(Orderable):
 
 class BusinessHelpedCard(ClusterableModel):
     title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    pointer_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    point1 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    point2 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    point3 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    point4 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    point5 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     footer_image_1 = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     footer_image_2 = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
 
     page = ParentalKey(ServicesPage, on_delete=models.CASCADE, related_name = "business_helped_card")
-    panels = [FieldPanel('title'), InlinePanel('business_helped_card_point', label= 'label'), FieldPanel('footer_image_1'), FieldPanel('footer_image_2')]
+    panels = [FieldPanel('title'), FieldPanel('pointer_icon'), FieldPanel('point1'), FieldPanel('point2'), FieldPanel('point3'), FieldPanel('point4'), FieldPanel('point5'), FieldPanel('footer_image_1'), FieldPanel('footer_image_2')]
     
     @property
     def cardpointbusinesshelped(self):

@@ -90,7 +90,8 @@
   .process-section .process-main .process-map .process-map-card .ul-connecting-line {
     position: absolute;
     left: 3.5rem;
-    top: 6rem;
+    top: 9rem;
+    height: 15rem;
   }
   .process-section .process-main .process-map .process-map-card ul {
     position: relative;
@@ -463,7 +464,6 @@
     .process-section .process-main .process-map .process-map-card .ul-connecting-line {
       position: absolute;
       left: 3.5rem;
-      top: 5rem;
       height: 20rem;
     }
     .process-section .process-main .process-map .process-map-card ul {

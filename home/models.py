@@ -131,7 +131,7 @@ class HomeProcessCard(Orderable):
     point4 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "process_cards")
-    panels = [FieldPanel('pointer_icon'),FieldPanel('point1'), FieldPanel('point2'), FieldPanel('point3'), FieldPanel('point4'), FieldPanel('title')]
+    panels = [FieldPanel('pointer_icon'), FieldPanel('final_pointer_icon'), FieldPanel('point1'), FieldPanel('point2'), FieldPanel('point3'), FieldPanel('point4'), FieldPanel('title')]
 
 class TechnologiesStack(ClusterableModel):
     title = models.CharField(max_length = 255, blank = True, help_text = "Technology Stack Group Name")

@@ -16,14 +16,36 @@
                                 <h3>{{business_helped_card.title}}</h3>    
                             </div>
                             <ul>
-                                {% for business_helped_card_point in business_helped_card.cardpointbusinesshelped%}
                                 <li>
-                                    {% image business_helped_card_point.pointer_icon max-3000x1500%}
+                                    {% image business_helped_card.pointer_icon max-3000x1500%}
                                     <p class="ft-16">
-                                    {{business_helped_card_point.point}}
+                                    {{business_helped_card.point1}}
                                     </p>
                                 </li>
-                                {% endfor %}
+                                <li>
+                                    {% image business_helped_card.pointer_icon max-3000x1500%}
+                                    <p class="ft-16">
+                                    {{business_helped_card.point2}}
+                                    </p>
+                                </li>
+                                <li>
+                                    {% image business_helped_card.pointer_icon max-3000x1500%}
+                                    <p class="ft-16">
+                                    {{business_helped_card.point3}}
+                                    </p>
+                                </li>
+                                <li>
+                                    {% image business_helped_card.pointer_icon max-3000x1500%}
+                                    <p class="ft-16">
+                                    {{business_helped_card.point4}}
+                                    </p>
+                                </li>
+                                <li>
+                                    {% image business_helped_card.pointer_icon max-3000x1500%}
+                                    <p class="ft-16">
+                                    {{business_helped_card.point5}}
+                                    </p>
+                                </li>
                             </ul>
                         </div>
                         <div class="sector-card-footer">

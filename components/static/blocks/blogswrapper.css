@@ -11,7 +11,8 @@
   }
   .blog-section .blog-cards-wrapper .blog-card:hover {
     box-shadow: 1px 1px 4px 4px #f7f7f7;
-    transform: scale(1.005);
+    transform: scale(1.05);
+    padding: 1.6rem;
   }
   .blog-section .blog-cards-wrapper .blog-card img {
     width: 100%;
