@@ -4,6 +4,7 @@
     background-color: #493F3F;
     position: relative;
     top: 24rem;
+    display: none;
   }
   .our-journey-main .line-slider .slider-marker {
     position: absolute;
@@ -32,4 +33,9 @@
   .our-journey-main .our-journey-card-container .our-journey-card-wrapper .our-journey-card {
     width: 28rem;
     object-fit: cover;
+  }
+
+  .our-journey-main .our-journey-card-container .our-journey-card-wrapper .our-journey-card img{
+    width: 28rem;
+    object-fit: contain;
   }
