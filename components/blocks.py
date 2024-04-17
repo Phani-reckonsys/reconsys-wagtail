@@ -64,7 +64,8 @@ class TestimonialCard(StructBlock):
 #Herosection Block
 class HeroSectionBlock(StructBlock):
     titles = StreamBlock([('title', TitleGroupBasicBlock())])
-    include_quick_testimonials = BooleanBlock(required=False)
+    include_companies = BooleanBlock(required=False)
+    include_fullimage = BooleanBlock(required=False)
     primary_button = StreamBlock([('button', PrimaryButtonBlock())])
     image_cover = ImageChooserBlock(required=False)
     image_decor = ImageChooserBlock(required= False)

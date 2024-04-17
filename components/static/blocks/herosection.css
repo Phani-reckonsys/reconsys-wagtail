@@ -45,6 +45,13 @@
     right: -5.4rem;
     top: 0rem;
   }
+
+  .herosection-wrapper .herosection .geometric-shapes .geometric-connection.custom-hero-fullimage {
+    position: absolute;
+    right: -5.4rem;
+    top: -12rem;
+  }
+
   .herosection-wrapper .herosection .geometric-shapes .geometric-wave {
     position: absolute;
     top: 40rem;
