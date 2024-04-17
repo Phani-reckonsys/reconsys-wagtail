@@ -11,18 +11,21 @@ class HomePage(Page):
          
         ], null = True)
     # services section content
-    home_service_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    home_service_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Side Title")
+    home_service_title = models.CharField(max_length = 255, blank=True, help_text = "Services Title")
     home_service_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_service_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_service_button_text = models.CharField(max_length= 255, blank = True, help_text= "card title")
     home_service_button_icon = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete= models.SET_NULL, related_name = "+")
     # process section content
+    home_process_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_technology_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_technology_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     dotted_mesh = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     # Rating Section Content
+    home_rating_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_rating_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_rating_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_rating_testimonial_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -30,6 +33,7 @@ class HomePage(Page):
     home_rating_testimonial_name = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_rating_testimonial_designation = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     #industries section content
+    home_industries_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_industries_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_industries_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_industries_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -64,10 +68,10 @@ class HomePage(Page):
     
     content_panels = [TitleFieldPanel('title')]
     herosection_panels = [FieldPanel('herosection')]
-    services_offered_panels = [FieldPanel('home_service_title'),FieldPanel('home_service_subtitle'), FieldPanel('home_service_content'),MultiFieldPanel(heading = "Service Button", children=(FieldPanel('home_service_button_text'), FieldPanel('home_service_button_icon') )), InlinePanel('service_cards', label='Service Card')]
-    process_followed_panels = [FieldPanel('home_process_title'),FieldPanel('home_process_subtitle'), FieldPanel('home_process_technology_title'), FieldPanel('home_process_technology_content'), FieldPanel('dotted_mesh'), InlinePanel('process_cards', label='label'), InlinePanel('technologies_stack', label='Technologies Stack')]
-    rating_panels =  [FieldPanel('home_rating_title'), FieldPanel('home_rating_subtitle'), FieldPanel('great_place_to_work_badge'), FieldPanel('home_rating_testimonial_title'), FieldPanel('home_rating_testimonial_content'), FieldPanel('home_rating_testimonial_name'), FieldPanel('home_rating_testimonial_designation'), FieldPanel('enquirebot_cofounder_image')]
-    industries_section_panel = [FieldPanel('home_industries_title'), FieldPanel('home_industries_subtitle'), FieldPanel('home_industries_content'), InlinePanel('industries_cards', label='card') ]
+    services_offered_panels = [FieldPanel('home_service_sidetitle'), FieldPanel('home_service_title'),FieldPanel('home_service_subtitle'), FieldPanel('home_service_content'),MultiFieldPanel(heading = "Service Button", children=(FieldPanel('home_service_button_text'), FieldPanel('home_service_button_icon') )), InlinePanel('service_cards', label='Service Card')]
+    process_followed_panels = [FieldPanel('home_process_sidetitle'), FieldPanel('home_process_title'), FieldPanel('home_process_subtitle'), FieldPanel('home_process_technology_title'), FieldPanel('home_process_technology_content'), FieldPanel('dotted_mesh'), InlinePanel('process_cards', label='label'), InlinePanel('technologies_stack', label='Technologies Stack')]
+    rating_panels =  [FieldPanel('home_rating_sidetitle'), FieldPanel('home_rating_title'), FieldPanel('home_rating_subtitle'), FieldPanel('great_place_to_work_badge'), FieldPanel('home_rating_testimonial_title'), FieldPanel('home_rating_testimonial_content'), FieldPanel('home_rating_testimonial_name'), FieldPanel('home_rating_testimonial_designation'), FieldPanel('enquirebot_cofounder_image')]
+    industries_section_panel = [FieldPanel('home_industries_sidetitle'), FieldPanel('home_industries_title'), FieldPanel('home_industries_subtitle'), FieldPanel('home_industries_content'), InlinePanel('industries_cards', label='card') ]
     whyreckonsys_section_panel = [FieldPanel('home_whyreckonsys_title'), FieldPanel('home_whyreckonsys_subtitle'), FieldPanel('home_whyreckonsys_content'), InlinePanel('whyreckonsys_cards', label='card') ]
     casestudies_panel = [FieldPanel('home_casestudies_title'), FieldPanel('home_casestudies_subtitle'), InlinePanel('casestudies_cards', label='case studies card') ]  
     testimonial_panel = [FieldPanel('home_testimonials_title'), FieldPanel('home_testimonials_subtitle'), InlinePanel('testimonial_cards', label='testimonial card') ]  
