@@ -62,7 +62,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "reckonsys.urls"
 
-CSRF_TRUSTED_ORIGINS=["https://reckonsys-wagtail-qa-alb-606896497.ap-south-1.elb.amazonaws.com"]
+CSRF_TRUSTED_ORIGINS=[
+    "https://reckonsys-wagtail-qa-alb-606896497.ap-south-1.elb.amazonaws.com",
+    "https://qa.reckonsys.com",
+]
 USE_X_FORWARDED_HOST = True
 
 TEMPLATES = [
