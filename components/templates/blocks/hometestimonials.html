@@ -15,15 +15,15 @@
         <div class="testimonials-container">
         {% for card in self.testimonialcards %}
             <div class="testimonial-card">
-                <h3 class="bb pb-33 mb-12">
+                <h3 class="bb pb-33 mb-12 ft-20">
                 {{card.value.review}}
                 </h3>
                 <div class="testimonial-profile">
-                <div class="testimonial-avatar"></div>
-                <div class="profile-content">
-                    <h5 class="ft-16">{{card.value.name}}</h5>
-                    <p class="ft-16">{{card.value.designation}}</p>
-                </div>
+                  <div class="testimonial-avatar"></div>
+                  <div class="profile-content">
+                      <h5 class="ft-16">{{card.value.name}}</h5>
+                      <p class="ft-16">{{card.value.designation}}</p>
+                  </div>
                 </div>
             </div>
         {% endfor %}

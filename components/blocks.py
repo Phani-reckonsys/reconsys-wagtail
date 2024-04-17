@@ -53,7 +53,7 @@ class ImageTitleCombo(StructBlock):
 #Testimonial Card Basic Block
 class TestimonialCard(StructBlock):
     review = CharBlock(classname="title", required=True)
-    Name = CharBlock(classname="title", required=True)
+    name = CharBlock(classname="title", required=True)
     designation = CharBlock(classname="title", required=True)
 
 #----------Basic Blocks Ends------------------

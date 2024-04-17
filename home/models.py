@@ -33,6 +33,7 @@ class HomePage(Page):
     home_industries_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_industries_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_industries_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+
     # Why Reckonsys
     home_whyreckonsys_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_whyreckonsys_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -122,7 +123,7 @@ class HomeServiceCard(Orderable):
 
 class HomeProcessCard(Orderable):
     pointer_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    line_svg = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    final_pointer_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     point1 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     point2 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -155,20 +156,25 @@ class IndustriesSectionCard(ClusterableModel):
     footer_testimonial1 = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     footer_testimonial2 = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     card_title = models.CharField(max_length= 255, blank = True, help_text= "card title")
+    pointer_icon = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete= models.SET_NULL, related_name = "+")
+    point1 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    point2 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    point3 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    point4 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    point5 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "industries_cards")
-    panels = [FieldPanel('card_icon'), FieldPanel('card_title'), FieldPanel('footer_testimonial1'), FieldPanel('footer_testimonial2'), InlinePanel('industries_cards_point', label= 'label')]
+    panels = [FieldPanel('card_icon'), FieldPanel('card_title'), FieldPanel('pointer_icon'), FieldPanel('point1'), FieldPanel('point2'),  FieldPanel('point3'), FieldPanel('point4'), FieldPanel('point5'), FieldPanel('footer_testimonial1'), FieldPanel('footer_testimonial2')]
 
     @property
     def cardindustriespoint(self):
         return self.industries_cards_point.all()
 
 class IndusrtrialSectionCardPoint(Orderable):
-    pointer_icon = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete= models.SET_NULL, related_name = "+")
     point = models.CharField(max_length= 255, blank = True, help_text= "card title")
 
     indusrtrial_section_card = ParentalKey(IndustriesSectionCard, on_delete = models.CASCADE, related_name = "industries_cards_point")
-    panels = [FieldPanel('pointer_icon'), FieldPanel('point')]
+    panels = [ FieldPanel('point')]
 
 class HomeWhyReckonsyCard(Orderable):
     image= models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")

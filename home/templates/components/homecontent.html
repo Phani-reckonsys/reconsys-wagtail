@@ -198,10 +198,28 @@
             {% for process_card in page.cardprocess %}
                 <div class="process-map-card">
                      <h6>{{process_card.title}}</h6>
+                     <svg
+              class="ul-connecting-line"
+              width="1"
+              height="181"
+              viewBox="0 0 1 181"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="0.5"
+                y1="2.18557e-08"
+                x2="0.499992"
+                y2="181"
+                stroke="white"
+                stroke-opacity="0.31"
+                stroke-dasharray="5 5"
+              />
+            </svg>
                     <ul>
                         <li>
                             {% image process_card.pointer_icon max-3000x1500%}
-                             <p class="ft-20 color-white lh-140">{{process_card.point1}}</p>
+                            <p class="ft-20 color-white lh-140">{{process_card.point1}}</p>
                         </li>
                         <li>
                             {% image process_card.pointer_icon max-3000x1500%}
@@ -212,8 +230,8 @@
                              <p class="ft-20 color-white lh-140">{{process_card.point3}}</p>
                         </li>
                         <li>
-                            {% image process_card.pointer_icon max-3000x1500%}
-                             <p class="ft-20 color-white lh-140">{{process_card.point4}}</p>
+                            {% image process_card.final_pointer_icon max-3000x1500%}
+                            <p class="ft-20 color-white lh-140">{{process_card.point4}}</p>
                         </li>
                     </ul>
                 </div>
@@ -1315,14 +1333,36 @@
                     <h3 class="lh-125">{{industries_cards.card_title}}</h3>
                   </div>
                   <ul>
-                    {% for industries_card_point in industries_cards.cardindustriespoint %} 
                         <li>
-                        {% image industries_card_point.pointer_icon max-3000x1500%}
+                        {% image industries_cards.pointer_icon max-3000x1500%}
                           <p class="ft-16 lh-145 o-8">
-                          {{industries_card_point.point}}
+                          {{industries_cards.point1}}
                           </p>
                         </li> 
-                    {% endfor %} 
+                        <li>
+                        {% image industries_cards.pointer_icon max-3000x1500%}
+                          <p class="ft-16 lh-145 o-8">
+                          {{industries_cards.point2}}
+                          </p>
+                        </li> 
+                        <li>
+                        {% image industries_cards.pointer_icon max-3000x1500%}
+                          <p class="ft-16 lh-145 o-8">
+                          {{industries_cards.point3}}
+                          </p>
+                        </li> 
+                        <li>
+                        {% image industries_cards.pointer_icon max-3000x1500%}
+                          <p class="ft-16 lh-145 o-8">
+                          {{industries_cards.point4}}
+                          </p>
+                        </li> 
+                        <li>
+                        {% image industries_cards.pointer_icon max-3000x1500%}
+                          <p class="ft-16 lh-145 o-8">
+                          {{industries_cards.point5}}
+                          </p>
+                        </li> 
                   </ul>
                 </div>
                 <div class="sector-card-footer">

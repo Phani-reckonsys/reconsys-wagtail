@@ -374,10 +374,12 @@
   }
   .testimonials-main .testimonials-container .testimonial-card {
     width: 39rem;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 28rem;
     background-color: #fff;
     padding: 4rem 3.3rem 2.2rem 2.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .testimonials-main .testimonials-container .testimonial-card .testimonial-profile {
     display: flex;
