@@ -4,7 +4,7 @@
  <!-- FAQ section starts -->
      <section>
         <div class="sidebar">
-            <h5>FAQ</h5>
+            <h5>{{page.faqsection_sidetitle}}</h5>
         </div>
          <!-- FAQ's section starts -->
             <div class="faq-section ml-162 pr-54 pt-200 pb-180 w-60">
@@ -31,14 +31,14 @@
                 <h2 class="mb-40">{{page.faqsection_title_top}}<br />
                    {{page.faqsection_title_bottom}}</h2>
                 {% for faqsection_faq in page.faqfaqsection%}
-                <div class="faq-wrapper pb-24 pt-24 bb">
+                <div class="faq-wrapper mb-24 pt-24">
                     <div class="question-wrapper">
                         <h4>{{faqsection_faq.question}}</h4>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="black"/>
                         </svg>                            
                     </div>
-                    <p class="answer mt-14 ft-16">{{faqsection_faq.answer}}</p>
+                    <p class="answer ft-16 mb-24">{{faqsection_faq.answer}}</p>
                 </div>
                 {% endfor %}
             </div>

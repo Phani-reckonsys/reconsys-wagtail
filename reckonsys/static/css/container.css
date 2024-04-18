@@ -59,6 +59,10 @@ section {
     top: 20rem;
   }
 
+  section > .sidebar > h5.t-25{
+    top: 25rem;
+  }
+
   section > .sidebar > h5.t-30{
     top: 30rem;
   }
