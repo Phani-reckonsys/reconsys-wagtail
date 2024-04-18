@@ -4,22 +4,42 @@
   .herosection-wrapper .herosection {
     display: flex;
   }
+  .herosection-wrapper .herosection div .category-heading{
+    position: relative;
+    height: 3rem;
+    width: 100%;
+  }
+
+  .herosection-wrapper .herosection .herosection-content{
+    width: 90%;
+  }
+
+
   .herosection-wrapper .herosection div .category-heading h4 {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 3s ease;
+    width: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease;
   }
   .herosection-wrapper .herosection div .category-heading h4.active {
-    display: block;
     opacity: 1;
   }
+  .herosection-wrapper .herosection div .main-heading{
+    position: relative;
+    height: 30rem;
+  }
   .herosection-wrapper .herosection div .main-heading h1 {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 3s ease;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    
   }
   .herosection-wrapper .herosection div .main-heading h1.active {
-    display: block;
     opacity: 1;
   }
   .herosection-wrapper .herosection div .hero-carousel-indicator-group {
