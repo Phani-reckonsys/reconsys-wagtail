@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrub: 0.5,
       end: "+=" + (scrollRatio*clientWidth),
       start: "50% 50%",
-      markers: true,
+      markers: false,
       // scroller: ".our-journey-card-container",
     },
   });

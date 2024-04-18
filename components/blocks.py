@@ -63,7 +63,7 @@ class TestimonialCard(StructBlock):
 
 #Herosection Block
 class HeroSectionBlock(StructBlock):
-    sidetitles = StreamBlock([('title', TitleGroupBasicBlock())])
+    sidetitles = CharBlock(classname="title", required=True)
     titles = StreamBlock([('title', TitleGroupBasicBlock())])
     include_companies = BooleanBlock(required=False)
     include_fullimage = BooleanBlock(required=False)
