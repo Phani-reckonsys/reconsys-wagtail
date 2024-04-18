@@ -49,3 +49,14 @@
     height: 2.4rem;
     width: auto;
   }
+
+
+  @media only screen and (max-width: 992px) {
+   
+  }
+  @media only screen and (max-width: 768px) {
+   
+  }
+  @media only screen and (max-width: 576px) {
+    
+  }

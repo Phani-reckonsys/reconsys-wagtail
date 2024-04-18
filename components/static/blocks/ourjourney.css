@@ -39,3 +39,778 @@
     width: 28rem;
     object-fit: contain;
   }
+
+
+  @media only screen and (max-width: 992px) {
+    .servicespage-wrapper .herosection div p {
+      width: 90%;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes {
+      height: 20rem;
+      position: relative;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes .geometric-connection {
+      height: 40rem;
+      width: auto;
+      position: absolute;
+      right: -5.4rem;
+      top: -5rem;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes .geometric-wave {
+      width: 10rem;
+      height: auto;
+      position: absolute;
+      top: 18rem;
+      right: 20rem;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body {
+      width: 100%;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row img {
+      width: 45%;
+      height: auto;
+      -o-object-fit: contain;
+         object-fit: contain;
+      margin-bottom: 2rem;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row p {
+      flex-basis: 45%;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row:first-child {
+      position: relative;
+      top: 4rem;
+      margin-bottom: 4rem;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row:last-child {
+      position: relative;
+      bottom: 4rem;
+    }
+    .servicespage-wrapper .accordians-section {
+      padding-top: 0;
+      width: 100%;
+    }
+    .servicespage-wrapper .accordians-section .accordians-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .accordians-section .accordians-wrapper .custom-accordian {
+      flex-basis: 47%;
+      padding: 1.8rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .accordians-section .accordians-wrapper .custom-accordian .left {
+      display: flex;
+      gap: 2.4rem;
+      align-items: center;
+    }
+    .servicespage-wrapper .carousel-section {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      padding-left: 3.4rem;
+    }
+    .servicespage-wrapper .carousel-section .left {
+      flex-basis: 55%;
+      overflow-x: hidden;
+    }
+    .servicespage-wrapper .carousel-section .left .carousal-image-wrapper {
+      display: flex;
+      width: 300%;
+      transition: transform 0.3s ease-in-out;
+    }
+    .servicespage-wrapper .carousel-section .left .carousal-image-wrapper .carousal-image {
+      width: 111.8rem;
+    }
+    .servicespage-wrapper .carousel-section .left .carousal-image-wrapper .carousal-image img {
+      width: 100%;
+      height: auto;
+    }
+    .servicespage-wrapper .carousel-section .right {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      flex-basis: 45%;
+      overflow-x: hidden;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper {
+      display: flex;
+      gap: 3rem;
+      width: 300%;
+      transition: transform 0.3s ease-in-out;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper .carousal-content {
+      min-width: 45rem;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator {
+      height: 0.4rem;
+      width: 4.5rem;
+      background-color: #333;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator:first-child {
+      width: 13rem;
+      background-color: #C01111;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .servicespage-wrapper .herosection div p {
+      width: 100%;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes {
+      height: 20rem;
+      position: relative;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes .geometric-connection {
+      height: 30rem;
+      width: auto;
+      position: absolute;
+      right: -3.6rem;
+      top: -5rem;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes .geometric-connection.app-page {
+      top: -2rem;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes .geometric-wave {
+      width: 8rem;
+      height: auto;
+      position: absolute;
+      top: 18rem;
+      right: 10rem;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes .geometric-wave.app-page {
+      right: 20rem;
+      top: 20rem;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body {
+      width: 100%;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row img {
+      width: 100%;
+      height: auto;
+      -o-object-fit: contain;
+         object-fit: contain;
+      margin-bottom: 2rem;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row p {
+      flex-basis: 45%;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row:first-child {
+      position: relative;
+      top: 0rem;
+      margin-bottom: 4rem;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row:last-child {
+      position: relative;
+      bottom: 0rem;
+      flex-direction: column-reverse;
+    }
+    .servicespage-wrapper .accordians-section {
+      padding-top: 0;
+      width: 100%;
+    }
+    .servicespage-wrapper .accordians-section .accordians-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .accordians-section .accordians-wrapper .custom-accordian {
+      flex-basis: 100%;
+      padding: 1.8rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .accordians-section .accordians-wrapper .custom-accordian .left {
+      display: flex;
+      gap: 2.4rem;
+      align-items: center;
+    }
+    .servicespage-wrapper .engagment-section h2 {
+      width: 100%;
+    }
+    .servicespage-wrapper .engagment-section .engagment-body .engagement-cards-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .servicespage-wrapper .services-stats-section {
+      position: relative;
+    }
+    .servicespage-wrapper .services-stats-section h2 {
+      width: 100% !important;
+    }
+    .servicespage-wrapper .services-stats-section .geometric-circle {
+      width: 30rem;
+      height: auto;
+      position: absolute;
+      top: -13rem;
+      left: -5rem;
+    }
+    .servicespage-wrapper .services-stats-section .geometric-rectangle {
+      width: 5rem;
+      height: auto;
+      position: absolute;
+      top: 40rem;
+      right: 0rem;
+    }
+    .servicespage-wrapper .services-stats-section .stats-wrapper {
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .services-stats-section .stats-wrapper .stat-card {
+      width: 18rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+    .servicespage-wrapper .case-studies-main .case-studies-header .left h2 {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    .servicespage-wrapper .case-studies-main .cards-container .cards-wrapper .case-study-card {
+      flex-direction: column;
+    }
+    .servicespage-wrapper .process-section .service-cards-wrapper {
+      gap: 4rem;
+    }
+    .servicespage-wrapper .process-section .service-cards-wrapper .service-card {
+      width: 100%;
+    }
+    .servicespage-wrapper .services-testimonial-section .testimonial-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .servicespage-wrapper .services-testimonial-section .testimonial-wrapper .left {
+      flex-basis: 40%;
+    }
+    .servicespage-wrapper .services-testimonial-section .testimonial-wrapper .left img {
+      width: 80%;
+      height: auto;
+    }
+    .servicespage-wrapper .services-testimonial-section .testimonial-wrapper .right {
+      flex-basis: 50%;
+    }
+    .servicespage-wrapper .carousel-section {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      padding-left: 3.4rem;
+    }
+    .servicespage-wrapper .carousel-section .left {
+      flex-basis: 55%;
+      overflow-x: hidden;
+    }
+    .servicespage-wrapper .carousel-section .left .carousal-image-wrapper {
+      display: flex;
+      width: 300%;
+      transition: transform 0.3s ease-in-out;
+    }
+    .servicespage-wrapper .carousel-section .left .carousal-image-wrapper .carousal-image {
+      width: 91.8rem;
+    }
+    .servicespage-wrapper .carousel-section .left .carousal-image-wrapper .carousal-image img {
+      width: 100%;
+      height: auto;
+    }
+    .servicespage-wrapper .carousel-section .right {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      flex-basis: 45%;
+      overflow-x: hidden;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper {
+      display: flex;
+      gap: 3rem;
+      width: 300%;
+      transition: transform 0.3s ease-in-out;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper .carousal-content {
+      min-width: 45rem;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator {
+      height: 0.4rem;
+      width: 4.5rem;
+      background-color: #333;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator:first-child {
+      width: 13rem;
+      background-color: #C01111;
+    }
+    .our-process-main .slider-completion {
+      position: absolute;
+      height: 11.6rem;
+      width: auto;
+      top: -11.6rem;
+      left: 88%;
+    }
+    .engagment-process-card-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    .engagment-process-card-wrapper .engagment-process-card {
+      width: 28rem;
+      display: none;
+    }
+    .engagment-process-card-wrapper .engagment-process-card:first-child {
+      display: block;
+    }
+    .faq-section {
+      margin-left: 3.6rem;
+      width: 90%;
+    }
+    .faq-section h2 {
+      font-size: 3.5rem;
+    }
+    .faq-section .faq-wrapper {
+      cursor: pointer;
+    }
+    .faq-section .faq-wrapper .question-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-section .faq-wrapper .question-wrapper svg {
+      transition: all 0.3s ease-in-out;
+    }
+    .faq-section .faq-wrapper .answer {
+      display: none;
+    }
+    .faq-section .faq-wrapper.active svg {
+      transform: rotate(45deg);
+      transform-origin: center;
+    }
+    .faq-section .faq-wrapper.active .answer {
+      display: block;
+    }
+    .our-journey-main p {
+      width: 100%;
+    }
+    .our-journey-main .our-journey-card-wrapper .our-journey-card {
+      width: 28rem;
+      display: none;
+    }
+    .our-journey-main .our-journey-card-wrapper .our-journey-card:first-child {
+      display: block;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 4.4rem;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .quotes {
+      width: 10rem;
+      height: auto;
+      position: absolute;
+      top: 63rem;
+      right: -3rem;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .left {
+      flex-basis: 30%;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .left img {
+      width: 100%;
+      height: auto;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .right {
+      flex-basis: 70%;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .right p {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    .servicespage-wrapper .herosection div p {
+      width: 100%;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes {
+      height: 20rem;
+      position: relative;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes .geometric-connection {
+      height: 30rem;
+      width: auto;
+      position: absolute;
+      right: -3.6rem;
+      top: -5rem;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes .geometric-connection.app-page {
+      top: -2rem;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes .geometric-wave {
+      width: 8rem;
+      height: auto;
+      position: absolute;
+      top: 18rem;
+      right: 10rem;
+    }
+    .servicespage-wrapper .herosection div.geometric-shapes .geometric-wave.app-page {
+      right: 20rem;
+      top: 20rem;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body {
+      width: 100%;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row img {
+      width: 100%;
+      height: auto;
+      -o-object-fit: contain;
+         object-fit: contain;
+      margin-bottom: 2rem;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row p {
+      flex-basis: 45%;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row:first-child {
+      position: relative;
+      top: 0rem;
+      margin-bottom: 4rem;
+    }
+    .servicespage-wrapper .enterprise-section .enterprise-section-body .custom-row:last-child {
+      position: relative;
+      bottom: 0rem;
+      flex-direction: column-reverse;
+    }
+    .servicespage-wrapper .accordians-section {
+      padding-top: 0;
+      width: 100%;
+    }
+    .servicespage-wrapper .accordians-section .accordians-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .accordians-section .accordians-wrapper .custom-accordian {
+      flex-basis: 100%;
+      padding: 1.8rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .accordians-section .accordians-wrapper .custom-accordian .left {
+      display: flex;
+      gap: 2.4rem;
+      align-items: center;
+    }
+    .servicespage-wrapper .engagment-section h2 {
+      width: 100%;
+    }
+    .servicespage-wrapper .engagment-section .engagment-body .engagement-cards-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .servicespage-wrapper .services-stats-section {
+      position: relative;
+    }
+    .servicespage-wrapper .services-stats-section h2 {
+      width: 100% !important;
+    }
+    .servicespage-wrapper .services-stats-section .geometric-circle {
+      width: 30rem;
+      height: auto;
+      position: absolute;
+      top: -13rem;
+      left: -5rem;
+    }
+    .servicespage-wrapper .services-stats-section .geometric-rectangle {
+      width: 5rem;
+      height: auto;
+      position: absolute;
+      top: 40rem;
+      right: 0rem;
+    }
+    .servicespage-wrapper .services-stats-section .stats-wrapper {
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .services-stats-section .stats-wrapper .stat-card {
+      width: 18rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+    .servicespage-wrapper .case-studies-main .case-studies-header .left h2 {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    .servicespage-wrapper .case-studies-main .cards-container .cards-wrapper .case-study-card {
+      flex-direction: column;
+    }
+    .servicespage-wrapper .process-section .service-cards-wrapper {
+      gap: 4rem;
+    }
+    .servicespage-wrapper .process-section .service-cards-wrapper .service-card {
+      width: 100%;
+    }
+    .servicespage-wrapper .services-testimonial-section .testimonial-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .servicespage-wrapper .services-testimonial-section .testimonial-wrapper .left {
+      flex-basis: 40%;
+    }
+    .servicespage-wrapper .services-testimonial-section .testimonial-wrapper .left img {
+      width: 80%;
+      height: auto;
+    }
+    .servicespage-wrapper .services-testimonial-section .testimonial-wrapper .right {
+      flex-basis: 50%;
+    }
+    .servicespage-wrapper .devops-consulting .devops-consulting-fullcard {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+    }
+    .servicespage-wrapper .devops-consulting .devops-consulting-fullcard .circle-shape {
+      display: none;
+      position: absolute;
+      left: 54rem;
+      top: 22rem;
+    }
+    .servicespage-wrapper .devops-consulting .devops-consulting-fullcard .left {
+      flex-basis: 50%;
+    }
+    .servicespage-wrapper .devops-consulting .devops-consulting-fullcard .right {
+      flex-basis: 50%;
+    }
+    .servicespage-wrapper .devops-consulting .devops-consulting-fullcard .right img {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: auto;
+    }
+    .servicespage-wrapper .carousel-section {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      padding-left: 3.4rem;
+    }
+    .servicespage-wrapper .carousel-section .left {
+      flex-basis: 55%;
+      overflow-x: hidden;
+    }
+    .servicespage-wrapper .carousel-section .left .carousal-image-wrapper {
+      display: flex;
+      width: 300%;
+      transition: transform 0.3s ease-in-out;
+    }
+    .servicespage-wrapper .carousel-section .left .carousal-image-wrapper .carousal-image {
+      width: 71.8rem;
+    }
+    .servicespage-wrapper .carousel-section .left .carousal-image-wrapper .carousal-image img {
+      width: 100%;
+      height: auto;
+    }
+    .servicespage-wrapper .carousel-section .right {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      flex-basis: 45%;
+      overflow-x: hidden;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper {
+      display: flex;
+      gap: 3rem;
+      width: 300%;
+      transition: transform 0.3s ease-in-out;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper .carousal-content {
+      min-width: 45rem;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator {
+      height: 0.4rem;
+      width: 4.5rem;
+      background-color: #333;
+    }
+    .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator:first-child {
+      width: 13rem;
+      background-color: #C01111;
+    }
+    .accordians-section {
+      padding-top: 0;
+      width: 100%;
+    }
+    .accordians-section .accordians-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .accordians-section .accordians-wrapper .custom-accordian {
+      flex-basis: 100%;
+      padding: 1.8rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .accordians-section .accordians-wrapper .custom-accordian .left {
+      display: flex;
+      gap: 2.4rem;
+      align-items: center;
+    }
+    .services-testimonial-section .testimonial-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .services-testimonial-section .testimonial-wrapper .left {
+      flex-basis: 40%;
+    }
+    .services-testimonial-section .testimonial-wrapper .left img {
+      width: 80%;
+      height: auto;
+    }
+    .services-testimonial-section .testimonial-wrapper .right {
+      flex-basis: 50%;
+    }
+    .our-process-main .slider-completion {
+      position: absolute;
+      height: 11.6rem;
+      width: auto;
+      top: -11.6rem;
+      left: 88%;
+    }
+    .engagment-process-card-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    .engagment-process-card-wrapper .engagment-process-card {
+      width: 28rem;
+      display: none;
+    }
+    .engagment-process-card-wrapper .engagment-process-card:first-child {
+      display: block;
+    }
+    .faq-section {
+      margin-left: 3.6rem;
+      width: 90%;
+    }
+    .faq-section h2 {
+      font-size: 3.5rem;
+    }
+    .faq-section .faq-wrapper {
+      cursor: pointer;
+    }
+    .faq-section .faq-wrapper .question-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-section .faq-wrapper .question-wrapper svg {
+      transition: all 0.3s ease-in-out;
+    }
+    .faq-section .faq-wrapper .answer {
+      display: none;
+    }
+    .faq-section .faq-wrapper.active svg {
+      transform: rotate(45deg);
+      transform-origin: center;
+    }
+    .faq-section .faq-wrapper.active .answer {
+      display: block;
+    }
+    .our-journey-main p {
+      width: 100%;
+    }
+    .our-journey-main .our-journey-card-wrapper .our-journey-card {
+      width: 28rem;
+      display: none;
+    }
+    .our-journey-main .our-journey-card-wrapper .our-journey-card:first-child {
+      display: block;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 4.4rem;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .quotes {
+      width: 10rem;
+      height: auto;
+      position: absolute;
+      top: 63rem;
+      right: -3rem;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .left {
+      flex-basis: 30%;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .left img {
+      width: 100%;
+      height: auto;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .right {
+      flex-basis: 70%;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .right p {
+      width: 100%;
+    }
+    .blog-section .blog-cards-wrapper .blog-card {
+      width: 100%;
+    }
+  }

@@ -46,7 +46,127 @@
     position: relative;
     top: 4rem;
   }
-  .servicespage-wrapper .banner-section .banner-section-body .custom-row:last-child {
+  .banner-section .banner-section-body .custom-row:last-child {
     position: relative;
     bottom: 4rem;
+  }
+
+
+
+
+
+  @media only screen and (max-width: 992px) {
+    .banner-section .banner-section-body {
+      width: 100%;
+    }
+    .banner-section .banner-section-body .custom-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .banner-section .banner-section-body .custom-row img {
+      width: 45%;
+      height: auto;
+      -o-object-fit: contain;
+         object-fit: contain;
+      margin-bottom: 2rem;
+    }
+    .banner-section .banner-section-body .custom-row p {
+      flex-basis: 45%;
+    }
+    .banner-section .banner-section-body .custom-row {
+      position: relative;
+      top: 4rem;
+      margin-bottom: 4rem;
+    }
+    .banner-section .banner-section-body .custom-row:nth-child(even) {
+      position: relative;
+      bottom: 4rem;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .banner-section .decor-squares {
+      display: none;
+    }
+    .banner-section .banner-section-body {
+      width: 100%;
+    }
+    .banner-section .banner-section-body .custom-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+    .banner-section .banner-section-body .custom-row img {
+      width: 100%;
+      height: auto;
+      -o-object-fit: contain;
+         object-fit: contain;
+      margin-bottom: 2rem;
+    }
+    .banner-section .banner-section-body .custom-row p {
+      flex-basis: 45%;
+    }
+    .banner-section .banner-section-body .custom-row {
+      position: relative;
+      top: 0rem;
+      margin-bottom: 4rem;
+    }
+    .banner-section .banner-section-body .custom-row:first-child {
+      position: relative;
+      top: 0;
+    }
+    .banner-section .banner-section-body .custom-row:first-child .right {
+      margin-top: 0rem;
+    }
+    .banner-section .banner-section-body .custom-row:nth-child(even) {
+      position: relative;
+      bottom: 0rem;
+      flex-direction: column;
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    .banner-section .decor-squares {
+      display: none;
+    }
+    .banner-section .banner-section-body {
+      width: 100%;
+    }
+    .banner-section .banner-section-body .custom-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+    .banner-section .banner-section-body .custom-row img {
+      width: 100%;
+      height: auto;
+      -o-object-fit: contain;
+         object-fit: contain;
+      margin-bottom: 2rem;
+    }
+    .banner-section .banner-section-body .custom-row:first-child .right {
+      margin-top: 0rem;
+    }
+    .banner-section .banner-section-body .custom-row p {
+      flex-basis: 45%;
+    }
+    .banner-section .banner-section-body .custom-row {
+      position: relative;
+      top: 0rem;
+      margin-bottom: 4rem;
+    }
+    .banner-section .banner-section-body .custom-row:first-child {
+      position: relative;
+      top: 0;
+    }
+    .banner-section .banner-section-body .custom-row:nth-child(even) {
+      position: relative;
+      bottom: 0rem;
+      flex-direction: column;
+      margin-top: 3rem;
+    }
+    
   }

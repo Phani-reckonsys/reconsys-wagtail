@@ -11,3 +11,32 @@
      top: 0;
      left: 0;
  }
+
+ @media only screen and (max-width: 992px) {
+   
+ }
+ @media only screen and (max-width: 768px) {
+     
+ }
+ @media only screen and (max-width: 576px) {
+    .ourwork-herosection-wrapper > .herosection {
+        flex-direction: column;
+    } 
+    .ourwork-herosection-wrapper > .herosection > .herosection-content{
+        width: 100%;
+    } 
+
+    .ourwork-herosection-wrapper > .herosection > .herosection-content>p{
+        width: 100%;
+    } 
+    .ourwork-herosection-wrapper > .herosection > .ourworks-heroimage-container {
+       height: 45rem;
+     }
+     .ourwork-herosection-wrapper > .herosection > .ourworks-heroimage-container > .ourworks-heroimage{
+        width: 70%;
+        height: auto;
+        position: absolute;
+         top: 0;
+         left: 30%;
+     } 
+ }

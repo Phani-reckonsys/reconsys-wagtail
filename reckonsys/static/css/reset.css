@@ -264,6 +264,11 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
+.outline-btn:hover svg{
+  transform: translateX(5px);
+  transition: all 0.2s ease-in-out;
+}
+
 .outline-btn-white {
   display: inline-flex;
   width: auto;
