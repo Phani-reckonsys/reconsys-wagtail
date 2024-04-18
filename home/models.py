@@ -13,8 +13,8 @@ class HomePage(Page):
     # services section content
     home_service_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Side Title")
     home_service_title = models.CharField(max_length = 255, blank=True, help_text = "Services Title")
-    home_service_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_service_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    home_service_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Subtitle")
+    home_service_content = models.CharField(max_length = 255, blank=True, help_text = "Services Content")
     home_service_button_text = models.CharField(max_length= 255, blank = True, help_text= "card title")
     home_service_button_icon = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete= models.SET_NULL, related_name = "+")
     # process section content
@@ -39,15 +39,14 @@ class HomePage(Page):
     home_industries_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     # Why Reckonsys
+    home_whyreckonsys_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_whyreckonsys_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_whyreckonsys_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_whyreckonsys_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     # Case Studies
+    home_casestudies_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_casestudies_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_casestudies_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-     # Testimonial
-    home_testimonials_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_testimonials_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     # images
     image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
@@ -72,9 +71,8 @@ class HomePage(Page):
     process_followed_panels = [FieldPanel('home_process_sidetitle'), FieldPanel('home_process_title'), FieldPanel('home_process_subtitle'), FieldPanel('home_process_technology_title'), FieldPanel('home_process_technology_content'), FieldPanel('dotted_mesh'), InlinePanel('process_cards', label='label'), InlinePanel('technologies_stack', label='Technologies Stack')]
     rating_panels =  [FieldPanel('home_rating_sidetitle'), FieldPanel('home_rating_title'), FieldPanel('home_rating_subtitle'), FieldPanel('great_place_to_work_badge'), FieldPanel('home_rating_testimonial_title'), FieldPanel('home_rating_testimonial_content'), FieldPanel('home_rating_testimonial_name'), FieldPanel('home_rating_testimonial_designation'), FieldPanel('enquirebot_cofounder_image')]
     industries_section_panel = [FieldPanel('home_industries_sidetitle'), FieldPanel('home_industries_title'), FieldPanel('home_industries_subtitle'), FieldPanel('home_industries_content'), InlinePanel('industries_cards', label='card') ]
-    whyreckonsys_section_panel = [FieldPanel('home_whyreckonsys_title'), FieldPanel('home_whyreckonsys_subtitle'), FieldPanel('home_whyreckonsys_content'), InlinePanel('whyreckonsys_cards', label='card') ]
-    casestudies_panel = [FieldPanel('home_casestudies_title'), FieldPanel('home_casestudies_subtitle'), InlinePanel('casestudies_cards', label='case studies card') ]  
-    testimonial_panel = [FieldPanel('home_testimonials_title'), FieldPanel('home_testimonials_subtitle'), InlinePanel('testimonial_cards', label='testimonial card') ]  
+    whyreckonsys_section_panel = [FieldPanel('home_whyreckonsys_sidetitle'), FieldPanel('home_whyreckonsys_title'), FieldPanel('home_whyreckonsys_subtitle'), FieldPanel('home_whyreckonsys_content'), InlinePanel('whyreckonsys_cards', label='card') ]
+    casestudies_panel = [FieldPanel('home_casestudies_sidetitle'), FieldPanel('home_casestudies_title'), FieldPanel('home_casestudies_subtitle'), InlinePanel('casestudies_cards', label='case studies card') ]  
     body_panel = [FieldPanel('body')]
     edit_handler = TabbedInterface([
         ObjectList(content_panels, heading= 'Content'),
@@ -85,7 +83,6 @@ class HomePage(Page):
         ObjectList(rating_panels, heading='Rating'),
         ObjectList(whyreckonsys_section_panel, heading='Why Reckonsys'),
         ObjectList(casestudies_panel, heading='case studies'),
-        ObjectList(testimonial_panel, heading='Testimonial'),
         ObjectList(body_panel, heading='Body'),
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
