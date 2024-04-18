@@ -1,3 +1,4 @@
+ {% load static %}
   <!-- Testimonials section starts -->
     <section class="testimonials-section">
       <div class="sidebar">
@@ -28,8 +29,8 @@
             </div>
         {% endfor %}
           <div class="testimonial-gradient"></div>
-          <a href="#" class="outline-btn testimonial-button"
-            >View More
+          <div class="outline-btn hometestimonial-button">
+            <div class="hometestimonial-button-text">View More</div>
             <svg
               width="27"
               height="11"
@@ -39,8 +40,9 @@
             >
               <path d="M0 1H25L17.9577 10" stroke="#333333" />
             </svg>
-          </a>
+          </div>
         </div>
       </div>
     </section>
     <!-- Testimonial section ends -->
+        <script src="{% static 'blocks/js/hometestimonials.js' %}"></script>
