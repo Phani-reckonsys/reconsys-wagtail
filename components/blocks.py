@@ -63,6 +63,7 @@ class TestimonialCard(StructBlock):
 
 #Herosection Block
 class HeroSectionBlock(StructBlock):
+    sidetitles = StreamBlock([('title', TitleGroupBasicBlock())])
     titles = StreamBlock([('title', TitleGroupBasicBlock())])
     include_companies = BooleanBlock(required=False)
     include_fullimage = BooleanBlock(required=False)
@@ -76,6 +77,7 @@ class HeroSectionBlock(StructBlock):
 
 # HomePage Testimonail section
 class HomeTestimonialsBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
     testimonialcards = StreamBlock([('testimonialcard', TestimonialCard())])
@@ -85,6 +87,7 @@ class HomeTestimonialsBlock(StructBlock):
 
 # HomePage Blogs Section
 class HomeBlogsBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
     blogcard = StreamBlock([('blogcard', BlogsCard())])
@@ -96,6 +99,7 @@ class HomeBlogsBlock(StructBlock):
 
 #OurMission Block
 class OurMissionBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
     cover_image = ImageChooserBlock(required=False)
@@ -105,6 +109,7 @@ class OurMissionBlock(StructBlock):
 
 #OurVision Block
 class OurVisionBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
     cover_image = ImageChooserBlock(required=False)
@@ -120,6 +125,7 @@ class OurVisionBlock(StructBlock):
 
 #OurValues Block
 class OurValuesBlock(StructBlock):
+    sidetitle = CharBlock(classname='title', required=True)
     title = CharBlock(classname='title', required=True)
     word1 = CharBlock(classname='word1', required=True)
     word2 = CharBlock(classname='word2', required=True)
@@ -133,6 +139,7 @@ class OurValuesBlock(StructBlock):
 
 #OurJourney Block
 class OurJourneyBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
     ourjourneycards = StreamBlock([('ourjourneycard', CardBasicBlock())])
@@ -142,6 +149,7 @@ class OurJourneyBlock(StructBlock):
 
 #OurGallery Block
 class OurGalleryBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     gallery = StreamBlock([('gallery', ListBlock(ImageChooserBlock()))])
 
@@ -150,6 +158,7 @@ class OurGalleryBlock(StructBlock):
 
 #OurTestimonial Block
 class OurTestimonialBlock(StructBlock):
+    sidetitle = CharBlock(classname="content", required=True)
     image = ImageChooserBlock(required = False)
     content = CharBlock(classname="content", required=True)
     svg = ImageChooserBlock(required = False)
@@ -159,6 +168,7 @@ class OurTestimonialBlock(StructBlock):
 
 #Herosection Blogs Page Block
 class BlogsHerosection(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
     cards = StreamBlock([('blogsherosectioncards', CardBasicBlock())])
@@ -168,6 +178,7 @@ class BlogsHerosection(StructBlock):
 
 #Blogs container Section Block
 class BlogsWrapperBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     cards = StreamBlock([('blogswrappercard', BlogsCard())])
 
@@ -183,6 +194,7 @@ class CoverImageBlock(StructBlock):
 
 #Culture Block
 class CultureBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
     gallery = StreamBlock([('gallery', ListBlock(ImageChooserBlock()))])
@@ -192,6 +204,7 @@ class CultureBlock(StructBlock):
 
 #One Column Scroller Block
 class OneColScrollerSection(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
     content = CharBlock(classname="subtitle", required=True)
@@ -202,6 +215,7 @@ class OneColScrollerSection(StructBlock):
 
 #Benifits Grid Block
 class BenifitsBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
     cards = StreamBlock([('Benifitcard', CardBasicBlock())])
@@ -211,6 +225,7 @@ class BenifitsBlock(StructBlock):
 
 #OurWorks Herosection Block
 class OurWorksHerosectionBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
     content = CharBlock(classname="title", required=True)
@@ -233,6 +248,7 @@ class OurWorkCard(StructBlock):
 
 #OurWorks Display
 class OurWorksDisplayBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
     categorytitles = StreamBlock([("categories", ListBlock(CharBlock()))])
