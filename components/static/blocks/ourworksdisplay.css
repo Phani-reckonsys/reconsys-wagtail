@@ -47,6 +47,9 @@
     
 }
 @media only screen and (max-width: 576px) {
+    .ourwork-display > p{
+        width: 90%;
+    }
     .ourwork-display > .category-container{
         overflow-x: scroll;
         position: sticky;

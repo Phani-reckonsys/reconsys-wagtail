@@ -1,5 +1,6 @@
 .life-at-reckonsys-main .gallery-container{
     overflow-x: scroll;
+    width: 100%;
 }
 
 .life-at-reckonsys-main .gallery-container .gallery-wrapper{

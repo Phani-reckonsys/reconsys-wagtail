@@ -1,0 +1,8 @@
+.ourmission-main .our-mission .image-wrapper{
+    width: 100%;
+}
+
+.ourmission-main .our-mission .image-wrapper img {
+    width: 100%;
+    object-fit: contain;
+}

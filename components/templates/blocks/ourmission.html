@@ -5,7 +5,7 @@
         <div class="sidebar">
             <h5 class="t-15">{{self.sidetitle}}</h5>
         </div>
-        <div class="servicespage-wrapper  w-container">
+        <div class="ourmission-main  w-container">
 
              <!-- Our Mission Starts -->
              <div class="our-mission ml-54 mr-54 pt-100 pb-164">
@@ -16,7 +16,9 @@
                     {{self.subtitle}}
                 </h2>
                 <!-- cover image after herosection -->
-                {% image self.cover_image max-4000x2000 class="w-100"%}
+                <div class="image-wrapper">
+                {% image self.cover_image max-4000x2000 %}
+                </div>
                 <!-- cover image after herosection -->       
              </div>
             <!-- Our Mission Ends -->

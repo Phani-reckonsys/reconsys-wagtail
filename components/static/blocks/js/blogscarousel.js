@@ -29,4 +29,4 @@ carousalLeftArrow.addEventListener("click", ()=>{
     changeCorousel(activeCorouselIndex-1);
 })
 
-setInterval(() => changeCorousel(activeCorouselIndex + 1), 5000);
+setInterval(() => changeCorousel(activeCorouselIndex + 1), 4000);
