@@ -1,4 +1,5 @@
  {% load static %}
+ {%load wagtailimages_tags%}
   <!-- Testimonials section starts -->
     <section class="testimonials-section">
       <div class="sidebar">
@@ -14,6 +15,26 @@
           </h2>
         </div>
         <div class="testimonials-container">
+        {% for card in self.ratingcards%}
+          <div class="testimonial_rating-card">
+              <div class="rating-header">
+                <div class="left">
+                  <div class="rating-stars">
+                    {% image card.value.star1 max-3000x1500 %}
+                    {% image card.value.star2 max-3000x1500 %}
+                    {% image card.value.star3 max-3000x1500 %}
+                    {% image card.value.star4 max-3000x1500 %}
+                    {% image card.value.star5 max-3000x1500 %}
+                  </div>
+                  <h2>{{card.value.rating}}</h2>
+                </div>
+                <div class="right">
+                  <h2 class="ft-22" >{{card.value.review_count}} Reviews</h2>
+                </div>
+              </div>
+              {% image card.value.logo max-3000x1500 %}
+          </div>
+        {% endfor %}
         {% for card in self.testimonialcards %}
             <div class="testimonial-card">
                 <h3 class="bb pb-33 mb-12 ft-20">

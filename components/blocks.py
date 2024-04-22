@@ -56,6 +56,19 @@ class TestimonialCard(StructBlock):
     name = CharBlock(classname="title", required=True)
     designation = CharBlock(classname="title", required=True)
 
+class Image(StructBlock):
+    image = ImageChooserBlock(required=True)
+
+class RatingCard(StructBlock):
+    star1 = ImageChooserBlock(required= False)
+    star2 = ImageChooserBlock(required= False)
+    star3 = ImageChooserBlock(required= False)
+    star4 = ImageChooserBlock(required= False)
+    star5 = ImageChooserBlock(required= False)
+    rating = CharBlock(classname="title", required=True)
+    review_count = CharBlock(classname="title", required=True)
+    logo = ImageChooserBlock(required= False)
+
 #----------Basic Blocks Ends------------------
 
 
@@ -81,6 +94,7 @@ class HomeTestimonialsBlock(StructBlock):
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
     testimonialcards = StreamBlock([('testimonialcard', TestimonialCard())])
+    ratingcards = StreamBlock([('ratingcard', RatingCard())])
 
     class Meta:
         template = "blocks/hometestimonials.html"

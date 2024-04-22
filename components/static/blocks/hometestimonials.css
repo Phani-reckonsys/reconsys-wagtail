@@ -35,9 +35,55 @@
     height: fit-content;
   }
 
+  .testimonials-main .testimonials-container .testimonial_rating-card {
+    background-color: #fff;
+    width: 39rem;
+    padding: 2.8rem 2.7rem 2.2rem 2.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .testimonials-main .testimonials-container .testimonial_rating-card .rating-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .testimonials-main .testimonials-container .testimonial_rating-card .rating-header .left{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+  }
+  .testimonials-main .testimonials-container .testimonial_rating-card .rating-header .right h2{
+    color: #C01111;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 145%; 
+    height: fit-content;
+  }
+
+  .testimonials-main .testimonials-container .testimonial_rating-card .rating-header .right{
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #DF2526;
+    height: fit-content;
+  }
+
+  .testimonials-main .testimonials-container .testimonial_rating-card .rating-header .rating-stars {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2.4rem;
+  }
+  .testimonials-main .testimonials-container .testimonial_rating-card:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .testimonials-main .testimonials-container .testimonial_rating-card:last-child img {
+    width: 9.2rem;
+    height: auto;
+  }
+
   .testimonials-main .testimonials-container .testimonial-card {
     width: 39rem;
-    height: 28rem;
     background-color: #fff;
     padding: 4rem 3.3rem 2.2rem 2.6rem;
     display: flex;
@@ -60,6 +106,11 @@
     width: 100%;
     background: linear-gradient(360deg, #fff 26.69%, rgba(255, 255, 255, 0) 103.72%);
   }
+
+  .testimonials-main .testimonials-container.viewfour .testimonial-gradient {
+  display: none;
+  }
+
   .testimonials-main .testimonials-container .hometestimonial-button {
     position: absolute;
     bottom: 0;
