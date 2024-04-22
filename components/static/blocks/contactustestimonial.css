@@ -1,12 +1,33 @@
 .contactustestimonial-wrapper .contactus-testimonial {
     display: flex;
-    margin-bottom: 19rem;
+    padding-bottom: 9rem;
+    margin-bottom: 10rem;
     justify-content: space-between;
+    border-bottom: 1px solid #727070;
+    overflow-x: scroll;
   }
-  .contactustestimonial-wrapper .contactus-testimonial .rating-cards {
+  .contactustestimonial-wrapper .contactus-testimonial .card-wrapper{
+    display: flex;
+    gap: 3rem;
+  }
+
+  .contactustestimonial-wrapper .contactus-testimonial .card-wrapper .rating-cards {
     width: 28.4rem;
   }
-  .contactustestimonial-wrapper .contactus-testimonial .rating-cards.clutch-rating {
+
+  .contactustestimonial-wrapper .contactus-testimonial .card-wrapper .rating-cards>p.bb{
+    border-bottom: 1px solid #727070;
+  }
+  .contactustestimonial-wrapper .contactus-testimonial .card-wrapper .rating-cards.clutch-rating {
     background: #171616;
     padding: 2.8rem 6.2rem 3.5rem 2.4rem;
+  }
+
+  .contactustestimonial-wrapper .contactus-testimonial .card-wrapper .rating-cards.clutch-rating .image-wrapper{
+    width:11rem;
+  }
+
+  .contactustestimonial-wrapper .contactus-testimonial .card-wrapper .rating-cards.clutch-rating .image-wrapper img{
+    width: 100%;
+    object-fit: contain;
   }

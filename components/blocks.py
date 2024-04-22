@@ -258,6 +258,7 @@ class OurWorksDisplayBlock(StructBlock):
         template = "blocks/ourworksdisplay.html"
 
 class ContactUsTestimonialBlock(StructBlock):
+    clutch_logo = ImageChooserBlock(required=False)
     testimonialcards = StreamBlock([('testimonialcard', TestimonialCard())])
 
     class Meta:
