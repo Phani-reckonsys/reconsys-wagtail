@@ -8,17 +8,28 @@
     width: 32vw;
     width: 30%;
     margin-bottom: 10rem;
+    overflow: hidden;
   }
   .blog-section .blog-cards-wrapper .blog-card:hover {
-    box-shadow: 1px 1px 4px 4px #f7f7f7;
-    transform: scale(1.05);
-    padding: 1.6rem;
     cursor: pointer;
   }
-  .blog-section .blog-cards-wrapper .blog-card img {
-    width: 100%;
-    height: auto;
+
+  .blog-section .blog-cards-wrapper .blog-card:hover .image-wrapper img{
+    transform: scale(1.6);
   }
+
+  .blog-section .blog-cards-wrapper .blog-card .image-wrapper{
+    height: 22.1rem;
+    overflow: hidden;
+  }
+
+  .blog-section .blog-cards-wrapper .blog-card .image-wrapper img {
+    transition:all 0.4s ease;
+    height: 22.1rem;
+    width: auto;
+    object-fit: cover;
+  }
+
   .blog-section .blog-cards-wrapper .blog-card p:first-of-type {
     color: #D2112B;
   }

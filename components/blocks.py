@@ -263,3 +263,11 @@ class ContactUsTestimonialBlock(StructBlock):
 
     class Meta:
         template = "blocks/contactustestimonial.html"
+
+
+class ContactModelBlock(StructBlock):
+    close_btn = ImageChooserBlock(required=False)
+    title = CharBlock(classname="title", required=True)
+    
+    class Meta:
+        template = "blocks/contactmodel.html"

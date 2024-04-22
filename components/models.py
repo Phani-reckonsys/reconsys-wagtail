@@ -36,10 +36,10 @@ class SocialItems(Orderable, models.Model):
 
 class FooterItems(Orderable, models.Model):
     name = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
-    url = models.URLField(null=True, blank=True)
+    url = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
 
     navbar = ParentalKey(Footer, on_delete = models.CASCADE, related_name="footeritems")
-    panels = [FieldPanel("name"), FieldPanel("url")]
+    panels = [FieldPanel("name"), PageChooserPanel("url")]
 
 
 @register_snippet

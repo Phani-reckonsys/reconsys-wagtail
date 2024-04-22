@@ -23,6 +23,7 @@
     position: relative;
     height: 70rem;
     overflow-y: hidden;
+    padding-bottom: 10rem;
   }
 
   .testimonials-main .testimonials-container.viewfour {
@@ -45,7 +46,6 @@
   }
   .testimonials-main .testimonials-container .testimonial-card .testimonial-profile {
     display: flex;
-    gap: 1rem;
     align-items: center;
   }
   .testimonials-main .testimonials-container .testimonial-card:nth-child(3n+2) {
