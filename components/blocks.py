@@ -124,7 +124,7 @@ class HomeBlogsBlock(StructBlock):
 class OurMissionBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     cover_image = ImageChooserBlock(required=False)
 
     class Meta: 
@@ -182,9 +182,12 @@ class OurGalleryBlock(StructBlock):
 #OurTestimonial Block
 class OurTestimonialBlock(StructBlock):
     sidetitle = CharBlock(classname="content", required=True)
+    name = CharBlock(classname="content", required=True)
+    designation = CharBlock(classname="content", required=True)
     image = ImageChooserBlock(required = False)
     content = CharBlock(classname="content", required=True)
     svg = ImageChooserBlock(required = False)
+
     
     class Meta: 
         template = "blocks/ourtestimonial.html"

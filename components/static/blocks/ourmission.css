@@ -2,6 +2,21 @@
     width: 100%;
 }
 
+.ourmission-main .our-mission h2 p{
+    font-size: 4.2rem;
+    font-family: "Satoshi-Bold";
+    color: #333;
+    margin-bottom: 0;
+    line-height: 125%;
+}
+
+.ourmission-main .our-mission h2 p b{
+    background: linear-gradient(89deg, #333 5.49%, #f77b45 96.99%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .ourmission-main .our-mission .image-wrapper img {
     width: 100%;
     object-fit: contain;
