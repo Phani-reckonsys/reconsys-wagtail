@@ -1,4 +1,5 @@
     {%load wagtailimages_tags%}
+    {% load static %}
     <!-- Services Starts -->
     <section>
       <div class="sidebar">
@@ -18,10 +19,9 @@
               <p class="mb-32 lh-140">
                 {{page.home_service_content}}
               </p>
-              <a href="./services.html" class="outline-btn">
-                {{page.home_service_button_text}}
-                {% image page.home_service_button_icon max-3000x1500%}
-              </a>
+              {% for button in page.outline_grey_button %}
+                {{button}}
+              {% endfor %}
             </div>
 
             <!-- Geometric circular shape with lines positioned at left bottom end of services section -->

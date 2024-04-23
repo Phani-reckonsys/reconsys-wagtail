@@ -1,0 +1,23 @@
+.testimonialgeneric-section {
+    margin-top: 16rem;
+    margin-bottom: 15rem;
+  }
+  .testimonialgeneric-section .testimonial-wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    gap: 4.4rem;
+  }
+  .testimonialgeneric-section .testimonial-wrapper .quotes {
+    position: absolute;
+    top: -7rem;
+    right: 6rem;
+  }
+  .testimonialgeneric-section .testimonial-wrapper .left {
+    flex-basis: 30%;
+    flex-shrink: 0;
+  }
+  .testimonialgeneric-section .testimonial-wrapper .left img {
+    width: 100%;
+    height: auto;
+  }

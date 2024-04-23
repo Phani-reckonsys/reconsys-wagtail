@@ -1,9 +1,10 @@
 from django.db import models
 from wagtail.models import Page, Orderable, ClusterableModel, StreamField
+from wagtail.blocks import StreamBlock
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, ContactModelBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, ContactModelBlock, OutlineGreyButtonBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -16,8 +17,8 @@ class HomePage(Page):
     home_service_title = models.CharField(max_length = 255, blank=True, help_text = "Services Title")
     home_service_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Subtitle")
     home_service_content = models.CharField(max_length = 255, blank=True, help_text = "Services Content")
-    home_service_button_text = models.CharField(max_length= 255, blank = True, help_text= "card title")
-    home_service_button_icon = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete= models.SET_NULL, related_name = "+")
+    outline_grey_button = StreamField([('button', OutlineGreyButtonBlock())], null = True)
+
     # process section content
     home_process_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -68,7 +69,7 @@ class HomePage(Page):
     
     content_panels = [TitleFieldPanel('title')]
     herosection_panels = [FieldPanel('herosection')]
-    services_offered_panels = [FieldPanel('home_service_sidetitle'), FieldPanel('home_service_title'),FieldPanel('home_service_subtitle'), FieldPanel('home_service_content'),MultiFieldPanel(heading = "Service Button", children=(FieldPanel('home_service_button_text'), FieldPanel('home_service_button_icon') )), InlinePanel('service_cards', label='Service Card')]
+    services_offered_panels = [FieldPanel('home_service_sidetitle'), FieldPanel('home_service_title'),FieldPanel('home_service_subtitle'), FieldPanel('home_service_content'), FieldPanel('outline_grey_button'),  InlinePanel('service_cards', label='Service Card')]
     process_followed_panels = [FieldPanel('home_process_sidetitle'), FieldPanel('home_process_title'), FieldPanel('home_process_subtitle'), FieldPanel('home_process_technology_title'), FieldPanel('home_process_technology_content'), FieldPanel('dotted_mesh'), InlinePanel('process_cards', label='label'), InlinePanel('technologies_stack', label='Technologies Stack')]
     rating_panels =  [FieldPanel('home_rating_sidetitle'), FieldPanel('home_rating_title'), FieldPanel('home_rating_subtitle'), FieldPanel('great_place_to_work_badge'), FieldPanel('home_rating_testimonial_title'), FieldPanel('home_rating_testimonial_content'), FieldPanel('home_rating_testimonial_name'), FieldPanel('home_rating_testimonial_designation'), FieldPanel('enquirebot_cofounder_image')]
     industries_section_panel = [FieldPanel('home_industries_sidetitle'), FieldPanel('home_industries_title'), FieldPanel('home_industries_subtitle'), FieldPanel('home_industries_content'), InlinePanel('industries_cards', label='card') ]

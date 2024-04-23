@@ -125,12 +125,18 @@
     display: flex;
     gap: 2.6rem;
     padding: 3.2rem 0 4.6rem 0;
-    overflow: scroll;
+    flex-wrap: wrap;
   }
   .process-section .process-main .technologies .technology-stack-wrapper .technology-stack {
     padding-right: 2.6rem;
     border-right: 1px solid #656565;
   }
+
+  .process-section .process-main .technologies .technology-stack-wrapper .technology-stack:last-child {
+    padding-right: 2.6rem;
+    border-right: none;
+  }
+
   .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array {
     display: flex;
     gap: 1rem;

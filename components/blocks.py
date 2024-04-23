@@ -26,6 +26,15 @@ class PrimaryButtonBlock(StructBlock):
         max_num = 1
         template = "basic_blocks/primary_button.html"
 
+#Outline button Basic Block
+class OutlineGreyButtonBlock(StructBlock): 
+    title = CharBlock(classname = "title", required = True)
+    icon = ImageChooserBlock(required = False)
+    link = PageChooserBlock(can_choose_root= True)
+
+    class Meta:
+        template = "basic_blocks/outline_grey_button.html"
+
 #Card Basic Block
 class CardBasicBlock(StructBlock):
     image = ImageChooserBlock(required = False)
