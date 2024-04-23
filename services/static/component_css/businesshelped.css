@@ -45,7 +45,7 @@
     display: flex;
     gap: 2rem;
   }
-  .servicesto-section .sector-card-group-wrapper .sector-card-group .sector-card .sector-card-footer svg {
+  .servicesto-section .sector-card-group-wrapper .sector-card-group .sector-card .sector-card-footer img {
     height: 2.4rem;
     width: auto;
   }

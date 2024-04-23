@@ -294,7 +294,7 @@
   .industries-section .industries-main .sector-card-container .sector-card-group-wrapper .sector-card-group .sector-card .sector-card-footer img{
     display: inline-flex;
     height: 2.8rem;
-    max-width: 1.6rem; 
+    max-width: 16rem; 
     object-fit: contain;
     width: auto;
   }
