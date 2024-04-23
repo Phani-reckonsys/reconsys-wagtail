@@ -98,6 +98,11 @@
     position: relative;
     top: 5rem;
   }
+
+  .testimonials-main .testimonials-container .testimonial_rating-card:nth-child(3n+2) {
+    position: relative;
+    top: 5rem;
+  }
   .testimonials-main .testimonials-container .testimonial-gradient {
     position: absolute;
     bottom: -5rem;

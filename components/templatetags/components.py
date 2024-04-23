@@ -32,8 +32,10 @@ def navbargrey(context):
 
 @register.inclusion_tag('snippets/contact.html', takes_context=True)
 def contact(context):
+    contact = Contact.objects.first()
     return {
         'contact': Contact.objects.first(),
+        'servicesoptions': contact.servicesoptions.all(),
         'request': context['request'],
     }
 

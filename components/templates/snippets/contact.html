@@ -68,12 +68,10 @@
             <div class="services">
               <label for="servies">Services</label>
               <select name="services" id="services">
-                <option value="software-services" selected>
-                  Software Services
-                </option>
-                <option value="software-services">Software Services</option>
-                <option value="software-services">Software Services</option>
-                <option value="software-services">Software Services</option>
+                {% for service in servicesoptions %}
+                  <option value="software-services">{{service.service}}</option>
+                {% endfor %}
+                
               </select>
             </div>
             <button class="primary-btn">

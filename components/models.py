@@ -43,8 +43,16 @@ class FooterItems(Orderable, models.Model):
 
 
 @register_snippet
-class Contact(models.Model):
-   pass
+class Contact(ClusterableModel):
+   
+   panels = [InlinePanel('servicesoptions', heading="ServicesOptions")]
+
+class SevicesOptions(Orderable,models.Model):
+    service = models.CharField(max_length = 255, blank=True, help_text = "Services Offred")
+
+    contact = ParentalKey(Contact, on_delete = models.CASCADE, related_name="servicesoptions")
+    panels = [FieldPanel("service")]
+
 
 @register_snippet
 class NavbarGreen(ClusterableModel):
