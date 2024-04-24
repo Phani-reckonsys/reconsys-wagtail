@@ -47,6 +47,17 @@ class TitleGroupBasicBlock(StructBlock):
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
 
+#herosection content Block
+class HeroContentBasicBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    btn_title = CharBlock(classname = "title", required = True)
+    btn_icon = ImageChooserBlock(required = False)
+    btn_link = PageChooserBlock(can_choose_root= True)
+    include_fullimage = BooleanBlock(required=False)
+    image_cover = ImageChooserBlock(required = False)
+    image_decor = ImageChooserBlock(required = False)
+
 #BlogsCard Basic Block
 class BlogsCard(StructBlock):
     image = ImageChooserBlock(required = False)
@@ -67,7 +78,7 @@ class TestimonialCard(StructBlock):
     designation = CharBlock(classname="title", required=True)
 
 class Image(StructBlock):
-    image = ImageChooserBlock(required=True)
+    image = ImageChooserBlock(required=False)
 
 class RatingCard(StructBlock):
     star1 = ImageChooserBlock(required= False)
@@ -75,6 +86,7 @@ class RatingCard(StructBlock):
     star3 = ImageChooserBlock(required= False)
     star4 = ImageChooserBlock(required= False)
     star5 = ImageChooserBlock(required= False)
+    url = URLBlock(classname="link", required=True)
     rating = CharBlock(classname="title", required=True)
     review_count = CharBlock(classname="title", required=True)
     logo = ImageChooserBlock(required= False)
@@ -87,13 +99,13 @@ class RatingCard(StructBlock):
 #Herosection Block
 class HeroSectionBlock(StructBlock):
     sidetitles = CharBlock(classname="title", required=True)
-    titles = StreamBlock([('title', TitleGroupBasicBlock())])
+    content = StreamBlock([('herocontent', HeroContentBasicBlock())])
+    # primary_button = StreamBlock([('button', PrimaryButtonBlock())])
     include_companies = BooleanBlock(required=False)
-    include_fullimage = BooleanBlock(required=False)
-    primary_button = StreamBlock([('button', PrimaryButtonBlock())])
-    company_image = StreamBlock([('image', Image())])
-    image_cover = ImageChooserBlock(required=False)
-    image_decor = ImageChooserBlock(required= False)
+    company_image = StreamBlock([('image', Image())], required=False)
+    # image_cover = ImageChooserBlock(required=False)
+    # image_decor = ImageChooserBlock(required= False)
+    
 
     class Meta:
         icon = "title"
@@ -104,6 +116,7 @@ class HomeTestimonialsBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
+
     testimonialcards = StreamBlock([('testimonialcard', TestimonialCard())])
     ratingcards = StreamBlock([('ratingcard', RatingCard())])
 

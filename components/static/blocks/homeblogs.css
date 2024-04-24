@@ -21,7 +21,9 @@
     overflow: hidden;
     cursor: pointer;
   }
-
+  .blogs-main .blogs-container .blog-card:hover h4 {
+    color: #C01111 !important;
+  }
 
 .blogs-main .blogs-container .blog-card:hover .image-wrapper img {
     transform: scale(1.6);

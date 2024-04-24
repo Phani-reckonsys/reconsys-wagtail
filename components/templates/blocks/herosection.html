@@ -5,47 +5,40 @@
   <div class="sidebar">
     <h5 class="t-15">{{self.sidetitle}}</h5>
   </div>
+  
   <div class="herosection-wrapper pl-54 pr-54 w-container">
-    <!-- Herosection Starts -->
-    <div class="row herosection">
+  <div class="herosection-height">
+    {% for content in self.content %}
+      <div class="row herosection active">
       <div class="herosection-content">
-        <div class="category-heading">
-          {% for herosection in self.titles %}
-          <h4 class="mb-22 lh-110">{{herosection.value.title}}</h4>
-          {% endfor %}
-        </div>
-        <div class="main-heading">
-          {% for herosection in self.titles %}
-            {% if self.include_fullimage %}
-              <h1 class="mb-36 hero w-80">{{herosection.value.subtitle}}</h1>
-            {% else %}
-              <h1 class="mb-36 hero">{{herosection.value.subtitle}}</h1>
-            {% endif %}
-          {% endfor %}
-        </div>
-        {% for button in self.primary_button  %}
-            {{button}}
-        {% endfor %}
-        <div class="hero-carousel-indicator-group">
-        {% if self.titles|length != 1 %}
+        <h4 class="mb-22 lh-110">{{content.value.title}}</h4>
+        <h1 class="mb-36 hero w-80">{{content.value.subtitle}}</h1>
+        <a href="{{content.value.btn_link.get_url}}" class="primary-btn">
+            {{content.value.btn_title}}
+            {% image content.value.btn_icon max-300x200%}
+        </a>
+      </div>
+      <div class="geometric-shapes">
+      {% if content.value.include_fullimage %}
+        {% image content.value.image_cover max-3000x1500 class="geometric-connection custom-hero-fullimage"%}
+      {% else %}
+        {% image content.value.image_cover max-3000x1500 class="geometric-connection"%}
+        {% image content.value.image_decor max-3000x1500 class="geometric-wave"%}
+      {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+    <div class="hero-carousel-indicator-group">
+        {% if self.content|length != 1 %}
             
-            {% for herosection in self.titles %}
+            {% for content in self.content %}
             <div></div>
             {% endfor %}
            
         {% endif %}
-         </div>
-      </div>
-      <div class="geometric-shapes">
-      {% if self.include_fullimage %}
-        {% image self.image_cover max-3000x1500 class="geometric-connection custom-hero-fullimage"%}
-      {% else %}
-        {% image self.image_cover max-3000x1500 class="geometric-connection"%}
-        {% image self.image_decor max-3000x1500 class="geometric-wave"%}
-      {% endif %}
-      </div>
     </div>
-    <!-- Herosection Ends -->
+    </div>
+    
     {% if self.include_companies %}
         <!-- Quick testimonials Starts-->
     <div class="quick-testimonials">
@@ -65,12 +58,9 @@
 <!-- Herosection Ends -->
 
 <script>
-  let herosectionTitleCount = {{self.titles | length}};
+  let herosectionTitleCount = {{self.content | length}};
   const categoryHeadings = document.querySelectorAll(
-      ".herosection .category-heading > *"
-    );
-    const mainHeadings = document.querySelectorAll(
-      ".herosection .main-heading > *"
+      ".herosection"
     );
     const headingIndicator = document.querySelectorAll(
       ".hero-carousel-indicator-group > *"
@@ -81,11 +71,9 @@
     const setActiveHeading = (index) => {
       currentHeading = (index + herosectionTitleCount) % herosectionTitleCount;
       categoryHeadings.forEach((entry) => entry.classList.remove("active"));
-      mainHeadings.forEach((entry) => entry.classList.remove("active"));
       headingIndicator.forEach((entry) => entry.classList.remove("active"));
 
       categoryHeadings[currentHeading].classList.add("active");
-      mainHeadings[currentHeading].classList.add("active");
       headingIndicator[currentHeading].classList.add("active");
     };
 

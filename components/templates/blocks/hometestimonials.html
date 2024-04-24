@@ -16,7 +16,7 @@
         </div>
         <div class="testimonials-container">
         {% for card in self.ratingcards%}
-          <div class="testimonial_rating-card">
+          <a href="{{card.value.url}}" class="testimonial_rating-card">
               <div class="rating-header">
                 <div class="left">
                   <div class="rating-stars">
@@ -33,7 +33,7 @@
                 </div>
               </div>
               {% image card.value.logo max-3000x1500 %}
-          </div>
+          </a>
         {% endfor %}
         {% for card in self.testimonialcards %}
             <div class="testimonial-card">
