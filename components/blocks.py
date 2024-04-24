@@ -91,6 +91,7 @@ class HeroSectionBlock(StructBlock):
     include_companies = BooleanBlock(required=False)
     include_fullimage = BooleanBlock(required=False)
     primary_button = StreamBlock([('button', PrimaryButtonBlock())])
+    company_image = StreamBlock([('image', Image())])
     image_cover = ImageChooserBlock(required=False)
     image_decor = ImageChooserBlock(required= False)
 

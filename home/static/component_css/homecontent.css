@@ -367,28 +367,7 @@
   }
   
 
-  .blogs-main .blogs-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .blogs-main .blogs-header h2{
-    text-align: center;
-  }
-
   
-  .blogs-main .blogs-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .blogs-main .blogs-container .blog-card {
-    width: 39.2rem;
-  }
-  .blogs-main .blogs-container .blog-card img {
-    width: 100%;
-    height: auto;
-  }
   
   @media only screen and (max-width: 992px) {
     .company-logo {

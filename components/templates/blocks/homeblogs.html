@@ -16,7 +16,9 @@
         {% for card in self.blogcard %}
         <a href = "{{card.value.link}}" class="blog-card">
             {% comment %} <img src="./res/images/crm-technology.png" alt="" class="mb-16" /> {% endcomment %}
-            {% image card.value.image class='mb-16' max-3000x1500%}
+            <div class  = "image-wrapper mb-16">
+              {% image card.value.image  max-3000x1500%}
+            </div>
             <h6 class="mb-8 gradient-text">{{card.value.category}}</h6>
             <h4 class="mb-16 ft-1">
              {{card.value.title}}

@@ -88,13 +88,20 @@
   .herosection-wrapper .quick-testimonials .client-logos-wrapper{
     overflow-x: scroll;
   }
+
+  .herosection-wrapper .quick-testimonials .client-logos-wrapper::-webkit-scrollbar{
+    display: none;
+  }
+
   .herosection-wrapper .quick-testimonials .client-logos-wrapper .client-logos {
     display: flex;
     align-items: center;
     gap: 4.3rem;
   }
-  .herosection-wrapper .quick-testimonials .client-logos-wrapper .client-logos svg {
-    display: inline-block;
+  .herosection-wrapper .quick-testimonials .client-logos-wrapper .client-logos img{
+    height: 2.5rem;
+    object-fit: contain;
+    width: auto;
   }
 
   @media only screen and (max-width: 992px) {
