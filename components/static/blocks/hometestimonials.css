@@ -72,12 +72,17 @@
     gap: 0.5rem;
     margin-bottom: 2.4rem;
   }
+  .testimonials-main .testimonials-container .testimonial_rating-card .rating-header .rating-stars img{
+    height: 2.6rem;
+    width: auto;
+    object-fit: contain;
+  }
   .testimonials-main .testimonials-container .testimonial_rating-card:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .testimonials-main .testimonials-container .testimonial_rating-card:last-child img {
+  .testimonials-main .testimonials-container .testimonial_rating-card img {
     width: 9.2rem;
     height: auto;
   }

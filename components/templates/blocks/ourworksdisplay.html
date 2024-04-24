@@ -11,14 +11,12 @@
         <div class="category-container pl-54  mb-120">
         <div class="category-wrapper">
             {% for categorytitle in self.categorytitles %}
-                {% for title in categorytitle.value %}
-                <p class="color-white">{{title}}</p>
-                {% endfor %}
+                <p class="color-white {{categorytitle.value.tag}}">{{categorytitle.value.title}}</p>
             {% endfor %}
         </div>
         </div>
         {% for card in self.cards %}
-            <div class="our-works-card" style="background-color: #{{card.value.bgcolor}}">
+            <div class="our-works-card {{card.value.tag}}" style="background-color: #{{card.value.bgcolor}}">
                 <div class="content">
                     <h2 class="color-white w-80 mb-36">
                    {{card.value.title}}

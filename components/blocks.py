@@ -8,6 +8,7 @@ from wagtail.blocks import (
     PageChooserBlock,
     ListBlock,
     URLBlock,
+    ChoiceBlock
 )
 from wagtail.models import StreamField
 from wagtail.embeds.blocks import EmbedBlock
@@ -264,6 +265,10 @@ class OurWorksHerosectionBlock(StructBlock):
 
 class OurWorkCard(StructBlock):
     title =CharBlock(clasname="title", required=True)
+    tag = ChoiceBlock(choices=[
+    ('csd', 'Custom Sofware Development'),
+    ('ui', 'UI/UX Design'),
+    ], icon='cup')
     subtitle =CharBlock(clasname="title", required=True)
     label1 =CharBlock(clasname="data title 1", required=True)
     label2 =CharBlock(clasname="data title 2", required=True)
@@ -272,12 +277,21 @@ class OurWorkCard(StructBlock):
     image =ImageChooserBlock(required=False)
     bgcolor = CharBlock(clasname="BackgroundColor", required=True)
 
+class TitleTagCombo(StructBlock):
+    title =CharBlock(clasname="title", required=True)
+    tag = ChoiceBlock(choices=[
+    ('csd-btn', 'Custom Sofware Development'),
+    ('ui-btn', 'UI/UX Design'),
+    ('all-btn', 'All')
+    ], icon='cup')
+
 #OurWorks Display
 class OurWorksDisplayBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
-    categorytitles = StreamBlock([("categories", ListBlock(CharBlock()))])
+    # categorytitles = StreamBlock([("categories", ListBlock(CharBlock(), CharBlock()))])
+    categorytitles = StreamBlock([("TitleTabCombo", TitleTagCombo())])
     cards = StreamBlock([("OurWorkCards", OurWorkCard())])
 
     class Meta:

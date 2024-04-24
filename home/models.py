@@ -115,6 +115,7 @@ class HomePage(Page):
     @property
     def cardstestimonial(self):
         return self.testimonial_cards.all()
+    
 
 class HomeServiceCard(Orderable):
     card_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")

@@ -16,11 +16,11 @@
         </div>
         <div class="main-heading">
           {% for herosection in self.titles %}
-          {% if self.include_fullimage %}
-          <h1 class="mb-36 hero w-80">{{herosection.value.subtitle}}</h1>
-          {% else %}
-           <h1 class="mb-36 hero">{{herosection.value.subtitle}}</h1>
-           {% endif %}
+            {% if self.include_fullimage %}
+              <h1 class="mb-36 hero w-80">{{herosection.value.subtitle}}</h1>
+            {% else %}
+              <h1 class="mb-36 hero">{{herosection.value.subtitle}}</h1>
+            {% endif %}
           {% endfor %}
         </div>
         {% for button in self.primary_button  %}

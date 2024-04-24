@@ -254,8 +254,13 @@
     display: inline-block;
     margin-bottom: 2rem;
   }
+  .industries-section .industries-main .sector-card-container .sector-card-group-wrapper::-webkit-scrollbar {
+    display: none;
+  }
   .industries-section .industries-main .sector-card-container .sector-card-group-wrapper {
     overflow-x: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
   }
   .industries-section .industries-main .sector-card-container .sector-card-group-wrapper .sector-card-group {
     display: flex;
