@@ -1591,8 +1591,8 @@
         <div class="cards-container">
           <div class="cards-wrapper">
           {% for casestudies_card in page.cardscasestudy%}
-            <div class="case-study-card">
-              <div class="content">
+            <div class="case-study-card" >
+              <div class="content" style='background-color: #{{casestudies_card.bgcolor}}'>
                 <h3 class="color-white mb-27 ft-32 w-80 lh-115">
                   {{casestudies_card.title}}
                 </h3>

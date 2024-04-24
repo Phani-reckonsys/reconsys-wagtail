@@ -189,6 +189,7 @@ class HomeWhyReckonsyCard(Orderable):
 
 
 class HomeCaseStudiesCard(Orderable):
+    bgcolor = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     cover_image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -198,7 +199,7 @@ class HomeCaseStudiesCard(Orderable):
     label2 = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "casestudies_cards")
-    panels = [FieldPanel('cover_image'),FieldPanel('title'), FieldPanel('subtitle'), FieldPanel('data1'), FieldPanel('label1'), FieldPanel('data2'), FieldPanel('label2')]
+    panels = [FieldPanel('cover_image'), FieldPanel('bgcolor') ,FieldPanel('title'), FieldPanel('subtitle'), FieldPanel('data1'), FieldPanel('label1'), FieldPanel('data2'), FieldPanel('label2')]
 
 class HomeTestimonialCard(Orderable):
     name = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
