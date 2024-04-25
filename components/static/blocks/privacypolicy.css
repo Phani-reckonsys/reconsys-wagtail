@@ -1,0 +1,13 @@
+.privacypolicy-wrapper .privacypolicy-main{
+    padding: 9.7rem 0 8rem 12.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.privacypolicy-wrapper .privacypolicy-main .content{
+    flex-basis: 60%;
+}
+
+.privacypolicy-wrapper .privacypolicy-main .geometric-shapes{
+    flex-basis: 20%;
+}

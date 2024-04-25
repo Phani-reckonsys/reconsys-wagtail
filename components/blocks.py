@@ -325,3 +325,16 @@ class ContactModelBlock(StructBlock):
     
     class Meta:
         template = "blocks/contactmodel.html"
+
+class PrivacyPolicyBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=True)
+    title = CharBlock(classname="title", required=True)
+    datetitle = CharBlock(classname="lastupdatedtitle", required=True)
+    date = CharBlock(classname="date", required=True)
+    welcomeline = CharBlock(classname="date", required=True)
+    commitment = CharBlock(classname="date", required=True)
+    mainimage = ImageChooserBlock(required=False)
+
+    class Meta: 
+        template = "blocks/privacypolicy.html"
+
