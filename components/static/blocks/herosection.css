@@ -53,7 +53,7 @@
   .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-connection.custom-hero-fullimage {
     position: absolute;
     right: -5.4rem;
-    top: -12rem;
+    top: -12.23rem;
   }
 
   .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-wave {
@@ -85,7 +85,7 @@
     gap: 6rem;
     width: fit-content;
     flex-wrap: nowrap;
-    animation: slide 30s linear infinite;
+    animation: slide 100s linear infinite;
     animation-delay: 2s;
     animation-fill-mode: forwards;
   }

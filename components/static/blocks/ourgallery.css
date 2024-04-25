@@ -1,5 +1,5 @@
 .life-at-reckonsys-main .gallery-container{
-    overflow-x: scroll;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -7,7 +7,19 @@
     display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
+    width: fit-content;
+    flex-wrap: nowrap;
+    animation: slideimages 30s linear infinite;
 }
+
+@keyframes slideimages{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-50%);
+    }
+  }
 
 .life-at-reckonsys-main .gallery-container .gallery-wrapper .image{
     height: 25rem;

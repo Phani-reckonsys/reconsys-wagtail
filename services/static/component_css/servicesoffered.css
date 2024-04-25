@@ -40,9 +40,19 @@
   }
 .accordians-section .accordians-wrapper .custom-accordian .content .custom-answer {
     display: none;
+
   }
 .accordians-section .accordians-wrapper .custom-accordian .content .custom-answer.active {
     display: block;
+    
+  }
+  @keyframes slidedown{
+    from{
+      transform: translatey(0);
+    }
+    to{
+      transform: translatey(2rem);
+    }
   }
 
   @media only screen and (max-width: 992px) {

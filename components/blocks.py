@@ -98,7 +98,7 @@ class RatingCard(StructBlock):
 
 #Herosection Block
 class HeroSectionBlock(StructBlock):
-    sidetitles = CharBlock(classname="title", required=True)
+    sidetitle = CharBlock(classname="title", required=True)
     content = StreamBlock([('herocontent', HeroContentBasicBlock())])
     # primary_button = StreamBlock([('button', PrimaryButtonBlock())])
     include_companies = BooleanBlock(required=False)
