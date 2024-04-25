@@ -11,3 +11,7 @@
 .privacypolicy-wrapper .privacypolicy-main .geometric-shapes{
     flex-basis: 20%;
 }
+
+.privacypolicy-wrapper .privacypolicy-main .geometric-shapes .geometric-circle{
+    margin-left: auto;
+}

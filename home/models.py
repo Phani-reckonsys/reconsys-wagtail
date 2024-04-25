@@ -336,16 +336,16 @@ class ContactusPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
-class PrivacyPolicyPage(Page):
+class PrivacypolicyPage(Page):
     body = StreamField(
         [('PrivacyPolicy', PrivacyPolicyBlock()),
          ('ContactusTesimonial', ContactUsTestimonialBlock()),
 
         ], null = True)
     
-body_panels = [FieldPanel('body')]
+    body_panels = [FieldPanel('body')]
 
-edit_handler = TabbedInterface([
+    edit_handler = TabbedInterface([
         ObjectList(Page.content_panels, heading= 'Content'),
         ObjectList(body_panels, heading= 'Body'),
         ObjectList(Page.promote_panels, heading='Promote'),

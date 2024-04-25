@@ -334,6 +334,7 @@ class PrivacyPolicyBlock(StructBlock):
     welcomeline = CharBlock(classname="date", required=True)
     commitment = CharBlock(classname="date", required=True)
     mainimage = ImageChooserBlock(required=False)
+    decorimage = ImageChooserBlock(required=False)
 
     class Meta: 
         template = "blocks/privacypolicy.html"
