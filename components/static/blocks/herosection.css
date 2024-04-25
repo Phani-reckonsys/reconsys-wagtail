@@ -70,7 +70,9 @@
   }
 
   .herosection-wrapper .quick-testimonials .client-logos-wrapper{
-    overflow-x: scroll;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
   }
 
   .herosection-wrapper .quick-testimonials .client-logos-wrapper::-webkit-scrollbar{
@@ -80,7 +82,18 @@
   .herosection-wrapper .quick-testimonials .client-logos-wrapper .client-logos {
     display: flex;
     align-items: center;
-    gap: 4.3rem;
+    gap: 6rem;
+    width: fit-cotent;
+    animation: slide 20s linear infinite;
+  }
+
+  @keyframes slide{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-50%);
+    }
   }
   .herosection-wrapper .quick-testimonials .client-logos-wrapper .client-logos img{
     height: 2.5rem;
