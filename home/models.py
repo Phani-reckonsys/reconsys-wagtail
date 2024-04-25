@@ -1,5 +1,6 @@
 from django.db import models
 from wagtail.models import Page, Orderable, ClusterableModel, StreamField
+from wagtail.fields import RichTextField
 from wagtail.blocks import StreamBlock
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
@@ -182,7 +183,7 @@ class IndusrtrialSectionCardPoint(Orderable):
 
 class HomeWhyReckonsyCard(Orderable):
     image= models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    description = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    description = RichTextField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "whyreckonsys_cards")
     panels = [FieldPanel('image'), FieldPanel('description')]

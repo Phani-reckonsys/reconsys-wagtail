@@ -10,6 +10,7 @@ def navbar(context):
         'navbar': navbar,
         'navitems': navbar.navitems.all(),
         'request': context['request'],
+        'path': context.request.path,
     }
 
 @register.inclusion_tag('snippets/navbargreen.html', takes_context=True)
@@ -19,6 +20,7 @@ def navbargreen(context):
         'navbargreen': navbargreen,
         'navitemsgreen': navbargreen.navitemsgreen.all(),
         'request': context['request'],
+        'path': context.request.path,
     }
 
 @register.inclusion_tag('snippets/navbargrey.html', takes_context=True)
@@ -28,6 +30,7 @@ def navbargrey(context):
         'navbargrey': navbargrey,
         'navitemsgrey': navbargrey.navitemsgrey.all(),
         'request': context['request'],
+        'path': context.request.path,
     }
 
 @register.inclusion_tag('snippets/contact.html', takes_context=True)

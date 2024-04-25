@@ -1,4 +1,5 @@
     {%load wagtailimages_tags%}
+    {% load wagtailcore_tags %}
     {% load static %}
     <!-- Services Starts -->
     <section>
@@ -1389,10 +1390,10 @@
             <h4 class="color-white mb-14 lh-110">
             {{page.home_whyreckonsys_title}}
             </h4>
-            <h2 class="w-60 mb-14 color-white">
+            <h2 class="w-70 mb-14 color-white">
              {{page.home_whyreckonsys_subtitle}}
             </h2>
-            <p class="ft-24 color-white mb-106">
+            <p class="ft-24 w-80 color-white mb-106">
               {{page.home_whyreckonsys_content}}
             </p>
           </div>
@@ -1512,9 +1513,10 @@
         {% for whyreckonsys_card in page.cardswhyreckonsys%}
           <div class="collaborative-working mb-106">
             {% image whyreckonsys_card.image class="mb-32 why-reckonsys-image" max-3000x1500%}
-            <p class="color-white w-70 ft-20">
+            {{whyreckonsys_card.description|richtext}}
+            {% comment %} <p class="color-white w-70 ft-20">
               {{whyreckonsys_card.description}}
-            </p>
+            </p> {% endcomment %}
           </div>
         {% endfor %}
         </div>

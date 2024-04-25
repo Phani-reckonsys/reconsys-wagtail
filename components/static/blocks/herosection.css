@@ -83,8 +83,11 @@
     display: flex;
     align-items: center;
     gap: 6rem;
-    width: fit-cotent;
-    animation: slide 20s linear infinite;
+    width: fit-content;
+    flex-wrap: nowrap;
+    animation: slide 30s linear infinite;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
   }
 
   @keyframes slide{
@@ -96,7 +99,6 @@
     }
   }
   .herosection-wrapper .quick-testimonials .client-logos-wrapper .client-logos img{
-    height: 2.5rem;
     object-fit: contain;
     width: auto;
   }

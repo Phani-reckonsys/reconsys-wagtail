@@ -83,7 +83,10 @@
         <div class="navigation">
         {% for navitem in navitemsgreen %}
           <h5>
-            <a href="{{navitem.link.get_url}}" class="color-white"
+            <a href="{{navitem.link.get_url}}" class="color-white
+              {% if navitem.link.get_url == path %}
+                  active
+              {% endif %}"
               >
               {{navitem.name}}
               <svg
@@ -106,6 +109,9 @@
         </div>
         <h5 class="contactus">
           <a href="{{navbargreen.Contact_page_link.get_url}}" class="color-white"
+              {% if navitem.link.get_url == path %}
+                  class = "active"
+              {% endif %}
             >{{navbargreen.Contact_page}}
             <svg
               width="28"

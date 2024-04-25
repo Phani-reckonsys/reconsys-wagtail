@@ -317,7 +317,10 @@
     .why-reckonsys-main .left{
         flex-basis: 50%;
     }
-  
+
+  .why-reckonsys-main .right .collaborative-working p{
+        color:#fff;
+    }
   .case-studies-main .case-studies-header {
     display: flex;
     align-items: center;

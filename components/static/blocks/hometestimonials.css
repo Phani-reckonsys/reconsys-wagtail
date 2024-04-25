@@ -21,7 +21,7 @@
     gap: 4rem;
     justify-content: space-between;
     position: relative;
-    height: 70rem;
+    height: 87rem;
     overflow-y: hidden;
     padding-bottom: 10rem;
   }
@@ -112,9 +112,9 @@
     position: absolute;
     bottom: -5rem;
     left: 0;
-    height: 20rem;
+    height: 34rem;
     width: 100%;
-    background: linear-gradient(360deg, #fff 26.69%, rgba(255, 255, 255, 0) 103.72%);
+    background: linear-gradient(360deg, #fff 67.69%, rgba(255, 255, 255, 0) 103.72%);
   }
 
   .testimonials-main .testimonials-container.viewfour .testimonial-gradient {
@@ -123,7 +123,7 @@
 
   .testimonials-main .testimonials-container .hometestimonial-button {
     position: absolute;
-    bottom: 0;
+    bottom: 10rem;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
