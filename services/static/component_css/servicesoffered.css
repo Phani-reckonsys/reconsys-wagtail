@@ -16,6 +16,7 @@
     height: fit-content;
     border-bottom: 1px solid #949494;
     padding: 18px 0px;
+    transition: align-items 0.6s ease;
   }
 .accordians-section .accordians-wrapper .custom-accordian.up {
     align-items: flex-start;
@@ -24,7 +25,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.4rem;
   }
 .accordians-section .accordians-wrapper .custom-accordian .content .custom-question {
     display: flex;
@@ -39,12 +39,15 @@
     transform: rotate(45deg);
   }
 .accordians-section .accordians-wrapper .custom-accordian .content .custom-answer {
-    display: none;
+    max-height: 0;
+    transition:all 0.6s ease;
+    overflow:hidden;
+    
 
   }
 .accordians-section .accordians-wrapper .custom-accordian .content .custom-answer.active {
-    display: block;
-    
+    max-height: 20rem;
+    padding-top: 2rem;
   }
   @keyframes slidedown{
     from{
