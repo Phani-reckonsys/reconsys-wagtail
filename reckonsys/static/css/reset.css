@@ -219,6 +219,9 @@ a {
   text-transform: uppercase;
   background: linear-gradient(270deg, #ce4961 8.92%, #c94d45 84.76%);
   border: 0;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
   svg {
     margin-top: 0.8rem;
   }
@@ -226,15 +229,33 @@ a {
     width: 26.9rem;
     justify-content: space-between;
   }
+  
 }
-.primary-btn:hover{
-  opacity: 0.95;
+.primary-btn::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+z-index: -1;
+  }
+
+.primary-btn:hover::before{
+  width: 100%;
+  border: 1px solid #ce4961;
 }
 .primary-btn:hover img{
   transform: translateX(5px);
   transition: all 0.2s ease-in-out;
+  color: #c94d45;
 }
-
+.primary-btn:hover{
+  color: #ce4961;
+  
+}
 .outline-btn {
   display: inline-block;
   width: 26.9rem;
@@ -251,6 +272,7 @@ a {
   letter-spacing: 1.4px;
   text-transform: uppercase;
   background: #fff;
+  position: relative;
   border: 1px solid #333;
   svg {
     margin-top: 0.8rem;
@@ -263,6 +285,30 @@ a {
 .outline-btn:hover img{
   transform: translateX(5px);
   transition: all 0.2s ease-in-out;
+}.outline-btn::before{
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.outline-btn:hover::before{
+width: 100%;
+border: 1px solid #333;
+}
+.outline-btn:hover img{
+transform: translateX(5px);
+transition: all 0.2s ease-in-out;
+color: #c94d45;
+}
+.outline-btn:hover{
+color: #fff;
+
 }
 
 .outline-btn:hover svg{
