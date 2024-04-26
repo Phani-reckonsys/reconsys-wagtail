@@ -13,11 +13,20 @@
     gap: 4rem;
 }
 
+.ourwork-display .outline-btn {
+    margin: auto;
+    margin-top: 4rem;
+}
+
 .ourwork-display > .our-works-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 9rem 0 12rem 5.5rem;
+}
+
+.ourwork-display > .our-works-card.hidecard{
+    display: none;
 }
 
 .ourwork-display > .our-works-card .image-wrapper{

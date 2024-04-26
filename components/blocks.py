@@ -20,7 +20,7 @@ from wagtail.images.blocks import ImageChooserBlock
 class PrimaryButtonBlock(StructBlock): 
     title = CharBlock(classname = "title", required = True)
     icon = ImageChooserBlock(required = False)
-    link = PageChooserBlock(can_choose_root= True)
+    link = PageChooserBlock(can_choose_root= True, required = False)
 
     class Meta:
         min_num = 0
@@ -31,7 +31,7 @@ class PrimaryButtonBlock(StructBlock):
 class OutlineGreyButtonBlock(StructBlock): 
     title = CharBlock(classname = "title", required = True)
     icon = ImageChooserBlock(required = False)
-    link = PageChooserBlock(can_choose_root= True)
+    link = PageChooserBlock(can_choose_root= True, required = False )
 
     class Meta:
         template = "basic_blocks/outline_grey_button.html"
@@ -321,7 +321,9 @@ class OurWorksDisplayBlock(StructBlock):
     # categorytitles = StreamBlock([("categories", ListBlock(CharBlock(), CharBlock()))])
     categorytitles = StreamBlock([("TitleTabCombo", TitleTagCombo())])
     cards = StreamBlock([("OurWorkCards", OurWorkCard())])
-
+    btntitle = CharBlock(classname="title", required=True)
+    icon = ImageChooserBlock(required=False)
+    outlinegrey_button = StreamBlock([('button', OutlineGreyButtonBlock())])
     class Meta:
         template = "blocks/ourworksdisplay.html"
 

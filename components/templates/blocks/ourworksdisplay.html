@@ -1,5 +1,5 @@
 {%load wagtailimages_tags%}
-
+{% load static %}
 <!-- Herosection starts -->
 <section>
   <div class="sidebar theme-darkgreen"></div>
@@ -42,10 +42,16 @@
                 </div>
             </div>
         {% endfor %}
-        
+        <div class="outline-btn">
+            {{self.btntitle}}
+            {% image self.icon max-300x200%}
+        </div>
     </div>
   </div>
 </section>
 <!-- Herosection Ends -->
+
+<script src="{% static 'blocks/js/ourworks.js' %}"></script>
+
 
 
