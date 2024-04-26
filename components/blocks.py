@@ -326,6 +326,9 @@ class ContactModelBlock(StructBlock):
     class Meta:
         template = "blocks/contactmodel.html"
 
+class EditTextBasicBlock(StructBlock):
+    edittext = RichTextBlock(classname="subtitle", required=True)
+
 class PrivacyPolicyBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=True)
     title = CharBlock(classname="title", required=True)
@@ -335,6 +338,7 @@ class PrivacyPolicyBlock(StructBlock):
     commitment = CharBlock(classname="date", required=True)
     mainimage = ImageChooserBlock(required=False)
     decorimage = ImageChooserBlock(required=False)
+    edittextfield = StreamBlock([('edittext', EditTextBasicBlock())])
 
     class Meta: 
         template = "blocks/privacypolicy.html"

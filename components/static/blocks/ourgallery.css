@@ -23,6 +23,7 @@
 
 .life-at-reckonsys-main .gallery-container .gallery-wrapper .image{
     height: 25rem;
+    width: 39rem;
     object-fit: cover;
 }
 

@@ -12,6 +12,11 @@
                     <h3 class="mb-32">{{self.datetitle}}<span class="date">{{self.date}}</span></h3>
                     <p class="mb-24">{{self.welcomeline}}</p>
                     <p class="mb-32">{{self.commitment}}</p>
+                    <div class="main-text">
+                        {% for edittext in self.edittextfield %}
+                            {{edittext.value.edittext}}
+                        {% endfor %}
+                    </div>
                 </div>
                 <div class="geometric-shapes">
                     {% image self.mainimage max-3000x1500 class="geometric-circle"%}

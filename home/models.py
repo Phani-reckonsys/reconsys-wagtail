@@ -336,6 +336,7 @@ class ContactusPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
+
 class PrivacypolicyPage(Page):
     body = StreamField(
         [('PrivacyPolicy', PrivacyPolicyBlock()),
