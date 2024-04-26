@@ -207,6 +207,20 @@ class OurTestimonialBlock(StructBlock):
     class Meta: 
         template = "blocks/ourtestimonial.html"
 
+#OurTestimonial Block
+class TestimonialGenericBlock(StructBlock):
+    sidetitle = CharBlock(classname="content", required=True)
+    name = CharBlock(classname="content", required=True)
+    designation = CharBlock(classname="content", required=True)
+    image = ImageChooserBlock(required = False)
+    content = CharBlock(classname="content", required=True)
+    svg = ImageChooserBlock(required = False)
+    bgcolor = CharBlock(classname="bgcolor", required=True)
+    fontcolor = CharBlock(classname="bgcolor", required=True)
+    
+    class Meta: 
+        template = "blocks/testimonialgeneric.html"
+
 #Herosection Blogs Page Block
 class BlogsHerosection(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
