@@ -5,7 +5,7 @@ from wagtail.blocks import StreamBlock
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, ContactModelBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, ContactModelBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -64,6 +64,7 @@ class HomePage(Page):
     body = StreamField([
         ("hometesimonials", HomeTestimonialsBlock()),
         ("homeblogs", HomeBlogsBlock()),
+        ("badges", BadgesBlock()),
         # ('contactmodel', ContactModelBlock())
         ], null=True)
     # Adding field panels

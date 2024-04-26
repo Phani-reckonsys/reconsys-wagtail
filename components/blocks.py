@@ -91,6 +91,16 @@ class RatingCard(StructBlock):
     review_count = CharBlock(classname="title", required=True)
     logo = ImageChooserBlock(required= False)
 
+class RatingCard2(StructBlock):
+    star1 = ImageChooserBlock(required= False)
+    star2 = ImageChooserBlock(required= False)
+    star3 = ImageChooserBlock(required= False)
+    star4 = ImageChooserBlock(required= False)
+    star5 = ImageChooserBlock(required= False)
+    url = URLBlock(classname="link", required=True)
+    rating = RichTextBlock(classname="title", required=True)
+    logo = ImageChooserBlock(required= False)
+
 #----------Basic Blocks Ends------------------
 
 
@@ -359,3 +369,10 @@ class PrivacyPolicyBlock(StructBlock):
     class Meta: 
         template = "blocks/privacypolicy.html"
 
+class BadgesBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    badgefield = StreamBlock([('image', Image())])
+
+
+    class Meta: 
+        template = "blocks/badges.html"
