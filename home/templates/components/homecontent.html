@@ -254,9 +254,17 @@
                 {{technologies_stack.title}}
               </h5>
               <div class="logos-array">
-              {% for technologies in technologies_stack.technology%}
-                {% image technologies.icon max-3000x1500%}
-              {% endfor %}
+              
+                {% for technologies in technologies_stack.technology%}
+                <div class="tooltip-wrapper">
+                  {% image technologies.icon max-3000x1500%}
+                  <div class="tooltip-text-wrapper">
+                    <p class="tooltip-text">{{technologies.text}}</p>
+                    <p class="tooltip-text">{{technologies.subtext}}</p>
+                  </div>
+                </div>
+                {% endfor %}
+                
               </div>
             </div>
           {% endfor %}

@@ -152,9 +152,11 @@ class TechnologiesStack(ClusterableModel):
 
 class technologies(Orderable):
     icon = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete= models.SET_NULL, related_name = "+")
+    text = models.CharField(max_length = 255, blank = True, help_text = "Technology Stack Group Name")
+    subtext = models.CharField(max_length = 255, blank = True, help_text = "Technology Stack Group Name")
 
     page = ParentalKey(TechnologiesStack, on_delete = models.CASCADE, related_name = "technologies")
-    panels = [FieldPanel('icon')]
+    panels = [FieldPanel('icon'), FieldPanel('text'), FieldPanel('subtext')]
 
 
 

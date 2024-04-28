@@ -141,6 +141,32 @@
     display: flex;
     gap: 1rem;
   }
+
+  .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array .tooltip-wrapper{
+    position: relative;
+  }
+  
+  .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array .tooltip-wrapper .tooltip-text-wrapper{ 
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    width:300px;
+    padding:20px;
+    bottom:calc(100% + 10px);
+    transform:scale(0);
+    transition:all 0.3s ease;
+    transform-origin: 0% 100%;
+  }
+
+  .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array .tooltip-wrapper .tooltip-text-wrapper p{ 
+    color:white;
+  }
+
+  .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array .tooltip-wrapper img:hover+.tooltip-text-wrapper{
+    transform:scale(1);
+  } 
+
+
   .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array .logo-wrapper {
     width: 5.6rem;
     height: 5.6rem;
