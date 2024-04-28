@@ -1,0 +1,42 @@
+{% load static %} 
+{%load wagtailimages_tags%}
+<!-- Testimonials section starts -->
+<section class="testimonials-section">
+  <div class="sidebar">
+    <h5 class="t-15">{{self.sidetitle}}</h5>
+  </div>
+  <div class="ratings-main pl-54 pr-54 pt-100 w-container c-cream">
+    <div class="ratings-wrapper pl-54 pr-54">
+      <h2>{{self.title}}</h2>
+      <div class="ratings-container">
+            {% for card in self.ratingcards%}
+                <a
+                href="{{card.value.url}}"
+                target="_blank"
+                class="testimonial_rating-card"
+                >
+                    <div class="rating-header">
+                        <div class="rating-stars">
+                            {% image card.value.star1 max-3000x1500 %} 
+                            {% image card.value.star2 max-3000x1500 %} 
+                            {% image card.value.star3 max-3000x1500 %} 
+                            {% image card.value.star4 max-3000x1500 %} 
+                            {% image card.value.star5 max-3000x1500 %}
+                        </div>
+                        {{card.value.rating}}
+                    </div>
+                    {% image card.value.logo max-3000x1500 %}
+                </a>
+            {% endfor %}
+            {% for badge in self.badgecards %}
+                <div class = "badge-card" 
+                >
+                {% image badge.value.image max-3000x1500 class="badge"%}
+                </div>
+            {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonial section ends -->
+<script src="{% static 'blocks/js/hometestimonials.js' %}"></script>

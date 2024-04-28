@@ -133,6 +133,15 @@ class HomeTestimonialsBlock(StructBlock):
     class Meta:
         template = "blocks/hometestimonials.html"
 
+class RatingBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
+    title = CharBlock(classname="title", required=True)
+    ratingcards = StreamBlock([('ratingcard2', RatingCard2()), ('badge', Image())])
+    badgecards = StreamBlock([('badge', Image())])
+
+    class Meta: 
+        template = "blocks/rating.html"
+
 # HomePage Blogs Section
 class HomeBlogsBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
@@ -328,7 +337,6 @@ class OurWorksDisplayBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
-    # categorytitles = StreamBlock([("categories", ListBlock(CharBlock(), CharBlock()))])
     categorytitles = StreamBlock([("TitleTabCombo", TitleTagCombo())])
     cards = StreamBlock([("OurWorkCards", OurWorkCard())])
     btntitle = CharBlock(classname="title", required=True)
