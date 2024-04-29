@@ -12,10 +12,13 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import environ
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -47,6 +50,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "storages"
 ]
 
 MIDDLEWARE = [
@@ -153,7 +157,16 @@ MEDIA_URL = "/media/"
 # See https://docs.djangoproject.com/en/5.0/ref/settings/#std-setting-STORAGES
 STORAGES = {
     "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
+        "BACKEND": "storages.backends.s3.S3Storage",
+        "OPTIONS":{
+            "bucket_name": 'reckonsys-images',
+            "region_name": 'ap-south-1',
+            "access_key": env.str('AWS_ACCESS_KEY', ''),
+            "secret_key": env.str('AWS_SECRET_KEY', ''),
+            "default_acl": "public-read",
+            "location": env.str('AWS_LOCATION', 'media/'),
+            "querystring_auth": False
+        }
     },
     # ManifestStaticFilesStorage is recommended in production, to prevent
     # outdated JavaScript / CSS assets being served from cache

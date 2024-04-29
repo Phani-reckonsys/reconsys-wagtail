@@ -247,10 +247,14 @@ z-index: -1;
   width: 100%;
   border: 1px solid #ce4961;
 }
-.primary-btn:hover img{
+.primary-btn:hover svg{
   transform: translateX(5px);
   transition: all 0.2s ease-in-out;
   color: #c94d45;
+}
+
+.primary-btn:hover svg path{
+  stroke: #000;
 }
 .primary-btn:hover{
   color: #ce4961;

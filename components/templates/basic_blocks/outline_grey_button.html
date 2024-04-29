@@ -2,5 +2,8 @@
 
 <a href="{{self.link.get_url}}" class="outline-btn">
     {{self.title}}
-    {% image self.icon max-300x200%}
+    {% comment %} {% image self.icon max-300x200%} {% endcomment %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="11" viewBox="0 0 27 11" fill="none">
+        <path d="M0 1H25L17.9577 10" stroke="#333333"/>
+    </svg>
 </a>
