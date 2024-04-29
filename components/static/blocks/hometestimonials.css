@@ -33,6 +33,7 @@
     justify-content: space-between;
     position: relative;
     height: fit-content;
+    padding-bottom: 20rem;
   }
 
   .testimonials-main .testimonials-container .testimonial_rating-card {
@@ -126,6 +127,14 @@
   .testimonials-main .testimonials-container .hometestimonial-button {
     position: absolute;
     bottom: 10rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  .testimonials-main .testimonials-container.viewfour .hometestimonial-button {
+    position: absolute;
+    bottom: 0rem;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
