@@ -12,13 +12,13 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import environ
+from dotenv import load_dotenv
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
+load_dotenv(os.path.join(BASE_DIR, ".env"))
+env = os.environ
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -161,10 +161,10 @@ STORAGES = {
         "OPTIONS":{
             "bucket_name": 'reckonsys-images',
             "region_name": 'ap-south-1',
-            "access_key": env.str('AWS_ACCESS_KEY', ''),
-            "secret_key": env.str('AWS_SECRET_KEY', ''),
+            "access_key": env.get('AWS_ACCESS_KEY', ''),
+            "secret_key": env.get('AWS_SECRET_KEY', ''),
             "default_acl": "public-read",
-            "location": env.str('AWS_LOCATION', 'media/'),
+            "location": env.get('AWS_LOCATION', 'media/'),
             "querystring_auth": False
         }
     },
@@ -176,7 +176,6 @@ STORAGES = {
         "BACKEND": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage",
     },
 }
-
 
 # Wagtail settings
 
