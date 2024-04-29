@@ -281,6 +281,7 @@ class OneColScrollerSection(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="subtitle", required=True)
+    btntitle = CharBlock(classname="subtitle", required=True)
     content = CharBlock(classname="subtitle", required=True)
     cards = StreamBlock([('image', ImageTitleCombo())])
 

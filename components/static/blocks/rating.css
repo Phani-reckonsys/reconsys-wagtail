@@ -7,7 +7,7 @@
     padding-bottom: 12rem;
     background: #F2F2F2;
 }
-.ratings-main .ratings-wrapper h2{
+.ratings-main .ratings-wrapper>h2{
    text-align: center;
    width: 70%;
 }
