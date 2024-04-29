@@ -248,14 +248,13 @@ z-index: -1;
   border: 1px solid #ce4961;
 }
 .primary-btn:hover svg{
-  transform: translateX(5px);
-  transition: all 0.2s ease-in-out;
   color: #c94d45;
 }
 
 .primary-btn:hover svg path{
-  stroke: #000;
+  stroke: #c94d45;
 }
+
 .primary-btn:hover{
   color: #ce4961;
   
@@ -286,10 +285,12 @@ z-index: -1;
 .outline-btn:hover{
   opacity: 0.95;
 }
-.outline-btn:hover img{
-  transform: translateX(5px);
-  transition: all 0.2s ease-in-out;
-}.outline-btn::before{
+
+
+.outline-btn:hover svg path{
+  stroke: #fff;
+}
+.outline-btn::before{
   content: " ";
   position: absolute;
   top: 0;
@@ -305,19 +306,10 @@ z-index: -1;
 width: 100%;
 border: 1px solid #333;
 }
-.outline-btn:hover img{
-transform: translateX(5px);
-transition: all 0.2s ease-in-out;
-color: #c94d45;
-}
+
 .outline-btn:hover{
 color: #fff;
 
-}
-
-.outline-btn:hover svg{
-  transform: translateX(5px);
-  transition: all 0.2s ease-in-out;
 }
 
 .outline-btn-white {
