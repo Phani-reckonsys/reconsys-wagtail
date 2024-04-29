@@ -43,6 +43,10 @@ section {
     padding-top: 20rem;
   }
 
+  section > .sidebar.pt-25{
+    padding-top: 25rem;
+  }
+
   section > .sidebar.pt-30{
     padding-top: 30rem;
   }
