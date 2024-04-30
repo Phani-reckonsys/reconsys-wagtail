@@ -40,6 +40,7 @@ def contact(context):
         'contact': Contact.objects.first(),
         'servicesoptions': contact.servicesoptions.all(),
         'request': context['request'],
+        'path': context.request.path,
     }
 
 @register.inclusion_tag('snippets/footer.html', takes_context=True)

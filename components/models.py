@@ -23,7 +23,6 @@ class NavItem(Orderable, models.Model):
 
 @register_snippet
 class Footer(ClusterableModel):
-
     # navbar content variables
     panels = [InlinePanel('socialitems', heading='socialitems'), InlinePanel('footeritems', heading='footeritems')]
 
@@ -44,8 +43,8 @@ class FooterItems(Orderable, models.Model):
 
 @register_snippet
 class Contact(ClusterableModel):
-   
-   panels = [InlinePanel('servicesoptions', heading="ServicesOptions")]
+   ourworks_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+   panels = [InlinePanel('servicesoptions', heading="ServicesOptions"), FieldPanel('ourworks_page_link')]
 
 class SevicesOptions(Orderable,models.Model):
     service = models.CharField(max_length = 255, blank=True, help_text = "Services Offred")
