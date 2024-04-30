@@ -75,7 +75,7 @@
     color: #f0493e;
   }
   nav .navigation-wrapper .navigation h5 a.active {
-    color: #f0493e;
+    color: #f0493e !important;
   }
   nav .navigation-wrapper .navigation h5:hover a svg path {
     stroke: #f0493e;

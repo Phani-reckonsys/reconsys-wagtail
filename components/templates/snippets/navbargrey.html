@@ -115,11 +115,7 @@
     <div class="navigation">
       {% for navitem in navitemsgrey %}
       <h5>
-        <a href="{{navitem.link.get_url}}" class="color-white"
-              {% if navitem.link.get_url == path %}
-                  class = "active"
-              {% endif %}
-        >
+        <a href="{{navitem.link.get_url}}" class="color-white {% if navitem.link.get_url == path %}active{% endif %}">
           {{navitem.name}}
           <svg
             class="menu-arrow"
@@ -136,11 +132,9 @@
       {% endfor %}
     </div>
     <h5 class="contactus">
-      <a href="{{navbargrey.Contact_page_link.get_url}}" class="color-white"
-          {% if navitem.link.get_url == path %}
-                  class = "active"
-          {% endif %}
-        >{{navbargrey.Contact_page}}
+      <a href="{{navbargrey.Contact_page_link.get_url}}" class="color-white {% if navbargrey.Contact_page_link.get_url == path %}active{% endif %}">
+        <p>{{navitem.link.get_url}}</p>
+        {{navbargrey.Contact_page}}
         <svg
           width="28"
           height="11"
