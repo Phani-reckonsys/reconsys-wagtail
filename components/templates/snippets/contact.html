@@ -1,3 +1,4 @@
+{% load static %}
  <!-- contact and Footer section Starts -->
     <section class="contact-section">
       <div class="sidebar dark-section {% if contact.ourworks_page_link.get_url == path %}theme-darkgreen{% endif %}">
@@ -15,7 +16,7 @@
               Want cutting-edge solutions minus the headaches? Contact us to shape your digital future.
             </h4>
           </div>
-          <form class="contact-form">
+          <form class="contact-form" >
             <div class="cf-row">
               <div class="name div-input-50">
                 <label for="name">Name</label>
@@ -73,7 +74,8 @@
                 
               </select>
             </div>
-            <button class="primary-btn">
+             {% comment %} <input type="submit" value="Submit!" class="primary-btn"/> {% endcomment %}
+            <button type="submit" class="primary-btn" id="submit-btn">
               Get in Touch
               <svg
                 width="28"
@@ -94,3 +96,5 @@
       </div>
     </section>
     <!-- contact and Footer section Ends -->
+
+<script src="{% static 'blocks/js/contactus.js' %}"></script>
