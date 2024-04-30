@@ -35,7 +35,7 @@ section {
   }
 
   section > .theme-darkgreen {
-    background: #172125;
+    background: #172125 !important;
     border-right: 1px solid #544e4e;
   }
 

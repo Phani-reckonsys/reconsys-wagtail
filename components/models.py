@@ -24,7 +24,10 @@ class NavItem(Orderable, models.Model):
 @register_snippet
 class Footer(ClusterableModel):
     # navbar content variables
-    panels = [InlinePanel('socialitems', heading='socialitems'), InlinePanel('footeritems', heading='footeritems')]
+    ourworks_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
+    panels = [InlinePanel('socialitems', heading='socialitems'), InlinePanel('footeritems', heading='footeritems'), FieldPanel("ourworks_page_link")]
+
 
 class SocialItems(Orderable, models.Model):
     name = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
