@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "services",
     "components",
     "search",
+    "backend",
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
@@ -50,7 +51,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "storages"
+    "storages",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
