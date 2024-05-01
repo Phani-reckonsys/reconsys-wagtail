@@ -104,40 +104,7 @@
   }
 
   @media only screen and (max-width: 992px) {
-    .herosection-wrapper {
-      overflow-x: hidden;
-    }
-    .herosection-wrapper .herosection-height .herosection div h1 {
-      font-size: 5rem;
-    }
-    .herosection-wrapper .herosection-height .herosection div .hero-carousel-indicator-group {
-      margin-top: 7.2rem;
-      margin-bottom: 7rem !important;
-      display: flex;
-      gap: 2rem;
-    }
-    .herosection-wrapper .herosection-height .herosection div .hero-carousel-indicator-group div {
-      width: 5.4rem;
-      height: 2px;
-      background-color: #333;
-    }
-    .herosection-wrapper .herosection-height .herosection div .hero-carousel-indicator-group div.active {
-      background-color: #f0493e;
-    }
-    .herosection-wrapper .herosection-height .herosection .geometric-shapes {
-      height: 25rem;
-      position: relative;
-    }
-    .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-connection {
-      height: 50rem;
-      right: -12.6rem;
-    }
-    .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-wave {
-      position: absolute;
-      bottom: 11rem;
-      right: 25rem;
-      width: 20rem;
-    }
+
     .herosection-wrapper .quick-testimonials {
       padding: 5rem 0;
     }
@@ -156,44 +123,37 @@
   }
   @media only screen and (max-width: 768px) {
     .herosection-wrapper {
-      padding-top: 8rem;
+      padding-top: 12.2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .herosection-wrapper .herosection-height{
+      position: relative;
+      height: 90rem;
     }
     .herosection-wrapper .herosection-height .herosection {
-      flex-direction: column;
-      border-bottom: 1px solid #cac8c8;
-    }
-    .herosection-wrapper .herosection-height .herosection div h1 {
-      font-size: 5rem;
-    }
-    .herosection-wrapper .herosection-height .herosection div .hero-carousel-indicator-group {
-      margin-top: 7.2rem;
-      margin-bottom: 7rem !important;
       display: flex;
-      gap: 2rem;
+      flex-direction: column;
     }
-    .herosection-wrapper .herosection-height .herosection div .hero-carousel-indicator-group div {
-      width: 5.4rem;
-      height: 2px;
-      background-color: #333;
+    .herosection-wrapper .herosection-height .herosection .herosection-content{
+      width: 100%;
     }
-    .herosection-wrapper .herosection-height .herosection div .hero-carousel-indicator-group div.active {
-      background-color: #f0493e;
+    .herosection-wrapper .herosection-height .herosection .herosection-content .title{
+      font-size: 4.2rem;
     }
-    .herosection-wrapper .herosection-height .herosection .geometric-shapes {
-      height: 40rem;
-      position: relative;
+    .herosection-wrapper .herosection-height .hero-carousel-indicator-group {
+      bottom:52rem;
     }
     .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-connection {
-      height: 40rem;
-      width: auto;
+      height: 50rem;
       position: absolute;
-      right: -3.6rem;
+      right: -5.4rem;
+      top: 0rem;
     }
-    .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-wave {
+    .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-connection.custom-hero-fullimage {
       position: absolute;
-      top: 25rem;
-      right: 25rem;
-      width: 30rem;
+      right: -15.4rem;
+      top: 2rem;
     }
     .herosection-wrapper .quick-testimonials {
       padding: 5rem 0;
@@ -217,85 +177,37 @@
   }
   @media only screen and (max-width: 576px) {
     .herosection-wrapper {
-      padding-top: 8rem;
+      padding-top: 12.2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .herosection-wrapper .herosection-height{
+      position: relative;
+      height: 90rem;
     }
     .herosection-wrapper .herosection-height .herosection {
-      border-bottom: 1px solid #cac8c8;
-    }
-    .herosection-wrapper .herosection-height .herosection div .hero-carousel-indicator-group {
-      margin-top: 7.2rem;
-      margin-bottom: 7rem !important;
       display: flex;
-      gap: 2rem;
+      flex-direction: column;
     }
-    .herosection-wrapper .herosection-height .herosection div .hero-carousel-indicator-group div {
-      width: 5.4rem;
-      height: 2px;
-      background-color: #333;
-    }
-    .herosection-wrapper .herosection-height .herosection div .hero-carousel-indicator-group div.active {
-      background-color: #f0493e;
-    }
-    .herosection-wrapper .herosection-height .herosection div .category-heading{
-      position: relative;
-      height: 3rem;
-      width: 100%;
-    }
-  
     .herosection-wrapper .herosection-height .herosection .herosection-content{
-      width: 90%;
-    }
-  
-    
-    .herosection-wrapper .herosection-height .herosection div .category-heading h4 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: opacity 3s ease;
-      width: 100%;
-      opacity: 0;
-    }
-    .herosection-wrapper .herosection-height .herosection div .category-heading h4.active {
-      opacity: 1;
-    }
-    .herosection-wrapper .herosection-height .herosection div .main-heading{
-      position: relative;
-      height: 38rem;
       width: 100%;
     }
-    .herosection-wrapper .herosection-height .herosection div .main-heading h1 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      transition: opacity 3s ease;
-      opacity: 0;
-      
+    .herosection-wrapper .herosection-height .herosection .herosection-content .title{
+      font-size: 4.2rem;
     }
-    .herosection-wrapper .herosection-height .herosection div .main-heading h1.active {
-      opacity: 1;
-    }
-    .herosection-wrapper .herosection-height .herosection .geometric-shapes {
-      height: 40rem;
-      position: relative;
+    .herosection-wrapper .herosection-height .hero-carousel-indicator-group {
+      bottom:52rem;
     }
     .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-connection {
-      height: 35rem;
-      width: auto;
+      height: 50rem;
       position: absolute;
-      right: -3.6rem;
+      right: -5.4rem;
+      top: 0rem;
     }
     .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-connection.custom-hero-fullimage {
       position: absolute;
-      height: 50rem;
-      right: -5.4rem;
-      top: -12rem;
-    }
-    .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-wave {
-      position: absolute;
-      top: 25rem;
-      right: 18rem;
-      width: 13rem;
+      right: -15.4rem;
+      top: 2rem;
     }
     .herosection-wrapper .quick-testimonials {
       padding: 5rem 0;

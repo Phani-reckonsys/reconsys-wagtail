@@ -11,8 +11,8 @@
     {% for content in self.content %}
       <div class="row herosection active">
       <div class="herosection-content">
-        <h1 class="mb-22 ft-20 lh-110">{{content.value.title}}</h1>
-        <h1 class="mb-36 hero w-80">{{content.value.subtitle}}</h1>
+        <h1 class="mb-22 ft-20 lh-110 category-title">{{content.value.title}}</h1>
+        <h1 class="mb-36 hero w-80 title">{{content.value.subtitle}}</h1>
         <a href="{{content.value.btn_link.get_url}}" class="primary-btn">
             {{content.value.btn_title}}
             {% comment %} {% image content.value.btn_icon max-300x200%} {% endcomment %}
