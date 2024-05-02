@@ -282,10 +282,6 @@ z-index: -1;
   }
 }
 
-.outline-btn:hover{
-  opacity: 0.95;
-}
-
 
 .outline-btn:hover svg path{
   stroke: #fff;
@@ -309,7 +305,6 @@ border: 1px solid #333;
 
 .outline-btn:hover{
 color: #fff;
-
 }
 
 .outline-btn-white {
@@ -329,9 +324,36 @@ color: #fff;
   text-transform: uppercase;
   background: transparent;
   border: 1px solid #fff;
+  position: relative;
+  z-index: 1;
   svg {
     margin-top: 0.8rem;
   }
+}
+
+.outline-btn-white:hover svg path{
+  stroke: #fff;
+}
+.outline-btn-white::before{
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #ce4961;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.outline-btn-white:hover::before{
+width: 100%;
+border: 1px solid #ce4961;
+}
+
+.outline-btn-white:hover{
+color: #fff;
+border: 1px solid #ce4961;
 }
 
 .outline-btn-white:hover{

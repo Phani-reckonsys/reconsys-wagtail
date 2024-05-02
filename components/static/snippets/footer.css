@@ -14,6 +14,11 @@
     display: flex;
     flex-direction: column;
   }
+  .custom-footer .navigation-footer .custom-col .footer-image{
+    width: 6.8rem;
+    height: fit-content;
+    object-fit: contain;
+  }
   .custom-footer .navigation-footer .custom-col:nth-last-child(2) {
     gap: 2.2rem;
   }
