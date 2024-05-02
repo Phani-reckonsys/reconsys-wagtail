@@ -287,6 +287,8 @@ class OneColScrollerSection(StructBlock):
     btntitle = CharBlock(classname="subtitle", required=True)
     content = CharBlock(classname="subtitle", required=True)
     cards = StreamBlock([('image', ImageTitleCombo())])
+    url = URLBlock(classname="link", required=True)
+    btntext = CharBlock(classname="subtitle", required=True)
 
     class Meta:
         template = "blocks/onecolscrollersection.html"

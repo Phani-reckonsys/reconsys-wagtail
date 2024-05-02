@@ -62,7 +62,7 @@
   nav .navigation-wrapper .navigation {
     display: flex;
     width: 40%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   nav .navigation-wrapper .navigation h5:first-child {
