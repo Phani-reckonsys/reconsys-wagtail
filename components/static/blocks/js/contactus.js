@@ -5,7 +5,6 @@ function submitContactDetails(){
     const phoneNumber = document.querySelector("#phone-number").value;
     const company = document.querySelector("#company").value;
     const service = document.querySelector("#services").value;
-    
     if (name === "" || email === "" || countryCode === "" || phoneNumber === "" || company === "" || service === "") {
         alert("Please fill in all fields");
         return;
@@ -19,12 +18,12 @@ function submitContactDetails(){
     }
 
     // Validate phone number format (example: XXX-XXXXXXX)
-    const phonePattern = /^\d{3}-\d{7}$/;
+    const phonePattern = /^\d{10}$/;
     if (!phonePattern.test(phoneNumber)) {
         alert("Please enter a valid phone number (XXX-XXXXXXX)");
         return;
     }
-
+    
     const sendData = {
         name: name,
         email: email,
@@ -39,7 +38,7 @@ function submitContactDetails(){
             "Content-Type": "application/json"
         }
     }).then((response)=>response.json())
-    .then((body)=>{console.log("sussefull")}).catch((error)=>{console.log(error)})
+    .then((body)=>{console.log("sussefull"); window.location.href = "https://qa.reckonsys.com/thankyou/";}).catch((error)=>{console.log(error)})
 }
 
 const submitBtn = document.getElementById("submit-btn");
