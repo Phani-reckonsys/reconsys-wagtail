@@ -25,8 +25,15 @@ class NavItem(Orderable, models.Model):
 class Footer(ClusterableModel):
     # navbar content variables
     ourworks_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    
+    panels = [InlinePanel('socialitems', heading='socialitems'), InlinePanel('footeritems', heading='footeritems'), InlinePanel('footerimages', heading='footerimages'), FieldPanel("ourworks_page_link")]
+   
+    
+class FooterImages(Orderable,models.Model):
+    image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
 
-    panels = [InlinePanel('socialitems', heading='socialitems'), InlinePanel('footeritems', heading='footeritems'), FieldPanel("ourworks_page_link")]
+    footer = ParentalKey(Footer, on_delete = models.CASCADE, related_name="footerimages")
+    panels = [FieldPanel("image")]
 
 
 class SocialItems(Orderable, models.Model):

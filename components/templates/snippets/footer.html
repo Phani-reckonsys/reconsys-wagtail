@@ -1,4 +1,6 @@
- <!-- contact and Footer section Starts -->
+{%load wagtailimages_tags%}
+
+<!-- contact and Footer section Starts -->
     <section class="contact-section">
       <div class="sidebar dark-section {% if footer.ourworks_page_link.get_url == path %}theme-darkgreen{% endif %}">
         <h5 class="color-white spaced-word"></h5>
@@ -62,7 +64,7 @@
               </h3>
             {% for socialitem in socialitems %}
              <h3 class="color-light-white ft-16 mb-16 f-400">
-                <a href="{{socialitem.url.get_url}}" class="color-light-white">{{socialitem.name}}</a>
+                <a href="{{socialitem.url}}" class="color-light-white">{{socialitem.name}}</a>
               </h3>
             {% endfor %}
             </div>
@@ -122,8 +124,9 @@
               </div>
             </div>
             <div class="custom-col">
-              <img src="./res/images/DUNS-registered.png" alt="" />
-              <img src="./res/images/nascom-certified.png" alt="" />
+              {% for footerimage in footerimages %}
+                  {%image footerimage.image max-3000x1500%}
+              {% endfor %}
             </div>
           </div>
         </div>

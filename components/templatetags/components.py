@@ -48,6 +48,7 @@ def footer(context):
     footer = Footer.objects.first()
     return {
         'footer': Footer.objects.first(),
+        'footerimages': footer.footerimages.all(),
         'footeritems': footer.footeritems.all(),
         'socialitems': footer.socialitems.all(),
         'request': context['request'],
