@@ -71,9 +71,9 @@
                 <option value="software-services" selected>
                   Software Services
                 </option>
-                <option value="software-services">Software Services</option>
-                <option value="software-services">Software Services</option>
-                <option value="software-services">Software Services</option>
+                {% for optiontext in self.optiontext %}
+                     <option value="software-services">{{optiontext.value.text}}</option>
+                {% endfor %}
               </select>
             </div>
             <button class="primary-btn">
@@ -94,6 +94,19 @@
             </button>
           </form>
         </div>
+        <div class="thankyou-container">
+          <div class="left">
+            <h1 class="hero">
+              Thank you for reaching out to us.
+            </h1>
+            <h3>We will get in touch with you regarding your request within one business day.</h3>
+          </div>
+          <div class="right">
+
+          </div>
+        </div>
       </div>
     </section>
     <!-- contact and Footer section Ends -->
+
+    <script src="{% static 'blocks/js/contactus.js' %}"></script>

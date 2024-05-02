@@ -5,6 +5,25 @@ function submitContactDetails(){
     const phoneNumber = document.querySelector("#phone-number").value;
     const company = document.querySelector("#company").value;
     const service = document.querySelector("#services").value;
+    
+    if (name === "" || email === "" || countryCode === "" || phoneNumber === "" || company === "" || service === "") {
+        alert("Please fill in all fields");
+        return;
+    }
+
+    // Validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address");
+        return;
+    }
+
+    // Validate phone number format (example: XXX-XXXXXXX)
+    const phonePattern = /^\d{3}-\d{7}$/;
+    if (!phonePattern.test(phoneNumber)) {
+        alert("Please enter a valid phone number (XXX-XXXXXXX)");
+        return;
+    }
 
     const sendData = {
         name: name,

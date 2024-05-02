@@ -80,6 +80,9 @@ class TestimonialCard(StructBlock):
 class Image(StructBlock):
     image = ImageChooserBlock(required=False)
 
+class Text(StructBlock):
+    text = CharBlock(classname="title", required=True)
+
 class RatingCard(StructBlock):
     star1 = ImageChooserBlock(required= False)
     star2 = ImageChooserBlock(required= False)
@@ -353,6 +356,22 @@ class ContactUsTestimonialBlock(StructBlock):
     class Meta:
         template = "blocks/contactustestimonial.html"
 
+class ContactUsBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    optiontext = StreamBlock([('optiontext', Text())])
+
+    class Meta:
+        template = "blocks/contactusblock.html"
+
+class ThankyouBlock(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    image_cover = ImageChooserBlock(required = False)
+    image_decor = ImageChooserBlock(required = False)
+
+    class Meta:
+        template = "blocks/thankyoublock.html"
 
 class ContactModelBlock(StructBlock):
     close_btn = ImageChooserBlock(required=False)
