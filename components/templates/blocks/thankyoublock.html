@@ -1,20 +1,21 @@
  {%load wagtailimages_tags%}
+ {% load static %}
  <!-- contact and Footer section Starts -->
     <section class="contact-section">
       <div class="sidebar dark-section">
         <h5 class="color-white spaced-word">Contact Us</h5>
       </div>
-      <div class="contact-main pl-54 pr-54 pt-100 w-container c-dark">
+      <div class="thankyou-main pl-54 pt-100 w-container c-dark">
         <div class="thankyou-container">
           <div class="left">
-            <h1 class="hero">
+            <h1 class="hero color-white w-70 mb-24">
               Thank you for reaching out to us.
             </h1>
-            <h3>We will get in touch with you regarding your request within one business day.</h3>
+            <h3 class="color-white w-50">We will get in touch with you regarding your request within one business day.</h3>
           </div>
           <div class="right">
-            <% image self.image_cover max-3000x1500%>
-            <% image self.image_decor max-3000x1500%>
+            {% image self.image_cover max-3000x1500 class="image-cover"%}
+            {% image self.image_decor max-3000x1500 class="image-decor"%}
           </div>
         </div>
       </div>
