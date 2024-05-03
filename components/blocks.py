@@ -405,3 +405,32 @@ class BadgesBlock(StructBlock):
 
     class Meta: 
         template = "blocks/badges.html"
+
+
+class BlogHeaderBlock(StructBlock):
+    page_title = CharBlock(classname="title", required=True)
+    headline = CharBlock(classname="title", required=True)
+    category_title = CharBlock(classname="title", required=True)
+    publish_date = CharBlock(classname="title", required=True)
+    decorimage = ImageChooserBlock(required=False)
+    tags = StreamBlock([('tags', Text())])
+
+
+    class Meta: 
+        template = "blocks/blogheader.html"
+
+class BlogBodyBlock(StructBlock):
+    page_title = RichTextBlock(classname="title", required=True)
+
+    class Meta: 
+        template = "blocks/blogbody.html"
+
+class BlogAuthorBlock(StructBlock):
+    profile_image = ImageChooserBlock(required=False)
+    name = CharBlock(classname="title", required=True)
+    designation = CharBlock(classname="title", required=True)
+    abouttheauthor = CharBlock(classname="title", required=True)
+
+
+    class Meta: 
+        template = "blocks/blogauthor.html"
