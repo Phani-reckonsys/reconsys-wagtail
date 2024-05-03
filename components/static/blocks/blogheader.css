@@ -34,6 +34,6 @@
 
 .blogheader .left .left-margin .cover-image{
    width: 70rem;
-   object-position: contain;
+   object-fit: contain;
    height: fit-content;
 }
