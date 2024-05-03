@@ -5,7 +5,7 @@ from wagtail.blocks import StreamBlock
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, ContactModelBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogAuthorBlock, BlogBodyBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, ContactModelBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -344,17 +344,14 @@ class ContactusPage(Page):
 class PersonalblogPage(Page):
     blogheader = StreamField([('blogheader', BlogHeaderBlock())], null = True)
     blogbody = StreamField([('blogbody', BlogBodyBlock())], null = True)
-    blogAuthor = StreamField([('blogauthor', BlogAuthorBlock())], null = True)
     
     blogheader_panels = [FieldPanel('blogheader')]
-    blogauthor_panels = [FieldPanel('blogAuthor')]
     blogbody_panels = [FieldPanel('blogbody')]
 
     edit_handler = TabbedInterface([
         ObjectList(Page.content_panels, heading= 'Content'),
         ObjectList(blogheader_panels, heading= 'BlogHeader'),
-        ObjectList(blogauthor_panels, heading= 'BlogHeader'),
-        ObjectList(blogbody_panels, heading= 'BlogHeader'),
+        ObjectList(blogbody_panels, heading= 'BlogBody'),
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 

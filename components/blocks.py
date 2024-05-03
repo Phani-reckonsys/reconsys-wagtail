@@ -420,17 +420,11 @@ class BlogHeaderBlock(StructBlock):
         template = "blocks/blogheader.html"
 
 class BlogBodyBlock(StructBlock):
-    page_title = RichTextBlock(classname="title", required=True)
-
-    class Meta: 
-        template = "blocks/blogbody.html"
-
-class BlogAuthorBlock(StructBlock):
     profile_image = ImageChooserBlock(required=False)
     name = CharBlock(classname="title", required=True)
     designation = CharBlock(classname="title", required=True)
     abouttheauthor = CharBlock(classname="title", required=True)
-
+    page_title = RichTextBlock(classname="title", required=True)
 
     class Meta: 
-        template = "blocks/blogauthor.html"
+        template = "blocks/blogbody.html"
