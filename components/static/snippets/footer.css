@@ -38,6 +38,8 @@
     gap: 10px;
     border: 0.5px solid #3F3F3F;
     background: #0C0B0B;
+    color: #fff;
+    font-size: 1.8rem;
   }
   .custom-footer .navigation-footer .custom-col .newsletter-subscription input::-moz-placeholder {
     color: #fff;
