@@ -13,7 +13,7 @@ function submitNewsletterDetails(){
      const sendData = {
         email: email,
     }
-    fetch("https://qa.reckonsys.com/backend/contact-us", {
+    fetch("https://qa.reckonsys.com/backend/news-letter", {
         method: "POST",
         body: JSON.stringify(sendData),
         headers: {
