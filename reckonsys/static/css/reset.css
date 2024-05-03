@@ -742,7 +742,9 @@ img {
 .lh-160 {
   line-height: 160% !important;
 }
-
+.o-4 {
+  opacity: 0.4;
+}
 .o-5 {
   opacity: 0.5;
 }
