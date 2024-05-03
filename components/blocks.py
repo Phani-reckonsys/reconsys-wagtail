@@ -412,7 +412,7 @@ class BlogHeaderBlock(StructBlock):
     headline = CharBlock(classname="title", required=True)
     category_title = CharBlock(classname="title", required=True)
     publish_date = CharBlock(classname="title", required=True)
-    decorimage = ImageChooserBlock(required=False)
+    cover_image = ImageChooserBlock(required=False)
     tags = StreamBlock([('tags', Text())])
 
 
@@ -423,8 +423,8 @@ class BlogBodyBlock(StructBlock):
     profile_image = ImageChooserBlock(required=False)
     name = CharBlock(classname="title", required=True)
     designation = CharBlock(classname="title", required=True)
-    abouttheauthor = CharBlock(classname="title", required=True)
-    page_title = RichTextBlock(classname="title", required=True)
+    about_the_author = CharBlock(classname="title", required=True)
+    blog_text = RichTextBlock(classname="title", required=True, features=['h1','h2','h3','h4','h5','h6', 'bold', 'hr', 'italic','code','ol','ul','link','image','blockquote'])
 
     class Meta: 
         template = "blocks/blogbody.html"
