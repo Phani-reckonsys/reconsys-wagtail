@@ -41,6 +41,10 @@
     color: #fff;
     font-size: 1.8rem;
   }
+  .custom-footer .navigation-footer .custom-col .newsletter-subscription input:focus {
+    outline: none;
+    border: 1px solid #ED7F5C;
+  }
   .custom-footer .navigation-footer .custom-col .newsletter-subscription input::-moz-placeholder {
     color: #fff;
     font-size: 1.6rem;
