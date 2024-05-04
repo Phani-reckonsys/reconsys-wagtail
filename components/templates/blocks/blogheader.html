@@ -26,7 +26,7 @@
                         <h1 class="mb-26 ft-52">{{self.headline}}</h1>
                         <div class="tags-container mb-26">
                             {% for tag in self.tags %}
-                                <h4 class="tag fw-500 ft-16">{{tag.value.text}}</h4>
+                                <h4 class="tag fw-500 ft-16">#{{tag.value.text}}</h4>
                             {% endfor %}
                         </div>
                         <h6 class="mb-46 category-title-date"><span class="category-title ft-900">{{self.category_title}}</span>   <span class="date">Published On : {{self.publish_date}}</span></h6>

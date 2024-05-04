@@ -349,13 +349,13 @@
   .why-reckonsys-main .right .card p{
         color:#fff;
     }
-    .why-reckonsys-main .right .card .why-reckonsys-image:nth-child(odd){
-      width: 100%;
+    .why-reckonsys-main .right .card:nth-child(odd) .why-reckonsys-image{
+      width: 75%;
       object-fit: contain;
       height: fit-content;
   }
-  .why-reckonsys-main .right .card .why-reckonsys-image:nth-child(even){
-    width: 80%;
+  .why-reckonsys-main .right .card:nth-child(even) .why-reckonsys-image{
+    width: 65%;
     object-fit: contain;
     height: fit-content;
 }

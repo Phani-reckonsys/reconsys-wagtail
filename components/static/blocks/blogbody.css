@@ -38,18 +38,24 @@
 
 .blogbody .content h2{
    font-size: 3rem;
-   margin-bottom: 2.4rem;
+   margin-bottom: 1.8rem;
    line-height: 133%;
 }
 
 .blogbody .content h3{
+    font-size: 2.2rem;
+    margin-bottom: 1.4rem;
+    line-height: 133%;
+ }
+
+ .blogbody .content h4{
     font-size: 2.2rem;
     margin-bottom: 1.8rem;
     line-height: 133%;
  }
 
  .blogbody .content p{
-    margin-bottom: 4.2rem;
+    margin-bottom: 3.6rem;
     width: 100%;
  }
 
@@ -57,8 +63,22 @@
     margin-bottom: 4.2rem;
  }
 
- .blogbody .content ol li{
+ .blogbody .content ul li{
+    margin-bottom: 3.6rem;
+    width: 100%;
+    font-family: "Spline Sans";
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 137%; /* 21.92px */
+    margin-left: 2rem;
+ }
+
+ .blogbody .content ol{
     margin-bottom: 4.2rem;
+ }
+
+ .blogbody .content ol li{
+    margin-bottom: 3.6rem;
     width: 100%;
     font-family: "Spline Sans";
     font-size: 1.8rem;
