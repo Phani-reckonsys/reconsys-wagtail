@@ -346,9 +346,19 @@
         flex-basis: 50%;
     }
 
-  .why-reckonsys-main .right .collaborative-working p{
+  .why-reckonsys-main .right .card p{
         color:#fff;
     }
+    .why-reckonsys-main .right .card .why-reckonsys-image:nth-child(odd){
+      width: 100%;
+      object-fit: contain;
+      height: fit-content;
+  }
+  .why-reckonsys-main .right .card .why-reckonsys-image:nth-child(even){
+    width: 80%;
+    object-fit: contain;
+    height: fit-content;
+}
   .case-studies-main .case-studies-header {
     display: flex;
     align-items: center;
