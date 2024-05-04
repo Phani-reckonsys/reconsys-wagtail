@@ -1,5 +1,4 @@
 .ourwork-display > .category-container{
-    overflow-x: scroll;
     position: sticky;
     top: 0;
     background-color: #172125;
