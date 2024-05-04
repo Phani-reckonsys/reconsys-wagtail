@@ -424,7 +424,11 @@ class BlogBodyBlock(StructBlock):
     name = CharBlock(classname="title", required=True)
     designation = CharBlock(classname="title", required=True)
     about_the_author = CharBlock(classname="title", required=True)
-    blog_text = RichTextBlock(classname="title", required=True, features=['h1','h2','h3','h4','h5','h6', 'bold', 'hr', 'italic','code','ol','ul','link','image','blockquote'])
+    twitter_url = URLBlock(classname="link", required=False)
+    linkedin_url = URLBlock(classname="link", required=False)
+    facebook_url = URLBlock(classname="link", required=False)
+    url = URLBlock(classname="link", required=True)
+    blog_text = RichTextBlock(classname="title", required=True, features=['h2', 'h3' , 'h4' , 'p' , 'bold', 'hr', 'italic','code','ol','ul','link','image','blockquote'])
 
     class Meta: 
         template = "blocks/blogbody.html"
