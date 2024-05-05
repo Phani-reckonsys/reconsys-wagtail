@@ -1,4 +1,5 @@
-version: '1'
+version: '2'
+
 services:
   wagtail:
     build: .
@@ -6,5 +7,20 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - /www/wagtail_data/media:/app/media
       - /www/wagtail_data/db.sqlite3:/app/db.sqlite3
+    env_file:
+      - .env
+  
+  nginx-proxy:
+    build: nginx
+    restart: always
+    volumes:
+      - ./nginx/default.conf:/tmp/default.conf
+    environment:
+      - DJANGO_SERVER_ADDR=wagtail:8000
+    env_file:
+      - .env
+    ports:
+      - 81:80
+    depends_on:
+      - wagtail
