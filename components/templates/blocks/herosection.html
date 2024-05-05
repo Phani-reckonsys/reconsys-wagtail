@@ -65,25 +65,26 @@
 
 <script>
   let herosectionTitleCount = {{self.content | length}};
-  const categoryHeadings = document.querySelectorAll(
-      ".herosection"
-    );
-    const headingIndicator = document.querySelectorAll(
-      ".hero-carousel-indicator-group > *"
-    );
+  const categoryHeadings = document.querySelectorAll(".herosection");
+  const headingIndicator = document.querySelectorAll(".hero-carousel-indicator-group > *");
 
-    let currentHeading = 0;
+  let currentHeading = 0;
 
-    const setActiveHeading = (index) => {
-      currentHeading = (index + herosectionTitleCount) % herosectionTitleCount;
-      categoryHeadings.forEach((entry) => entry.classList.remove("active"));
-      headingIndicator.forEach((entry) => entry.classList.remove("active"));
+  const setActiveHeading = (index) => {
+    currentHeading = (index + herosectionTitleCount) % herosectionTitleCount;
+    categoryHeadings.forEach((entry) => entry.classList.remove("active"));
+    headingIndicator.forEach((entry) => entry.classList.remove("active"));
 
+    if (categoryHeadings.length > currentHeading && currentHeading >= 0) {
       categoryHeadings[currentHeading].classList.add("active");
+    }
+    if (headingIndicator.length > currentHeading && currentHeading >= 0) {
       headingIndicator[currentHeading].classList.add("active");
-    };
+    }
+  };
 
-    setInterval(() => setActiveHeading(currentHeading + 1), 5000);
+  setInterval(() => setActiveHeading(currentHeading + 1), 5000);
 
-    setActiveHeading(currentHeading);
+  setActiveHeading(currentHeading);
 </script>
+
