@@ -345,8 +345,6 @@ class OurWorksDisplayBlock(StructBlock):
     categorytitles = StreamBlock([("TitleTabCombo", TitleTagCombo())])
     cards = StreamBlock([("OurWorkCards", OurWorkCard())])
     btntitle = CharBlock(classname="title", required=True)
-    icon = ImageChooserBlock(required=False)
-    outlinegrey_button = StreamBlock([('button', OutlineGreyButtonBlock())])
     class Meta:
         template = "blocks/ourworksdisplay.html"
 

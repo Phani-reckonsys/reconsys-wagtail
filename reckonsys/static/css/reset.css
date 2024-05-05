@@ -291,6 +291,7 @@ z-index: -1;
 .outline-btn:hover svg path{
   stroke: #fff;
 }
+
 .outline-btn::before{
   content: " ";
   position: absolute;
