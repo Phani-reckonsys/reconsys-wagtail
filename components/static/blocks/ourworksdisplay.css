@@ -23,6 +23,12 @@
     justify-content: space-between;
     padding: 9rem 0 12rem 5.5rem;
 }
+.ourwork-display > .our-works-card.none{
+    display: none;
+}
+.ourwork-display > .our-works-card.active{
+    display: flex;
+}
 
 .ourwork-display > .our-works-card.hidecard{
     display: none;
