@@ -150,7 +150,9 @@ class HomeBlogsBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = CharBlock(classname="title", required=True)
+    blogspagelink = PageChooserBlock(can_choose_root= True, required=False)
     blogcard = StreamBlock([('blogcard', BlogsCard())])
+
 
     class Meta:
         template = "blocks/homeblogs.html"
