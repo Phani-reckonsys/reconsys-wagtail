@@ -35,7 +35,9 @@
 .blogbody .content{
     flex-basis: 55%;
 }
-
+.blogbody .content a{
+    color: #F86638;
+}
 .blogbody .content h2{
    font-size: 3rem;
    margin-bottom: 1.8rem;
@@ -55,12 +57,12 @@
  }
 
  .blogbody .content p{
-    margin-bottom: 3.6rem;
+    margin-bottom: 2.4rem;
     width: 100%;
  }
 
  .blogbody .content ul{
-    margin-bottom: 4.2rem;
+    margin-bottom: 3.6rem;
  }
 
  .blogbody .content ul li{
@@ -71,6 +73,7 @@
     font-weight: 400;
     line-height: 137%; /* 21.92px */
     margin-left: 2rem;
+    margin-bottom: 2rem;
  }
 
  .blogbody .content ol{
