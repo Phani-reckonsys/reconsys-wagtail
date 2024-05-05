@@ -64,7 +64,7 @@ class BlogsCard(StructBlock):
     title = CharBlock(classname="title", required=True)
     category = CharBlock(classname="category", required=True)
     info = CharBlock(classname="info", required=True)
-    link = URLBlock(classname="link", required=True)
+    link = PageChooserBlock(required=False)
 
 #ImageTitle Combo Basic Block
 class ImageTitleCombo(StructBlock):

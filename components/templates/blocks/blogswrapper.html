@@ -9,14 +9,14 @@
             <div class="blog-cards-wrapper">
                 <!-- Blog 1 Starts -->
                 {% for card in self.cards %}
-                <div class="blog-card">
+                <a href ="card.value.link"class="blog-card">
                     <div class="image-wrapper mb-14">
                         {% image card.value.image max-3000x1500%}
                     </div>
                     <p class="ft-14 mb-26 lh-110">{{card.value.category}}</p>
                     <p class="ft-22 fw-500 mb-28 lh-110">{{card.value.title}}</p>
                     <p class="ft-16 lh-110">{{card.value.info}}</p>
-                </div>
+                </a>
                 {% endfor %}
                 <!-- Blog 1 ends -->
             </div>
