@@ -13,8 +13,6 @@ function setOurWorksCardCount(count) {
       showMoreBtnText.textContent = "show more"
     }
   }
-  console.log(count);
-  console.log(ourWorkCards);
 }
 
 setOurWorksCardCount(8);
@@ -39,27 +37,26 @@ allBtn.addEventListener('click', () => {
 
 csdBtn.addEventListener('click', () => {
   ourWorkCards.forEach(card => {
-    card.classList.add("none");
+    card.classList.remove("none");
+    card.classList.remove("active");
   });
   uiCards.forEach(card => {
     card.classList.add("none");
   });
   csdCards.forEach(card => {
-    card.classList.remove("none");
     card.classList.add("active");
   });
 });
 
 uiBtn.addEventListener('click', () => {
   ourWorkCards.forEach(card => {
-    card.classList.add("none");
+    card.classList.remove("none");
+    card.classList.remove("active");
   });
   uiCards.forEach(card => {
-    card.classList.remove("none");
     card.classList.add("active");
   });
   csdCards.forEach(card => {
-    
     card.classList.add("none");
   });
 });
