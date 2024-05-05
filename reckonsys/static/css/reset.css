@@ -312,6 +312,10 @@ border: 1px solid #333;
 color: #fff;
 }
 
+.outline-btn:hover h4{
+  color: #fff;
+  }
+
 .outline-btn-white {
   display: inline-flex;
   width: auto;
