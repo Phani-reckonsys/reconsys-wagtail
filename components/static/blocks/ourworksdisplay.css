@@ -12,6 +12,10 @@
     gap: 4rem;
 }
 
+.ourwork-display > .category-container > .category-wrapper p{
+    cursor: pointer;
+}
+
 .ourwork-display .outline-btn {
     margin: auto;
     margin-top: 4rem;
