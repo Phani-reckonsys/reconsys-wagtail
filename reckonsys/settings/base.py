@@ -53,26 +53,24 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "storages",
     "rest_framework",
+    "whitenoise",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
 ROOT_URLCONF = "reckonsys.urls"
-
-CSRF_TRUSTED_ORIGINS=[
-    "https://reckonsys-wagtail-qa-alb-606896497.ap-south-1.elb.amazonaws.com",
-    "https://qa.reckonsys.com",
-]
-USE_X_FORWARDED_HOST = True
 
 TEMPLATES = [
     {
@@ -160,15 +158,15 @@ MEDIA_URL = "/media/"
 STORAGES = {
     "default": {
         "BACKEND": "storages.backends.s3.S3Storage",
-        "OPTIONS":{
-            "bucket_name": 'reckonsys-images',
-            "region_name": 'ap-south-1',
-            "access_key": env.get('AWS_ACCESS_KEY', ''),
-            "secret_key": env.get('AWS_SECRET_KEY', ''),
+        "OPTIONS": {
+            "bucket_name": "reckonsys-images",
+            "region_name": "ap-south-1",
+            "access_key": env.get("AWS_ACCESS_KEY", ""),
+            "secret_key": env.get("AWS_SECRET_KEY", ""),
             "default_acl": "public-read",
-            "location": env.get('AWS_LOCATION', 'media/'),
-            "querystring_auth": False
-        }
+            "location": env.get("AWS_LOCATION", "media/"),
+            "querystring_auth": False,
+        },
     },
     # ManifestStaticFilesStorage is recommended in production, to prevent
     # outdated JavaScript / CSS assets being served from cache
@@ -196,3 +194,16 @@ WAGTAILSEARCH_BACKENDS = {
 WAGTAILADMIN_BASE_URL = "http://example.com"
 
 WAGTAILIMAGES_EXTENSIONS = ["gif", "jpg", "jpeg", "png", "webp", "svg"]
+
+# REST Framework Configuration
+DEFAULT_RENDERER_CLASSES = (
+    "rest_framework.renderers.JSONRenderer",
+    "rest_framework.renderers.BrowsableAPIRenderer",
+)
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
+    ),
+    "DEFAULT_RENDERER_CLASSES": DEFAULT_RENDERER_CLASSES,
+}
