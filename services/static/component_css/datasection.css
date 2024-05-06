@@ -1,6 +1,14 @@
 .services-stats-section {
     position: relative;
   }
+  .services-stats-section h4{
+    position: relative;
+    z-index: 10;
+  }
+  .services-stats-section h2{
+    position: relative;
+    z-index: 10;
+  }
  .services-stats-section .geometric-circle {
     position: absolute;
     top: -13rem;
