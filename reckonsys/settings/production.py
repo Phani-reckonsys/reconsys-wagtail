@@ -3,7 +3,14 @@ from .base import *
 DEBUG = False
 
 # All the hosts to allow
-http_hosts = ("localhost:8000", "127.0.0.1:8000", "localhost", "127.0.0.1")
+http_hosts = (
+    "localhost:8000",
+    "127.0.0.1:8000",
+    "localhost",
+    "127.0.0.1",
+    # EC2 IP
+    "172.31.26.146",
+)
 https_hosts = (
     "qa.reckonsys.com",
     "www.reckonsys.com",
