@@ -1,0 +1,51 @@
+.body-container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-container.remove {
+   display: none;
+}
+
+
+.body-container .welcomeback-model{
+    width: 103rem;
+    height: 56rem;
+    border-radius: 1.1rem;
+    display: flex;
+    background-color: #232020;
+    position: relative;
+    overflow: hidden;
+}
+
+.body-container .welcomeback-model .left{ 
+    flex-basis: 45%;
+}
+
+.body-container .welcomeback-model .left img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.body-container .welcomeback-model .right{ 
+    flex-basis: 55%;
+    padding: 8.6rem 4.5rem 8.6rem 4.5rem;
+    position: relative;
+}
+
+.body-container .welcomeback-model .right .welcomeback-close-btn{ 
+    position: absolute;
+    top: 4rem;
+    right: 4.5rem;
+    cursor: pointer;
+}
