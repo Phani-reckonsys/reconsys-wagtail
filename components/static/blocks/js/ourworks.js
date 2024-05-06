@@ -24,11 +24,14 @@ showMoreBtn.addEventListener("click", () => {
 const allBtn = document.querySelector(".all-btn");
 const csdBtn = document.querySelector(".csd-btn");
 const uiBtn = document.querySelector(".ui-btn");
-
+allBtn.classList.add("active");
 const csdCards = document.querySelectorAll(".our-works-card.csd");  // All cards selector
 const uiCards = document.querySelectorAll(".our-works-card.ui");  // All cards selector
 
 allBtn.addEventListener('click', () => {
+  allBtn.classList.add("active");
+  uiBtn.classList.remove("active");
+  csdBtn.classList.remove("active");
   ourWorkCards.forEach(card => {
     card.classList.remove("none");
     card.classList.remove("active");
@@ -36,6 +39,9 @@ allBtn.addEventListener('click', () => {
 });
 
 csdBtn.addEventListener('click', () => {
+  allBtn.classList.remove("active");
+  uiBtn.classList.remove("active");
+  csdBtn.classList.add("active");
   ourWorkCards.forEach(card => {
     card.classList.remove("none");
     card.classList.remove("active");
@@ -49,6 +55,9 @@ csdBtn.addEventListener('click', () => {
 });
 
 uiBtn.addEventListener('click', () => {
+  uiBtn.classList.add("active");
+  allBtn.classList.remove("active");
+  csdBtn.classList.remove("active");
   ourWorkCards.forEach(card => {
     card.classList.remove("none");
     card.classList.remove("active");

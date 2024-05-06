@@ -16,6 +16,14 @@
     cursor: pointer;
 }
 
+.ourwork-display > .category-container > .category-wrapper p:hover{
+    color: #f0493e !important;
+}
+
+.ourwork-display > .category-container > .category-wrapper p.active{
+    color: #f0493e !important;
+}
+
 .ourwork-display .outline-btn {
     margin: auto;
     margin-top: 4rem;
