@@ -1,5 +1,6 @@
 function submitNewsletterDetails(){
     const email = document.querySelector("#newsletter-email").value; 
+    const thankyouForSubscription = document.querySelector(".newsletter-subscription-thankyou");
     if (email === "") {
         alert("Please provide email for newsletter");
         return;
@@ -20,7 +21,7 @@ function submitNewsletterDetails(){
             "Content-Type": "application/json"
         }
     }).then((response)=>response.json())
-    .then((body)=>{console.log("sussefull");}).catch((error)=>{console.log(error)})
+    .then((body)=>{thankyouForSubscription.classList.add("active"); console.log("sussefull");}).catch((error)=>{console.log(error)})
 }
 
 const submitEmailBtn = document.querySelector(".newsletter-submit");
