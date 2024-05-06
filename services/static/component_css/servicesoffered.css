@@ -3,8 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1.8rem;
-    height: -moz-fit-content;
-    height: fit-content;
+    align-items: flex-start;
   }
   .accordians-section .accordians-wrapper .custom-accordian{
     flex-basis: 45%;
