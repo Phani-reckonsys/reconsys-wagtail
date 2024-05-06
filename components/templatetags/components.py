@@ -54,3 +54,11 @@ def footer(context):
         'request': context['request'],
         'path': context.request.path,
     }
+
+@register.inclusion_tag('snippets/welcomebackmodel.html', takes_context=True)
+def welcomebackmodel(context):
+    welcomebackmodel = welcomebackmodel.objects.first()
+    return{
+        'welcomebackmodel': welcomebackmodel.objects.first(),
+        'request': context['request'],
+    }
