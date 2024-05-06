@@ -54,7 +54,9 @@ class HeroContentBasicBlock(StructBlock):
     btn_title = CharBlock(classname = "title", required = True)
     btn_icon = ImageChooserBlock(required = False)
     btn_link = PageChooserBlock(can_choose_root= True)
+    btn_url_link = URLBlock(classname="link", required=False)
     include_fullimage = BooleanBlock(required=False)
+    include_url_button = BooleanBlock(required = False)
     image_cover = ImageChooserBlock(required = False)
     image_decor = ImageChooserBlock(required = False)
 
