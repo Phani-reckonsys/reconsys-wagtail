@@ -89,6 +89,7 @@
               </h4>
               <div class="newsletter-subscription">
                 <div class="newsletter-subscription-input">
+                  {% csrf_token %}
                   <input
                     type="email"
                     id="newsletter-email"
