@@ -22,12 +22,12 @@ accQuestions.forEach((question, index) => {
     const isActive = accAnswers[index].classList.contains("active");
     accQuestions.forEach((_, indexAll) => {
       accAnswers[indexAll].classList.remove("active");
-      customAccordian[indexAll].classList.remove("up");
+      // customAccordian[indexAll].classList.remove("up");
       accPlus[indexAll].classList.remove("rotate");
     });
     if (!isActive) {
       accAnswers[index].classList.add("active");
-      customAccordian[index].classList.add("up");
+      // customAccordian[index].classList.add("up");
       accPlus[index].classList.add("rotate");
     }
   });

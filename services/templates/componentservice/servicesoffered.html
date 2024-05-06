@@ -15,19 +15,21 @@
                 <div class="accordians-wrapper">
                     {% for servicesoffered in page.offeredservices %}
                         <div class="custom-accordian">
-                            {% image servicesoffered.service_icon max-3000x1500%}
-                            <div class="content">
-                                <div class="custom-question">
-                                    <h4>
-                                        {{servicesoffered.question}}
-                                    </h4>
-                                    {% image servicesoffered.plus_icon class='accordian-plus' max-3000x1500%}
+                            <div class="header">
+                                {% image servicesoffered.service_icon max-3000x1500%}
+                                <div class="content">
+                                    <div class="custom-question">
+                                        <h4>
+                                            {{servicesoffered.question}}
+                                        </h4>
+                                        {% image servicesoffered.plus_icon class='accordian-plus' max-3000x1500%}
+                                    </div>
                                 </div>
-                                <div class="custom-answer">
+                            </div>
+                             <div class="custom-answer">
                                     <p class="ft-16">
                                         {{servicesoffered.answer}}
                                     </p>
-                                </div>
                             </div>
                         </div>
                     {% endfor %}

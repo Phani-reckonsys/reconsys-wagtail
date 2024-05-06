@@ -6,15 +6,17 @@
     height: -moz-fit-content;
     height: fit-content;
   }
-.accordians-section .accordians-wrapper .custom-accordian {
+  .accordians-section .accordians-wrapper .custom-accordian{
     flex-basis: 45%;
+    border-bottom: 1px solid #949494;
+  }
+.accordians-section .accordians-wrapper .custom-accordian .header{
     display: flex;
     gap: 2.4rem;
     width: 100%;
     align-items: center;
     height: -moz-fit-content;
     height: fit-content;
-    border-bottom: 1px solid #949494;
     padding: 18px 0px;
     transition: align-items 0.6s ease;
   }
@@ -38,16 +40,16 @@
 .accordians-section .accordians-wrapper .custom-accordian .content .custom-question .accordian-plus.rotate {
     transform: rotate(45deg);
   }
-.accordians-section .accordians-wrapper .custom-accordian .content .custom-answer {
+.accordians-section .accordians-wrapper .custom-accordian .custom-answer {
     max-height: 0;
     transition:all 0.6s ease;
     overflow:hidden;
-    
-
+    margin-left: 8rem;
   }
-.accordians-section .accordians-wrapper .custom-accordian .content .custom-answer.active {
+.accordians-section .accordians-wrapper .custom-accordian .custom-answer.active {
     max-height: 20rem;
-    padding-top: 2rem;
+    margin-top: -2rem;
+    padding-bottom: 2rem;
   }
   @keyframes slidedown{
     from{
