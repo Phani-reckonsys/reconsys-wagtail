@@ -96,3 +96,12 @@ class NavItemGrey(Orderable, models.Model):
 
     navbar = ParentalKey(NavbarGrey, on_delete = models.CASCADE, related_name="navitemsgrey")
     panels = [FieldPanel("name"), PageChooserPanel("link")] 
+
+@register_snippet
+class Welcomebackmodel(ClusterableModel):
+    headline = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
+    content = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
+    btn_text= models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
+    sideimage = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
+    panels = [ FieldPanel("headline"), FieldPanel("content"), PageChooserPanel("btn_text"), PageChooserPanel("sideimage")]

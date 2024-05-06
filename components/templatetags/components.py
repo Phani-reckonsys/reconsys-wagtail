@@ -1,5 +1,5 @@
 from django import template
-from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey
+from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey, Welcomebackmodel
 register = template.Library()
 # ...
 # Advert snippets
@@ -57,8 +57,8 @@ def footer(context):
 
 @register.inclusion_tag('snippets/welcomebackmodel.html', takes_context=True)
 def welcomebackmodel(context):
-    welcomebackmodel = welcomebackmodel.objects.first()
+    welcomebackmodel = Welcomebackmodel.objects.first()
     return{
-        'welcomebackmodel': welcomebackmodel.objects.first(),
+        'welcomebackmodel': Welcomebackmodel.objects.first(),
         'request': context['request'],
     }
