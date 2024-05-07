@@ -91,6 +91,34 @@ p {
   line-height: 155%;
 }
 
+
+h2 p{
+  font-size: 4.2rem;
+  font-family: "Satoshi-Bold";
+  color: #333;
+  margin-bottom: 0;
+  line-height: 125%;
+}
+
+h2 p b{
+  background: linear-gradient(89deg, #333 5.49%, #f77b45 96.99%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2.color-white p{
+  font-size: 4.2rem;
+  font-family: "Satoshi-Bold";
+  color: #fff;
+  margin-bottom: 0;
+  line-height: 125%;
+}
+h2.color-white p b{
+  background: linear-gradient(92deg, #F7F5F4 21.9%, #F7722F 53.55%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 ol,
 ul {
   padding-left: 0rem;
@@ -900,4 +928,20 @@ img {
 }
 .leading4 {
   line-height: 1.4;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 700px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 1700px) and (max-width: 2000px) {
+  html {
+    font-size: 12px;
+  }
 }

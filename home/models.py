@@ -16,21 +16,21 @@ class HomePage(Page):
     # services section content
     home_service_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Side Title")
     home_service_title = models.CharField(max_length = 255, blank=True, help_text = "Services Title")
-    home_service_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Subtitle")
+    home_service_subtitle = RichTextField(max_length = 255, blank=True, help_text = "Services Subtitle")
     home_service_content = models.CharField(max_length = 255, blank=True, help_text = "Services Content")
     outline_grey_button = StreamField([('button', OutlineGreyButtonBlock())], null = True)
 
     # process section content
     home_process_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_process_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    home_process_subtitle = RichTextField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_technology_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_technology_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     dotted_mesh = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     # Rating Section Content
     home_rating_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_rating_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_rating_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    home_rating_subtitle = RichTextField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_rating_testimonial_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_rating_testimonial_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_rating_testimonial_name = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -38,18 +38,18 @@ class HomePage(Page):
     #industries section content
     home_industries_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_industries_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_industries_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    home_industries_subtitle = RichTextField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_industries_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     # Why Reckonsys
     home_whyreckonsys_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_whyreckonsys_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_whyreckonsys_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    home_whyreckonsys_subtitle = RichTextField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_whyreckonsys_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     # Case Studies
     home_casestudies_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_casestudies_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_casestudies_subtitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
+    home_casestudies_subtitle = RichTextField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     # images
     image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")

@@ -1,6 +1,7 @@
 from django.db import models
 from wagtail.models import Page, Orderable, ClusterableModel,StreamField
 from modelcluster.fields import ParentalKey
+from wagtail.fields import RichTextField
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel
 from components.blocks import HeroSectionBlock
@@ -12,23 +13,23 @@ class ServicesPage(Page):
         ], null = True)
     # banner section
     banner_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Banner section title")
-    banner_title = models.CharField(max_length = 255, blank=True, help_text = "Banner section title")
+    banner_title = RichTextField(max_length = 255, blank=True, help_text = "Banner section title")
     # Services Offered Section
     servicesoffered_sidetitle = models.CharField(max_length = 255, blank = True, help_text = "Services offered title")
     servicesoffered_title = models.CharField(max_length = 255, blank = True, help_text = "Services offered title")
-    servicesoffered_content = models.CharField(max_length = 255, blank = True, help_text = "Services offered content")
+    servicesoffered_content = RichTextField(max_length = 255, blank = True, help_text = "Services offered content")
     # Business Helped Section
     businesshelped_sidetitle = models.CharField(max_length = 255, blank = True, help_text = "Business helped title")
     businesshelped_title = models.CharField(max_length = 255, blank = True, help_text = "Business helped title")
-    businesshelped_subtitle = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
+    businesshelped_subtitle = RichTextField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     # Engagment Section
     engagment_sidetitle = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     engagment_title = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
-    engagment_subtitle = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
+    engagment_subtitle = RichTextField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     # Data Section
     datasection_sidetitle = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     datasection_title = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
-    datasection_subtitle = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
+    datasection_subtitle = RichTextField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     # Testimonials section
     testimonial_content = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     testimonial_name = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
@@ -36,8 +37,7 @@ class ServicesPage(Page):
     testimonial_avatar = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     # FAQ
     faqsection_sidetitle = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
-    faqsection_title_top = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
-    faqsection_title_bottom = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
+    faqsection_title = RichTextField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     # Panels
     content_panels = [TitleFieldPanel('title')]
     banner_panels = [FieldPanel('banner_sidetitle'), FieldPanel('banner_title'), InlinePanel('banner_row', label = 'label')]
@@ -46,7 +46,7 @@ class ServicesPage(Page):
     businesshelped_panels = [FieldPanel('businesshelped_sidetitle'), FieldPanel('businesshelped_title'), FieldPanel('businesshelped_subtitle'), InlinePanel('business_helped_card')]
     engagmentmodel_panels = [FieldPanel('engagment_sidetitle'), FieldPanel('engagment_title'), FieldPanel('engagment_subtitle'), InlinePanel('engagment_card')]
     datasection_panels = [FieldPanel('datasection_sidetitle'), FieldPanel('datasection_title'), FieldPanel('datasection_subtitle'), InlinePanel('datasection_stat')]
-    faqsection_panels = [FieldPanel('faqsection_sidetitle'), FieldPanel('faqsection_title_top'), FieldPanel('faqsection_title_bottom'), InlinePanel('faqsection_faq')]
+    faqsection_panels = [FieldPanel('faqsection_sidetitle'), FieldPanel('faqsection_title'), InlinePanel('faqsection_faq')]
     testimonial_panels = [FieldPanel('testimonial_content'), FieldPanel('testimonial_name'), FieldPanel('testimonial_designation'), FieldPanel('testimonial_avatar')]
     edit_handler = TabbedInterface([
         ObjectList(content_panels, heading= 'Content'),

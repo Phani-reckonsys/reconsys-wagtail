@@ -1,6 +1,6 @@
 {%load wagtailimages_tags%}
 {% load static %}
-
+ {% load wagtailcore_tags %}
 <section>
         <div class="sidebar pt-20">
             <h5 class="t-20">{{page.datasection_sidetitle}}</h5>
@@ -113,7 +113,7 @@
                     
                 
             <h4 class="mb-20 ft-20">{{page.datasection_title}}</h4>
-            <h2 class="mb-84 w-80">{{page.datasection_subtitle}}</h2>
+            <h2 class="mb-84 w-80">{{page.datasection_subtitle|richtext}}</h2>
             <div class="stats-wrapper w-80 pb-82 bb">
             {% for datasection_stat in page.statdatasection%}
                 <div class="stat-card">

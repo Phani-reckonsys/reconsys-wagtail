@@ -1,4 +1,5 @@
   {%load wagtailimages_tags%}
+   {% load wagtailcore_tags %}
 <section>
         <div class="sidebar pt-20">
             <h5 class="t-20">{{page.businesshelped_sidetitle}}</h5>
@@ -6,7 +7,7 @@
         <!-- services offer to section starts -->
         <div class="servicesto-section pl-54 pr-54 w-container">
             <h4 class="mb-20 ft-20">{{page.businesshelped_title}}</h4>
-            <h2 class="mb-46 w-60">{{page.businesshelped_subtitle}}</span></h2>
+            <h2 class="mb-46 w-60">{{page.businesshelped_subtitle|richtext}}</h2>
             <div class="sector-card-group-wrapper">
                 <div class="sector-card-group">
                 {% for business_helped_card in page.cardbusinesshelped%}

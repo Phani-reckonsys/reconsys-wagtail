@@ -17,6 +17,9 @@
     margin-bottom: 3rem;
     line-height: 150%;
 }
+.privacypolicy-wrapper .privacypolicy-main .content .main-text p a{
+    color: #ED7F5C;
+}
 
 .privacypolicy-wrapper .privacypolicy-main .content .main-text ul{
     margin-left: 3rem;

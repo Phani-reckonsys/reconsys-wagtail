@@ -130,7 +130,7 @@ class HeroSectionBlock(StructBlock):
 class HomeTestimonialsBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="title", required=True)
+    subtitle = RichTextBlock(classname="title", required=True)
 
     testimonialcards = StreamBlock([('testimonialcard', TestimonialCard())])
     ratingcards = StreamBlock([('ratingcard', RatingCard())])
@@ -151,7 +151,7 @@ class RatingBlock(StructBlock):
 class HomeBlogsBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="title", required=True)
+    subtitle = RichTextBlock(classname="title", required=True)
     blogspagelink = PageChooserBlock(can_choose_root= True, required=False)
     blogcard = StreamBlock([('blogcard', BlogsCard())])
 
@@ -175,7 +175,7 @@ class OurMissionBlock(StructBlock):
 class OurVisionBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     cover_image = ImageChooserBlock(required=False)
     image1 = ImageChooserBlock(required=False)
     image2 = ImageChooserBlock(required=False)
@@ -205,7 +205,7 @@ class OurValuesBlock(StructBlock):
 class OurJourneyBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     ourjourneycards = StreamBlock([('ourjourneycard', CardBasicBlock())])
 
     class Meta:
@@ -251,7 +251,7 @@ class TestimonialGenericBlock(StructBlock):
 class BlogsHerosection(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     cards = StreamBlock([('blogsherosectioncards', CardBasicBlock())])
 
     class Meta: 
@@ -260,7 +260,7 @@ class BlogsHerosection(StructBlock):
 #Blogs container Section Block
 class BlogsWrapperBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
-    title = CharBlock(classname="title", required=True)
+    title = RichTextBlock(classname="title", required=True)
     cards = StreamBlock([('blogswrappercard', BlogsCard())])
 
     class Meta: 
@@ -277,7 +277,7 @@ class CoverImageBlock(StructBlock):
 class CultureBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     gallery = StreamBlock([('gallery', ListBlock(ImageChooserBlock()))])
 
     class Meta:
@@ -287,7 +287,7 @@ class CultureBlock(StructBlock):
 class OneColScrollerSection(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     content = CharBlock(classname="subtitle", required=True)
     cards = StreamBlock([('image', ImageTitleCombo())])
     url = URLBlock(classname="link", required=True)
@@ -300,7 +300,7 @@ class OneColScrollerSection(StructBlock):
 class BenifitsBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     cards = StreamBlock([('Benifitcard', CardBasicBlock())])
     
     class Meta:
@@ -310,7 +310,7 @@ class BenifitsBlock(StructBlock):
 class OurWorksHerosectionBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="title", required=True)
+    subtitle = RichTextBlock(classname="title", required=True)
     content = CharBlock(classname="title", required=True)
     primary_button = StreamBlock([('button', PrimaryButtonBlock())])
     image = ImageChooserBlock(required=False)
@@ -325,7 +325,7 @@ class OurWorkCard(StructBlock):
     ('csd', 'Custom Sofware Development'),
     ('ui', 'UI/UX Design'),
     ], icon='cup')
-    subtitle =CharBlock(clasname="title", required=True)
+    subtitle = RichTextBlock(clasname="title", required=True)
     label1 =CharBlock(clasname="data title 1", required=True)
     label2 =CharBlock(clasname="data title 2", required=True)
     data1 =CharBlock(clasname="data1", required=True)
@@ -345,7 +345,7 @@ class TitleTagCombo(StructBlock):
 class OurWorksDisplayBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="title", required=True)
+    subtitle = RichTextBlock(classname="title", required=True)
     categorytitles = StreamBlock([("TitleTabCombo", TitleTagCombo())])
     cards = StreamBlock([("OurWorkCards", OurWorkCard())])
     btntitle = CharBlock(classname="title", required=True)
@@ -361,7 +361,7 @@ class ContactUsTestimonialBlock(StructBlock):
 
 class ContactUsBlock(StructBlock):
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     optiontext = StreamBlock([('optiontext', Text())])
 
     class Meta:
@@ -369,7 +369,7 @@ class ContactUsBlock(StructBlock):
 
 class ThankyouBlock(StructBlock):
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     image_cover = ImageChooserBlock(required = False)
     image_decor = ImageChooserBlock(required = False)
 

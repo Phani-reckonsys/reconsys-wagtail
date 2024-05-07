@@ -1,4 +1,5 @@
   {%load wagtailimages_tags%}
+   {% load wagtailcore_tags %}
 <!-- Herosection starts -->
     <section>
         <div class="sidebar">
@@ -10,7 +11,7 @@
                     {{page.servicesoffered_title}}
                 </h4>
                 <h2 class="mb-72">
-                    {{page.servicesoffered_content}}
+                    {{page.servicesoffered_content|richtext}}
                 </h2>
                 <div class="accordians-wrapper">
                     {% for servicesoffered in page.offeredservices %}

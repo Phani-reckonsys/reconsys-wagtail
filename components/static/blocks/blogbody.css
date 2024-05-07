@@ -123,8 +123,11 @@
 .blogbody .author-profile{
     flex-basis: 30%;
     display: flex;
+    height: fit-content;
     flex-direction: column;
     gap: 1.8rem;
+    position: sticky;
+    top: 3rem;
 }
 
 .blogbody .author-profile .header{
@@ -133,8 +136,8 @@
 }
 
 .blogbody .author-profile .header .avatar{
-    width: 4.6rem;
-    height: 4.6rem;  
+    width: 4.8rem;
+    height: 4.8rem;  
     overflow: hidden; 
     border-radius: 5rem;
 }
