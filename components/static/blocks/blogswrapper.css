@@ -18,6 +18,10 @@
     transform: scale(1.6);
   }
 
+  .blog-section .blog-cards-wrapper .blog-card:hover .card-title{
+    color:#D2112B;
+  }
+
   .blog-section .blog-cards-wrapper .blog-card .image-wrapper{
     height: 22.1rem;
     overflow: hidden;
@@ -33,6 +37,9 @@
   .blog-section .blog-cards-wrapper .blog-card .card-title{
     font-weight: 500;
     font-size: 2.4rem;
+  }
+  .blog-section .blog-cards-wrapper .blog-card .card-category{
+    font-weight: 500;
   }
 
   .blog-section .blog-cards-wrapper .blog-card p:first-of-type {
