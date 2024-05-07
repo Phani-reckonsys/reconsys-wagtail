@@ -49,11 +49,19 @@ input[type="number"] {
 
 .contact-main .contact-container .contact-form .cf-row .div-input-50 .error-message{
   position: absolute;
-  right:0;
-  top: 1rem;
+  left:0;
+  bottom: -2rem;
   color:#d40c0c;
   display: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
+}
+.contact-main .contact-container .contact-form .cf-row .div-input-50.phone-number .error-message{
+  position: absolute;
+  left:9rem;
+  bottom: -2rem;
+  color:#d40c0c;
+  display: none;
+  font-size: 1.2rem;
 }
 
 .contact-main .contact-container .contact-form .cf-row .div-input-50 .error-message.active{
@@ -222,11 +230,11 @@ input[type="number"] {
 }
 .contact-main .contact-container .contact-form .services .error-message{
   position: absolute;
-  right:0;
-  top: 1rem;
+  left:0;
+  bottom: -2rem;
   color:#d40c0c;
   display: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .contact-main .contact-container .contact-form .services .error-message.active{
   display: flex;
