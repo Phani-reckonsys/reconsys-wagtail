@@ -86,7 +86,7 @@ class ServicesPage(Page):
 
 class BannerRow(Orderable):
     banner_image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    banner_text = models.CharField(max_length = 450, blank=True, help_text = "Services Navigation Link")
+    banner_text = RichTextField(max_length = 450, blank=True, help_text = "Services Navigation Link")
 
     page = ParentalKey(ServicesPage, on_delete = models.CASCADE, related_name = "banner_row")
     panels = [FieldPanel('banner_image'), FieldPanel('banner_text')]

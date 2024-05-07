@@ -91,6 +91,14 @@ p {
   line-height: 155%;
 }
 
+p p{
+  font-size: 1.8rem;
+  font-family: "Spline sans";
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 0;
+  line-height: 155%;
+} 
 
 h2 p{
   font-size: 4.2rem;
