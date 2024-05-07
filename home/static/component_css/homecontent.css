@@ -58,6 +58,16 @@
     position: relative;
     overflow: hidden;
   }
+  .process-section .process-main .process-map .path1{
+    position: absolute;
+    top: 8rem;
+    left: 38rem;
+  }
+  .process-section .process-main .process-map .path2{
+    position: absolute;
+    bottom: 10rem;
+    left: 63rem;
+  }
   .process-section .process-main .process-map .dotted-mesh {
     position: absolute;
     top: 30rem;
@@ -105,11 +115,15 @@
     align-items: center;
     margin-bottom: 1.8rem;
   }
-  .process-section .process-main .process-map .process-map-card:nth-child(2) {
+  .process-section .process-main .process-map .process-map-card:nth-child(3) {
+    position: relative;
+    top: 0rem;
+  }
+  .process-section .process-main .process-map .process-map-card:nth-child(4) {
     position: relative;
     top: 5.5rem;
   }
-  .process-section .process-main .process-map .process-map-card:nth-child(3) {
+  .process-section .process-main .process-map .process-map-card:nth-child(5) {
     position: relative;
     top: 11rem;
     padding-bottom: 10rem;
@@ -632,6 +646,12 @@
       gap: 5rem;
       height: auto;
     }
+    .process-section .process-main .process-map .path1{
+      display: none;
+    }
+    .process-section .process-main .process-map .path2{
+      display: none;
+    }
     .process-section .process-main .process-map .process-map-card {
       width: 100%;
     }
@@ -833,6 +853,12 @@
     }
     .process-section .process-main .process-map .process-map-card {
       width: 100%;
+    }
+    .process-section .process-main .process-map .path1{
+      display: none;
+    }
+    .process-section .process-main .process-map .path2{
+      display: none;
     }
     .process-section .process-main .process-map .process-map-card .ul-connecting-line {
       position: absolute;
