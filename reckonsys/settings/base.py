@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "whitenoise",
     "corsheaders",
+    'wagtail.contrib.sitemaps',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [

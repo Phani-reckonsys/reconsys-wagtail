@@ -28,6 +28,7 @@
                   name="name"
                   class="input-50"
                   placeholder="John"
+                  autocomplete = "on"
                 />
               </div>
               <div class="email div-input-50">
@@ -39,6 +40,7 @@
                   name="email"
                   class="input-50"
                   placeholder="john@gmail.com"
+                  autocomplete = "on"
                 />
               </div>
             </div>
@@ -56,6 +58,7 @@
                     name="phone-number"
                     maxlength="10"
                     placeholder="7386429889"
+                    autocomplete = "on"
                   />
                 </div>
               </div>
@@ -111,7 +114,6 @@ fetch("{% static 'blocks/js/countries.json' %}")
   .then((response) => response.json())
   .then((data) => {
     dialCodesData(data);
-    console.log(data);
   })
   .catch((error) => console.error("Error fetching country data:", error));
 </script>

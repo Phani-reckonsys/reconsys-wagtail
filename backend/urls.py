@@ -1,6 +1,7 @@
 from django.urls import path
-
 from backend.apis import ContactUsAPI, NewsLetterAPI
+
+
 
 urlpatterns = [
     path("contact-us", ContactUsAPI.as_view(), name="contact_us_form"),
