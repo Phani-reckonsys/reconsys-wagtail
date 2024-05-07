@@ -1,6 +1,6 @@
-
 function dialCodesData(data) {
   var dialCodes = data.map((country) => country.dial_code);
+  var countryName = data.map((country) => country.name);
   dialCodes.sort();
 
   var countryDropdown = document.querySelector("#country-code");
@@ -10,7 +10,7 @@ function dialCodesData(data) {
     option.text = dialCode;
     countryDropdown.add(option);
   });
-  countryDropdown.value = "+91";
+  countryDropdown.value = "+1";
 }
 
 function submitContactDetails() {
