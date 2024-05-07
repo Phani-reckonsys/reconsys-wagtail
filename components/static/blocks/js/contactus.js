@@ -98,7 +98,7 @@ function submitContactDetails() {
   serviceerror.classList.remove("active");
   serviceerror.textContent = "";
   }
-  if(error)return;
+
 
   // Validate email format
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -106,7 +106,7 @@ function submitContactDetails() {
     emailfield.classList.add("error");
     emailerror.classList.add("active");
     emailerror.textContent = "Please enter a valid email address";
-    errorvalid=true;
+    error=true;
   }else{
     emailfield.classList.remove("error");
     emailerror.classList.remove("active");
@@ -119,13 +119,13 @@ function submitContactDetails() {
     phoneNumberfield.classList.add("error");
     phoneNumbererror.classList.add("active");
     phoneNumbererror.textContent = "Please enter valid phone number";
-    errorvalid=true;
+    error=true;
   }else{
     phoneNumberfield.classList.remove("error");
     phoneNumbererror.classList.remove("active");
     phoneNumbererror.textContent = "";
   }
-  if(errorvalid)return;
+  if(error)return;
 
   const sendData = {
     name: name,
