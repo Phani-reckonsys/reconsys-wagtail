@@ -21,6 +21,7 @@
             <div class="cf-row">
               <div class="name div-input-50">
                 <label for="name">Name</label>
+                <p class="error-message name-error-message"></p>
                 <input
                   type="text"
                   id="name"
@@ -31,6 +32,7 @@
               </div>
               <div class="email div-input-50">
                 <label for="email">Email</label>
+                <p class="error-message email-error-message"></p>
                 <input
                   type="email"
                   id="email"
@@ -43,9 +45,10 @@
             <div class="cf-row">
               <div class="phone-number div-input-50">
                 <label for="phone-number">Phone Number</label>
+                <p class="error-message phn-error-message"></p>
                 <div class="countrycode-phnno">
-                  <select name="country code" id="country-code">
-                    <option value="+91">+91</option>
+                  <select name="country-code" id="country-code">
+                    {% comment %} get data from countries.json {% endcomment %}
                   </select>
                   <input
                     type="number"
@@ -57,6 +60,7 @@
               </div>
               <div class="company div-input-50">
                 <label for="company">Company</label>
+                <p class="error-message company-error-message"></p>
                 <input
                   type="text"
                   id="company"
@@ -68,9 +72,10 @@
             </div>
             <div class="services">
               <label for="services">Services</label>
+              <p class="error-message services-error-message"></p>
               <select name="services" id="services">
                 {% for service in servicesoptions %}
-                  <option value="software-services">{{service.service}}</option>
+                  <option value="{{service.service}}">{{service.service}}</option>
                 {% endfor %}
                 
               </select>
@@ -99,3 +104,13 @@
     <!-- contact and Footer section Ends -->
 
 <script src="{% static 'blocks/js/contactus.js' %}"></script>
+
+<script>
+fetch("{% static 'blocks/js/countries.json' %}")
+  .then((response) => response.json())
+  .then((data) => {
+    dialCodesData(data);
+    console.log(data);
+  })
+  .catch((error) => console.error("Error fetching country data:", error));
+</script>

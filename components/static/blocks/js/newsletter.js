@@ -1,18 +1,34 @@
 function submitNewsletterDetails() {
   const email = document.querySelector("#newsletter-email").value;
+  const emailfield = document.querySelector("#newsletter-email");
   const thankyouForSubscription = document.querySelector(
     ".newsletter-subscription-thankyou"
   );
+  const emailerror = document.querySelector(".subscription-error-message");
   if (email === "") {
-    alert("Please provide email for newsletter");
+    emailfield.classList.add("error");
+    emailerror.classList.add("active");
+    emailerror.textContent = "Please enter your email"
     return;
+  }else{
+    emailfield.classList.remove("error");
+    emailerror.classList.remove("active");
+    emailerror.textContent = "";
   }
+  // Validate email format
   // Validate email format
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
-    alert("Please enter a valid email address");
+    emailfield.classList.add("error");
+    emailerror.classList.add("active");
+    emailerror.textContent = "Please enter a valid email address";
     return;
+  }else{
+    emailfield.classList.remove("error");
+    emailerror.classList.remove("active");
+    emailerror.textContent = "";
   }
+  if(error)return
   const sendData = { email: email };
   const csrftoken = document.querySelector("[name=csrfmiddlewaretoken]").value;
 

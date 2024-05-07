@@ -44,7 +44,22 @@ input[type="number"] {
 }
 .contact-main .contact-container .contact-form .cf-row .div-input-50 {
   flex-basis: 50%;
+  position: relative;
 }
+
+.contact-main .contact-container .contact-form .cf-row .div-input-50 .error-message{
+  position: absolute;
+  right:0;
+  top: 1rem;
+  color:#d40c0c;
+  display: none;
+  font-size: 1rem;
+}
+
+.contact-main .contact-container .contact-form .cf-row .div-input-50 .error-message.active{
+  display: flex;
+}
+
 
 .contact-main .contact-container .contact-form .cf-row .div-input-50 .input-50 {
   display: flex;
@@ -63,6 +78,10 @@ input[type="number"] {
 .contact-main .contact-container .contact-form .cf-row .div-input-50 .input-50:focus{
   outline: none;
   border: 1px solid #ED7F5C;
+}
+.contact-main .contact-container .contact-form .cf-row .div-input-50 .input-50.error{
+  outline: none;
+  border: 1px solid #d40c0c;
 }
 .contact-main
   .contact-container
@@ -161,6 +180,16 @@ input[type="number"] {
   .cf-row
   .div-input-50
   .countrycode-phnno
+  #phone-number.error {
+    outline: none;
+    border: 1px solid #d40c0c;
+}
+.contact-main
+  .contact-container
+  .contact-form
+  .cf-row
+  .div-input-50
+  .countrycode-phnno
   #phone-number::-moz-placeholder {
   color: #808080;
   font-family: "Spline Sans";
@@ -189,7 +218,20 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   margin-bottom: 3rem;
+  position: relative;
 }
+.contact-main .contact-container .contact-form .services .error-message{
+  position: absolute;
+  right:0;
+  top: 1rem;
+  color:#d40c0c;
+  display: none;
+  font-size: 1rem;
+}
+.contact-main .contact-container .contact-form .services .error-message.active{
+  display: flex;
+}
+
 .contact-main .contact-container .contact-form .services #services {
   display: flex;
   flex-direction: column;
@@ -206,6 +248,10 @@ input[type="number"] {
 .contact-main .contact-container .contact-form .services #services:focus {
   outline: none;
     border: 1px solid #ED7F5C;
+}
+.contact-main .contact-container .contact-form .services #services.error {
+  outline: none;
+    border: 1px solid #d40c0c;
 }
 .contact-main .contact-container .contact-form .message {
   display: flex;
