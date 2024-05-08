@@ -106,4 +106,4 @@ class Welcomebackmodel(ClusterableModel):
     contactus_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
 
 
-    panels = [ FieldPanel("headline"), FieldPanel("content"), PageChooserPanel("btn_text"), PageChooserPanel("sideimage")]
+    panels = [ FieldPanel("headline"), FieldPanel("content"), FieldPanel("btn_text"), PageChooserPanel("sideimage"), PageChooserPanel("contactus_page_link")]

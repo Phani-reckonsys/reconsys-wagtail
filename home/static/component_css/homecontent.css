@@ -74,7 +74,7 @@
     left: 6rem;
   }
   .process-section .process-main .process-map .process-map-card {
-    width: 38.8rem;
+    width: 30%;
     height: 31.3rem;
     position: relative;
     flex-shrink: 0;
@@ -115,15 +115,51 @@
     align-items: center;
     margin-bottom: 1.8rem;
   }
-  .process-section .process-main .process-map .process-map-card:nth-child(3) {
+  .process-section .process-main .process-map .process-map-card:nth-child(1) {
     position: relative;
     top: 0rem;
   }
-  .process-section .process-main .process-map .process-map-card:nth-child(4) {
+  .process-section .process-main .process-map .process-map-card:nth-child(2) {
     position: relative;
     top: 5.5rem;
   }
-  .process-section .process-main .process-map .process-map-card:nth-child(5) {
+  .process-section .process-main .process-map .process-map-card:nth-child(1)::before {
+   content: "";
+   position: absolute;
+   width: 68%;
+   height: 2px;
+   left: 100%;
+   border-top: 2px dashed #fff;
+   top: 2rem;
+  }
+  .process-section .process-main .process-map .process-map-card:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    width: 2%;
+    height: 3.5rem;
+    left: 50%;
+    border-right: 2px dashed #fff;
+    top: -3.5rem;
+   }
+   .process-section .process-main .process-map .process-map-card:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 2px;
+    right: 100%;
+    border-top: 2px dashed #fff;
+    bottom: 2rem;
+   }
+   .process-section .process-main .process-map .process-map-card:nth-child(2)::after {
+     content: "";
+     position: absolute;
+     width: 2%;
+     height: 3.5rem;
+     left: 50%;
+     border-right: 2px dashed #fff;
+     bottom: -3.5rem;
+    }
+  .process-section .process-main .process-map .process-map-card:nth-child(3) {
     position: relative;
     top: 11rem;
     padding-bottom: 10rem;

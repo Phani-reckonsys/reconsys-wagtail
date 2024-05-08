@@ -8,8 +8,8 @@
 
 .ourwork-herosection-wrapper > .herosection > .ourworks-heroimage-container > .ourworks-heroimage{
     position: absolute;
-     top: 0;
-     left: 0;
+     top: -10rem;
+     left: -7.3rem;
  }
 
  @media only screen and (max-width: 992px) {
