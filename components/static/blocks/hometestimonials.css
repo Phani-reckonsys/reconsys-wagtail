@@ -112,6 +112,7 @@
   .testimonials-main .testimonials-container .testimonial-card .testimonial-profile .testimonial-avatar img{
     width: 100%;
     object-fit: contain;
+    height: fit-content;
   }
 
   .testimonials-main .testimonials-container .testimonial-card:nth-child(3n+2) {

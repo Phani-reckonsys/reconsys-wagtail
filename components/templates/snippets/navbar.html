@@ -1,3 +1,5 @@
+ {% load static %}
+
  <div class="company-logo">
       <svg
         width="29"
@@ -166,3 +168,42 @@ menuBars.addEventListener("click",(event)=> {
     body.style.overflow = "scroll";
  });
  </script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const companyLogo = document.querySelector('.company-logo');
+    const darkSections = document.querySelectorAll('.dark-section');
+    let darkSectionsInView = 0;
+
+    function updateLogoBackground() {
+        darkSections.forEach((darkSection) => {
+            const darkSectionTop = darkSection.getBoundingClientRect().top;
+            const darkSectionBottom = darkSection.getBoundingClientRect().bottom;
+            if (darkSectionTop <= 0 && darkSectionBottom > 0) {
+                // Dark section is in view
+                darkSectionsInView++;
+            }
+        });
+        if (darkSectionsInView > 0) {
+            // At least one dark section is in view
+            companyLogo.style.backgroundColor = '#232020';
+            companyLogo.style.color = '#fff';
+        } else {
+            // No dark sections are in view
+            companyLogo.style.backgroundColor = '#fff';
+            companyLogo.style.color = '#000';
+        }
+
+        // Reset the count for the next scroll event
+        darkSectionsInView = 0;
+    }
+
+    window.addEventListener('scroll', updateLogoBackground);
+
+    // Initial update
+    updateLogoBackground();
+});
+
+
+</script>

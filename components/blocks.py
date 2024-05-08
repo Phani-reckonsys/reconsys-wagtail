@@ -251,7 +251,7 @@ class TestimonialGenericBlock(StructBlock):
 class BlogsHerosection(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = RichTextBlock(classname="subtitle", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
     cards = StreamBlock([('blogsherosectioncards', CardBasicBlock())])
 
     class Meta: 
@@ -310,7 +310,7 @@ class BenifitsBlock(StructBlock):
 class OurWorksHerosectionBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = RichTextBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="title", required=True)
     content = CharBlock(classname="title", required=True)
     primary_button = StreamBlock([('button', PrimaryButtonBlock())])
     image = ImageChooserBlock(required=False)
