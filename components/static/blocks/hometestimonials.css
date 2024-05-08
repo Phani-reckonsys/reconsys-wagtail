@@ -101,7 +101,19 @@
   .testimonials-main .testimonials-container .testimonial-card .testimonial-profile {
     display: flex;
     align-items: center;
+    gap: 2rem;
   }
+  .testimonials-main .testimonials-container .testimonial-card .testimonial-profile .testimonial-avatar{
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 4.8rem;
+    overflow: hidden;
+  }
+  .testimonials-main .testimonials-container .testimonial-card .testimonial-profile .testimonial-avatar img{
+    width: 100%;
+    object-fit: contain;
+  }
+
   .testimonials-main .testimonials-container .testimonial-card:nth-child(3n+2) {
     position: relative;
     top: 5rem;

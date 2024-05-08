@@ -75,6 +75,7 @@ class ImageTitleCombo(StructBlock):
 
 #Testimonial Card Basic Block
 class TestimonialCard(StructBlock):
+    avatar = ImageChooserBlock(required=False)
     review = CharBlock(classname="title", required=True)
     name = CharBlock(classname="title", required=True)
     designation = CharBlock(classname="title", required=True)
@@ -131,7 +132,6 @@ class HomeTestimonialsBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = RichTextBlock(classname="title", required=True)
-
     testimonialcards = StreamBlock([('testimonialcard', TestimonialCard())])
     ratingcards = StreamBlock([('ratingcard', RatingCard())])
 

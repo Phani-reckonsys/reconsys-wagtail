@@ -29,7 +29,7 @@
                   <h2>{{card.value.rating}}</h2>
                 </div>
                 <div class="right">
-                  <h2 class="ft-22" >{{card.value.review_count}} Reviews</h2>
+                  <h2 class="ft-22" >{{card.value.review_count}}Reviews</h2>
                 </div>
               </div>
               {% image card.value.logo max-3000x1500 %}
@@ -41,7 +41,9 @@
                 {{card.value.review}}
                 </h3>
                 <div class="testimonial-profile">
-                  <div class="testimonial-avatar"></div>
+                  <div class="testimonial-avatar">
+                    {% image card.value.avatar max-3000x1500%}
+                  </div>
                   <div class="profile-content">
                       <h5 class="ft-16">{{card.value.name}}</h5>
                       <p class="ft-16">{{card.value.designation}}</p>
