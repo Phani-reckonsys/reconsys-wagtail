@@ -410,6 +410,7 @@ class BadgesBlock(StructBlock):
 
 
 class BlogHeaderBlock(StructBlock):
+    blogs_url = PageChooserBlock(required=False)
     page_title = CharBlock(classname="title", required=True)
     headline = CharBlock(classname="title", required=True)
     category_title = CharBlock(classname="title", required=True)

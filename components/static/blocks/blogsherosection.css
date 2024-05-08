@@ -30,7 +30,7 @@
     transition: transform 0.3s ease-in-out;
   }
   .servicespage-wrapper .carousel-section .left .carousal-image-wrapper .carousal-image {
-    width: 71.8rem;
+    width: 33.33%;
   }
   .servicespage-wrapper .carousel-section .left .carousal-image-wrapper .carousal-image img {
     width: 100%;
@@ -50,7 +50,7 @@
     transition: transform 0.3s ease-in-out;
   }
   .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper .carousal-content {
-    min-width: 55rem;
+    width: 33.33%
   }
   .servicespage-wrapper .carousel-section .right .carousal-controls {
     display: flex;
