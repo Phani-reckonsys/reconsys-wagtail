@@ -21,3 +21,13 @@
     width: 100%;
     height: auto;
   }
+
+  .reckonsys-testimonial-section .testimonial-wrapper .right p {
+    font-size: 2.4rem;
+    width: 80%;
+    margin-bottom: 3rem;
+  }
+
+  .reckonsys-testimonial-section .testimonial-wrapper .right h4{
+    margin-top: 5rem;
+  } 

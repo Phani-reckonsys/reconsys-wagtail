@@ -103,5 +103,7 @@ class Welcomebackmodel(ClusterableModel):
     content = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
     btn_text= models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
     sideimage = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    contactus_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
 
     panels = [ FieldPanel("headline"), FieldPanel("content"), PageChooserPanel("btn_text"), PageChooserPanel("sideimage")]

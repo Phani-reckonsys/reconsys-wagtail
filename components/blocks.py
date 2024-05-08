@@ -226,7 +226,7 @@ class OurTestimonialBlock(StructBlock):
     name = CharBlock(classname="content", required=True)
     designation = CharBlock(classname="content", required=True)
     image = ImageChooserBlock(required = False)
-    content = CharBlock(classname="content", required=True)
+    content = RichTextBlock(classname="content", required=True)
     svg = ImageChooserBlock(required = False)
 
     
@@ -325,7 +325,7 @@ class OurWorkCard(StructBlock):
     ('csd', 'Custom Sofware Development'),
     ('ui', 'UI/UX Design'),
     ], icon='cup')
-    subtitle = RichTextBlock(clasname="title", required=True)
+    subtitle = CharBlock(clasname="title", required=True)
     label1 =CharBlock(clasname="data title 1", required=True)
     label2 =CharBlock(clasname="data title 2", required=True)
     data1 =CharBlock(clasname="data1", required=True)

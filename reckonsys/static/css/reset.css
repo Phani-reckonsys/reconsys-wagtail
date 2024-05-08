@@ -133,6 +133,25 @@ h2.color-white .gradient-text-light{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+h2.color-light-white p{
+  font-size: 4.2rem;
+  font-family: "Satoshi-Bold";
+  color: #fff;
+  margin-bottom: 0;
+  line-height: 125%;
+}
+h2.color-light-white p b{
+  background: linear-gradient(92deg, #F7F5F4 21.9%, #F7722F 53.55%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2.color-light-white .gradient-text-light{
+  background: linear-gradient(92deg, #F7F5F4 21.9%, #F7722F 53.55%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 ol,
 ul {
   padding-left: 0rem;
