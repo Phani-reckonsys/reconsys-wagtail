@@ -5,7 +5,7 @@
     padding-top: 12rem;
     padding-bottom: 9rem;
     display: flex;
-    gap: 9.5rem;
+    gap: 6rem;
     background-color: #f3f3f3;
   }
   .services-main .software-services .left {
@@ -17,6 +17,11 @@
     top: 7rem;
     z-index: 100;
   }
+
+  .services-main .software-services .left .software-services-content>h2{
+    margin-bottom: 2.4rem;
+  }
+
   .services-main .software-services .left .software-services-geometric-shape {
     position: absolute;
     bottom: -9rem;
@@ -57,16 +62,6 @@
     height: 55rem;
     position: relative;
     overflow: hidden;
-  }
-  .process-section .process-main .process-map .path1{
-    position: absolute;
-    top: 8rem;
-    left: 38rem;
-  }
-  .process-section .process-main .process-map .path2{
-    position: absolute;
-    bottom: 10rem;
-    left: 63rem;
   }
   .process-section .process-main .process-map .dotted-mesh {
     position: absolute;
@@ -190,6 +185,7 @@
   .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array .tooltip-wrapper{
@@ -896,6 +892,30 @@
     .process-section .process-main .process-map .path2{
       display: none;
     }
+    .process-section .process-main .process-map .process-map-card:nth-child(1)::before {
+      display: none;
+     }
+     .process-section .process-main .process-map .process-map-card:nth-child(2)::before {
+       content: "";
+       position: absolute;
+       width: 2%;
+       height: 4.5rem;
+       left: 50%;
+       border-right: 2px dashed #fff;
+       top: -4.7rem;
+      }
+      .process-section .process-main .process-map .process-map-card:nth-child(3)::before {
+       display: none;
+      }
+      .process-section .process-main .process-map .process-map-card:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        width: 2%;
+        height: 4.5rem;
+        left: 50%;
+        border-right: 2px dashed #fff;
+        bottom: -4.7rem;
+       }
     .process-section .process-main .process-map .process-map-card .ul-connecting-line {
       position: absolute;
       left: 3.5rem;
@@ -928,6 +948,9 @@
     .process-section .process-main .technologies {
       padding: 5rem 0 2.6rem 0;
     }
+    .process-section .process-main .technologies>p{
+      line-height: 140% !important;
+    }
     .process-section .process-main .technologies .technology-stack-wrapper {
       display: flex;
       gap: 2.6rem;
@@ -936,11 +959,15 @@
     }
     .process-section .process-main .technologies .technology-stack-wrapper .technology-stack {
       padding-right: 2.6rem;
-      border-right: 1px solid #656565;
+      border-right: none;
     }
     .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array {
       display: flex;
       gap: 1rem;
+    }
+    .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array .tooltip-wrapper img{
+      width: 4.6rem;
+      height: 4.6rem;
     }
     .process-section .process-main .technologies .technology-stack-wrapper .technology-stack .logos-array .logo-wrapper {
       width: 5.6rem;
@@ -952,42 +979,8 @@
       justify-content: center;
       align-items: center;
     }
-    .rating-section .rating-main .rating-card-group {
-      flex-direction: column;
-      gap: 3rem;
-    }
-    .rating-section .rating-main .rating-card-group .rating-card {
-      width: 100%;
-    }
-    .rating-section .rating-main .client-testimonial-wrapper {
-      padding: 5.6rem 0 9.6rem 0;
-      position: relative;
-    }
-    .rating-section .rating-main .client-testimonial-wrapper .client-testimonial {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .rating-section .rating-main .client-testimonial-wrapper .client-testimonial .client-testimonial-profile-img {
-      width: 16.2rem;
-    }
-    .rating-section .rating-main .client-testimonial-wrapper .client-testimonial .client-testimonial-profile-img img {
-      width: 100%;
-      flex-shrink: 0;
-    }
-    .rating-section .rating-main .client-testimonial-wrapper .client-testimonial .client-testimonial-content {
-      width: 100%;
-      padding: 0;
-    }
-    .rating-section .rating-main .client-testimonial-wrapper .client-testimonial .client-testimonial-quotes {
-      margin-left: auto;
-      width: 12rem;
-      height: auto;
-    }
-    .rating-section .rating-main .client-testimonial-wrapper .geometric-triangle {
-      width: 16rem;
-      height: auto;
+    .industries-section .industries-main {
+      padding-top: 8rem;
     }
     .industries-section .industries-main .industries-header {
       width: 100%;

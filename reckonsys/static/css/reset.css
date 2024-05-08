@@ -907,6 +907,12 @@ img {
   h1.hero {
     font-size: 5rem;
   }
+  h2{
+    font-size: 3rem;
+  }
+  h2 p{
+    font-size: 3rem !important;
+  }
   .pl-54 {
     padding-left: 3.6rem;
   }
