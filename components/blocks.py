@@ -140,7 +140,7 @@ class HomeTestimonialsBlock(StructBlock):
 
 class RatingBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
-    title = CharBlock(classname="title", required=True)
+    title = RichTextBlock(classname="title", required=True)
     ratingcards = StreamBlock([('ratingcard2', RatingCard2()), ('badge', Image())])
     badgecards = StreamBlock([('badge', Image())])
 
@@ -401,7 +401,7 @@ class PrivacyPolicyBlock(StructBlock):
         template = "blocks/privacypolicy.html"
 
 class BadgesBlock(StructBlock):
-    title = CharBlock(classname="title", required=True)
+    title = RichTextBlock(classname="title", required=True)
     badgefield = StreamBlock([('image', Image())])
 
 
