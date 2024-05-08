@@ -344,8 +344,8 @@ class TitleTagCombo(StructBlock):
 #OurWorks Display
 class OurWorksDisplayBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
-    title = CharBlock(classname="title", required=True)
-    subtitle = RichTextBlock(classname="title", required=True)
+    title = RichTextBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="title", required=True)
     categorytitles = StreamBlock([("TitleTabCombo", TitleTagCombo())])
     cards = StreamBlock([("OurWorkCards", OurWorkCard())])
     btntitle = CharBlock(classname="title", required=True)
