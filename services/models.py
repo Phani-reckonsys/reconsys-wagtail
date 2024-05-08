@@ -47,7 +47,7 @@ class ServicesPage(Page):
     businesshelped_panels = [FieldPanel('businesshelped_sidetitle'), FieldPanel('businesshelped_title'), FieldPanel('businesshelped_subtitle'), InlinePanel('business_helped_card')]
     engagmentmodel_panels = [FieldPanel('engagment_sidetitle'), FieldPanel('engagment_title'), FieldPanel('engagment_subtitle'), InlinePanel('engagment_card')]
     datasection_panels = [FieldPanel('datasection_sidetitle'), FieldPanel('datasection_title'), FieldPanel('datasection_subtitle'), InlinePanel('datasection_stat')]
-    faqsection_panels = [FieldPanel('faqsection_sidetitle'), FieldPanel('faqsection_title'), InlinePanel('faqsection_faq')]
+    faqsection_panels = [FieldPanel('faqsection_sidetitle'), FieldPanel('faqsection_toptitle'), FieldPanel('faqsection_title'), InlinePanel('faqsection_faq')]
     testimonial_panels = [FieldPanel('testimonial_content'), FieldPanel('testimonial_name'), FieldPanel('testimonial_designation'), FieldPanel('testimonial_avatar')]
     edit_handler = TabbedInterface([
         ObjectList(content_panels, heading= 'Content'),
