@@ -37,6 +37,7 @@ class ServicesPage(Page):
     testimonial_avatar = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     # FAQ
     faqsection_sidetitle = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
+    faqsection_toptitle = models.CharField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     faqsection_title = RichTextField(max_length = 255, blank = True, help_text = "Business helped subtitle")
     # Panels
     content_panels = [TitleFieldPanel('title')]
