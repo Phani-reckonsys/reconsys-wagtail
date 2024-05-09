@@ -148,3 +148,30 @@
     height: fit-content;  
     
 }
+@media only screen and (max-width: 992px) {
+   
+}
+@media only screen and (max-width: 768px) {
+  
+}
+@media only screen and (max-width: 576px) {
+    .blogbody{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        padding-bottom: 8rem;
+    }
+    .blogbody .social-media-group{
+        display: none;
+    }
+    .blogbody .author-profile{
+        flex-basis: 30%;
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+        gap: 1.8rem;
+        position: sticky;
+        top: 3rem;
+        margin-bottom: 10rem;
+    }
+}

@@ -37,3 +37,43 @@
    object-fit: contain;
    height: fit-content;
 }
+
+@media only screen and (max-width: 992px) {
+   
+}
+@media only screen and (max-width: 768px) {
+  
+}
+@media only screen and (max-width: 576px) {
+    .blogheader-wrapper{
+        overflow-x: auto !important;
+    }
+    .blogheader {
+       padding-top: 6rem;
+       padding-bottom: 0rem;
+       margin-right: 3.6rem;
+       margin-left: 3.6rem;
+    }
+    .blogheader .left {
+        width: 100%;
+    }
+
+    .blogheader .geometric-shapes {
+        display: none;
+    }
+    .blogheader .left .left-margin{
+        margin-left: 0rem;
+    }
+    .blogheader .left .left-margin>h1{
+        width: 100%;
+        font-size: 3.8rem;
+    }
+    .blogheader .left .breadcrump{
+        margin-bottom: 2rem;
+    }
+    .blogheader .left .left-margin .cover-image{
+        width: 100%;
+        object-fit: contain;
+        height: fit-content;
+     }
+}

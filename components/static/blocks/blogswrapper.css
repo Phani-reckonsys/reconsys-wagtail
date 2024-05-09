@@ -68,6 +68,7 @@
     .blog-section .blog-cards-wrapper .blog-card {
       margin-bottom: 0rem;
       overflow: hidden;
+      min-width: 100%;
     }
     .blog-section .blog-cards-wrapper .blog-card .card-title{
       margin-bottom: 2rem;

@@ -183,14 +183,17 @@
     }
     .herosection-wrapper .herosection-height{
       position: relative;
-      height: 40rem;
+      height: 57rem;
     }
     .herosection-wrapper .herosection-height .herosection {
       display: flex;
       flex-direction: column;
+      margin-top: 24%;
     }
     .herosection-wrapper .herosection-height .herosection .herosection-content{
       width: 100%;
+      position: relative;
+      z-index: 5;
     }
     .herosection-wrapper .herosection-height .herosection .herosection-content .category-title{
      line-height: 140% !important;
@@ -202,13 +205,20 @@
       display: none;
     }
     .herosection-wrapper .herosection-height .herosection .geometric-shapes {
-      display: none;
+      position: absolute;
+      top: -74%;
+      right: -62px;
+      transform: scale(0.8);
     }
     .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-connection {
       height: 50rem;
       position: absolute;
       right: -5.4rem;
       top: 0rem;
+      opacity: 0.5;
+    }
+    .herosection-wrapper .herosection-height .herosection .geometric-shapes  .geometric-wave{
+      display: none;
     }
     .herosection-wrapper .herosection-height .herosection .geometric-shapes .geometric-connection.custom-hero-fullimage {
       position: absolute;
