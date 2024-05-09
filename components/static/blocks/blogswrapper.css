@@ -45,3 +45,31 @@
   .blog-section .blog-cards-wrapper .blog-card p:first-of-type {
     color: #D2112B;
   }
+
+  @media only screen and (max-width: 992px) {
+    
+    
+  }
+  @media only screen and (max-width: 768px) {
+    
+  }
+  @media only screen and (max-width: 576px) {
+    .blog-section{
+      padding-top: 0rem;
+    }
+    .blog-section h2{
+      margin-bottom: 4rem;
+    }
+    .blog-section .blog-cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6rem;
+    }
+    .blog-section .blog-cards-wrapper .blog-card {
+      margin-bottom: 0rem;
+      overflow: hidden;
+    }
+    .blog-section .blog-cards-wrapper .blog-card .card-title{
+      margin-bottom: 2rem;
+    }
+  }
