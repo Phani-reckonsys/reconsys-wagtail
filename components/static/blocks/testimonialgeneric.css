@@ -21,3 +21,25 @@
     width: 100%;
     height: auto;
   }
+
+  @media only screen and (max-width: 992px) {
+   
+  }
+  @media only screen and (max-width: 768px) {
+      
+  }
+  @media only screen and (max-width: 576px) {
+    .testimonialgeneric-section {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+    .testimonialgeneric-section .testimonial-wrapper {
+      flex-direction: column;
+    }
+    .testimonialgeneric-section .testimonial-wrapper .right>p{
+      font-size: 2.4rem;
+    }
+    .testimonialgeneric-section .testimonial-wrapper .right>h6{
+      font-size: 1.6rem;
+    }
+  }

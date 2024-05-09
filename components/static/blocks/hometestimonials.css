@@ -38,7 +38,7 @@
 
   .testimonials-main .testimonials-container .testimonial_rating-card {
     background-color: #fff;
-    width: 39rem;
+    width: 30.33%;
     height: 27rem;
     padding: 2.8rem 2.7rem 2.2rem 2.7rem;
     display: flex;
@@ -91,7 +91,7 @@
   }
 
   .testimonials-main .testimonials-container .testimonial-card {
-    width: 39rem;
+    width: 30.33%;
     background-color: #fff;
     padding: 4rem 3.3rem 2.2rem 2.6rem;
     display: flex;
@@ -143,6 +143,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
+    cursor: pointer;
   }
 
   .testimonials-main .testimonials-container.viewfour .hometestimonial-button {

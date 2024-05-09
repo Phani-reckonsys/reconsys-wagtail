@@ -116,7 +116,7 @@
 
   @media only screen and (max-width: 576px) {
     .custom-footer {
-      height: 110rem;
+      /* height: 150rem; */
     }
     .custom-footer .navigation-footer {
       gap: 5rem;

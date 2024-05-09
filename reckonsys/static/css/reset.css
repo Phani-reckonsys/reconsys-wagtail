@@ -287,6 +287,7 @@ a {
   position: relative;
   transition: all 0.3s ease-in-out;
   z-index: 1;
+  cursor: pointer;
   svg {
     margin-top: 0.8rem;
   }
@@ -402,6 +403,10 @@ color: #fff;
   }
 }
 
+.outline-btn-white>h4{
+  color: #fff;
+}
+
 .outline-btn-white:hover svg path{
   stroke: #fff;
 }
@@ -412,21 +417,28 @@ color: #fff;
   left: 0;
   height: 100%;
   width: 0;
-  background-color: #ce4961;
+  background-color: #fff;
   transition: all 0.3s ease-in-out;
   z-index: -1;
 }
 
 .outline-btn-white:hover::before{
 width: 100%;
-border: 1px solid #ce4961;
+border: 1px solid #fff;
 }
 
 .outline-btn-white:hover{
 color: #fff;
-border: 1px solid #ce4961;
+border: 1px solid #fff;
 }
 
+.outline-btn-white:hover h4{
+  color: #333;
+  border: 1px solid #fff;
+  }
+  .outline-btn-white:hover svg path{
+    stroke: #333;
+    }
 .outline-btn-white:hover{
   opacity: 0.95;
 }

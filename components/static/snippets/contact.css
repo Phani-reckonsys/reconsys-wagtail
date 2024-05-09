@@ -143,6 +143,7 @@ input[type="number"] {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
+  color: #fff;
 }
 .contact-main
   .contact-container
@@ -334,7 +335,7 @@ input[type="number"] {
   .contact-main .contact-container {
     display: flex;
     width: 100%;
-    gap: 10rem;
+    gap: 6rem;
     padding-bottom: 8rem;
     border-bottom: 1px solid #544e4e;
   }
@@ -344,6 +345,9 @@ input[type="number"] {
   }
   .contact-main .contact-container .left {
     flex-basis: 40%;
+  }
+  .contact-main .contact-container .left h4{
+    font-size: 2rem;
   }
   .contact-main .contact-container .contact-form .cf-row {
     display: flex;

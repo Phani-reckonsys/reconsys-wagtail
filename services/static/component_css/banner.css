@@ -129,7 +129,7 @@
   @media only screen and (max-width: 576px) {
     .banner-section {
       position: relative;
-      padding-top: 0;
+      padding-top: 4rem;
       padding-bottom: 6rem;
     }
     .banner-section .decor-squares {

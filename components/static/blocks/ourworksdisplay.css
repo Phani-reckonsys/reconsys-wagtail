@@ -1,3 +1,6 @@
+.ourwork-display{
+    border-bottom: 1px solid #43494c;
+}
 .ourwork-display > .category-container{
     position: sticky;
     top: 0;
@@ -8,7 +11,6 @@
 
 .ourwork-display > .category-container > .category-wrapper {
     display: flex;
-    align-items: center;
     gap: 4rem;
 }
 
@@ -23,9 +25,10 @@
 .ourwork-display > .category-container > .category-wrapper p.active{
     color: #f0493e !important;
 }
-
-.ourwork-display .outline-btn {
+.ourwork-display .outline-btn-white {
+    display: flex;
     margin: auto;
+    width: 20rem;
     margin-top: 4rem;
 }
 
@@ -73,8 +76,17 @@
     
 }
 @media only screen and (max-width: 576px) {
+    .ourwork-display {
+        padding-top: 4rem;
+        padding-bottom: 8rem;
+    }
+    .ourwork-display > h2{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
     .ourwork-display > p{
         width: 90%;
+        margin-bottom: 4rem;
     }
     .ourwork-display > .category-container{
         overflow-x: scroll;
@@ -83,11 +95,12 @@
         background-color: #172125;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        margin-bottom: 6rem;
     }
     .ourwork-display > .our-works-card {
         flex-direction: column;
-        gap: 6rem;
-        padding: 9rem 0 12rem 5.5rem;
+        gap: 4rem;
+        padding: 6rem 0 6rem 4rem;
     }
     
     .ourwork-display > .our-works-card .image-wrapper{
@@ -96,17 +109,29 @@
     
     .ourwork-display > .our-works-card .image-wrapper img{
         width: 100%;
-        height: 43rem;
-        object-fit: cover;
+        height: fit-content;
+        object-fit: contain;
     }
     
     .ourwork-display > .our-works-card > .content{
         flex-basis: 50%;
     }
-    
+    .ourwork-display > .our-works-card > .content h2{
+        margin-bottom: 2rem;
+    }
+    .ourwork-display > .our-works-card > .content>p{
+        margin-bottom: 3rem;
+    }
+    .ourwork-display > .category-container > .category-wrapper p {
+        cursor: pointer;
+        white-space: nowrap;
+    }
     .ourwork-display > .our-works-card > .content > .stats-group{
         display: flex;
-        align-items: center;
+        align-items: baseline;
         gap: 6rem;
+    }
+    .ourwork-display > .our-works-card > .content > .stats-group .stat{
+        flex-basis: 50%;
     }
 }
