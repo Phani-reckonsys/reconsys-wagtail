@@ -41,6 +41,7 @@ class CardBasicBlock(StructBlock):
     image = ImageChooserBlock(required = False)
     title = CharBlock(classname = "title", required=True)
     subtitle = CharBlock(classname = "subtitle", required=True)
+    blog_link = PageChooserBlock(can_choose_root= True, required = False )
 
 #TitleGroup Basic Block
 class TitleGroupBasicBlock(StructBlock):

@@ -45,12 +45,18 @@
   }
   .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper {
     display: flex;
-    gap: 3rem;
+    /* gap: 3rem; */
     width: 300%;
     transition: transform 0.3s ease-in-out;
   }
   .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper .carousal-content {
     width: 33.33%
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper .carousal-content:hover h2 {
+    color: #C01111;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-content-container .carousal-content-wrapper:hover .carousal-content h2 {
+    color: #C01111;
   }
   .servicespage-wrapper .carousel-section .right .carousal-controls {
     display: flex;
@@ -67,6 +73,12 @@
     height: 0.4rem;
     width: 4.5rem;
     background-color: #333;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-controls .arrow-group .carousal-left-arrow{
+    cursor: pointer;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-controls .arrow-group .carousal-right-arrow{
+    cursor: pointer;
   }
   .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator.active {
     width: 13rem;

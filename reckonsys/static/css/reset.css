@@ -402,13 +402,20 @@ color: #fff;
     margin-top: 0.8rem;
   }
 }
+.outline-btn-white:hover {
+  color: #333 !important;
+}
 
 .outline-btn-white>h4{
   color: #fff;
 }
 
+.outline-btn-white svg path{
+  stroke-width: 2px;
+}
 .outline-btn-white:hover svg path{
   stroke: #fff;
+  stroke-width: 2px;
 }
 .outline-btn-white::before{
   content: " ";
