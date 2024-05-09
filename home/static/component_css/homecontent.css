@@ -372,13 +372,13 @@
 
   .industries-section .industries-main .sector-card-container .sector-card-group-wrapper .sector-card-group .sector-card .sector-card-footer {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     align-items: center;
   }
 
   .industries-section .industries-main .sector-card-container .sector-card-group-wrapper .sector-card-group .sector-card .sector-card-footer img{
     display: inline-flex;
-    height: 2.8rem;
+    height: 5rem;
     max-width: 16rem; 
     object-fit: contain;
     width: auto;

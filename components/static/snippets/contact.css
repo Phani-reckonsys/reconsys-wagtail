@@ -57,7 +57,7 @@ input[type="number"] {
 }
 .contact-main .contact-container .contact-form .cf-row .div-input-50.phone-number .error-message{
   position: absolute;
-  left:10rem;
+  left:10.5rem;
   bottom: -2rem;
   color:#d40c0c;
   display: none;

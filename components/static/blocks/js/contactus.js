@@ -70,7 +70,7 @@ function submitContactDetails() {
   if (phoneNumber === "") {
     phoneNumberfield.classList.add("error");
     phoneNumbererror.classList.add("active");
-    phoneNumbererror.textContent = "Please enter your phone number"
+    phoneNumbererror.textContent = "Please enter your phone no."
     error=true;
   }else{
     phoneNumberfield.classList.remove("error");
@@ -118,7 +118,7 @@ function submitContactDetails() {
   if (!phonePattern.test(phoneNumber)) {
     phoneNumberfield.classList.add("error");
     phoneNumbererror.classList.add("active");
-    phoneNumbererror.textContent = "Please enter valid phone number";
+    phoneNumbererror.textContent = "Please enter valid phone no.";
     error=true;
   }else{
     phoneNumberfield.classList.remove("error");

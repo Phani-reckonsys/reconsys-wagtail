@@ -28,7 +28,6 @@ function submitNewsletterDetails() {
     emailerror.classList.remove("active");
     emailerror.textContent = "";
   }
-  if(error)return
   const sendData = { email: email };
   const csrftoken = document.querySelector("[name=csrfmiddlewaretoken]").value;
 

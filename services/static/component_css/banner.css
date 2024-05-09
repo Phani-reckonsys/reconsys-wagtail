@@ -19,12 +19,14 @@
     justify-content: space-between;
     align-items: center;
   }
-
+  .banner-section .banner-section-body .custom-row:nth-child(even) .right {
+    margin-top: 5rem;
+  }
 .banner-section .banner-section-body .custom-row:first-child {
     align-items: flex-start;
   }
 .banner-section .banner-section-body .custom-row:first-child .right {
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 .banner-section .banner-section-body .custom-row img {
     width: 45%;
