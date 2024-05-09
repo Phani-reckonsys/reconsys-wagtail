@@ -78,6 +78,7 @@
   @media only screen and (max-width: 576px) {
     .services-stats-section {
       position: relative;
+      padding-top: 0rem;
     }
     .services-stats-section h2 {
       width: 100% !important;
@@ -100,12 +101,13 @@
       width: 100%;
       display: flex;
       gap: 3rem;
-      justify-content: space-between;
+      justify-content: center;
     }
     .services-stats-section .stats-wrapper .stat-card {
-      width: 18rem;
+      width: 30rem;
       display: flex;
       flex-direction: column;
+      text-align: center;
       gap: 2.4rem;
     }
   }

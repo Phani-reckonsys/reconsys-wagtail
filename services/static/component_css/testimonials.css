@@ -43,7 +43,9 @@
    
   }
   @media only screen and (max-width: 576px) {
-    
+    .services-testimonial-section{
+      padding-top: 2rem;
+    }
     .services-testimonial-section .testimonial-wrapper {
       width: 100%;
       display: flex;
@@ -54,11 +56,14 @@
       flex-basis: 40%;
     }
     .services-testimonial-section .testimonial-wrapper .left img {
-      width: 80%;
+      width: 100%;
       height: auto;
     }
-    .services-testimonial-section .testimonial-wrapper .right {
-      flex-basis: 50%;
+    .services-testimonial-section .testimonial-wrapper .right p{
+      font-size: 2.4rem;
+      margin-bottom: 4rem;
     }
-    
+    .services-testimonial-section .testimonial-wrapper .right h6{
+      font-size: 1.6rem;
+    }
   }

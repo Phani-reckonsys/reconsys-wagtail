@@ -110,7 +110,11 @@
   @media only screen and (max-width: 576px) {
     .accordians-section {
       padding-top: 0;
+      padding-bottom: 8rem;
       width: 100%;
+    }
+    .accordians-section h2{
+      margin-bottom: 4rem;
     }
     .accordians-section .accordians-wrapper {
       display: flex;
@@ -123,11 +127,26 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-direction: column;
+    }
+    .accordians-section .accordians-wrapper .custom-accordian .header{
+      padding: 0;
     }
     .accordians-section .accordians-wrapper .custom-accordian .left {
       display: flex;
       gap: 2.4rem;
       align-items: center;
     }
+    .accordians-section .accordians-wrapper .custom-accordian .custom-answer {
+      max-height: 0;
+      transition:all 0.6s ease;
+      overflow:hidden;
+      margin-left: 9rem;
+    }
+    .accordians-section .accordians-wrapper .custom-accordian .custom-answer.active {
+      max-height: 20rem;
+      margin-top: 0rem;
+      padding-bottom: 0rem;
+  }
    
   }

@@ -26,11 +26,17 @@
     .engagment-section .engagment-body .engagement-cards-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 3rem;
+      gap: 4rem;
     }
   }
   @media only screen and (max-width: 576px) {
-    
+    .engagment-section {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+    .engagment-section h2{
+      margin-bottom: 4rem;
+    }
     .engagment-process-card-wrapper {
       display: flex;
       justify-content: space-between;

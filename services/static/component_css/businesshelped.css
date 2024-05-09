@@ -58,5 +58,13 @@
    
   }
   @media only screen and (max-width: 576px) {
-    
+    .servicesto-section {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      background-color: #f3f3f3;
+    }
+    .servicesto-section .sector-card-group-wrapper .sector-card-group {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
   }

@@ -116,10 +116,10 @@
 
   @media only screen and (max-width: 576px) {
     .custom-footer {
-      height: 150rem;
+      height: 110rem;
     }
     .custom-footer .navigation-footer {
-      gap: 4rem;
+      gap: 5rem;
     }
     .custom-footer .navigation-footer {
       height: fit-content;
@@ -141,13 +141,17 @@
     .custom-footer .navigation-footer .custom-col.footer-newsletter{
       order: 1;
     }
+    .custom-footer .navigation-footer .custom-col.footer-newsletter h4{
+      font-size: 2rem;
+    }
     .custom-footer .navigation-footer .custom-col.footer-badges{
       order: 4;
     }
     .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-input{
       width: 90%;
+      gap: 2rem;
     }
     .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-input .newsletter-email{
-      width: 70%;
+      width: 75%;
     }
   }

@@ -328,6 +328,16 @@ input[type="number"] {
   }
 }
 @media only screen and (max-width: 576px) {
+  .contact-main {
+    padding-bottom: 8rem;
+  }
+  .contact-main .contact-container {
+    display: flex;
+    width: 100%;
+    gap: 10rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid #544e4e;
+  }
   .contact-main .contact-container {
     display: flex;
     flex-direction: column;

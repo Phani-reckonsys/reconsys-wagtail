@@ -1,7 +1,7 @@
 .banner-section {
     position: relative;
 
-  }
+}
 .banner-section .decor-squares {
     position: absolute;
     top: 2rem;
@@ -127,6 +127,11 @@
     }
   }
   @media only screen and (max-width: 576px) {
+    .banner-section {
+      position: relative;
+      padding-top: 0;
+      padding-bottom: 6rem;
+    }
     .banner-section .decor-squares {
       display: none;
     }
@@ -140,12 +145,18 @@
       align-items: center;
       gap: 2rem;
     }
+    .banner-section .banner-section-body .custom-row:nth-child(even) .right {
+      margin-top: 0rem;
+  }
     .banner-section .banner-section-body .custom-row img {
       width: 100%;
       height: auto;
       -o-object-fit: contain;
          object-fit: contain;
       margin-bottom: 2rem;
+    }
+    .banner-section .banner-section-body .custom-row:first-child{
+      margin-bottom: 6rem;
     }
     .banner-section .banner-section-body .custom-row:first-child .right {
       margin-top: 0rem;
