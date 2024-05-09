@@ -30,7 +30,7 @@
 .ourwork-display .outline-btn-white {
     display: flex;
     margin: auto;
-    width: 20rem;
+    width: fit-content;
     margin-top: 4rem;
 }
 

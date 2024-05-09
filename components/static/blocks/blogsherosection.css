@@ -1,5 +1,6 @@
 .servicespage-wrapper .herosection{
     display: flex;
+    padding-top: 12.2rem;
 }
 
 .servicespage-wrapper .herosection div.geometric-shapes {
