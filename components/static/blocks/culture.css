@@ -12,3 +12,31 @@
     height: 25rem;
     object-fit: cover;
 }
+
+@media only screen and (max-width: 992px) {
+   
+}
+@media only screen and (max-width: 768px) {
+  
+}
+@media only screen and (max-width: 576px) {
+    .culture{
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    .culture h2{
+       width: 100%;
+       margin-bottom: 4rem;
+    }
+    .culture .gallery-container .gallery-wrapper{
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .culture .gallery-container .gallery-wrapper .image{
+        height: fit-content;
+        object-fit: contain;
+        width: 100%;
+    }
+}
