@@ -860,11 +860,14 @@
     }
     .services-main .software-services .service-card-group {
       display: flex;
-      gap: 1.6rem;
+      gap: 2.5rem;
       flex-wrap: wrap;
     }
     .services-main .software-services .service-card-group .services-card {
       width: 100%;
+    }
+    .process-section .process-main {
+      margin-bottom: 2rem;
     }
     .process-section .process-main .process-map {
       flex-direction: column;
@@ -981,6 +984,7 @@
     }
     .industries-section .industries-main {
       padding-top: 8rem;
+      padding-bottom: 8rem;
     }
     .industries-section .industries-main .industries-header {
       width: 100%;
@@ -996,18 +1000,26 @@
     .industries-section .industries-main .industries-header .middle {
       flex-basis: 100%;
     }
-    .industries-section .industries-main .industries-header .rigt {
+    .industries-section .industries-main .industries-header .right {
       flex-basis: 100%;
+    }
+    .industries-section .industries-main .industries-header .right svg{
+      width: 4rem;
+      height: fit-content;
+      margin-bottom: 0;
     }
     .why-reckonsys-main{
       display: flex;
       flex-direction: column;
+      padding-top: 8rem;
+      padding-bottom: 0 ;
     }
     .why-reckonsys-main .left .left-content-wrapper h2 {
       width: 100%;
     }
     .why-reckonsys-main .left .left-content-wrapper p {
       margin-bottom: 3rem;
+      font-size: 1.8rem;
     }
     .why-reckonsys-main .left  svg {
       display: none !important;
@@ -1016,8 +1028,19 @@
       width: 100%;
     }
     .why-reckonsys-main .right .why-reckonsys-image {
-      width: 100%;
+      width: 100% !important;
       margin-top: 3rem;
+    }
+    .case-studies-main {
+      padding-bottom: 8rem;
+    }
+    .case-studies-main .case-studies-header{
+      flex-direction: column;
+      align-items: start !important;
+    }
+    .case-studies-main .case-studies-header .right svg{
+      width: 4rem;
+      height: fit-content;
     }
     .case-studies-main .case-studies-header .left h2 {
       width: 100%;
@@ -1026,32 +1049,7 @@
     .case-studies-main .cards-container .cards-wrapper .case-study-card {
       flex-direction: column;
     }
-    .testimonials-main {
-      padding-bottom: 5rem;
-    }
-    .testimonials-main .testimonials-header h2 {
-      width: 100%;
-    }
-    .testimonials-main .testimonials-container .testimonial-card {
-      width: 100%;
-    }
-    .testimonials-main .testimonials-container .testimonial-card:nth-child(3n+2) {
-      position: static;
-      top: 5rem;
-    }
-    .blogs-main .blogs-header h2 {
-      width: 100%;
-    }
-    .blogs-main .blogs-container {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-    }
-    .blogs-main .blogs-container .blog-card {
-      width: 100%;
-    }
-    .blogs-main .blogs-container .blog-card img {
-      width: 100%;
-      height: auto;
+    .case-studies-main .cards-container .cards-wrapper .content {
+      padding: 4.7rem 3.6rem !important;
     }
   }

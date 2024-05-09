@@ -58,6 +58,26 @@
  }
 
 
-
+ @media only screen and (max-width: 576px) {
+   .ratings-main .ratings-wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6.6rem;
+      padding-top: 4rem;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom:8rem;
+      background: #F2F2F2;
+  }
+  .ratings-main .ratings-wrapper>h2{
+   text-align: center;
+   width: 100%;
+   }
+   .ratings-main .ratings-wrapper .ratings-container{
+      flex-direction: column;
+      gap: 3rem;
+   }
+ }
 
 

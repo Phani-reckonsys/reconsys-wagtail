@@ -4,6 +4,7 @@
     left: 1.9rem;
     z-index: 5000;
     background: #fff;
+    border-radius: 0 3.2rem 3.2rem;
   }
   
   nav.c-dark {

@@ -43,7 +43,7 @@
             </a>
           </div>
           <div class="navigation-footer">
-            <div class="custom-col">
+            <div class="custom-col footer-address">
               <h3 class="color-white ft-16 mb-20 ft-900">India(HQ)</h3>
               <h3 class="color-light-white ft-16 mb-46 f-400">
                 2/B, 19th Main Rd, Sector 3,<br />
@@ -61,17 +61,17 @@
                 © 2024 RECKONSYS TECH LABS
               </h3>
             </div>
-            <div class="custom-col">
+            <div class="custom-col footer-social">
              <h3 class="color-white ft-16 mb-22 ft-900">
                 <a href="#"></a>Social
               </h3>
-            {% for socialitem in socialitems %}
-             <h3 class="color-light-white ft-16 mb-16 f-400">
-                <a href="{{socialitem.url}}" target="_blank" class="color-light-white">{{socialitem.name}}</a>
-              </h3>
-            {% endfor %}
+              {% for socialitem in socialitems %}
+              <h3 class="color-light-white ft-16 mb-16 f-400">
+                  <a href="{{socialitem.url}}" target="_blank" class="color-light-white">{{socialitem.name}}</a>
+                </h3>
+              {% endfor %}
             </div>
-            <div class="custom-col">
+            <div class="custom-col footer-nav">
               <h3 class="color-white ft-16 mb-22 ft-900">Company</h3>
               {% for footeritem in footeritems %}
                 <a href="{{footeritem.url.get_url}}">
@@ -81,7 +81,7 @@
                 </a>
               {% endfor %}
             </div>
-            <div class="custom-col">
+            <div class="custom-col footer-newsletter">
               <h4 class="color-white">
                 Stay informed, stay inspired – <br />
                 subscribe to our newsletter for the <br />
@@ -112,7 +112,7 @@
                 </div>
               </div>
             </div>
-            <div class="custom-col">
+            <div class="custom-col footer-badges">
               {% for footerimage in footerimages %}
                   {%image footerimage.image max-3000x1500 class="footer-image"%}
               {% endfor %}

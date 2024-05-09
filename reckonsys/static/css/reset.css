@@ -934,6 +934,9 @@ img {
   h2.w-60 {
     width: 100%;
   }
+  .w-80{
+    width: 100% !important;
+  }
   h2.w-40 {
     width: 100%;
   }
