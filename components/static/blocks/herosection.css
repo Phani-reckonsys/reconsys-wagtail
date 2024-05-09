@@ -239,5 +239,7 @@
     .herosection-wrapper .quick-testimonials .client-logos svg {
       display: inline-block;
     }
-    
+    .herosection-wrapper .quick-testimonials .client-logos-wrapper .client-logos {
+      gap: 2rem;
+    }
   }
