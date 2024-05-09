@@ -24,6 +24,8 @@
 
 .ourwork-display > .category-container > .category-wrapper p.active{
     color: #f0493e !important;
+    
+    border-bottom: 1px solid #f0493e ;
 }
 .ourwork-display .outline-btn-white {
     display: flex;

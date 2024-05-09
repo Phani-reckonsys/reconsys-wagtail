@@ -32,3 +32,33 @@
     margin-top: 5rem;
   } 
 
+  @media only screen and (max-width: 992px) {
+   
+  }
+  @media only screen and (max-width: 768px) {
+      
+  }
+  @media only screen and (max-width: 576px) {
+    .reckonsys-testimonial-section {
+      margin-top: 8rem;
+      margin-bottom: 8rem;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper {
+      flex-direction: column;
+      padding-bottom: 0rem;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .right>p{
+      font-size: 2.4rem;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .right>h6{
+      font-size: 1.6rem;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .quotes {
+      display: none;
+    }
+    .reckonsys-testimonial-section .testimonial-wrapper .right p {
+      font-size: 2.4rem;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }

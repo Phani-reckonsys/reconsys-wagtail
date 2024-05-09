@@ -2,6 +2,10 @@
     width: 100%;
 }
 
+.ourmission-main .our-mission{
+   padding-bottom: 16.4rem;
+}
+
 .ourmission-main .our-mission h2 p{
     font-size: 4.2rem;
     font-family: "Satoshi-Bold";
@@ -31,4 +35,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 992px) {
+   
+}
+@media only screen and (max-width: 768px) {
+    
+}
+@media only screen and (max-width: 576px) {
+    .ourmission-main .our-mission{
+        padding-bottom: 8rem;
+    }
 }

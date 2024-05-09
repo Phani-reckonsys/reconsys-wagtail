@@ -1,5 +1,5 @@
-const showMoreBtn = document.querySelector(".ourwork-display .outline-btn");
-const showMoreBtnText = document.querySelector(".ourwork-display .outline-btn h4");
+const showMoreBtn = document.querySelector(".ourwork-display .outline-btn-white");
+const showMoreBtnText = document.querySelector(".ourwork-display .outline-btn-white h4");
 let ourWorkCardVisibleCount = 8;
 const ourWorkCards = document.querySelectorAll(".our-works-card");  // All cards selector
 function setOurWorksCardCount(count) {
