@@ -34,11 +34,12 @@
   }
   .herosection-wrapper .herosection-height .hero-carousel-indicator-group div {
     width: 5.4rem;
-    height: 2px;
-    background-color: #333;
+    height: 1.8rem;
+    border-bottom: 2px solid #333;
+    cursor: pointer;
   }
   .herosection-wrapper .herosection-height .hero-carousel-indicator-group div.active {
-    background-color: #f0493e;
+    border-color: #f0493e;
   }
   .herosection-wrapper .herosection-height .herosection .geometric-shapes {
     margin-left: auto;
