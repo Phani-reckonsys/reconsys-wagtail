@@ -428,6 +428,7 @@
     display: flex;
     width: 100%;
     transition: transform 300ms ease-in-out;
+    
   }
   .case-studies-main .cards-container .cards-wrapper .case-study-card:nth-child(2) .content {
     background-color: #1c2a5d;
@@ -1050,10 +1051,19 @@
       width: 100%;
       margin-bottom: 3rem;
     }
+    .case-studies-main .cards-container{
+      margin-left: -4rem;
+      margin-right: -4rem;
+    }
     .case-studies-main .cards-container .cards-wrapper .case-study-card {
       flex-direction: column;
     }
     .case-studies-main .cards-container .cards-wrapper .content {
-      padding: 4.7rem 3.6rem !important;
+      padding: 3rem !important;
+    }
+    .case-studies-main .cards-container .cards-wrapper .case-study-card .content .data-value-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
   }

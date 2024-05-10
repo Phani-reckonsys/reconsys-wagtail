@@ -27,16 +27,19 @@
 
   .our-journey-main .our-journey-card-container .our-journey-card-wrapper {
     display: flex;
-    gap: 3rem;
+    gap: 6rem;
     margin-bottom: 4rem;
   }
+  .our-journey-main .our-journey-card-container .our-journey-card-wrapper .our-journey-card-wrapper-content{
+    min-width: 60rem;
+  }
   .our-journey-main .our-journey-card-container .our-journey-card-wrapper .our-journey-card {
-    width: 28rem;
+    width: 36rem;
     object-fit: cover;
   }
 
   .our-journey-main .our-journey-card-container .our-journey-card-wrapper .our-journey-card img{
-    width: 28rem;
+    width: 36rem;
     object-fit: contain;
     height: fit-content;
   }
@@ -51,5 +54,8 @@
   @media only screen and (max-width: 576px) {
     .our-journey-main {
       padding-top: 8rem;
+    }
+    .our-journey-main .our-journey-card-container .our-journey-card-wrapper .our-journey-card-wrapper-content{
+      min-width: 30rem;
     }
   }

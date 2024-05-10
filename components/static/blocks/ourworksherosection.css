@@ -3,6 +3,8 @@
 }
 .ourwork-herosection-wrapper > .herosection {
     display: flex;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8rem;
 }
 
 .ourwork-herosection-wrapper > .herosection > .ourworks-heroimage-container {
