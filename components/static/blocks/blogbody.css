@@ -163,11 +163,16 @@
     .blogbody{
         display: flex;
         justify-content: space-between;
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding-bottom: 8rem;
     }
     .blogbody .social-media-group{
         display: none;
+    }
+    .blogbody .content{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid #dbdbdb;
     }
     .blogbody .author-profile{
         flex-basis: 30%;
@@ -177,7 +182,7 @@
         gap: 1.8rem;
         position: sticky;
         top: 3rem;
-        margin-bottom: 10rem;
+        margin-top: 3rem;
     }
     
 }

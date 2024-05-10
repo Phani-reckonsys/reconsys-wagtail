@@ -102,11 +102,12 @@
     .ourwork-display > .our-works-card {
         flex-direction: column;
         gap: 4rem;
-        padding: 6rem 0 6rem 4rem;
+        padding: 4rem;
     }
     
     .ourwork-display > .our-works-card .image-wrapper{
         flex-basis: 45%;
+        margin-right: -4rem;
     }
     
     .ourwork-display > .our-works-card .image-wrapper img{
@@ -123,6 +124,7 @@
     }
     .ourwork-display > .our-works-card > .content>p{
         margin-bottom: 3rem;
+        width: 100%;
     }
     .ourwork-display > .category-container > .category-wrapper p {
         cursor: pointer;
@@ -130,8 +132,9 @@
     }
     .ourwork-display > .our-works-card > .content > .stats-group{
         display: flex;
+        flex-direction: column;
         align-items: baseline;
-        gap: 6rem;
+        gap: 2rem;
     }
     .ourwork-display > .our-works-card > .content > .stats-group .stat{
         flex-basis: 50%;

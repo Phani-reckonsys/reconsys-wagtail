@@ -1,5 +1,6 @@
 .ourwork-herosection-wrapper{
     padding-top: 12.2rem;
+    
 }
 .ourwork-herosection-wrapper > .herosection {
     display: flex;
@@ -25,7 +26,7 @@
  }
  @media only screen and (max-width: 576px) {
     .ourwork-herosection-wrapper{
-        padding-top: 6rem;
+        padding-top: 20rem;
         padding-bottom: 6rem;
     } 
     .ourwork-herosection-wrapper > .herosection {
