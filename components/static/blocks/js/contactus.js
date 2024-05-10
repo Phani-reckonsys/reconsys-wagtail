@@ -136,7 +136,7 @@ function submitContactDetails() {
   };
   const csrftoken = document.querySelector("[name=csrfmiddlewaretoken]").value;
 
-  fetch("https://reckonsys.com/backend/contact-us", {
+  fetch("https://www.reckonsys.com/backend/contact-us", {
     method: "POST",
     body: JSON.stringify(sendData),
     headers: {
@@ -147,7 +147,7 @@ function submitContactDetails() {
     .then((response) => response.json())
     .then((body) => {
       console.log("sussefull");
-      window.location.href = "https://reckonsys.com/thankyou/";
+      window.location.href = "https://www.reckonsys.com/thankyou/";
     })
     .catch((error) => {
       console.log(error);
