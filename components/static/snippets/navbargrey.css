@@ -308,7 +308,7 @@
       height: 2rem;
     }
     nav .navigation-wrapper .navigation h5 a .menu-arrow path {
-      stroke: #333;
+      stroke: #fff;
     }
     nav .navigation-wrapper .navigation h5 a svg {
       display: block;
