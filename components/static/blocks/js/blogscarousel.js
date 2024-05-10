@@ -20,7 +20,11 @@ const changeCorousel = (index) => {
 
     carouselDescription.innerHTML = `0${activeCorouselIndex+1}/03`;
 }
-
+for(let [i, indicator] of carouselIndicator.entries()){
+    indicator.addEventListener('click' , ()=> {
+        changeCorousel(i)
+    })
+  }
 carousalRightArrow.addEventListener("click", ()=>{
     changeCorousel(activeCorouselIndex+1);
 })

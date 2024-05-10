@@ -31,7 +31,7 @@ function submitNewsletterDetails() {
   const sendData = { email: email };
   const csrftoken = document.querySelector("[name=csrfmiddlewaretoken]").value;
 
-  fetch("https://qa.reckonsys.com/backend/news-letter", {
+  fetch("https://www.reckonsys.com/backend/news-letter", {
     method: "POST",
     body: JSON.stringify(sendData),
     headers: {

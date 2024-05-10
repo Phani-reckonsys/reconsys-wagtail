@@ -1,6 +1,12 @@
 .blogheader {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+}
+.blogheader .geometric-shapes{
+   display: flex;
+   flex-direction: column;
 }
 
 .blogheader .left .breadcrump{
@@ -19,7 +25,7 @@
 }
 .blogheader .left .left-margin .tags-container .tag{
     background: rgba(175, 175, 175, 0.31);
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 1rem;
 }
 
 .blogheader .left .left-margin .category-title-date .category-title{

@@ -71,19 +71,36 @@
     gap: 2rem;
   }
   .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator {
-    height: 0.4rem;
+    position: relative;
+    top: -2rem;
+    height: 4rem;
     width: 4.5rem;
-    background-color: #333;
+    border-bottom: 4px solid #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
   .servicespage-wrapper .carousel-section .right .carousal-controls .arrow-group .carousal-left-arrow{
     cursor: pointer;
+    transition: all 1s ease;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-controls .arrow-group .carousal-left-arrow:hover{
+    fill: #333;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-controls .arrow-group .carousal-left-arrow:hover path{
+    stroke: #fff;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-controls .arrow-group .carousal-right-arrow:hover{
+    fill: #333;
+  }
+  .servicespage-wrapper .carousel-section .right .carousal-controls .arrow-group .carousal-right-arrow:hover path{
+    stroke: #fff;
   }
   .servicespage-wrapper .carousel-section .right .carousal-controls .arrow-group .carousal-right-arrow{
     cursor: pointer;
   }
   .servicespage-wrapper .carousel-section .right .carousal-controls .indicators-wrapper .indicator.active {
     width: 13rem;
-    background-color: #C01111;
+    border-color: #C01111;
   }
 
   @media only screen and (max-width: 992px) {

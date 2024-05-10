@@ -17,16 +17,26 @@
     min-width: 39.2rem;
     width: 32vw;
     width: 30%;
-    margin-bottom: 10rem;
     overflow: hidden;
     cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .blogs-main .blogs-container .blog-card .blog-content-body {
+    padding: 1rem 2.4rem 3rem 2.4rem;
+  }
+  .blogs-main .blogs-container .blog-card h4 {
+    transition: all 0.3s ease;
+  }
+  .blogs-main .blogs-container .blog-card:hover{
+    box-shadow: 0 20px 20px 8px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1.5rem);
   }
   .blogs-main .blogs-container .blog-card:hover h4 {
     color: #C01111 !important;
   }
 
 .blogs-main .blogs-container .blog-card:hover .image-wrapper img {
-    transform: scale(1.6);
+    transform: scale(1.2);
   }
   .blogs-main .blogs-container .blog-card .image-wrapper img{
     transition:all 0.4s ease;

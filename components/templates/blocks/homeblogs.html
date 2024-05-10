@@ -5,7 +5,7 @@
       <div class="sidebar">
         <h5>{{self.sidetitle}}</h5>
       </div>
-      <div class="blogs-main pl-54 pr-54 pt-100 pb-180 w-container">
+      <div class="blogs-main pl-54 pr-54 pt-100 pb-100 w-container">
         <div class="blogs-header d-flex flex-column align-items-center mb-84">
           <h4 class="mb-20 ft-20 lh-110">{{self.title}}</h4>
           <h2 class="w-70 text-center">
@@ -16,14 +16,16 @@
         {% for card in self.blogcard %}
         <a href = "{{card.value.pagelink.get_url}}" class="blog-card">
             {% comment %} <img src="./res/images/crm-technology.png" alt="" class="mb-16" /> {% endcomment %}
-            <div class  = "image-wrapper mb-16">
+            <div class  = "image-wrapper">
               {% image card.value.image  max-3000x1500%}
             </div>
-            <h6 class="mb-8 gradient-text">{{card.value.category}}</h6>
-            <h4 class="ft-22 mb-16 ft-1">
-             {{card.value.title}}
-            </h4>
-            <p class="ft-16 lh-110">{{card.value.info}}</p>
+            <div class="blog-content-body">
+              <h6 class="mb-8 gradient-text">{{card.value.category}}</h6>
+              <h4 class="ft-22 mb-16 ft-1">
+              {{card.value.title}}
+              </h4>
+              <p class="ft-16 lh-110">{{card.value.info}}</p>
+            </div>
           </a>
         {% endfor %}
         </div>
