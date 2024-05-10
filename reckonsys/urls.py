@@ -9,9 +9,11 @@ from wagtail.documents import urls as wagtaildocs_urls
 from backend import urls as backend_urls
 from search import views as search_views
 from wagtail.contrib.sitemaps.views import sitemap
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path("sitemap.xml", sitemap),
+    path("robots.txt", TemplateView.as_view(template_name="robots.txt")),
     path("django-admin/", admin.site.urls),
     path("admin/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),
