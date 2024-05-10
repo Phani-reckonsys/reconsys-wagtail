@@ -2,6 +2,7 @@
     padding-top: 12.2rem;
     display: flex;
     flex-direction: column;
+    border-top: 1px solid #CCC7C7;
   }
   .herosection-wrapper .herosection-height{
     position: relative;

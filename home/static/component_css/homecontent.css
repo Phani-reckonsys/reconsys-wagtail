@@ -126,6 +126,7 @@
    left: 100%;
    border-top: 2px dashed #fff;
    top: 2rem;
+   opacity: 0.2;
   }
   .process-section .process-main .process-map .process-map-card:nth-child(2)::before {
     content: "";
@@ -135,6 +136,7 @@
     left: 50%;
     border-right: 2px dashed #fff;
     top: -3.5rem;
+    opacity: 0.2;
    }
    .process-section .process-main .process-map .process-map-card:nth-child(3)::before {
     content: "";
@@ -144,6 +146,7 @@
     right: 100%;
     border-top: 2px dashed #fff;
     bottom: 2rem;
+    opacity: 0.2;
    }
    .process-section .process-main .process-map .process-map-card:nth-child(2)::after {
      content: "";
@@ -153,6 +156,7 @@
      left: 50%;
      border-right: 2px dashed #fff;
      bottom: -3.5rem;
+     opacity: 0.2;
     }
   .process-section .process-main .process-map .process-map-card:nth-child(3) {
     position: relative;

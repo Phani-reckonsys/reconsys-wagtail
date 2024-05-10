@@ -71,14 +71,14 @@
                 </div>
                 <div class="right">
                     <div class="carousal-content-container">
-                            <a href="{{card.value.blog_link.get_url}}" class="carousal-content-wrapper">
+                            <div class="carousal-content-wrapper">
                                 {% for card in self.cards %}
-                                <div class="carousal-content">
+                                <a href="{{card.value.blog_link.get_url}}" class="carousal-content">
                                     <h2 class=" mb-40">{{card.value.title}}</h2>
                                     <p>{{card.value.subtitle}}</p>
-                                </div>
+                                </a>
                                 {% endfor %} 
-                            </a>
+                            </div>
                     </div>
                     <div class="carousal-controls">
                         <p class="numbering">01/03</p>

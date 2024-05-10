@@ -358,6 +358,17 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
   }
+  .contact-main .contact-container .contact-form .cf-row .div-input-50.phone-number .error-message{
+    position: absolute;
+    left:13rem;
+    bottom: -2rem;
+    color:#d40c0c;
+    display: none;
+    font-size: 1.2rem;
+  }
+  .contact-main .contact-container .contact-form .cf-row .div-input-50 .error-message.active{
+    display: flex;
+  }
   .footer-container .right {
     display: flex;
     flex-direction: row;
