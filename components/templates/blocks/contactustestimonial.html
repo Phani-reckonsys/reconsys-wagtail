@@ -1,6 +1,5 @@
 {%load wagtailimages_tags%}
 
-
 <section>
   <div class="sidebar dark-section"></div>
   <div class="contactustestimonial-wrapper pl-54 pr-54 w-container c-dark">
@@ -8,7 +7,6 @@
       <div class="card-wrapper">
         <div class="clutch-rating rating-cards">
           <div class="rating-stars mb-8">
-
             <svg
               width="26"
               height="24"
@@ -65,15 +63,19 @@
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M13.2 0L16.1636 9.12098H25.7539L17.9952 14.758L20.9588 23.879L13.2 18.242L5.44124 23.879L8.40482 14.758L0.646054 9.12098H10.2364L13.2 0Z"
-                fill="#D14F4F"
+                d="M12.5539 0L15.5175 9.12098H25.1079L17.3491 14.758L20.3127 23.879L12.5539 18.242L4.79518 23.879L7.75877 14.758L0 9.12098H9.59036L12.5539 0Z"
+                fill="#CF534B"
+              />
+              <path
+                d="M12.5782 18.2559L20.3178 23.879L17.3542 14.758L25.113 9.12098H15.5226L12.5782 0.05916V18.2559Z"
+                fill="#D9D9D9"
               />
             </svg>
           </div>
           <p class="ft-32 lh-110 color-white mb-8">4.9/5</p>
           <p class="ft-16 color-white mb-60">22 Reviews</p>
           <div class="image-wrapper">
-          {% image self.clutch_logo max-700x300%}
+            {% image self.clutch_logo max-700x300%}
           </div>
         </div>
         {% for testimonial_card in self.testimonialcards %}
@@ -94,7 +96,7 @@
           <p class="ft-19 color-white pb-54 mb-12 bb">
             {{testimonial_card.value.review}}
           </p>
-          <h4 class="color-white"> {{testimonial_card.value.name}}</h4>
+          <h4 class="color-white">{{testimonial_card.value.name}}</h4>
         </div>
         {% endfor %}
       </div>

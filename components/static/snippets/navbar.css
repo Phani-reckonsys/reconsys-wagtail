@@ -28,6 +28,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: calc(100% - 6.5rem);
+    z-index: 10000;
+    transition: position 2s ease;
+  }
+  nav .navigation-wrapper.dark-navbar {
+    border-left: 1px solid #544e4e;
+    border-bottom: 1px solid #544e4e;
   }
   nav .navigation-wrapper h3 {
     margin-left: 5.4rem;
@@ -36,6 +46,9 @@
   nav .navigation-wrapper .half-logo{
     display: flex;
     margin-top: 2px;
+  }
+  nav .navigation-wrapper.dark-navbar .half-logo path{
+    fill: #fff;
   }
   nav .navigation-wrapper .close-menu {
     display: none;
@@ -73,10 +86,16 @@
   nav .navigation-wrapper .navigation h5 a .menu-arrow {
     display: none;
   }
+  nav .navigation-wrapper.dark-navbar .navigation h5 a {
+    color: #fff;
+  }
   nav .navigation-wrapper .navigation h5:hover a {
     color: #f0493e;
   }
   nav .navigation-wrapper .navigation h5 a.active {
+    color: #f0493e;
+  }
+  nav .navigation-wrapper.dark-navbar .navigation h5 a.active {
     color: #f0493e;
   }
   nav .navigation-wrapper .navigation h5:hover a svg path {
@@ -85,6 +104,12 @@
   nav .navigation-wrapper .contactus {
     padding: 2rem 2.8rem;
     border-left: 1px solid #cac8c8;
+  }
+  nav .navigation-wrapper.dark-navbar .contactus {
+    border-left: 1px solid #544e4e;
+  }
+  nav .navigation-wrapper.dark-navbar .contactus a{
+    color: #fff;
   }
   nav .navigation-wrapper .contactus a svg {
     display: none;

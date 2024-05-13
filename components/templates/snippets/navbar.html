@@ -169,20 +169,53 @@ menuBars.addEventListener("click",(event)=> {
     mobileMenu.classList.remove("menu-open");
     body.style.overflow = "scroll";
  });
+ let lastScrollTop = 0;
+
+ document.addEventListener("scroll" ,()=>{
+   console.log(lastScrollTop)
+  var st = document.documentElement.scrollTop;
+  console.log(st);
+  if(st<lastScrollTop){
+    console.log("page moved bottom")
+  }else{
+    console.log("page moved top")
+  }
+  lastScrollTop = Math.max(0,st);
+  console.log(lastScrollTop, st);
+ })
+ 
  </script>
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script>
    document.addEventListener('DOMContentLoaded', function() {
     const companyLogo = document.querySelector('.company-logo');
+    const navbar = document.querySelector(".navigation-wrapper");
     const darkSections = document.querySelectorAll('.dark-section');
+    let lastScrollTop = 0;
+
+      document.addEventListener("scroll" ,()=>{
+        console.log(lastScrollTop)
+        var st = document.documentElement.scrollTop;
+        console.log(st);
+        if(st<lastScrollTop){
+          console.log("page moved bottom")
+          navbar.style.position = "fixed";
+        }else{
+          console.log("page moved top");
+          navbar.style.position = "static";
+        }
+        lastScrollTop = Math.max(0,st);
+        console.log(lastScrollTop, st);
+      })
+
     let darkSectionsInView = 0;
 
     function updateLogoBackground() {
         darkSections.forEach((darkSection) => {
             const darkSectionTop = darkSection.getBoundingClientRect().top;
             const darkSectionBottom = darkSection.getBoundingClientRect().bottom;
-            if (darkSectionTop <= 0 && darkSectionBottom > 0) {
+            if (darkSectionTop <= 60 && darkSectionBottom > 60) {
                 // Dark section is in view
                 darkSectionsInView++;
             }
@@ -190,11 +223,13 @@ menuBars.addEventListener("click",(event)=> {
         if (darkSectionsInView > 0) {
             // At least one dark section is in view
             companyLogo.style.backgroundColor = '#232020';
-            companyLogo.style.color = '#fff';
+            navbar.style.backgroundColor = '#232020';
+            navbar.classList.add('dark-navbar');
         } else {
             // No dark sections are in view
             companyLogo.style.backgroundColor = '#fff';
-            companyLogo.style.color = '#000';
+            navbar.style.backgroundColor = '#fff';
+            navbar.classList.remove('dark-navbar');
         }
 
         // Reset the count for the next scroll event
