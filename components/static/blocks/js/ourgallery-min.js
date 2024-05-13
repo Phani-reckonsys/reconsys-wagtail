@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(e=>{gsap.registerPlugin(ScrollTrigger);document.querySelectorAll(".gallery-wrapper").forEach((e=>gsap.timeline({repeat:-1}).to(e,{scrollTo:500,x:-5e3,duration:100,progress:1,ease:"linear"})))}));

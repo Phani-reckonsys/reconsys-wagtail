@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(r=>{gsap.registerPlugin(ScrollTrigger);gsap.utils.toArray(".our-journey-card");const e=document.querySelector(".our-journey-card-wrapper"),{scrollWidth:t,clientWidth:o}=e,n=Math.max((t-o)/o,0);gsap.to(e,{xPercent:100*-n,scrollTrigger:{trigger:e,pin:!0,scrub:.5,end:"+="+n*o,start:"50% 50%",markers:!1}})}));

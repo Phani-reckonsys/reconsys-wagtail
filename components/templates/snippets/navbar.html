@@ -169,20 +169,7 @@ menuBars.addEventListener("click",(event)=> {
     mobileMenu.classList.remove("menu-open");
     body.style.overflow = "scroll";
  });
- let lastScrollTop = 0;
-
- document.addEventListener("scroll" ,()=>{
-   console.log(lastScrollTop)
-  var st = document.documentElement.scrollTop;
-  console.log(st);
-  if(st<lastScrollTop){
-    console.log("page moved bottom")
-  }else{
-    console.log("page moved top")
-  }
-  lastScrollTop = Math.max(0,st);
-  console.log(lastScrollTop, st);
- })
+ 
  
  </script>
 
@@ -195,14 +182,10 @@ menuBars.addEventListener("click",(event)=> {
     let lastScrollTop = 0;
 
       document.addEventListener("scroll" ,()=>{
-        console.log(lastScrollTop)
         var st = document.documentElement.scrollTop;
-        console.log(st);
         if(st<lastScrollTop){
-          console.log("page moved bottom")
           navbar.style.position = "fixed";
         }else{
-          console.log("page moved top");
           navbar.style.position = "static";
         }
         lastScrollTop = Math.max(0,st);

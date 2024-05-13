@@ -1,0 +1,1 @@
+const companyLogo=document.querySelector(".company-logo"),darkSection=document.querySelector(".dark-section");function updateLogoBackground(){darkSection&&darkSection.getBoundingClientRect().top<window.innerHeight?companyLogo.style.background="#000":companyLogo.style.background="#fff"}window.addEventListener("scroll",updateLogoBackground),updateLogoBackground();
