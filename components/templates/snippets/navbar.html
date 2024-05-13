@@ -180,18 +180,17 @@ menuBars.addEventListener("click",(event)=> {
     const navbar = document.querySelector(".navigation-wrapper");
     const darkSections = document.querySelectorAll('.dark-section');
     let lastScrollTop = 0;
-
       document.addEventListener("scroll" ,()=>{
-        if(window.innerwidth>1000){
+
+    if(window.innerWidth>1000){
           var st = document.documentElement.scrollTop;
         if(st<lastScrollTop){
-          navbar.style.position = "fixed";
+          navbar.classList.remove("move-up");
         }else{
-          navbar.style.position = "static";
+          navbar.classList.add("move-up");
         }
         lastScrollTop = Math.max(0,st);
         }
-        
       })
 
     let darkSectionsInView = 0;
