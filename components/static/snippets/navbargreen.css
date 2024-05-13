@@ -27,6 +27,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    top: 0;
+    position: fixed;
+    background: #fff;
+    width: calc(100% - 6.5rem);
+    z-index: 10000;
+    transition: all 0.2s ease;
+    background: #172125;
+  }
+  .navigation-wrapper.move-up{
+    transform: translateY(-100%);
   }
   nav .navigation-wrapper h3 {
     margin-left: 5.4rem;

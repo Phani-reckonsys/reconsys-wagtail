@@ -174,3 +174,20 @@
     body.style.overflow = "scroll";
   });
 </script>
+
+<script>
+   const navbar = document.querySelector(".navigation-wrapper");
+    let lastScrollTop = 0;
+      document.addEventListener("scroll" ,()=>{
+
+    if(window.innerWidth>1000){
+          var st = document.documentElement.scrollTop;
+        if(st<lastScrollTop){
+          navbar.classList.remove("move-up");
+        }else{
+          navbar.classList.add("move-up");
+        }
+        lastScrollTop = Math.max(0,st);
+        }
+      })
+</script>
