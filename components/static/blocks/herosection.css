@@ -126,6 +126,7 @@
   }
   @media only screen and (max-width: 768px) {
     .herosection-wrapper {
+      margin-top: 0rem;
       padding-top: 12.2rem;
       display: flex;
       flex-direction: column;
@@ -180,6 +181,7 @@
   }
   @media only screen and (max-width: 576px) {
     .herosection-wrapper {
+      margin-top: 0rem;
       padding-top: 6rem;
       display: flex;
       flex-direction: column;

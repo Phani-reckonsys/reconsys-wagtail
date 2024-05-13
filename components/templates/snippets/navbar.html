@@ -182,14 +182,16 @@ menuBars.addEventListener("click",(event)=> {
     let lastScrollTop = 0;
 
       document.addEventListener("scroll" ,()=>{
-        var st = document.documentElement.scrollTop;
+        if(window.innerwidth>1000){
+          var st = document.documentElement.scrollTop;
         if(st<lastScrollTop){
           navbar.style.position = "fixed";
         }else{
           navbar.style.position = "static";
         }
         lastScrollTop = Math.max(0,st);
-        console.log(lastScrollTop, st);
+        }
+        
       })
 
     let darkSectionsInView = 0;
