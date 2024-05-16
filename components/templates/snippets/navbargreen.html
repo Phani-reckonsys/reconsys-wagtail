@@ -180,7 +180,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const elements = document.querySelectorAll('.elementanim');
 
-   elements.forEach(element => {
+   {% comment %} elements.forEach(element => {
             gsap.fromTo(element, 
                 { opacity: 0, y: 30 }, // Initial state
                 {
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             );
         });
-      })
+      }) {% endcomment %}
    const navbar = document.querySelector(".navigation-wrapper");
     let lastScrollTop = 0;
       document.addEventListener("scroll" ,()=>{
