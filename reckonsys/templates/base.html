@@ -46,6 +46,7 @@
   gtag('js', new Date());
   gtag('config', 'G-B7P3SS65ZJ');
 </script>
+
         <meta name="google-site-verification" content="zv7DL6vmJ75FRIGKzXH63lOLaG3UQDJ58d3vfnRKCLo" />
         <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BQQLR9FPB7'); </script>
         {# Global stylesheets #}
@@ -70,6 +71,31 @@
         {# Override this in templates to add extra javascript #}
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+        <script type="module">
+        document.addEventListener('DOMContentLoaded', function() {
+       import Lenis from '@studio-freight/lenis';
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
+            direction: 'vertical', // vertical, horizontal
+            gestureDirection: 'vertical', // vertical, horizontal, both
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+        });
+        </script>
         {% endblock %}
     </body>
 </html>

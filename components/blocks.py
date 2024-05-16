@@ -369,6 +369,7 @@ class ContactUsBlock(StructBlock):
         template = "blocks/contactusblock.html"
 
 class ThankyouBlock(StructBlock):
+    custom_head  = RichTextBlock(help_text="Custom HTML to be included in the <head> section")
     title = CharBlock(classname="title", required=True)
     subtitle = RichTextBlock(classname="subtitle", required=True)
     image_cover = ImageChooserBlock(required = False)
