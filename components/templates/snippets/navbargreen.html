@@ -180,7 +180,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const elements = document.querySelectorAll('.elementanim');
 
-   {% comment %} elements.forEach(element => {
+   elements.forEach(element => {
             gsap.fromTo(element, 
                 { opacity: 0, y: 30 }, // Initial state
                 {
@@ -193,12 +193,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         trigger: element,
                         start: 'top 90%',
                         markers: false,
-                        toggleActions: 'play none none reset', 
+                        toggleActions: 'play none none none', 
                     }
                 }
             );
         });
-      }) {% endcomment %}
+      }) 
    const navbar = document.querySelector(".navigation-wrapper");
     let lastScrollTop = 0;
       document.addEventListener("scroll" ,()=>{

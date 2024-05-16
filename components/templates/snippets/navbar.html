@@ -183,7 +183,7 @@ gsap.registerPlugin(ScrollTrigger);
    document.addEventListener('DOMContentLoaded', function() {
     const elements = document.querySelectorAll('.elementanim');
 
-   {% comment %} elements.forEach(element => {
+   elements.forEach(element => {
             gsap.fromTo(element, 
                 { opacity: 0, y: 30 }, // Initial state
                 {
@@ -196,11 +196,11 @@ gsap.registerPlugin(ScrollTrigger);
                         trigger: element,
                         start: 'top 90%',
                         markers: false,
-                        toggleActions: 'play none none reset', 
+                        toggleActions: 'play none none none', 
                     }
                 }
             );
-        }); {% endcomment %}
+        });
     const companyLogo = document.querySelector('.company-logo');
     const navbar = document.querySelector(".navigation-wrapper");
     const darkSections = document.querySelectorAll('.dark-section');

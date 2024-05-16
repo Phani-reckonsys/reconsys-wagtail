@@ -16,11 +16,11 @@
                 <div class="engagement-cards-wrapper">
                 {% for engagment_card in page.cardengagment%}
                     <div class="engagment-card elementanim">
-                        {% image engagment_card.cover_image class="mb-22" max-3000x1500 class="elementanim"%}
-                        <h4 class="mb-16 elementanim">
+                        {% image engagment_card.cover_image class="mb-22" max-3000x1500 %}
+                        <h4 class="mb-16 ">
                         {{engagment_card.title}}
                         </h4>
-                        <p class="elementanim">
+                        <p >
                          {{engagment_card.subtitle}}
                         </p>
                     </div>

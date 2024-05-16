@@ -1,15 +1,17 @@
 function dialCodesData(data) {
-  var dialCodes = data.map((country) => country.dial_code);
-  var countryName = data.map((country) => country.name);
-  dialCodes.sort();
+  // Sort the data by dial_code
+  data.sort((a, b) => a.dial_code.localeCompare(b.dial_code));
 
   var countryDropdown = document.querySelector("#country-code");
-  dialCodes.forEach((dialCode) => {
+
+  data.forEach((country) => {
     var option = document.createElement("option");
-    option.value = dialCode;
-    option.text = dialCode;
+    option.value = country.dial_code;
+    option.text = `${country.dial_code}  ${country.flag}  ${country.name} `;
     countryDropdown.add(option);
   });
+
+  // Set the default value to +1 (e.g., for the United States)
   countryDropdown.value = "+1";
 }
 

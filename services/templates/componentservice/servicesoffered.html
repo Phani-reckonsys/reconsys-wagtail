@@ -16,14 +16,14 @@
                 <div class="accordians-wrapper">
                     {% for servicesoffered in page.offeredservices %}
                         <div class="custom-accordian elementanim">
-                            <div class="header elementanim">
-                                {% image servicesoffered.service_icon max-3000x1500 class="elementanim"%}
+                            <div class="header ">
+                                {% image servicesoffered.service_icon max-3000x1500 %}
                                 <div class="content">
                                     <div class="custom-question">
                                         <h4>
                                             {{servicesoffered.question}}
                                         </h4>
-                                        {% image servicesoffered.plus_icon class='accordian-plus elementanim' max-3000x1500%}
+                                        {% image servicesoffered.plus_icon class='accordian-plus ' max-3000x1500%}
                                     </div>
                                 </div>
                             </div>

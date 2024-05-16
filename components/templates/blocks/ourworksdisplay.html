@@ -17,28 +17,28 @@
         </div>
         {% for card in self.cards %}
             <div class="our-works-card elementanim {{card.value.tag}}" style="background-color: #{{card.value.bgcolor}}">
-                <div class="content elementanim">
-                    <h2 class="color-white mb-36 elementanim">
+                <div class="content ">
+                    <h2 class="color-white mb-36 ">
                    {{card.value.title}}
                     </h2>
                     <p
-                    class="color-light-white opacity8 w-90 mb-54 elementanim"
+                    class="color-light-white opacity8 w-90 mb-54 "
                     >
                     {{card.value.subtitle}}
                     </p>
                     <div class="stats-group">
-                        <div class="stat elementanim">
-                            <h3 class="color-white mb-8 elementanim">{{card.value.data1}}</h3>
-                            <p class="color-white elementanim">{{card.value.label1}}</p>
+                        <div class="stat ">
+                            <h3 class="color-white mb-8 ">{{card.value.data1}}</h3>
+                            <p class="color-white ">{{card.value.label1}}</p>
                         </div>
                         <div class="stat">
-                            <h3 class="color-white mb-8 elementanim">{{card.value.data2}}</h3>
-                            <p class="color-white elementanim">{{card.value.label2}}</p>
+                            <h3 class="color-white mb-8 ">{{card.value.data2}}</h3>
+                            <p class="color-white ">{{card.value.label2}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="image-wrapper">
-                    {% image card.value.image max-3000x1500 class="card-image elementanim"%}
+                    {% image card.value.image max-3000x1500 class="card-image "%}
                 </div>
             </div>
         {% endfor %}
