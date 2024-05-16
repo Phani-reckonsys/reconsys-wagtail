@@ -374,7 +374,6 @@ class ThankyouBlock(StructBlock):
     subtitle = RichTextBlock(classname="subtitle", required=True)
     image_cover = ImageChooserBlock(required = False)
     image_decor = ImageChooserBlock(required = False)
-
     class Meta:
         template = "blocks/thankyoublock.html"
 
