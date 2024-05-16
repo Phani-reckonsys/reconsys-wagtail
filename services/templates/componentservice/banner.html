@@ -7,21 +7,21 @@
         </div>
         <!-- Banner Section Starts -->
             <div class="banner-section pl-54 pr-54 pb-100 pt-100 w-container">
-                <svg class="decor-squares" width="231" height="315" viewBox="0 0 231 315" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="decor-squares elementanim" width="231" height="315" viewBox="0 0 231 315" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="126.57" width="202" height="179" transform="rotate(45 126.57 0)" fill="#F86638"/>
                     <rect x="127.262" y="46.8779" width="202" height="176" transform="rotate(45 127.262 46.8779)" fill="#D51919"/>
                     </svg>
                                     
-                <h2 class="mb-36 w-70">
+                <h2 class="mb-36 w-70 elementanim">
                     {{page.banner_title|richtext}}
                 </h2>
                 <div class="banner-section-body w-80">
                     {% for banner_row in page.rowbanner%}
                     <div class="custom-row">
-                        {% image banner_row.banner_image max-3000x1500%}
-                        <div class="right">
-                            <div class="dash"></div>
-                            <p>
+                        {% image banner_row.banner_image max-3000x1500 class="elementanim"%}
+                        <div class="right elementanim">
+                            <div class="dash elementanim"></div>
+                            <p class="elementanim">
                             {{banner_row.banner_text|richtext}}
                             </p>
                         </div> 

@@ -6,15 +6,15 @@
         </div>
         <!-- services offer to section starts -->
         <div class="servicesto-section pl-54 pr-54 w-container">
-            <h4 class="mb-20 ft-20">{{page.businesshelped_title}}</h4>
-            <h2 class="mb-46 w-60">{{page.businesshelped_subtitle|richtext}}</h2>
+            <h4 class="mb-20 ft-20 elementanim">{{page.businesshelped_title}}</h4>
+            <h2 class="mb-46 w-60 elementanim">{{page.businesshelped_subtitle|richtext}}</h2>
             <div class="sector-card-group-wrapper">
                 <div class="sector-card-group">
                 {% for business_helped_card in page.cardbusinesshelped%}
-                    <div class="sector-card">
+                    <div class="sector-card elementanim">
                         <div class="sector-card-content">
                             <div class="sector-card-header">
-                                <h3>{{business_helped_card.title}}</h3>    
+                                <h3 class="elementanim">{{business_helped_card.title}}</h3>    
                             </div>
                             <ul>
                                 <li>

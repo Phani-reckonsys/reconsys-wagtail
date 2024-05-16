@@ -112,13 +112,13 @@
             </svg>
                     
                 
-            <h4 class="mb-20 ft-20">{{page.datasection_title}}</h4>
-            <h2 class="mb-84 w-80">{{page.datasection_subtitle|richtext}}</h2>
+            <h4 class="mb-20 ft-20 elementanim">{{page.datasection_title}}</h4>
+            <h2 class="mb-84 w-80 elementanim">{{page.datasection_subtitle|richtext}}</h2>
             <div class="stats-wrapper w-80 pb-82 bb">
             {% for datasection_stat in page.statdatasection%}
-                <div class="stat-card">
-                    <h1 class="stats">{{datasection_stat.data}}</h1>
-                    <h4>{{datasection_stat.title}}</h4>
+                <div class="stat-card elementanim">
+                    <h1 class="stats elementanim">{{datasection_stat.data}}</h1>
+                    <h4 class="elementanim">{{datasection_stat.title}}</h4>
                 </div>
             {% endfor %}
             </div>

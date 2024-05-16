@@ -6,21 +6,21 @@
         </div>
         <!-- Engagmnt model section starts -->
         <div class="engagment-section pl-54 pr-54 pt-100 pb-180 w-container">
-            <h4 class="mb-20 ft-20">
+            <h4 class="mb-20 ft-20 elementanim">
                 {{page.engagment_title}}
             </h4>
-            <h2 class="w-70 mb-54">
+            <h2 class="w-70 mb-54 elementanim">
                 {{page.engagment_subtitle|richtext}}
             </h2>
             <div class="engagment-body">
                 <div class="engagement-cards-wrapper">
                 {% for engagment_card in page.cardengagment%}
-                    <div class="engagment-card">
-                        {% image engagment_card.cover_image class="mb-22" max-3000x1500%}
-                        <h4 class="mb-16">
+                    <div class="engagment-card elementanim">
+                        {% image engagment_card.cover_image class="mb-22" max-3000x1500 class="elementanim"%}
+                        <h4 class="mb-16 elementanim">
                         {{engagment_card.title}}
                         </h4>
-                        <p>
+                        <p class="elementanim">
                          {{engagment_card.subtitle}}
                         </p>
                     </div>

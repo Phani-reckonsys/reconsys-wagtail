@@ -76,9 +76,32 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+        
         <script type="module">
-        document.addEventListener('DOMContentLoaded', function() {
-       import Lenis from '@studio-freight/lenis';
+        gsap.registerPlugin(ScrollTrigger);
+          document.addEventListener('DOMContentLoaded', function() {
+
+             const elements = document.querySelectorAll('.elementanim');
+
+            elements.forEach(element => {
+              gsap.fromTo(element, 
+                { opacity: 0, y: 30 }, // Initial state
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    delay: 0,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 90%',
+                        markers: false,
+                        toggleActions: 'play none none reset', 
+                    }
+                }
+             );
+           });
+           import Lenis from '@studio-freight/lenis';
 
         const lenis = new Lenis({
             duration: 1.2,
