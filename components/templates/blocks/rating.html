@@ -7,16 +7,16 @@
   </div>
   <div class="ratings-main pl-54 pr-54 w-container c-cream">
     <div class="ratings-wrapper pl-54 pr-54">
-      <h2>{{self.title}}</h2>
+      <h2 class="elementanim">{{self.title}}</h2>
       <div class="ratings-container">
             {% for card in self.ratingcards%}
                 <a
                 href="{{card.value.url}}"
                 target="_blank"
-                class="testimonial_rating-card"
+                class="testimonial_rating-card elementanim"
                 >
                     <div class="rating-header">
-                        <div class="rating-stars">
+                        <div class="rating-stars elementanim">
                             {% image card.value.star1 max-3000x1500 %} 
                             {% image card.value.star2 max-3000x1500 %} 
                             {% image card.value.star3 max-3000x1500 %} 
@@ -29,7 +29,7 @@
                 </a>
             {% endfor %}
             {% for badge in self.badgecards %}
-                <div class = "badge-card" 
+                <div class = "badge-card elementanim" 
                 >
                 {% image badge.value.image max-3000x1500 class="badge"%}
                 </div>

@@ -7,29 +7,29 @@
       </div>
       <div class="blogs-main pl-54 pr-54 pt-100 pb-100 w-container">
         <div class="blogs-header d-flex flex-column align-items-center mb-84">
-          <h4 class="mb-20 ft-20 lh-110">{{self.title}}</h4>
-          <h2 class="w-70 text-center">
+          <h4 class="mb-20 ft-20 lh-110 elementanim">{{self.title}}</h4>
+          <h2 class="w-70 text-center elementanim">
             {{self.subtitle}}
           </h2>
         </div>
         <div class="blogs-container mb-72">
         {% for card in self.blogcard %}
-        <a href = "{{card.value.pagelink.get_url}}" class="blog-card">
+        <a href = "{{card.value.pagelink.get_url}}" class="blog-card elementanim">
             {% comment %} <img src="./res/images/crm-technology.png" alt="" class="mb-16" /> {% endcomment %}
-            <div class  = "image-wrapper">
+            <div class  = "image-wrapper elementanim">
               {% image card.value.image  max-3000x1500%}
             </div>
             <div class="blog-content-body">
-              <h6 class="mb-8 gradient-text">{{card.value.category}}</h6>
-              <h4 class="ft-22 mb-16 ft-1">
+              <h6 class="mb-8 gradient-text elementanim">{{card.value.category}}</h6>
+              <h4 class="ft-22 mb-16 elementanim">
               {{card.value.title}}
               </h4>
-              <p class="ft-16 lh-110">{{card.value.info}}</p>
+              <p class="ft-16 lh-110 elementanim">{{card.value.info}}</p>
             </div>
           </a>
         {% endfor %}
         </div>
-        <a href="{{self.blogspagelink.get_url}}" class="outline-btn m-auto">
+        <a href="{{self.blogspagelink.get_url}}" class="outline-btn m-auto elementanim">
           View all Blogs
           <svg
             width="27"

@@ -17,7 +17,7 @@
               <h2 class="mb-32 elementanim">
                 {{page.home_service_subtitle|richtext}}
               </h2>
-              <p class="mb-32 lh-140">
+              <p class="mb-32 lh-140 elementanim">
                 {{page.home_service_content}}
               </p>
               {% for button in page.outline_grey_button %}
@@ -143,10 +143,10 @@
             {% for service_card in page.cardservice %}
                 <div class="services-card elementanim">
                 {% image service_card.card_icon max-3000x1500 class="mb-14"%}
-              <h4 class="mb-14 lh-125">
+              <h4 class="mb-14 lh-125 elementanim">
                 {{service_card.title}}
               </h4>
-              <p class="ft-16 lh-140 o-8">
+              <p class="ft-16 lh-140 o-8 elementanim">
                 {{service_card.description}}
               </p>
             </div>
@@ -191,16 +191,16 @@
             fill="#D51919"
           />
         </svg>
-        <h4 class="mb-20 color-white ft-20 lh-110">{{page.home_process_title}}</h4>
-        <h2 class="color-white w-80">
+        <h4 class="mb-20 color-white ft-20 lh-110 elementanim">{{page.home_process_title}}</h4>
+        <h2 class="color-white w-80 elementanim">
           {{page.home_process_subtitle|richtext}}
         </h2>
         <div class="process-map">
             {% for process_card in page.cardprocess %}
-            <div class="process-map-card">
+            <div class="process-map-card elementanim">
                      <h6>{{process_card.title}}</h6>
                      <svg
-              class="ul-connecting-line"
+              class="ul-connecting-line elementanim"
               width="1"
               height="181"
               viewBox="0 0 1 181"
@@ -241,15 +241,15 @@
         </div>
 
         <div class="technologies">
-          <h5 class="color-white mb-12 lh-110">
+          <h5 class="color-white mb-12 lh-110 elementanim">
             {{page.home_process_technology_title}}
           </h5>
-          <p class="color-light-white ft-16 lh-110">
+          <p class="color-light-white ft-16 lh-110 elementanim">
             {{page.home_process_technology_content}}
           </p>
           <div class="technology-stack-wrapper">
           {% for technologies_stack in page.stacktechnologies%}
-            <div class="technology-stack">
+            <div class="technology-stack elementanim">
               <h5 class="color-white mb-14 o-5 ft-12">
                 {{technologies_stack.title}}
               </h5>
@@ -284,18 +284,19 @@
       <div class="industries-main pl-54 pr-54 w-container">
         <div class="industries-header">
           <div class="left">
-            <h4 class="lh-110 ft-20 mb-20">{{page.home_industries_title}}</h4>
+            <h4 class="lh-110 ft-20 mb-20 elementanim">{{page.home_industries_title}}</h4>
             <h2>
               {{page.home_industries_subtitle|richtext}}
             </h2>
           </div>
           <div class="middle">
-            <p class="w-80 lh-140">
+            <p class="w-80 lh-140 elementanim">
               {{page.home_industries_content}}
             </p>
           </div>
           <div class="right">
             <svg
+              class="elementanim"
               id="industries-corousel-left-arrow"
               width="67"
               height="68"
@@ -319,6 +320,7 @@
               />
             </svg>
             <svg
+            class="elementanim"
               id="industries-corousel-right-arrow"
               width="67"
               height="68"
@@ -347,7 +349,7 @@
           <div class="sector-card-group-wrapper">
             <div class="sector-card-group">
             {% for industries_cards in page.cardindustries%}
-              <div class="sector-card">
+              <div class="sector-card elementanim">
               
                 <div class="sector-card-content">
                   <div class="sector-card-header">
@@ -412,13 +414,13 @@
       >
         <div class="left col-md-6">
           <div class="left-content-wrapper sticky-class">
-            <h4 class="color-white mb-20 ft-20 lh-110">
+            <h4 class="color-white mb-20 ft-20 lh-110 elementanim">
             {{page.home_whyreckonsys_title}}
             </h4>
-            <h2 class="w-80 mb-14 color-white">
+            <h2 class="w-80 mb-14 color-white elementanim">
              {{page.home_whyreckonsys_subtitle|richtext}}
             </h2>
-            <p class="ft-24 w-80 color-white mb-106">
+            <p class="ft-24 w-80 color-white mb-106 elementanim">
               {{page.home_whyreckonsys_content}}
             </p>
           </div>
@@ -536,8 +538,8 @@
         </div>
         <div class="right col-md-6">
         {% for whyreckonsys_card in page.cardswhyreckonsys%}
-          <div class="card mb-106">
-            {% image whyreckonsys_card.image class="mb-32 why-reckonsys-image" max-3000x1500%}
+          <div class="card mb-106 elementanim">
+            {% image whyreckonsys_card.image class="mb-32 why-reckonsys-image elementanim" max-3000x1500%}
             {{whyreckonsys_card.description|richtext}}
             {% comment %} <p class="color-white w-70 ft-20">
               {{whyreckonsys_card.description}}
@@ -559,16 +561,16 @@
       >
         <div class="case-studies-header d-flex align-items-center mb-54 row">
           <div class="left col-md-10">
-            <h4 class="color-white mb-20 ft-20 lh-110">
+            <h4 class="color-white mb-20 ft-20 lh-110 elementanim">
             {{page.home_casestudies_title}}
             </h4>
-            <h2 class="color-white w-90">
+            <h2 class="color-white w-90 elementanim">
              {{page.home_casestudies_subtitle|richtext}}
             </h2>
           </div>
           <div class="right d-flex col-md-2">
             <svg
-              class="caseStudies-left-arrow"
+              class="caseStudies-left-arrow elementanim"
               width="67"
               height="68"
               viewBox="0 0 67 68"
@@ -591,7 +593,7 @@
               />
             </svg>
             <svg
-              class="ml-12 caseStudies-right-arrow"
+              class="ml-12 caseStudies-right-arrow elementanim"
               width="67"
               height="68"
               viewBox="0 0 67 68"
@@ -618,7 +620,7 @@
         <div class="cards-container">
           <div class="cards-wrapper">
           {% for casestudies_card in page.cardscasestudy%}
-            <div class="case-study-card" >
+            <div class="case-study-card elementanim" >
               <div class="content" style='background-color: #{{casestudies_card.bgcolor}}'>
                 <h3 class="color-white mb-27 ft-32 w-80 lh-115">
                   {{casestudies_card.title}}

@@ -29,7 +29,7 @@
   }
   .blogs-main .blogs-container .blog-card:hover{
     box-shadow: 0 20px 20px 8px rgba(0, 0, 0, 0.05);
-    transform: translateY(-1.5rem);
+    transform: translateY(-1.5rem) !important;
   }
   .blogs-main .blogs-container .blog-card:hover h4 {
     color: #C01111 !important;

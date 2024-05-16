@@ -9,14 +9,14 @@
         <div
           class="testimonials-header d-flex flex-column align-items-center mb-84"
         >
-          <h4 class="mb-20 ft-20">{{self.title}}</h4>
-          <h2 class="w-75 text-center">
+          <h4 class="mb-20 ft-20 elementanim">{{self.title}}</h4>
+          <h2 class="w-75 text-center elementanim">
             {{self.subtitle}}
           </h2>
         </div>
         <div class="testimonials-container">
         {% for card in self.ratingcards%}
-          <a href="{{card.value.url}}" target="_blank" class="testimonial_rating-card">
+          <a href="{{card.value.url}}" target="_blank" class="testimonial_rating-card elementanim">
               <div class="rating-header">
                 <div class="left">
                   <div class="rating-stars">
@@ -36,7 +36,7 @@
           </a>
         {% endfor %}
         {% for card in self.testimonialcards %}
-            <div class="testimonial-card">
+            <div class="testimonial-card elementanim">
                 <h3 class="bb pb-33 mb-12 ft-20">
                 {{card.value.review}}
                 </h3>
@@ -51,8 +51,8 @@
                 </div>
             </div>
         {% endfor %}
-          <div class="testimonial-gradient"></div>
-          <div class="outline-btn hometestimonial-button">
+          <div class="testimonial-gradient elementanim"></div>
+          <div class="outline-btn hometestimonial-button elementanim">
             <div class="hometestimonial-button-text">View More</div>
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="11" viewBox="0 0 28 11" fill="none">
                 <path d="M0 1H25L17.9577 10" stroke="#333333" stroke-width="2"/>
