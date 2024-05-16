@@ -11,9 +11,9 @@
     {% for content in self.content %}
       <div class="row herosection active">
       <div class="herosection-content">
-        <h1 class="mb-20 ft-20 lh-110 category-title">{{content.value.title}}</h1>
-        <h1 class="mb-36 hero w-80 title">{{content.value.subtitle}}</h1>
-        <a href="{% if content.value.include_url_button %}{{content.value.btn_url_link}}{% else %}{{content.value.btn_link.get_url}}{% endif %}" target="_blank" class="primary-btn">
+        <h1 class="mb-20 ft-20 lh-110 category-title elementanim">{{content.value.title}}</h1>
+        <h1 class="mb-36 hero w-80 title elementanim">{{content.value.subtitle}}</h1>
+        <a href="{% if content.value.include_url_button %}{{content.value.btn_url_link}}{% else %}{{content.value.btn_link.get_url}}{% endif %}" target="_blank" class="primary-btn elementanim">
             {{content.value.btn_title}}
             {% comment %} {% image content.value.btn_icon max-300x200%} {% endcomment %}
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="11" viewBox="0 0 28 11" fill="none">
@@ -23,10 +23,10 @@
       </div>
       <div class="geometric-shapes">
       {% if content.value.include_fullimage %}
-        {% image content.value.image_cover max-3000x1500 class="geometric-connection custom-hero-fullimage"%}
+        {% image content.value.image_cover max-3000x1500 class="geometric-connection custom-hero-fullimage elementanim"%}
       {% else %}
-        {% image content.value.image_cover max-3000x1500 class="geometric-connection"%}
-        {% image content.value.image_decor max-3000x1500 class="geometric-wave"%}
+        {% image content.value.image_cover max-3000x1500 class="geometric-connection elementanim"%}
+        {% image content.value.image_decor max-3000x1500 class="geometric-wave elementanim"%}
       {% endif %}
       </div>
     </div>
@@ -44,10 +44,10 @@
     
     {% if self.include_companies %}
         <!-- Quick testimonials Starts-->
-    <div class="quick-testimonials">
-      <h5 class="lh-110">Trusted by global enterprises</h5>
+    <div class="quick-testimonials elementanim">
+      <h5 class="lh-110 elementanim">Trusted by global enterprises</h5>
       <div class="client-logos-wrapper">
-        <div class="client-logos">
+        <div class="client-logos elementanim">
          {% for logo in self.company_image %}
             {% image logo.value.image max-3000x1500 %}
          {% endfor %} 

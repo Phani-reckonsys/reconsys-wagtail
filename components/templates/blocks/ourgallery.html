@@ -8,16 +8,16 @@
         </div>
         <div class="life-at-reckonsys-main pl-54 pb-180 w-container">
             <div class="header mb-64">
-                <h2 class="fw-700"><span class="gradient-text">Life at Reckonsys</span></h2>
+                <h2 class="fw-700 elementanim"><span class="gradient-text">Life at Reckonsys</span></h2>
             </div>
             {% for gallery in self.gallery %}
-                <div class="gallery-container">
+                <div class="gallery-container elementanim">
                     <div class="gallery-wrapper">
                        {% for image in gallery.value %}
-                            {% image image max-3000x1500 class="image"%}
+                            {% image image max-3000x1500 class="image elementanim"%}
                        {% endfor %}
                        {% for image in gallery.value %}
-                            {% image image max-3000x1500 class="image"%}
+                            {% image image max-3000x1500 class="image elementanim"%}
                        {% endfor %}
                     </div>
                 </div>

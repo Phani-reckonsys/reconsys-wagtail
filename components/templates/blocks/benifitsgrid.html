@@ -7,14 +7,14 @@
             <h5 class="t-30">{{self.sidetitle}}</h5>
         </div>
         <div class="wellness-main w-container pl-54 pr-54 mr-54 pt-190 pb-260">
-            <h4 class="ft-20 mb-20">{{self.title}}</h4>
-            <h2 class="w-80 mb-140">{{self.subtitle}}</h2>
+            <h4 class="ft-20 mb-20 elementanim">{{self.title}}</h4>
+            <h2 class="w-80 mb-140 elementanim">{{self.subtitle}}</h2>
             <div class="wellness-card-wrapper w-90">
             {% for card in self.cards %}
-                <div class="wellness-card one">
-                    {% image card.value.image max-3000x1500 class="mb-30" %}  
-                    <h2 class="ft-32 mb-30">{{card.value.title}}</h2>
-                    <p>{{card.value.subtitle}}</p>
+                <div class="wellness-card one elementanim">
+                    {% image card.value.image max-3000x1500 class="mb-30 elementanim" %}  
+                    <h2 class="ft-32 mb-30 elementanim">{{card.value.title}}</h2>
+                    <p class="elementanim">{{card.value.subtitle}}</p>
                 </div>
             {% endfor %}
             </div>

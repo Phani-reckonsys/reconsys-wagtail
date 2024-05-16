@@ -5,18 +5,18 @@
             <h5 class="t-20">{{self.sidetitle}}</h5>
         </div>
         <div class="blog-section pl-54 pr-54 pb-180 pt-100 w-container">
-            <h2 class="mb-64">{{self.title}}</h2>
+            <h2 class="mb-64 elementanim">{{self.title}}</h2>
             <div class="blog-cards-wrapper">
                 <!-- Blog 1 Starts -->
                 {% for card in self.cards %}
-                <a href ="{{card.value.pagelink.get_url}}"class="blog-card">
+                <a href ="{{card.value.pagelink.get_url}}"class="blog-card elementanim">
                     <div class="image-wrapper mb-20">
-                        {% image card.value.image max-3000x1500%}
+                        {% image card.value.image max-3000x1500 class="elementanim"%}
                     </div>
                     <div class="blog-content-body">
-                        <h6 class="mb-8 gradient-text  card-category">{{card.value.category}}</h6>
-                        <h4 class="ft-22 mb-16 ft-1 card-title">{{card.value.title}}</h4>
-                        <p class="ft-16 lh-110">{{card.value.info}}</p>
+                        <h6 class="mb-8 gradient-text  card-category elementanim">{{card.value.category}}</h6>
+                        <h4 class="ft-22 mb-16 ft-1 card-title elementanim">{{card.value.title}}</h4>
+                        <p class="ft-16 lh-110 elementanim">{{card.value.info}}</p>
                     </div>
                     {% comment %} <p class="ft-14 mb-20 lh-110 card-category">{{card.value.category}}</p>
                     <p class="mb-28 lh-130 card-title">{{card.value.title}}</p>

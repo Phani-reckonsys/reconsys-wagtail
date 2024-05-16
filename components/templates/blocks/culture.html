@@ -9,17 +9,17 @@
 
              <!-- culture section main Starts -->
              <div class="culture ml-54 mr-54 pt-100 pb-164">
-                <h3 class="lh-110 mb-20 ft-20">
+                <h3 class="lh-110 mb-20 ft-20 elementanim">
                 {{self.title}}
                 </h3>
-                <h2 class="w-75 mb-72">
+                <h2 class="w-75 mb-72 elementanim">
                     {{self.subtitle}}
                 </h2>
                 {% for gallery in self.gallery %}
                  <div class="gallery-container">
                         <div class="gallery-wrapper">
                             {% for image in gallery.value %}
-                                {% image image max-3000x1500 class="image"%}
+                                {% image image max-3000x1500 class="image elementanim"%}
                             {% endfor %}
                         </div>
                   </div>

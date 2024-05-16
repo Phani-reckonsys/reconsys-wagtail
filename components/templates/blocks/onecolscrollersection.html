@@ -8,10 +8,10 @@
         <div class="career-main w-container pl-54 pr-54 pb-180 pt-70 c-dark">
             <div class="left pt-70 pb-180">
                 <div class="left-wrapper">
-                    <h4 class="mb-20 ft-20 color-white">{{self.title}}</h4>
-                    <h2 class="mb-30 color-white">{{self.subtitle}}</h2>
-                    <p class="mb-30 color-light-white">{{self.content}}</p>
-                    <a href="{{self.url}}" target="_blank" class="outline-btn-white">{{self.btntext}} <svg width="27" height="11" viewBox="0 0 27 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <h4 class="mb-20 ft-20 color-white elementanim">{{self.title}}</h4>
+                    <h2 class="mb-30 color-white elementanim">{{self.subtitle}}</h2>
+                    <p class="mb-30 color-light-white elementanim">{{self.content}}</p>
+                    <a href="{{self.url}}" target="_blank" class="outline-btn-white elementanim">{{self.btntext}} <svg width="27" height="11" viewBox="0 0 27 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 1H25L17.9577 10" stroke="#F7F5F4"/>
                     </svg>
                     </a>
@@ -20,8 +20,8 @@
             </div>
             <div class="right">
             {% for card in self.cards %}
-                {%image card.value.image max-3000x1500 class="creators"%}
-                <h2 class="">{{card.value.title}}</h2>
+                {%image card.value.image max-3000x1500 class="creators elementanim"%}
+                <h2 class="elementanim">{{card.value.title}}</h2>
             {% endfor %}
             </div>
         </div>

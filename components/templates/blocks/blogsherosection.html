@@ -10,12 +10,12 @@
             <!-- Herosection Starts -->
             <div class="row herosection ml-54 mr-54 pt-100 pb-100">
                 <div class="w-90">
-                    <h4 class="mb-20 ft-20">{{self.title}}</h4>
-                    <h1 class="mb-32 hero ">{{self.subtitle}}</h1> 
+                    <h4 class="mb-20 ft-20 elementanim">{{self.title}}</h4>
+                    <h1 class="mb-32 hero elementanim">{{self.subtitle}}</h1> 
                 </div>
                 <div class="geometric-shapes">
 
-                <svg class="blog-geometric-connection" width="217" height="372" viewBox="0 0 217 372" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="blog-geometric-connection elementanim" width="217" height="372" viewBox="0 0 217 372" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_4896_2961)">
                                 <g opacity="0.2">
                                 <path d="M119.159 1.53942C120.362 1.01378 121.571 0.500585 122.786 0H263.214C264.429 0.500585 265.638 1.01378 266.841 1.53942H119.159Z" fill="#301F1F"/>
@@ -52,7 +52,7 @@
                                 </defs>
                 </svg>
                                        
-                <svg class="blog-geometric-wave " width="90" height="46" viewBox="0 0 90 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="blog-geometric-wave elementanim" width="90" height="46" viewBox="0 0 90 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8606 0L23.5817 0.40743L33.9303 6.254L44.2788 0.40743L45 0L45.7212 0.40743L56.0697 6.25399L66.4183 0.40743L67.1394 0L67.8606 0.40743L78.2091 6.25399L88.5577 0.40743L90 3.00583L78.9303 9.25983L78.2091 9.66726L77.488 9.25983L67.1394 3.41326L56.7909 9.25983L56.0697 9.66726L55.3485 9.25983L45 3.41326L34.6514 9.25983L33.9303 9.66726L33.2091 9.25983L22.8606 3.41326L12.512 9.25983L11.7909 9.66726L11.0697 9.25983L0 3.00583L1.44232 0.40743L11.7909 6.254L22.1394 0.40743L22.8606 0ZM22.8606 18.1664L23.5817 18.5738L33.9303 24.4204L44.2788 18.5738L45 18.1664L45.7212 18.5738L56.0697 24.4204L66.4183 18.5738L67.1394 18.1664L67.8606 18.5738L78.2091 24.4204L88.5577 18.5738L90 21.1722L78.9303 27.4262L78.2091 27.8336L77.488 27.4262L67.1394 21.5796L56.7909 27.4262L56.0697 27.8336L55.3485 27.4262L45 21.5796L34.6514 27.4262L33.9303 27.8336L33.2091 27.4262L22.8606 21.5796L12.512 27.4262L11.7909 27.8336L11.0697 27.4262L0 21.1722L1.44232 18.5738L11.7909 24.4204L22.1394 18.5738L22.8606 18.1664ZM23.5817 36.7402L22.8606 36.3327L22.1394 36.7402L11.7909 42.5867L1.44232 36.7402L0 39.3386L11.0697 45.5926L11.7909 46L12.512 45.5926L22.8606 39.746L33.2091 45.5926L33.9303 46L34.6514 45.5926L45 39.746L55.3485 45.5926L56.0697 46L56.7909 45.5926L67.1394 39.746L77.488 45.5926L78.2091 46L78.9303 45.5926L90 39.3386L88.5577 36.7402L78.2091 42.5867L67.8606 36.7402L67.1394 36.3327L66.4183 36.7402L56.0697 42.5867L45.7212 36.7402L45 36.3327L44.2788 36.7402L33.9303 42.5867L23.5817 36.7402Z" fill="#F0493E"/>
                 </svg>     
                 </div>    
@@ -64,7 +64,7 @@
                     <div class="carousal-image-wrapper">
                         {% for card in self.cards %}
                             <a href="{{card.value.blog_link.get_url}}" class="carousal-image">
-                                    {% image card.value.image max-3000x1500%}
+                                    {% image card.value.image max-3000x1500 class="elementanim"%}
                             </a>
                         {% endfor %}       
                     </div>
@@ -74,20 +74,20 @@
                             <div class="carousal-content-wrapper">
                                 {% for card in self.cards %}
                                 <a href="{{card.value.blog_link.get_url}}" class="carousal-content">
-                                    <h2 class=" mb-40">{{card.value.title}}</h2>
-                                    <p>{{card.value.subtitle}}</p>
+                                    <h2 class=" mb-40 elementanim">{{card.value.title}}</h2>
+                                    <p class="elementanim">{{card.value.subtitle}}</p>
                                 </a>
                                 {% endfor %} 
                             </div>
                     </div>
-                    <div class="carousal-controls">
-                        <p class="numbering">01/03</p>
-                        <div class="indicators-wrapper">
+                    <div class="carousal-controls elementanim">
+                        <p class="numbering elementanim">01/03</p>
+                        <div class="indicators-wrapper ">
                             <div class="indicator active"></div>
                             <div class="indicator"></div>
                             <div class="indicator"></div>
                         </div>
-                        <div class="arrow-group">
+                        <div class="arrow-group elementanim">
                             <svg class="left-arrow carousal-left-arrow" xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
                                 <rect x="0.676471" y="0.676471" width="43.9706" height="44.6471" fill="white"/>
                                 <rect x="0.676471" y="0.676471" width="43.9706" height="44.6471" stroke="#676464" stroke-width="1.35294"/>

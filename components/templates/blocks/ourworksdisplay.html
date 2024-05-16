@@ -4,45 +4,45 @@
 <section>
   <div class="sidebar theme-darkgreen"></div>
   <div class="ourwork-display pt-100 pb-180 w-container theme-darkgreen">
-        <h2 class="pl-54 color-white mb-20 w-70 mb-64">{{self.title}}</h2>
-        <p class="pl-54 color-light-white ft-20 w-60 mb-58">
+        <h2 class="pl-54 color-white mb-20 w-70 mb-64 elementanim">{{self.title}}</h2>
+        <p class="pl-54 color-light-white ft-20 w-60 mb-58 elementanim">
           {{self.subtitle}}
         </p>
         <div class="category-container pl-54  mb-58">
         <div class="category-wrapper">
             {% for categorytitle in self.categorytitles %}
-                <p class="color-white {{categorytitle.value.tag}}">{{categorytitle.value.title}}</p>
+                <p class="color-white elementanim {{categorytitle.value.tag}}">{{categorytitle.value.title}}</p>
             {% endfor %}
         </div>
         </div>
         {% for card in self.cards %}
-            <div class="our-works-card {{card.value.tag}}" style="background-color: #{{card.value.bgcolor}}">
-                <div class="content">
-                    <h2 class="color-white mb-36">
+            <div class="our-works-card elementanim {{card.value.tag}}" style="background-color: #{{card.value.bgcolor}}">
+                <div class="content elementanim">
+                    <h2 class="color-white mb-36 elementanim">
                    {{card.value.title}}
                     </h2>
                     <p
-                    class="color-light-white opacity8 w-90 mb-54"
+                    class="color-light-white opacity8 w-90 mb-54 elementanim"
                     >
                     {{card.value.subtitle}}
                     </p>
                     <div class="stats-group">
-                        <div class="stat">
-                            <h3 class="color-white mb-8">{{card.value.data1}}</h3>
-                            <p class="color-white">{{card.value.label1}}</p>
+                        <div class="stat elementanim">
+                            <h3 class="color-white mb-8 elementanim">{{card.value.data1}}</h3>
+                            <p class="color-white elementanim">{{card.value.label1}}</p>
                         </div>
                         <div class="stat">
-                            <h3 class="color-white mb-8">{{card.value.data2}}</h3>
-                            <p class="color-white">{{card.value.label2}}</p>
+                            <h3 class="color-white mb-8 elementanim">{{card.value.data2}}</h3>
+                            <p class="color-white elementanim">{{card.value.label2}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="image-wrapper">
-                    {% image card.value.image max-3000x1500 class="card-image"%}
+                    {% image card.value.image max-3000x1500 class="card-image elementanim"%}
                 </div>
             </div>
         {% endfor %}
-        <div class="outline-btn-white">
+        <div class="outline-btn-white elementanim">
             <h4 class="ft-14">{{self.btntitle}}</h4>
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="11" viewBox="0 0 28 11" fill="none">
                 <path d="M0 1H25L17.9577 10" stroke="#F7F5F4" stroke-width="2"/>

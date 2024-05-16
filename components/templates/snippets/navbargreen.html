@@ -174,8 +174,31 @@
     body.style.overflow = "scroll";
   });
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.elementanim');
+
+   elements.forEach(element => {
+            gsap.fromTo(element, 
+                { opacity: 0, y: 30 }, // Initial state
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    delay: 0,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 90%',
+                        markers: false,
+                        toggleActions: 'play none none reset', 
+                    }
+                }
+            );
+        });
+      })
    const navbar = document.querySelector(".navigation-wrapper");
     let lastScrollTop = 0;
       document.addEventListener("scroll" ,()=>{

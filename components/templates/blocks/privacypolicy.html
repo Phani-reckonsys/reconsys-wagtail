@@ -8,11 +8,11 @@
         <div class="privacypolicy-wrapper  w-container">
            <div class="privacypolicy-main">
                 <div class="content">
-                    <h1 class="hero mb-54">{{self.title}}</h1>
+                    <h1 class="hero mb-54 ">{{self.title}}</h1>
                     <h3 class="mb-32">{{self.datetitle}} <span class="date">{{self.date}}</span></h3>
-                    <p class="mb-24">{{self.welcomeline}}</p>
-                    <p class="mb-32">{{self.commitment}}</p>
-                    <div class="main-text">
+                    <p class="mb-24 ">{{self.welcomeline}}</p>
+                    <p class="mb-32 ">{{self.commitment}}</p>
+                    <div class="main-text ">
                         {% for edittext in self.edittextfield %}
                             {{edittext.value.edittext}}
                         {% endfor %}

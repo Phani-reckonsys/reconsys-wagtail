@@ -8,11 +8,11 @@
   <div class="ourwork-herosection-wrapper pl-54 pr-54 pt-100  w-container theme-darkgreen">
     <div class="herosection">
       <div class="herosection-content w-75">
-        <h4 class="color-white ft-20 mb-20 ">{{self.title}}</h4>
-        <h1 class="hero color-white mb-58">
+        <h4 class="color-white ft-20 mb-20 elementanim">{{self.title}}</h4>
+        <h1 class="hero color-white mb-58 elementanim">
           {{self.subtitle}}
         </h1>
-        <p class="mb-40 color-light-white ft-20 w-70">
+        <p class="mb-40 color-light-white ft-20 w-70 elementanim">
           {{self.content}}
         </p>
         {% for button in self.primary_button  %}
@@ -20,7 +20,7 @@
         {% endfor %}
       </div>
       <div class="ourworks-heroimage-container">
-        {% image self.image max-3000x1500 class="ourworks-heroimage"%}
+        {% image self.image max-3000x1500 class="ourworks-heroimage elementanim"%}
       </div>
     </div>
   </div>
