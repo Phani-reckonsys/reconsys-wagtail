@@ -33,6 +33,43 @@
                   </div>
                   <div class="content elementanim">
                   {{self.blog_text }}
+                  <!-- blocks/table_block.html -->
+<div class="table-block">
+    {% if self.table.table_caption %}
+        <caption ><span class="caption">{{ self.table.table_caption }}</span></caption>
+    {% endif %}
+    <table>
+        {% if self.table.first_row_is_table_header %}
+            <thead>
+                <tr>
+                    {% for cell in self.table.data.0%}
+                        <th>{{ cell }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in self.table.data|slice:"1:"%}
+                    <tr>
+                        {% for cell in row %}
+                            <td>{{ cell}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        {% else %}
+            <tbody>
+                {% for row in self.table.data %}
+                    <tr>
+                        {% for cell in row %}
+                            <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        {% endif %}
+    </table>
+</div>
+
                   </div>
                   <div class="author-profile elementanim">
                   <div class="header elementanim">

@@ -8,11 +8,13 @@ from wagtail.blocks import (
     PageChooserBlock,
     ListBlock,
     URLBlock,
-    ChoiceBlock
+    ChoiceBlock,
+    
 )
 from wagtail.models import StreamField
 from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
+from wagtail.contrib.table_block.blocks import TableBlock
 
 
 #-----------Basic Blocks Starts------------
@@ -422,7 +424,26 @@ class BlogHeaderBlock(StructBlock):
 
     class Meta: 
         template = "blocks/blogheader.html"
-
+new_table_options = {
+    'contextMenu': [
+        'row_above',
+        'row_below',
+        '---------',
+        'col_left',
+        'col_right',
+        '---------',
+        'remove_row',
+        'remove_col',
+        '---------',
+        'undo',
+        'redo',
+        '---------',
+        'copy',
+        'cut',
+        '---------',
+        'alignment',
+    ],
+}
 class BlogBodyBlock(StructBlock):
     profile_image = ImageChooserBlock(required=False)
     name = CharBlock(classname="title", required=True)
@@ -433,6 +454,6 @@ class BlogBodyBlock(StructBlock):
     facebook_url = URLBlock(classname="link", required=False)
     url = URLBlock(classname="link", required=True)
     blog_text = RichTextBlock(classname="title", required=True, features=['h2', 'h3' , 'h4' , 'p' , 'bold', 'hr', 'italic','code','ol','ul','link','image','blockquote'])
-
+    table = TableBlock(table_options=new_table_options, required=False)
     class Meta: 
         template = "blocks/blogbody.html"

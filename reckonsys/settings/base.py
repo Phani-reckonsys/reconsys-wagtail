@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "corsheaders",
     'wagtail.contrib.sitemaps',
     'django.contrib.sitemaps',
+    "wagtail.contrib.table_block",
 ]
 
 MIDDLEWARE = [

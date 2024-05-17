@@ -16,10 +16,7 @@
         {% if page.search_description %}
         <meta name="description" content="{{ page.search_description }}" />
         {% endif %}
-         {% block extra_head %}
-       
-    
-    {% endblock %}
+         
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="{% static 'images/favicon-32x32.png'%}"/>
         <link rel="canonical" href="https://www.reckonsys.com/" />
@@ -66,7 +63,10 @@
   gtag('js', new Date());
   gtag('config', 'G-B7P3SS65ZJ');
 </script>
-
+{% block extra_head %}
+       
+    
+    {% endblock %}
         <meta name="google-site-verification" content="zv7DL6vmJ75FRIGKzXH63lOLaG3UQDJ58d3vfnRKCLo" />
         <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BQQLR9FPB7'); </script>
         {# Global stylesheets #}
@@ -80,10 +80,13 @@
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
+    <div id="smooth-wrapper">
+    <div id="smooth-content">
         {% wagtailuserbar %}
 
         {% block content %}{% endblock %}
-
+        </div>
+        </div>
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/reckonsys.js' %}"></script>
         
@@ -92,7 +95,16 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
-        
+        <script>
+        gsap.registerPlugin(ScrollSmoother);
+        document.addEventListener("DOMContentLoaded", () => {
+    let smoother = ScrollSmoother.create({
+  smooth: 2,
+  effects: true,
+  normalizeScroll: true
+});
+});
+</script>
         <script type="module">
         gsap.registerPlugin(ScrollTrigger);
           document.addEventListener('DOMContentLoaded', function() {

@@ -39,9 +39,62 @@
 }
 .blogbody .content{
     flex-basis: 55%;
+    max-width: 55%;
+    overflow-x: hidden;
 }
 .blogbody .content a{
     color: #F86638;
+}
+.blogbody .content .table-block{
+    width: 100%;
+overflow-x: scroll;
+}
+.blogbody .content .table-block .caption {
+    color:  #333;
+    font-family: "Satoshi-bold";
+    font-size: 1.8rem;
+    font-style: normal;
+    text-align: left;
+    line-height: 100%; 
+    display: flex;
+    margin-bottom: 1.2rem;
+}
+.blogbody .content .table-block::-webkit-scrollbar {
+    display: none;
+  }
+.blogbody .content .table-block table{
+    
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.blogbody .content .table-block table tr{
+    height: 64px;
+   
+    gap: 12px;
+    border-bottom: 1px solid #E4E7EC;
+}
+
+.blogbody .content .table-block table th{
+    color:  #333;
+    font-family: "Satoshi-bold";
+     padding: 12px 24px;
+    font-size: 1.8rem;
+    font-style: normal;
+    text-align: left;
+    line-height: 100%; 
+    width: auto;
+    background: #F2F2F2;
+}
+.blogbody .content .table-block table td{
+    color:  #333;
+    font-family: "Spline Sans";
+    font-size: 16px;
+    padding: 12px 24px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    line-height: 20px; /* 125% */
+    width: auto;
 }
 .blogbody .content h2{
    font-size: 3rem;
