@@ -147,7 +147,6 @@
       height: 90rem;
     }
     .herosection-wrapper .herosection-height .herosection {
-      display: flex;
       flex-direction: column;
     }
     .herosection-wrapper .herosection-height .herosection .herosection-content{
@@ -202,7 +201,7 @@
       height: 57rem;
     }
     .herosection-wrapper .herosection-height .herosection {
-      display: flex;
+
       flex-direction: column;
       margin-top: 24%;
     }
