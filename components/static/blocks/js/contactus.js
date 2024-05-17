@@ -7,7 +7,7 @@ function dialCodesData(data) {
   data.forEach((country) => {
     var option = document.createElement("option");
     option.value = country.dial_code;
-    option.text = `${country.dial_code}  ${country.flag}  ${country.name} `;
+    option.text = `${country.dial_code} ${country.flag}  ${country.name} `;
     countryDropdown.add(option);
   });
 

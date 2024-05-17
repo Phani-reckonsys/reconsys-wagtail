@@ -183,7 +183,7 @@ gsap.registerPlugin(ScrollTrigger);
    document.addEventListener('DOMContentLoaded', function() {
     const elements = document.querySelectorAll('.elementanim');
 
-   elements.forEach(element => {
+   {% comment %} elements.forEach(element => {
             gsap.fromTo(element, 
                 { opacity: 0, y: 30 }, // Initial state
                 {
@@ -200,7 +200,7 @@ gsap.registerPlugin(ScrollTrigger);
                     }
                 }
             );
-        });
+        }); {% endcomment %}
     const companyLogo = document.querySelector('.company-logo');
     const navbar = document.querySelector(".navigation-wrapper");
     const darkSections = document.querySelectorAll('.dark-section');

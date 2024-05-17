@@ -10,6 +10,7 @@
     height: fit-content;
     position: sticky;
     top: 8rem;
+    opacity: 0;
 }
 
 .blogbody .social-media-group .round{

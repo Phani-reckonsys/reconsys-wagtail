@@ -144,6 +144,16 @@ input[type="number"] {
   font-style: normal;
   font-weight: 400;
   color: #fff;
+  white-space: pre;
+}
+.contact-main
+  .contact-container
+  .contact-form
+  .cf-row
+  .div-input-50
+  .countrycode-phnno
+  #country-code option{
+  white-space: pre;
 }
 .contact-main
   .contact-container

@@ -10,16 +10,28 @@
     border-bottom: 1px solid #CCC7C7;
   }
   .herosection-wrapper .herosection-height .herosection {
-    display: flex;
+    /* display: flex; */
     position: absolute;
     top:0;
     left:0;
-    transition: opacity 1s ease;
+    /* transition: corousalfade 1s ease; */
+    animation-name: corouselfade;
+    animation-duration: 1s;
     width: 100%;
-    opacity: 0; 
+    display: none;
   }
+
+  @keyframes corouselfade{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
   .herosection-wrapper .herosection.active{
-    opacity: 1;
+    display: flex;
   }
 
   .herosection-wrapper .herosection-height .herosection .herosection-content{
