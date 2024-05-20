@@ -34,7 +34,7 @@ CORS_ALLOWED_ORIGINS += [f"https://{host}" for host in https_hosts]
 CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS[:]
 USE_X_FORWARDED_HOST = True
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 ADMINS = [("tejesh", "tejesh@reckonsys.com")]
 
 
