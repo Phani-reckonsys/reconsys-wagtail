@@ -20,6 +20,12 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 env = os.environ
 
+#----
+# AWS
+AWS_ACCESS_KEY_ID = env.get("AWS_ACCESS_KEY", "")
+AWS_SECRET_ACCESS_KEY = env.get("AWS_SECRET_KEY", "")
+AWS_SES_REGION_NAME = 'ap-south-1'
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -166,8 +172,8 @@ STORAGES = {
         "OPTIONS": {
             "bucket_name": "reckonsys-images",
             "region_name": "ap-south-1",
-            "access_key": env.get("AWS_ACCESS_KEY", ""),
-            "secret_key": env.get("AWS_SECRET_KEY", ""),
+            "access_key": AWS_ACCESS_KEY_ID,
+            "secret_key": AWS_SECRET_ACCESS_KEY,
             "default_acl": "public-read",
             "location": env.get("AWS_LOCATION", "media/"),
             "querystring_auth": False,
@@ -211,3 +217,12 @@ REST_FRAMEWORK = {
 }
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000
+
+EMAIL_BACKEND = "django_ses.SESBackend"
+EMAIL_HOST = env.get("EMAIL_SES_HOST")
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+FROM_MAIL_FOR_UPDATES = env.get("FROM_MAIL_FOR_UPDATES")
+TO_MAIL_FOR_UPDATES = env.get("TO_MAIL_FOR_UPDATES")

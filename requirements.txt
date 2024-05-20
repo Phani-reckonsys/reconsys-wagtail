@@ -5,3 +5,4 @@ boto3
 python-dotenv
 whitenoise
 django-cors-headers
+django-ses==4.0.0
