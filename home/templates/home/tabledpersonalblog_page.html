@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags components %}
+
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+<link rel="stylesheet" href="{% static 'snippets/navbar-min.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/welcomebackmodel-min.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/footer-min.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/contact-min.css' %}">
+<link rel="stylesheet" href="{% static 'blocks/blogheader-min.css' %}">
+<link rel="stylesheet" href="{% static 'blocks/blogbody-min.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    {% navbar %}
+    {{page.blogheader}}
+    {{page.blogbody}}
+    {% contact %}
+    {% footer %}
+    {% welcomebackmodel %}
+{% endblock content %}
+
+{% block extra_js%}
+{% endblock extra_js%}

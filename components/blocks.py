@@ -444,6 +444,32 @@ new_table_options = {
         'alignment',
     ],
 }
+class RichTextBlock(StructBlock):
+    blog_text = RichTextBlock(classname="title", required=True, features=['h2', 'h3' , 'h4' , 'p' , 'bold', 'hr', 'italic','code','ol','ul','link','image','blockquote'])
+    
+    class Meta: 
+        template = "basic_blocks/richtext_block.html"
+
+class TableBlock(StructBlock): 
+    table = TableBlock(table_options=new_table_options, required=False)
+    
+    class Meta: 
+        template = "basic_blocks/table_block.html"
+
+class BlogTabledBody(StructBlock):
+    profile_image = ImageChooserBlock(required=False)
+    name = CharBlock(classname="title", required=True)
+    designation = CharBlock(classname="title", required=True)
+    about_the_author = CharBlock(classname="title", required=True)
+    twitter_url = URLBlock(classname="link", required=False)
+    linkedin_url = URLBlock(classname="link", required=False)
+    facebook_url = URLBlock(classname="link", required=False)
+    url = URLBlock(classname="link", required=True)
+    blog_text = StreamBlock([('richtext', RichTextBlock()), ('tableblock', TableBlock())])
+    
+    class Meta: 
+        template = "blocks/blogtabledbody.html"
+
 class BlogBodyBlock(StructBlock):
     profile_image = ImageChooserBlock(required=False)
     name = CharBlock(classname="title", required=True)
