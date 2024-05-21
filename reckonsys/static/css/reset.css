@@ -460,6 +460,21 @@ svg {
   flex-shrink: 0;
 }
 
+.carousal-outline-btn{
+    margin-bottom: 2rem;
+    width: fit-content;  
+    height: fit-content;
+    border: 2px solid #CFCFCF;
+    padding: 2rem 2.5rem; 
+}
+.carousal-outline-btn:hover{
+
+  border: 2px solid #333;
+}
+.carousal-outline-btn svg{
+  margin-top: 0;
+  height: fit-content; 
+}
 .w-110 {
   width: 110%;
 }

@@ -328,9 +328,10 @@
     display: flex;
     gap: 1.2rem;
   }
-  .industries-section .industries-main .industries-header .right svg {
-    display: inline-block;
-    margin-bottom: 2rem;
+  
+  .industries-section .industries-main .industries-header .right #industries-corousel-left-arrow SVG{
+
+    margin-top: 0rem;
   }
   .industries-section .industries-main .sector-card-container .sector-card-group-wrapper::-webkit-scrollbar {
     display: none;
