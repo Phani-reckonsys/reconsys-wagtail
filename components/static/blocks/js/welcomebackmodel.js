@@ -26,10 +26,12 @@ const welcomebackContainer = document.querySelector(".body-container-welcomeback
 
 document.addEventListener('mouseout', function() {
     // welcomebackContainer.classList.remove('remove');
+    if (event.clientY <= 0) {
     if (!document.cookie.split(';').some((item) => item.trim().startsWith('seenMessage='))) {
         // Cookie does not exist, show the message
         welcomebackContainer.classList.remove('remove');
     } 
+    }
 });
 
 welcomebackCloseBtn.addEventListener("click", () => {
