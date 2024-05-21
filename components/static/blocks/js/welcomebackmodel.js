@@ -24,7 +24,7 @@ const welcomebackContainer = document.querySelector(".body-container-welcomeback
 
 // })
 
-document.addEventListener('mouseout', function() {
+document.addEventListener('mouseout', function(event) {
     // welcomebackContainer.classList.remove('remove');
     if (event.clientY <= 0) {
     if (!document.cookie.split(';').some((item) => item.trim().startsWith('seenMessage='))) {
