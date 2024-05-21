@@ -48,3 +48,18 @@
     margin-left: auto;
 }
 
+
+@media only screen and (max-width: 576px) {
+    .privacypolicy-wrapper .privacypolicy-main{
+        padding: 2rem 3.6rem 2rem 3.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } 
+    .privacypolicy-wrapper .privacypolicy-main .geometric-shapes{
+        display: none;
+    } 
+    .privacypolicy-wrapper .privacypolicy-main .content{
+        flex-basis: 60%;
+    }
+}

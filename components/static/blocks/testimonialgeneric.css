@@ -24,6 +24,14 @@
     height: auto;
   }
 
+  .testimonialgeneric-section .testimonial-wrapper .right {
+    position: relative;
+  }
+  .testimonialgeneric-section .testimonial-wrapper .right .generic-testimonial-decor{
+    position: absolute;
+    top: 10rem;
+    right: 0;
+  }
   @media only screen and (max-width: 992px) {
    
   }
