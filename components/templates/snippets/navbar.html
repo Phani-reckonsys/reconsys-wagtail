@@ -109,7 +109,7 @@
         {% for navitem in navitems %}
           <h5>
             <a href="{{navitem.link.get_url}}"
-              {% if navitem.link.get_url == path %}
+              {% if navitem.link.get_url in path %}
                   class = "active"
               {% endif %}>
               {{navitem.name}}

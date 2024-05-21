@@ -1,5 +1,6 @@
 from django import template
 from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey, Welcomebackmodel
+
 register = template.Library()
 # ...
 # Advert snippets
