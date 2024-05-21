@@ -444,7 +444,7 @@ new_table_options = {
         'alignment',
     ],
 }
-class RichTextBlock(StructBlock):
+class CustomRichTextBlock(StructBlock):
     blog_text = RichTextBlock(classname="title", required=True, features=['h2', 'h3' , 'h4' , 'p' , 'bold', 'hr', 'italic','code','ol','ul','link','image','blockquote'])
     
     class Meta: 
@@ -479,7 +479,7 @@ class BlogBodyBlock(StructBlock):
     linkedin_url = URLBlock(classname="link", required=False)
     facebook_url = URLBlock(classname="link", required=False)
     url = URLBlock(classname="link", required=True)
-    blog_text = RichTextBlock(classname="title", required=True, features=['h2', 'h3' , 'h4' , 'p' , 'bold', 'hr', 'italic','code','ol','ul','link','image','blockquote'])
-    table = TableBlock(table_options=new_table_options, required=False)
-    class Meta: 
+    blog_content = StreamBlock([('richtext', CustomRichTextBlock()), ('tableblock', TableBlock())])
+
+    class Meta:
         template = "blocks/blogbody.html"
