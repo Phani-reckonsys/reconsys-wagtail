@@ -232,6 +232,7 @@ overflow-x: scroll;
         padding-top: 3rem;
         padding-bottom: 3rem;
         border-bottom: 1px solid #dbdbdb;
+        max-width: 100%;
     }
     .blogbody .author-profile{
         flex-basis: 30%;
