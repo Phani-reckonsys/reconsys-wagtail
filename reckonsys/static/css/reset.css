@@ -990,9 +990,11 @@ img {
     border: 2px solid #CFCFCF;
     padding: 1rem 1.5rem; 
 }
-.carousal-outline-btn:hover{
+.carousal-outline-btn svg{
   height: 2rem;
   width: fit-content;
+}
+.carousal-outline-btn:hover{
   border: 2px solid #333;
 }
 }
