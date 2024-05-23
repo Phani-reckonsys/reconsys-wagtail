@@ -468,7 +468,6 @@ svg {
     padding: 2rem 2.5rem; 
 }
 .carousal-outline-btn:hover{
-
   border: 2px solid #333;
 }
 .carousal-outline-btn svg{
@@ -984,6 +983,18 @@ img {
   h1.w-80 {
     width: 100%;
   }
+  .carousal-outline-btn{
+    margin-bottom: 2rem;
+    width: fit-content;  
+    height: fit-content;
+    border: 2px solid #CFCFCF;
+    padding: 1rem 1.5rem; 
+}
+.carousal-outline-btn:hover{
+  height: 2rem;
+  width: fit-content;
+  border: 2px solid #333;
+}
 }
 .opacity-80 {
   opacity: 0.8;

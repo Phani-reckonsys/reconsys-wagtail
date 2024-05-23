@@ -154,7 +154,7 @@ overflow-x: scroll;
     margin-top: 1.8rem;
     margin-left: -2rem;
     padding: 2.8rem;
-    gap: 22px;
+    gap: 2.2rem;
     border-radius: 4px;
     background: #213142;
     color: #fff;
@@ -245,5 +245,4 @@ overflow-x: scroll;
         margin-top: 3rem;
         padding: 0;
     }
-    
 }
