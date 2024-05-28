@@ -14,6 +14,8 @@ from django.views.generic.base import TemplateView
 urlpatterns = [
     path("sitemap.xml", sitemap),
     path("robots.txt", TemplateView.as_view(template_name="robots.txt")),
+    path("404", TemplateView.as_view(template_name="404.html")),
+    path("500", TemplateView.as_view(template_name="500.html")),
     path("django-admin/", admin.site.urls),
     path("admin/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),
