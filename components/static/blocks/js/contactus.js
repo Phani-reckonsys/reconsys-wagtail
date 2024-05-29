@@ -15,7 +15,7 @@ function dialCodesData(data) {
   countryDropdown.value = "+1";
 }
 
-function submitContactDetails() {
+function submitContactDetails(token) {
   const name = document.querySelector("#name").value;
   const email = document.querySelector("#email").value;
   const countryCode = document.querySelector("#country-code").value;
@@ -125,10 +125,11 @@ function submitContactDetails() {
     phone: countryCode + phoneNumber,
     company: company,
     service: service,
+    token: token,
   };
   const csrftoken = document.querySelector("[name=csrfmiddlewaretoken]").value;
 
-  fetch("https://www.reckonsys.com/backend/contact-us", {
+  fetch("https://qa.reckonsys.com/backend/contact-us", {
     method: "POST",
     body: JSON.stringify(sendData),
     headers: {
@@ -149,5 +150,9 @@ function submitContactDetails() {
 const submitBtn = document.getElementById("submit-btn");
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  submitContactDetails();
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL', {action: 'submit'}).then(function(token) {
+        submitContactDetails(token);
+    });
+  });
 });
