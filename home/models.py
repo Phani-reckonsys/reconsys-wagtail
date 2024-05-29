@@ -27,14 +27,6 @@ class HomePage(Page):
     home_process_technology_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_process_technology_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     dotted_mesh = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    # Rating Section Content
-    home_rating_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_rating_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_rating_subtitle = RichTextField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_rating_testimonial_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_rating_testimonial_content = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_rating_testimonial_name = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
-    home_rating_testimonial_designation = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     #industries section content
     home_industries_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_industries_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
@@ -51,16 +43,6 @@ class HomePage(Page):
     home_casestudies_title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     home_casestudies_subtitle = RichTextField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
-    # images
-    image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    casestudies_saascard_image = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    great_place_to_work_badge = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    casestudies_seniorcentriccard_image = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    enquirebot_cofounder_image = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    blogs_crmemail = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    blogs_solvingcrmemail = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-    blogs_clutchreview = models.ForeignKey('wagtailimages.Image', null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-
     body = StreamField([
         ("hometesimonials", HomeTestimonialsBlock()),
         ("homeblogs", HomeBlogsBlock()),
@@ -74,7 +56,6 @@ class HomePage(Page):
     herosection_panels = [FieldPanel('herosection')]
     services_offered_panels = [FieldPanel('home_service_sidetitle'), FieldPanel('home_service_title'),FieldPanel('home_service_subtitle'), FieldPanel('home_service_content'), FieldPanel('outline_grey_button'),  InlinePanel('service_cards', label='Service Card')]
     process_followed_panels = [FieldPanel('home_process_sidetitle'), FieldPanel('home_process_title'), FieldPanel('home_process_subtitle'), FieldPanel('home_process_technology_title'), FieldPanel('home_process_technology_content'), FieldPanel('dotted_mesh'), InlinePanel('process_cards', label='label'), InlinePanel('technologies_stack', label='Technologies Stack')]
-    rating_panels =  [FieldPanel('home_rating_sidetitle'), FieldPanel('home_rating_title'), FieldPanel('home_rating_subtitle'), FieldPanel('great_place_to_work_badge'), FieldPanel('home_rating_testimonial_title'), FieldPanel('home_rating_testimonial_content'), FieldPanel('home_rating_testimonial_name'), FieldPanel('home_rating_testimonial_designation'), FieldPanel('enquirebot_cofounder_image')]
     industries_section_panel = [FieldPanel('home_industries_sidetitle'), FieldPanel('home_industries_title'), FieldPanel('home_industries_subtitle'), FieldPanel('home_industries_content'), InlinePanel('industries_cards', label='card') ]
     whyreckonsys_section_panel = [FieldPanel('home_whyreckonsys_sidetitle'), FieldPanel('home_whyreckonsys_title'), FieldPanel('home_whyreckonsys_subtitle'), FieldPanel('home_whyreckonsys_content'), InlinePanel('whyreckonsys_cards', label='card') ]
     casestudies_panel = [FieldPanel('home_casestudies_sidetitle'), FieldPanel('home_casestudies_title'), FieldPanel('home_casestudies_subtitle'), InlinePanel('casestudies_cards', label='case studies card') ]  
@@ -85,10 +66,9 @@ class HomePage(Page):
         ObjectList(services_offered_panels, heading='Service  Offered'),
         ObjectList(process_followed_panels, heading='Process Followed'),
         ObjectList(industries_section_panel, heading='IndustriesSection'),
-        ObjectList(rating_panels, heading='Rating'),
         ObjectList(whyreckonsys_section_panel, heading='Why Reckonsys'),
         ObjectList(casestudies_panel, heading='case studies'),
-        ObjectList(body_panel, heading='Body'),
+        ObjectList(body_panel, heading='Add New Sections'),
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
     @property
