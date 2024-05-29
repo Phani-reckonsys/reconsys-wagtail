@@ -79,16 +79,6 @@ function submitContactDetails() {
     phoneNumbererror.classList.remove("active");
     phoneNumbererror.textContent = "";
   }
-  // if (company === "") {
-  //   companyfield.classList.add("error");
-  //   companyerror.classList.add("active");
-  //   companyerror.textContent = "Please enter your company name"
-  //   error=true;
-  // }else{
-  //   companyfield.classList.remove("error");
-  // companyerror.classList.remove("active");
-  // companyerror.textContent = "";
-  // }
   
   if (service === "Select") {
     servicefield.classList.add("error");
