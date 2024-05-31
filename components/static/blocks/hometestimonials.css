@@ -86,7 +86,7 @@
   }
   .testimonials-main .testimonials-container .testimonial_rating-card img {
     width: fit-content;
-    height: 6rem;
+    max-height: 5rem;
     object-fit: contain;
   }
 

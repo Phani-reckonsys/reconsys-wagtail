@@ -33,7 +33,14 @@
     display: flex;
     flex-direction: column;
  }
-
+ .ratings-main .ratings-wrapper .ratings-container .testimonial_rating-card .rating-header p{
+   font-size: 4.2rem;
+   font-family: "Satoshi-Bold";
+}
+ .ratings-main .ratings-wrapper .ratings-container .testimonial_rating-card img{
+   max-height: 4rem;
+   width: fit-content;
+}
 
  .ratings-main .ratings-wrapper .ratings-container .testimonial_rating-card .rating-header .rating-stars {
     display: flex;

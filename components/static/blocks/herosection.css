@@ -96,7 +96,7 @@
   .herosection-wrapper .quick-testimonials .client-logos-wrapper .client-logos {
     display: flex;
     align-items: center;
-    gap: 6rem;
+    gap: 12rem;
     width: fit-content;
     flex-wrap: nowrap;
     animation: slide 100s linear infinite;
@@ -114,7 +114,8 @@
   }
   .herosection-wrapper .quick-testimonials .client-logos-wrapper .client-logos img{
     object-fit: contain;
-    width: auto;
+    width: fit-content;
+    height: 6rem;
   }
 
   @media only screen and (max-width: 992px) {
