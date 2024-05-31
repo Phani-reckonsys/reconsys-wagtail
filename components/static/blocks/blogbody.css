@@ -48,6 +48,7 @@
 .blogbody .content .table-block{
     width: 100%;
 overflow-x: scroll;
+margin-bottom: 4rem;
 }
 .blogbody .content .table-block .caption {
     color:  #333;
