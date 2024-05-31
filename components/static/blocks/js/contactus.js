@@ -129,7 +129,7 @@ function submitContactDetails(token) {
   };
   const csrftoken = document.querySelector("[name=csrfmiddlewaretoken]").value;
 
-  fetch("https://qa.reckonsys.com/backend/contact-us", {
+  fetch("https://www.reckonsys.com/backend/contact-us", {
     method: "POST",
     body: JSON.stringify(sendData),
     headers: {
