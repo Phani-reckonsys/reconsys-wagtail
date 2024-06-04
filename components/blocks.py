@@ -110,6 +110,11 @@ class RatingCard2(StructBlock):
     rating = RichTextBlock(classname="title", required=True)
     logo = ImageChooserBlock(required= False)
 
+class AccordionBasic(StructBlock):
+    question = CharBlock(classname="question", required= False)
+    answer = CharBlock(classname="answer", required=False)
+    service_icon = ImageChooserBlock(required = False)
+
 #----------Basic Blocks Ends------------------
 
 
@@ -505,3 +510,13 @@ class ServicesHeroSectionBlock(StructBlock):
     class Meta:
         icon = "title"
         template = "blocks/services_herosection.html"
+
+class ServicesofferedBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=True)
+    title = CharBlock(classname="title", required=True)
+    content = RichTextBlock(classname="content", required=True)
+    accordion = StreamBlock([('accordionbasic', AccordionBasic())], required=False)
+    
+    class Meta:
+        icon = "title"
+        template = "blocks/servicesoffered.html"
