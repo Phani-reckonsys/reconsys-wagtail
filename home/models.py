@@ -5,7 +5,7 @@ from wagtail.blocks import StreamBlock
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, ContactModelBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, BlogTabledBody
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, ContactModelBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -371,6 +371,28 @@ class PrivacypolicyPage(Page):
     body = StreamField(
         [('PrivacyPolicy', PrivacyPolicyBlock()),
          ('ContactusTesimonial', ContactUsTestimonialBlock()),
+
+        ], null = True)
+    
+    body_panels = [FieldPanel('body')]
+
+    edit_handler = TabbedInterface([
+        ObjectList(Page.content_panels, heading= 'Content'),
+        ObjectList(body_panels, heading= 'Body'),
+        ObjectList(Page.promote_panels, heading='Promote'),
+    ])
+
+class CustomServicesPage(Page):
+    body = StreamField(
+        [('herosection', ServicesHeroSectionBlock()),
+         ('ourmission', OurMissionBlock()),
+         ('ourvision', OurVisionBlock()),
+         ('ourvalues', OurValuesBlock()),
+         ('ourjourney', OurJourneyBlock()),
+         ('ourgallery', OurGalleryBlock()),
+         ('ourtestimonial', OurTestimonialBlock()),
+         ('blogsherosection', BlogsHerosection()),
+         ('blogswrapper', BlogsWrapperBlock()),
 
         ], null = True)
     
