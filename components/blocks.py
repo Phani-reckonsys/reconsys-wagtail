@@ -115,6 +115,10 @@ class AccordionBasic(StructBlock):
     answer = CharBlock(classname="answer", required=False)
     service_icon = ImageChooserBlock(required = False)
 
+class StatBasic(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    data = CharBlock(classname="data", required=False)
+
 #----------Basic Blocks Ends------------------
 
 
@@ -512,11 +516,20 @@ class ServicesHeroSectionBlock(StructBlock):
         template = "blocks/services_herosection.html"
 
 class ServicesofferedBlock(StructBlock):
-    sidetitle = CharBlock(classname="sidetitle", required=True)
-    title = CharBlock(classname="title", required=True)
-    content = RichTextBlock(classname="content", required=True)
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    content = RichTextBlock(classname="content", required=False)
     accordion = StreamBlock([('accordionbasic', AccordionBasic())], required=False)
     
     class Meta:
         icon = "title"
         template = "blocks/servicesoffered.html"
+
+class ServicesDatasectionBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    content = RichTextBlock(classname="contnet", required=False)
+    stat = StreamBlock([('statbasic', StatBasic())], required=False)
+
+    class Meta:
+        template = "blocks/services_datasection.html"
+
