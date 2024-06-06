@@ -1,0 +1,20 @@
+{% load static %}
+{% load wagtailimages_tags%}
+{% load wagtailcore_tags%}
+
+    <section>
+        <div class="sidebar pt-20">
+            <h5 class="t-20">{{self.sidetitle}}</h5>
+        </div>
+        <!-- software services stats starts -->
+        <div class="services-whychooseus w-container pl-54 pt-100 pr-54">
+            <h4 class="mb-20 ft-20">{{self.title}}</h4>
+            <h2 class="mb-54 w-70">{{self.content}}</h2>
+            <div class="whychooseus-list w-80 pb-82 bb">
+            {% for item in self.list%}
+                    <h4><span class="numbering">{{item.value.number}}</span>{{item.value.content}}</h4>
+            {% endfor %}
+            </div>
+        </div>
+        <!-- sofware services stats ends -->
+    </section>

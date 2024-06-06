@@ -119,6 +119,11 @@ class StatBasic(StructBlock):
     title = CharBlock(classname="title", required=False)
     data = CharBlock(classname="data", required=False)
 
+class ListBasic(StructBlock):
+    number = CharBlock(classname="number", required=False)
+    content = CharBlock(classname="content", required=False)
+
+
 #----------Basic Blocks Ends------------------
 
 
@@ -533,3 +538,12 @@ class ServicesDatasectionBlock(StructBlock):
     class Meta:
         template = "blocks/services_datasection.html"
 
+
+class ServicesWhychooseusBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname = "title", required=False)
+    content = RichTextBlock(classname = "content", required=False)
+    list = StreamBlock([('listbasic', ListBasic())], required=False)
+
+    class Meta: 
+        template = "blocks/services_whychooseus.html"
