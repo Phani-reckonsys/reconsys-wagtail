@@ -123,7 +123,15 @@ class ListBasic(StructBlock):
     number = CharBlock(classname="number", required=False)
     content = CharBlock(classname="content", required=False)
 
-
+class CasestudyCardBasic(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    data1 = CharBlock(classname ="data1", required=False)
+    label1 = CharBlock(classname = "value1", required=False)
+    data2 = CharBlock(classname = "data2", required=False)
+    label2 = CharBlock(classname ="value2", required=False)
+    cover_image = ImageChooserBlock(required = False)
+    bgcolor = CharBlock(classname = "bgcolor", required = False)
 #----------Basic Blocks Ends------------------
 
 
@@ -133,13 +141,9 @@ class ListBasic(StructBlock):
 class HeroSectionBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     content = StreamBlock([('herocontent', HeroContentBasicBlock())])
-    # primary_button = StreamBlock([('button', PrimaryButtonBlock())])
     include_companies = BooleanBlock(required=False)
     company_image = StreamBlock([('image', Image())], required=False)
-    # image_cover = ImageChooserBlock(required=False)
-    # image_decor = ImageChooserBlock(required= False)
     
-
     class Meta:
         icon = "title"
         template = "blocks/herosection.html"
@@ -547,3 +551,12 @@ class ServicesWhychooseusBlock(StructBlock):
 
     class Meta: 
         template = "blocks/services_whychooseus.html"
+
+class ServicesCasestudiesBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    content = RichTextBlock(classname = "content", required=False)
+    card = StreamBlock([('casestudycardbasic', CasestudyCardBasic())], required=False)
+    
+    class Meta:
+        template = "blocks/services_casestudies.html"
