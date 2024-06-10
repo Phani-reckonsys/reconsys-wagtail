@@ -23,7 +23,6 @@
           <h1 class="mb-36 hero w-95 title elementanim">{{self.subtitle}}</h1>
           <a
                 href="{% if self.include_url_button %}{{self.btn_url_link}}{% else %}{{self.btn_link.get_url}}{% endif %}"
-                target="_blank"
                 class="primary-btn elementanim"
                 >
             {{self.btn_title}} {% comment %} {% image self.btn_icon

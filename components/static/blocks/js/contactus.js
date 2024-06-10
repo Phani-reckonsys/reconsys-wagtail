@@ -1,19 +1,40 @@
 function dialCodesData(data) {
-  // Sort the data by dial_code
-  data.sort((a, b) => a.dial_code.localeCompare(b.dial_code));
+  // Sort the data by country name
+  data.sort((a, b) => a.name.localeCompare(b.name));
 
   var countryDropdown = document.querySelector("#country-code");
+  var searchInput = document.querySelector("#search-input");
 
-  data.forEach((country) => {
-    var option = document.createElement("option");
-    option.value = country.dial_code;
-    option.text = `${country.dial_code} ${country.flag}  ${country.name} `;
-    countryDropdown.add(option);
+  function updateDropdown(filteredData) {
+    // Clear existing options
+    countryDropdown.innerHTML = "";
+
+    // Add options for filtered countries
+    filteredData.forEach((country) => {
+      var option = document.createElement("option");
+      option.value = country.dial_code;
+      option.text = `${country.name} ${country.dial_code} ${country.flag}`;
+      countryDropdown.add(option);
+    });
+    countryDropdown.value = "+91";
+  }
+
+  // Initial population of dropdown
+  updateDropdown(data);
+
+  // Event listener for search input
+  searchInput.addEventListener("input", function() {
+    var searchTerm = searchInput.value.toLowerCase();
+    var filteredData = data.filter((country) => {
+      return country.name.toLowerCase().includes(searchTerm);
+    });
+    updateDropdown(filteredData);
   });
-
-  // Set the default value to +1 (e.g., for the United States)
-  countryDropdown.value = "+1";
 }
+
+
+
+  
 
 function submitContactDetails(token) {
   const name = document.querySelector("#name").value;
