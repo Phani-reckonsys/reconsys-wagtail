@@ -13,7 +13,7 @@ function dialCodesData(data) {
     filteredData.forEach((country) => {
       var option = document.createElement("option");
       option.value = country.dial_code;
-      option.text = `${country.name} ${country.dial_code} ${country.flag}`;
+      option.text = `${country.dial_code} ${country.name} ${country.flag}`;
       countryDropdown.add(option);
     });
     countryDropdown.value = "+91";
@@ -22,14 +22,6 @@ function dialCodesData(data) {
   // Initial population of dropdown
   updateDropdown(data);
 
-  // Event listener for search input
-  searchInput.addEventListener("input", function() {
-    var searchTerm = searchInput.value.toLowerCase();
-    var filteredData = data.filter((country) => {
-      return country.name.toLowerCase().includes(searchTerm);
-    });
-    updateDropdown(filteredData);
-  });
 }
 
 
