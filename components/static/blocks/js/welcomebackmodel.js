@@ -20,4 +20,4 @@ function delayedExecution() {
 }
 
 // Call the function after 1 minute of page load
-setTimeout(delayedExecution, 6000); // 1 minute in milliseconds
+setTimeout(delayedExecution, 60000); // 1 minute in milliseconds

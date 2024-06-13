@@ -132,6 +132,10 @@ class CasestudyCardBasic(StructBlock):
     label2 = CharBlock(classname ="value2", required=False)
     cover_image = ImageChooserBlock(required = False)
     bgcolor = CharBlock(classname = "bgcolor", required = False)
+
+class FaqBasicBlock(StructBlock):
+    question = CharBlock(classname="question", required=False)
+    answer = CharBlock(classname="answer", required=False)
 #----------Basic Blocks Ends------------------
 
 
@@ -560,3 +564,11 @@ class ServicesCasestudiesBlock(StructBlock):
     
     class Meta:
         template = "blocks/services_casestudies.html"
+
+class FaqBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = RichTextBlock(classname="title", required=False)
+    faq = StreamBlock([('faqbasicblock', FaqBasicBlock())], required=False)
+
+    class Meta:
+        template = "blocks/faq.html"
