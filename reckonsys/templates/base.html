@@ -60,7 +60,6 @@
 <script
   type="text/javascript"
   src="https://app.termly.io/resource-blocker/7ebc9ed3-6420-4714-bec9-3cde61220daa?autoBlock=on"></script>
-  <a href="#" class="termly-display-preferences">Consent Preferences</a>
 <script async src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL'></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -85,13 +84,9 @@
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
-    <div id="smooth-wrapper">
-    <div id="smooth-content">
         {% wagtailuserbar %}
 
         {% block content %}{% endblock %}
-        </div>
-        </div>
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/reckonsys.js' %}"></script>
         
@@ -99,17 +94,6 @@
         {# Override this in templates to add extra javascript #}
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
-        <script>
-        gsap.registerPlugin(ScrollSmoother);
-        document.addEventListener("DOMContentLoaded", () => {
-    let smoother = ScrollSmoother.create({
-  smooth: 2,
-  effects: true,
-  normalizeScroll: true
-});
-});
-</script>
         <script type="module">
         gsap.registerPlugin(ScrollTrigger);
           document.addEventListener('DOMContentLoaded', function() {
@@ -133,28 +117,7 @@
                     }
                 }
              );
-           });
-           import Lenis from '@studio-freight/lenis';
-
-        const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
-            direction: 'vertical', // vertical, horizontal
-            gestureDirection: 'vertical', // vertical, horizontal, both
-            smooth: true,
-            mouseMultiplier: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
-            infinite: false,
-        });
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-        });
+           });})
         </script>
         {% endblock %}
     </body>

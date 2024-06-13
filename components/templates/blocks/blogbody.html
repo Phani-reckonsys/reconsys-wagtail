@@ -61,3 +61,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
 
 <script>hljs.highlightAll();</script>
+
+<script>
+// Get the container element
+        const container = document.querySelector('.content');
+        // Find all <a> tags within the container
+        const links = container.getElementsByTagName('a');
+        // Loop through each <a> tag and set the target attribute to '_blank'
+        for (let i = 0; i < links.length; i++) {
+            links[i].setAttribute('target', '_blank');
+        }
+</script>
