@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(delayedExecution, 60000); // 1 minute in milliseconds
+});
 function delayedExecution() {
     const welcomebackCloseBtn = document.querySelector(".welcomeback-close-btn");
     const welcomebackContainer = document.querySelector(".body-container-welcomeback-model");
@@ -19,5 +22,3 @@ function delayedExecution() {
 
 }
 
-// Call the function after 1 minute of page load
-setTimeout(delayedExecution, 60000); // 1 minute in milliseconds
