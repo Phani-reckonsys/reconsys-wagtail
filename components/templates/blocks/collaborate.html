@@ -1,0 +1,21 @@
+{% load wagtailimages_tags %}
+
+<section>
+    <div class="sidebar">
+        <h5 class="t-15">{{self.sidetitle}}</h5>
+    </div>
+    <div class="collaborate-section pl-54 pr-54 w-container">
+        <div class="collaborate-wrapper">
+            <div class="image-wrapper">
+                {% image self.image class="w-100" max-3000x1500 %}
+            </div>
+            <div class="content">
+                <div class="dash-decor"></div>
+                <h2 class="mb-40">{{self.title}}</h2>
+                {% for button in self.button %}
+                    {{button}}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

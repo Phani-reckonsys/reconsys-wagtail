@@ -572,3 +572,13 @@ class FaqBlock(StructBlock):
 
     class Meta:
         template = "blocks/faq.html"
+
+class CollaborateBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    image = ImageChooserBlock(required=False)
+    title = CharBlock(classname="title", required=False)
+    button = StreamBlock([('primarybutton', PrimaryButtonBlock())], required=False)
+
+    class Meta:
+        template = "blocks/collaborate.html"
+    
