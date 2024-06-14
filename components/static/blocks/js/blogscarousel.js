@@ -8,6 +8,7 @@ const carouselIndicator =document.querySelectorAll(".indicator");
 const carouselDescription = document.querySelector(".numbering");
 
 let activeCorouselIndex = 0;
+let blogsHeroInterval
 
 const changeCorousel = (index) => {
     activeCorouselIndex = (index + 3) % 3;
@@ -22,15 +23,27 @@ const changeCorousel = (index) => {
 }
 for(let [i, indicator] of carouselIndicator.entries()){
     indicator.addEventListener('click' , ()=> {
-        changeCorousel(i)
+        changeCorousel(i);
+        stopBlogsHeroInterval();
+        startBlogsHeroInterval();
     })
   }
 carousalRightArrow.addEventListener("click", ()=>{
     changeCorousel(activeCorouselIndex+1);
+    stopBlogsHeroInterval();
+    startBlogsHeroInterval();
 })
 
 carousalLeftArrow.addEventListener("click", ()=>{
     changeCorousel(activeCorouselIndex-1);
+    stopBlogsHeroInterval();
+    startBlogsHeroInterval();
 })
+startBlogsHeroInterval();
+function startBlogsHeroInterval(){
+    blogsHeroInterval = setInterval(() => changeCorousel(activeCorouselIndex + 1), 4000);
+}
 
-setInterval(() => changeCorousel(activeCorouselIndex + 1), 4000);
+function stopBlogsHeroInterval(){
+    clearInterval(blogsHeroInterval);
+}
