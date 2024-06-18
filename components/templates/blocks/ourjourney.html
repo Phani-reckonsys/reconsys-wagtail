@@ -17,19 +17,19 @@
     </div>
     <div class="our-journey-card-container">
      {% comment %} <h3 class="lh-110 mb-20 ft-20 color-white">{{self.title}}</h3>
-    <h2 class="color-light-white lh-125 mb-84 w-80">{{self.subtitle}}</h2> {% endcomment %}
+      <h2 class="color-light-white lh-125 mb-84 w-80">{{self.subtitle}}</h2> {% endcomment %}
       <div class="our-journey-card-wrapper">
-      <div class="our-journey-card-wrapper-content">
-        <h3 class="lh-110 mb-20 ft-20 color-white elementanim">{{self.title}}</h3>
-        <h2 class="color-light-white lh-125 mb-84 w-80 elementanim">{{self.subtitle}}</h2>
-      </div>
-        {% for card in self.ourjourneycards %}
-        <div class="our-journey-card elementanim">
-          {% image card.value.image max-3000x1500 class="mb-46"%}
-          <h3 class="color-light-white mb-24 lh-145 elementanim">{{card.value.title}}</h3>
-          <p class="ft-16 color-light-white elementanim">{{card.value.subtitle}}</p>
+        <div class="our-journey-card-wrapper-content">
+          <h3 class="lh-110 mb-20 ft-20 color-white">{{self.title}}</h3>
+          <h2 class="color-light-white lh-125 mb-84 w-80">{{self.subtitle}}</h2>
         </div>
-        {% endfor %}
+          {% for card in self.ourjourneycards %}
+            <div class="our-journey-card ">
+              {% image card.value.image max-3000x1500 class="mb-46"%}
+              <h3 class="color-light-white mb-24 lh-145 ">{{card.value.title}}</h3>
+              <p class="ft-16 color-light-white ">{{card.value.subtitle}}</p>
+            </div>
+          {% endfor %}
       </div>
     </div>
   </div>
