@@ -1,0 +1,27 @@
+.collaborate-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 12rem;
+}
+
+.collaborate-wrapper .image-wrapper{
+    width: 40%;
+}
+
+.collaborate-wrapper .image-wrapper img{
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;
+}
+
+.collaborate-wrapper .content{
+    width: 50%;
+}
+
+.collaborate-wrapper .content .dash-decor{
+    height: 0.6rem;
+    width: 6.4rem;
+    background: #ED7F5C;
+    margin-bottom: 6.6rem;
+}

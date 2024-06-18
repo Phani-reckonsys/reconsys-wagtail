@@ -14,7 +14,7 @@
   }
   .services-main .software-services .left .software-services-content {
     position: sticky;
-    top: 7rem;
+    top: 10rem;
     z-index: 100;
   }
 

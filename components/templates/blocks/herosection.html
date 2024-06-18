@@ -13,7 +13,7 @@
       <div class="herosection-content">
         <h1 class="mb-20 ft-20 lh-110 category-title elementanim">{{content.value.title}}</h1>
         <h1 class="mb-36 hero w-80 title elementanim">{{content.value.subtitle}}</h1>
-        <a href="{% if content.value.include_url_button %}{{content.value.btn_url_link}}{% else %}{{content.value.btn_link.get_url}}{% endif %}" target="_blank" class="primary-btn elementanim">
+        <a href="{% if content.value.include_url_button %}{{content.value.btn_url_link}}{% else %}{{content.value.btn_link.get_url}}{% endif %}"  class="primary-btn elementanim">
             {{content.value.btn_title}}
             {% comment %} {% image content.value.btn_icon max-300x200%} {% endcomment %}
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="11" viewBox="0 0 28 11" fill="none">
@@ -70,6 +70,7 @@
 
 
   let currentHeading = 0;
+  let heroSectionInterval
 
   const setActiveHeading = (index) => {
     currentHeading = (index + herosectionTitleCount) % herosectionTitleCount;
@@ -85,11 +86,20 @@
   for(let [i, indicator] of headingIndicator.entries()){
     indicator.addEventListener('click' , ()=> {
       setActiveHeading(i)
+      endHeroSectionInterval()
+      startHeroSectionInterval()
     })
   }
 
+  startHeroSectionInterval()
 
-  setInterval(() => setActiveHeading(currentHeading + 1), 5000);
+  function startHeroSectionInterval(){
+      heroSectionInterval = setInterval(() => setActiveHeading(currentHeading + 1), 5000);
+  }
+
+  function endHeroSectionInterval(){
+    clearInterval(heroSectionInterval);
+  }
 
   setActiveHeading(currentHeading);
 </script>
