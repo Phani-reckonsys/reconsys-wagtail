@@ -110,6 +110,32 @@ class RatingCard2(StructBlock):
     rating = RichTextBlock(classname="title", required=True)
     logo = ImageChooserBlock(required= False)
 
+class AccordionBasic(StructBlock):
+    question = CharBlock(classname="question", required= False)
+    answer = CharBlock(classname="answer", required=False)
+    service_icon = ImageChooserBlock(required = False)
+
+class StatBasic(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    data = CharBlock(classname="data", required=False)
+
+class ListBasic(StructBlock):
+    number = CharBlock(classname="number", required=False)
+    content = CharBlock(classname="content", required=False)
+
+class CasestudyCardBasic(StructBlock):
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    data1 = CharBlock(classname ="data1", required=False)
+    label1 = CharBlock(classname = "value1", required=False)
+    data2 = CharBlock(classname = "data2", required=False)
+    label2 = CharBlock(classname ="value2", required=False)
+    cover_image = ImageChooserBlock(required = False)
+    bgcolor = CharBlock(classname = "bgcolor", required = False)
+
+class FaqBasicBlock(StructBlock):
+    question = CharBlock(classname="question", required=False)
+    answer = CharBlock(classname="answer", required=False)
 #----------Basic Blocks Ends------------------
 
 
@@ -119,13 +145,9 @@ class RatingCard2(StructBlock):
 class HeroSectionBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     content = StreamBlock([('herocontent', HeroContentBasicBlock())])
-    # primary_button = StreamBlock([('button', PrimaryButtonBlock())])
     include_companies = BooleanBlock(required=False)
     company_image = StreamBlock([('image', Image())], required=False)
-    # image_cover = ImageChooserBlock(required=False)
-    # image_decor = ImageChooserBlock(required= False)
     
-
     class Meta:
         icon = "title"
         template = "blocks/herosection.html"
@@ -483,3 +505,80 @@ class BlogBodyBlock(StructBlock):
 
     class Meta:
         template = "blocks/blogbody.html"
+
+
+class ServicesHeroSectionBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
+    title = CharBlock(classname="title", required=True)
+    services_url = PageChooserBlock(required = False)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    btn_title = CharBlock(classname = "title", required = True)
+    btn_icon = ImageChooserBlock(required = False)
+    btn_link = PageChooserBlock(can_choose_root= True)
+    btn_url_link = URLBlock(classname="link", required=False)
+    include_fullimage = BooleanBlock(required=False)
+    include_url_button = BooleanBlock(required = False)
+    image_cover = ImageChooserBlock(required = False)
+    image_decor = ImageChooserBlock(required = False)
+    include_companies = BooleanBlock(required=False)
+    company_image = StreamBlock([('image', Image())], required=False)
+    
+
+    class Meta:
+        icon = "title"
+        template = "blocks/services_herosection.html"
+
+class ServicesofferedBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    content = RichTextBlock(classname="content", required=False)
+    accordion = StreamBlock([('accordionbasic', AccordionBasic())], required=False)
+    
+    class Meta:
+        icon = "title"
+        template = "blocks/servicesoffered.html"
+
+class ServicesDatasectionBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    content = RichTextBlock(classname="contnet", required=False)
+    stat = StreamBlock([('statbasic', StatBasic())], required=False)
+
+    class Meta:
+        template = "blocks/services_datasection.html"
+
+
+class ServicesWhychooseusBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname = "title", required=False)
+    content = RichTextBlock(classname = "content", required=False)
+    list = StreamBlock([('listbasic', ListBasic())], required=False)
+
+    class Meta: 
+        template = "blocks/services_whychooseus.html"
+
+class ServicesCasestudiesBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    content = RichTextBlock(classname = "content", required=False)
+    card = StreamBlock([('casestudycardbasic', CasestudyCardBasic())], required=False)
+    
+    class Meta:
+        template = "blocks/services_casestudies.html"
+
+class FaqBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = RichTextBlock(classname="title", required=False)
+    faq = StreamBlock([('faqbasicblock', FaqBasicBlock())], required=False)
+
+    class Meta:
+        template = "blocks/faq.html"
+
+class CollaborateBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    image = ImageChooserBlock(required=False)
+    title = CharBlock(classname="title", required=False)
+    button = StreamBlock([('primarybutton', PrimaryButtonBlock())], required=False)
+
+    class Meta:
+        template = "blocks/collaborate.html"
+    

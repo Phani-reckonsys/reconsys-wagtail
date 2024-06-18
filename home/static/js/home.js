@@ -1,7 +1,6 @@
 
   
   //industries section corousel'
-  
   const industriesLeftArrow = document.querySelector(
     ".industries-corousel-left-arrow"
   );
@@ -10,6 +9,7 @@
   );
   
   // CaseStudies Section Corousel
+  let caseStudiesInterval;
   const carousalImageWrapper = document.querySelector(".case-study-card");
   const carousalContentWrapper = document.querySelector(".cards-wrapper");
   
@@ -26,20 +26,34 @@
     carousalImageWrapper.style.transform = `translateX(${translateX}%)`;
     carousalContentWrapper.style.transform = `translateX(${translateX}%)`;
   };
-  
+
+ 
+  startCaseStudiesCarouselInterval();
   carousalRightArrow.addEventListener("click", () => {
     moveToCorouselIndex(corouselIndex + 1);
+    stopCaseStudiesCarouselInterval();
+    startCaseStudiesCarouselInterval()
   });
   
   carousalLeftArrow.addEventListener("click", () => {
     moveToCorouselIndex(corouselIndex - 1);
+    stopCaseStudiesCarouselInterval();
+    startCaseStudiesCarouselInterval()
   });
-  
-  setInterval(() => {
-    moveToCorouselIndex(corouselIndex + 1);
-  }, 5000);
+
+  function startCaseStudiesCarouselInterval() {
+    caseStudiesInterval = setInterval(() => {
+        moveToCorouselIndex(corouselIndex + 1);
+    }, 5000);
+}
+
+// Function to stop the interval
+function stopCaseStudiesCarouselInterval() {
+    clearInterval(caseStudiesInterval);
+}
   
   // Sector Cards Section
+  let sectorCardInterval;
   const sectorCardWrapper = document.querySelector(".sector-card-group-wrapper");
   const sectorCards = document.querySelector(".sector-card-group").children;
   
@@ -56,21 +70,30 @@
   
     sectorCardWrapper.scrollTo({ left: scrollLeftValue, behavior: "smooth" });
   };
-  
+  startSectorCardInterval();
   const sectorCardsLeftButton = document.getElementById(
     "industries-corousel-left-arrow"
   );
   sectorCardsLeftButton.addEventListener("click", () => {
     scrollToSectorCard(currentSectorCardIndex - 1);
+    stopSectorCardInterval();
+    startSectorCardInterval();
   });
   const sectorCardsRightButton = document.getElementById(
     "industries-corousel-right-arrow"
   );
   sectorCardsRightButton.addEventListener("click", () => {
     scrollToSectorCard(currentSectorCardIndex + 1);
+    stopSectorCardInterval();
+    startSectorCardInterval();
   });
-  
-  setInterval(() => {
+  function startSectorCardInterval(){
+    sectorCardInterval = setInterval(() => {
     scrollToSectorCard(currentSectorCardIndex + 1);
   }, 5000);
+  }
+  function stopSectorCardInterval(){
+    clearInterval(sectorCardInterval);
+  }
+  
   

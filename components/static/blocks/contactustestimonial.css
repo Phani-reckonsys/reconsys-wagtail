@@ -6,6 +6,9 @@
     border-bottom: 1px solid #727070;
     overflow-x: scroll;
   }
+  .contactustestimonial-wrapper .contactus-testimonial::-webkit-scrollbar {
+    display: none;
+  }
   .contactustestimonial-wrapper .contactus-testimonial .card-wrapper{
     display: flex;
     gap: 3rem;

@@ -1,0 +1,79 @@
+  {%load wagtailimages_tags%}
+   {% load wagtailcore_tags %}
+<!-- Herosection starts -->
+    <section>
+        <div class="sidebar">
+            <h5 class="t-20">{{self.sidetitle}}</h5>
+        </div>
+        <!-- Accordians section as services starts -->
+            <div class="accordians-section pl-54 pr-54 pt-100 pb-180 w-90">
+                <h4 class="mb-20 ft-20 elementanim">
+                    {{self.title}}
+                </h4>
+                <h2 class="mb-72 elementanim">
+                    {{self.content}}
+                </h2>
+                <div class="accordians-wrapper">
+                    {% for servicesoffered in self.accordion %}
+                        <div class="custom-accordian elementanim">
+                            <div class="header">
+                                {% image servicesoffered.value.service_icon max-3000x1500 %}
+                                <div class="content">
+                                    <div class="custom-question">
+                                        <h4>
+                                            {{servicesoffered.value.question}}
+                                        </h4>
+                                        <svg class="accordian-plus" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="black"/>
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="custom-answer">
+                                    <p class="ft-16">
+                                        {{servicesoffered.value.answer}}
+                                    </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Accordians section as services Ends -->
+        
+    </section>
+    <!-- Herosection Ends -->
+
+    <script>
+        const questions = document.querySelectorAll(".faq-wrapper");
+        questions.forEach((question) => {
+        question.addEventListener("click", () => {
+            const isActive = question.classList.contains("active");
+            questions.forEach((question) => {
+            question.classList.remove("active");
+            });
+            if (!isActive) {
+            question.classList.add("active");
+            }
+        });
+        });
+        const accQuestions = document.querySelectorAll(".custom-question");
+        const accPlus = document.querySelectorAll(".accordian-plus");
+        const customAccordian = document.querySelectorAll(".custom-accordian");
+        const accAnswers = document.querySelectorAll(".custom-answer");
+        accQuestions.forEach((question, index) => {
+        question.addEventListener("click", () => {
+            const isActive = accAnswers[index].classList.contains("active");
+            accQuestions.forEach((_, indexAll) => {
+            accAnswers[indexAll].classList.remove("active");
+            // customAccordian[indexAll].classList.remove("up");
+            accPlus[indexAll].classList.remove("rotate");
+            });
+            if (!isActive) {
+            accAnswers[index].classList.add("active");
+            // customAccordian[index].classList.add("up");
+            accPlus[index].classList.add("rotate");
+            }
+        });
+        });
+    </script>

@@ -15,6 +15,9 @@
 .badgesection-container .badgesection-wrapper .badges-wrapper{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
     gap: 3.4rem;
 }
 

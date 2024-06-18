@@ -19,6 +19,11 @@
   }
   nav .nav-mobile {
     display: none;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 8000;
+
   }
   nav .navigation-wrapper {
     margin-left: 6.5rem;
