@@ -10,11 +10,7 @@
     {% comment %} <h3 class="lh-110 mb-20 ft-20 color-white">{{self.title}}</h3>
     <h2 class="color-light-white lh-125 mb-84 w-80">{{self.subtitle}}</h2> {% endcomment %}
 
-    <div class="slider-track mb-40">
-      <div class="line-slider">
-        <div class="slider-marker"></div>
-      </div>
-    </div>
+    
     <div class="our-journey-card-container">
      {% comment %} <h3 class="lh-110 mb-20 ft-20 color-white">{{self.title}}</h3>
       <h2 class="color-light-white lh-125 mb-84 w-80">{{self.subtitle}}</h2> {% endcomment %}
@@ -23,13 +19,32 @@
           <h3 class="lh-110 mb-20 ft-20 color-white">{{self.title}}</h3>
           <h2 class="color-light-white lh-125 mb-84 w-80">{{self.subtitle}}</h2>
         </div>
+        <svg class="indicator-flag" xmlns="http://www.w3.org/2000/svg" width="31" height="48" viewBox="0 0 31 48" fill="none">
+          <path d="M0 1.5C0 0.671573 0.671573 0 1.5 0V0C2.32843 0 3 0.671573 3 1.5V48H0V1.5Z" fill="url(#paint0_angular_9430_3456)"/>
+          <path d="M31 0.327869H5V20H30.35L20.925 10.4918L31 0.327869Z" fill="url(#paint1_linear_9430_3456)"/>
+          <defs>
+            <radialGradient id="paint0_angular_9430_3456" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1.50677 32.0371) rotate(89.9766) scale(26.0638 2.38773)">
+              <stop stop-color="#EE4136"/>
+              <stop offset="1" stop-color="#941209"/>
+            </radialGradient>
+            <linearGradient id="paint1_linear_9430_3456" x1="18" y1="0" x2="18" y2="20" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#EF7160"/>
+              <stop offset="1" stop-color="#941209"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="line-slider">
+          <div class="slider-marker"></div>
+        </div>
+        <div class="our-journey-card-width">
           {% for card in self.ourjourneycards %}
             <div class="our-journey-card ">
-              {% image card.value.image max-3000x1500 class="mb-46"%}
+              {% image card.value.image max-3000x1500 %}
               <h3 class="color-light-white mb-24 lh-145 ">{{card.value.title}}</h3>
               <p class="ft-16 color-light-white ">{{card.value.subtitle}}</p>
             </div>
           {% endfor %}
+        </div>
       </div>
     </div>
   </div>
@@ -37,3 +52,4 @@
 <!-- our process section ends -->
 
 <script src="{% static 'blocks/js/ourjourney.js' %}"></script>
+
