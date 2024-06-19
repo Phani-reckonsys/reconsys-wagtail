@@ -136,6 +136,11 @@ class CasestudyCardBasic(StructBlock):
 class FaqBasicBlock(StructBlock):
     question = CharBlock(classname="question", required=False)
     answer = CharBlock(classname="answer", required=False)
+
+class ServicesBasicCard(StructBlock):
+    icon = ImageChooserBlock(required=False)
+    title = CharBlock(classname="title", required=False)
+    content = CharBlock(classname="content", required=False)
 #----------Basic Blocks Ends------------------
 
 
@@ -581,4 +586,14 @@ class CollaborateBlock(StructBlock):
 
     class Meta:
         template = "blocks/collaborate.html"
-    
+
+
+class OurServicesBlock(StructBlock):
+    sidetitle = CharBlock(classname ="sidetitle", required=False)
+    title = CharBlock(classname= "title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    content = CharBlock(classname="content", required=False)
+    card = StreamBlock([('servicesbasiccard',ServicesBasicCard())], required=False)
+
+    class Meta:
+        template = "blocks/ourservices.html"
