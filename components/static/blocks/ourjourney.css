@@ -15,13 +15,18 @@
   margin-bottom: 4rem;
   padding-top: 37vh;
 }
-
+.our-journey-main .our-journey-card-container .our-journey-card-wrapper .indicator-flag {
+  position: absolute;
+  top: 65vh;
+  left: 0;
+  display: flex;
+}
 .our-journey-main .our-journey-card-container .our-journey-card-wrapper .line-slider {
   height: 5px;
   width: 100%;
   background-color: #493F3F;
   position: absolute;
-  top: 68vh;
+  top: 72vh;
   left: 0;
   display: flex;
 }
@@ -42,7 +47,7 @@
 }
 .our-journey-main .our-journey-card-container .our-journey-card-wrapper .our-journey-card-wrapper-content{
   position: absolute;
-  top: 0;
+  top: 10vh;
   left:0;
   min-width: 60rem;
 }
@@ -53,7 +58,7 @@
 
 .our-journey-main .our-journey-card-container .our-journey-card-wrapper .our-journey-card img{
   width: 36rem;
-  margin-bottom: 7rem;
+  margin-bottom: 10rem;
   object-fit: contain;
   height: fit-content;
 }

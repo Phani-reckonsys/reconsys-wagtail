@@ -35,4 +35,15 @@ gsap.to(sliderMarker, {
     scrub: 1
   }
 });
+const flag = document.querySelector(".indicator-flag"); 
+const ourjourneyWrapper3 = document.querySelector(".our-journey-card-wrapper");
+gsap.to(flag, {
+  left: "98%",
+  scrollTrigger: {
+    trigger: ourjourneyWrapper3,
+    start: "top left",
+    end: "+=3000",
+    scrub: 1
+  }
+});
 
