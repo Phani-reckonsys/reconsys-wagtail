@@ -610,3 +610,12 @@ class TechnologiesusedBlock(StructBlock):
 
     class Meta:
         template = "blocks/technologiesused.html"
+
+class EngagmentBlock(StructBlock):
+    sidetitle = CharBlock(classname = "sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    card = StreamBlock([('servicesbasiccard', ServicesBasicCard())], requried=False)
+
+    class Meta:
+        template = "blocks/engagment.html"

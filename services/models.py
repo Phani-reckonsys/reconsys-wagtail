@@ -3,6 +3,8 @@ from wagtail.models import Page, Orderable, ClusterableModel,StreamField
 from modelcluster.fields import ParentalKey
 from wagtail.fields import RichTextField
 from modelcluster.fields import ForeignKey
+from datetime import datetime
+
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel
 from components.blocks import HeroSectionBlock
 # Create your models here.
@@ -84,6 +86,18 @@ class ServicesPage(Page):
     @property
     def faqfaqsection(self):
         return self.faqsection_faq.all()
+    
+    def get_sitemap_urls(self, request=None):
+        # Get the standard URL for this page
+        sitemap_urls = super().get_sitemap_urls(request)
+
+        # Customize the URL dictionary
+        for url_dict in sitemap_urls:
+            url_dict['lastmod'] = datetime.now()
+            url_dict['changefreq'] = 'weekly'
+            url_dict['priority'] = 0.5
+
+        return sitemap_urls
 
 class BannerRow(Orderable):
     banner_image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
