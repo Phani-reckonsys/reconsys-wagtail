@@ -87,17 +87,6 @@ class ServicesPage(Page):
     def faqfaqsection(self):
         return self.faqsection_faq.all()
     
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
-
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
 
 class BannerRow(Orderable):
     banner_image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")

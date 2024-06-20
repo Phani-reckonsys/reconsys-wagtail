@@ -4,6 +4,7 @@ from wagtail.fields import RichTextField
 from wagtail.blocks import StreamBlock
 from modelcluster.fields import ParentalKey
 from datetime import datetime
+from django.urls import reverse
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
 from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesDatasectionBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock,OurServicesBlock, TechnologiesusedBlock
@@ -99,18 +100,7 @@ class HomePage(Page):
     @property
     def cardstestimonial(self):
         return self.testimonial_cards.all()
-    
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
 
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
     
 
 class HomeServiceCard(Orderable):
@@ -229,18 +219,6 @@ class AboutusPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
-
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
-
 
 class BlogPage(Page):
     body = StreamField(
@@ -264,17 +242,6 @@ class BlogPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
-
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
 
 class CareerPage(Page):
     body = StreamField(
@@ -301,17 +268,6 @@ class CareerPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
-
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
 
 
 class OurworksPage(Page):
@@ -342,18 +298,6 @@ class OurworksPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
-
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
-
 class ContactusPage(Page):
     body = StreamField(
         [('herosection', HeroSectionBlock()),
@@ -382,17 +326,6 @@ class ContactusPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
-
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
 
 class PersonalblogPage(Page):
     blogheader = StreamField([('blogheader', BlogHeaderBlock())], null = True)
@@ -408,17 +341,6 @@ class PersonalblogPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
-
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
 
 
 
@@ -450,18 +372,6 @@ class ThankyouPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
-
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
-
 
 class PrivacypolicyPage(Page):
     body = StreamField(
@@ -478,17 +388,6 @@ class PrivacypolicyPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
-
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
 
 class CustomServicesPage(Page):
     body = StreamField(
@@ -510,15 +409,3 @@ class CustomServicesPage(Page):
         ObjectList(body_panels, heading= 'Body'),
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
-
-    def get_sitemap_urls(self, request=None):
-        # Get the standard URL for this page
-        sitemap_urls = super().get_sitemap_urls(request)
-
-        # Customize the URL dictionary
-        for url_dict in sitemap_urls:
-            url_dict['lastmod'] = datetime.now()
-            url_dict['changefreq'] = 'weekly'
-            url_dict['priority'] = 0.5
-
-        return sitemap_urls
