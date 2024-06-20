@@ -5,7 +5,7 @@ from wagtail.blocks import StreamBlock
 from modelcluster.fields import ParentalKey
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, ContactModelBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesofferedBlock, ServicesDatasectionBlock, ServicesWhychooseusBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock,OurServicesBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesDatasectionBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock,OurServicesBlock, TechnologiesusedBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -386,14 +386,13 @@ class CustomServicesPage(Page):
     body = StreamField(
         [('herosection', ServicesHeroSectionBlock()),
          ('coverImage', CoverImageBlock()),
-        #('servicesoffered', ServicesofferedBlock()),
          ('datasection', ServicesDatasectionBlock()),
-        #('whychooseussection', ServicesWhychooseusBlock()),
          ('casestudies', ServicesCasestudiesBlock()),
          ('generictestimonial', TestimonialGenericBlock()),
          ('faqsection', FaqBlock()),
          ('collaboratesection', CollaborateBlock()),
          ('ourservicesblock', OurServicesBlock()),
+         ('technologiesused', TechnologiesusedBlock()),
         ], null = True)
     
     body_panels = [FieldPanel('body')]

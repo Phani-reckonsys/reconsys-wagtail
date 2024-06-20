@@ -141,6 +141,10 @@ class ServicesBasicCard(StructBlock):
     icon = ImageChooserBlock(required=False)
     title = CharBlock(classname="title", required=False)
     content = CharBlock(classname="content", required=False)
+
+class MultipleBasicImageTitle(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    tooltip = StreamBlock([('imagetitlecombo', ImageTitleCombo())], required=False)
 #----------Basic Blocks Ends------------------
 
 
@@ -597,3 +601,12 @@ class OurServicesBlock(StructBlock):
 
     class Meta:
         template = "blocks/ourservices.html"
+
+
+class TechnologiesusedBlock(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    tooltipgroup = CharBlock(classname="tooltipgroup", required=False)
+
+    class Meta:
+        template = "blocks/technologiesused.html"
