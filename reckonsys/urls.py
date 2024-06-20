@@ -10,9 +10,16 @@ from backend import urls as backend_urls
 from search import views as search_views
 from wagtail.contrib.sitemaps.views import sitemap
 from django.views.generic.base import TemplateView
+from .sitemaps import HomePageSitemap, AboutusPageSitemap
+
+sitemaps = {
+    'homepage': HomePageSitemap,
+    'aboutuspage': AboutusPageSitemap,
+    # Add other sitemaps as needed
+}
 
 urlpatterns = [
-    path("sitemap.xml", sitemap),
+     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path("robots.txt", TemplateView.as_view(template_name="robots.txt")),
     path("404", TemplateView.as_view(template_name="404.html")),
     path("500", TemplateView.as_view(template_name="500.html")),
