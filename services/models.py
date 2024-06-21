@@ -3,6 +3,8 @@ from wagtail.models import Page, Orderable, ClusterableModel,StreamField
 from modelcluster.fields import ParentalKey
 from wagtail.fields import RichTextField
 from modelcluster.fields import ForeignKey
+from datetime import datetime
+
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel
 from components.blocks import HeroSectionBlock
 # Create your models here.
@@ -84,6 +86,7 @@ class ServicesPage(Page):
     @property
     def faqfaqsection(self):
         return self.faqsection_faq.all()
+    
 
 class BannerRow(Orderable):
     banner_image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")

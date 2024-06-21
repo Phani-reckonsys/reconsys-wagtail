@@ -20,9 +20,6 @@
               <p class="mb-32 lh-140 elementanim">
                 {{self.content}}
               </p>
-              {% for button in page.outline_grey_button %}
-                {{button}}
-              {% endfor %}
             </div>
 
             <!-- Geometric circular shape with lines positioned at left bottom end of services section -->
@@ -140,14 +137,14 @@
           <!-- Right side Service cards group -->
           <div class="service-card-group">
             <!-- service card 1 starts -->
-            {% for service_card in page.cardservice %}
+            {% for service_card in self.card %}
                 <div class="services-card elementanim">
-                {% image service_card.card_icon max-3000x1500 class="mb-14"%}
+                {% image service_card.value.icon max-3000x1500 class="mb-14"%}
               <h4 class="mb-14 lh-125">
-                {{service_card.title}}
+                {{service_card.value.title}}
               </h4>
               <p class="ft-16 lh-140 o-8">
-                {{service_card.description}}
+                {{service_card.value.description}}
               </p>
             </div>
             {% endfor %}

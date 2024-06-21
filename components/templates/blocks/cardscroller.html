@@ -1,0 +1,48 @@
+ {%load wagtailimages_tags%}
+ {% load wagtailcore_tags %}
+<section>
+        <div class="sidebar pt-20" style="background-color:#{{self.sidebar_background}}">
+            <h5 class="t-25">{{self.sidetitle}}</h5>
+        </div>
+        <!-- Engagmnt model section starts -->
+        <div class="cardscroller-section pl-54 pr-54 pt-100 pb-180 w-container" style="background-color:#{{self.container_background}}; ">
+            <div class="cardscroller-header">
+                <div class="left">
+                    <h4 class="mb-20 ft-20">
+                        {{self.title}}
+                    </h4>
+                    <h2 class="w-70 mb-54">
+                        {{self.subtitle}}
+                    </h2>
+                </div>
+                <div class="right">
+                    <div id="industries-corousel-left-arrow" class="outline-btn carousal-outline-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
+                            <path d="M14 1L2 13.1732L14 23" stroke="#333333" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div id="industries-corousel-right-arrow" class="outline-btn carousal-outline-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
+                            <path d="M1 1L13 13.1732L1 23" stroke="#333333" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="cardscroller-body">
+                <div class="engagement-cards-wrapper">
+                {% for card in self.card %}
+                    <div class="cardscroller-card" style="background-color:#{{card.value.background}}; padding: {{card.value.padding_top}}rem {{card.value.padding_right}rem {{card.value.padding_bottom}}rem {{card.value.padding_left}}rem; } ">
+                        {% image cardscroller_card.value.icon class="mb-22" max-3000x1500 %}
+                        <h4 class="mb-16">
+                            {{cardscroller_card.value.title}}
+                        </h4>
+                        <p>
+                            {{cardscroller_card.value.subtitle}}
+                        </p>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Engagmnt model section End -->
+    </section>
