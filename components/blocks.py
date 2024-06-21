@@ -136,6 +136,25 @@ class CasestudyCardBasic(StructBlock):
 class FaqBasicBlock(StructBlock):
     question = CharBlock(classname="question", required=False)
     answer = CharBlock(classname="answer", required=False)
+
+class ServicesBasicCard(StructBlock):
+    icon = ImageChooserBlock(required=False)
+    title = CharBlock(classname="title", required=False)
+    content = CharBlock(classname="content", required=False)
+
+class CustomServicesBasicCard(StructBlock):
+    icon = ImageChooserBlock(required=False)
+    background = CharBlock(classname="background", required=False)
+    padding_top = CharBlock(classname="padding_top", required=False)
+    padding_right = CharBlock(classname="padding_right", required=False)
+    padding_bottom = CharBlock(classname="padding_bottom", required=False)
+    padding_left = CharBlock(classname = "padding_left", required=False)
+    title = CharBlock(classname="title", required=False)
+    content = CharBlock(classname="content", required=False)
+
+class MultipleBasicImageTitle(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    tooltip = StreamBlock([('imagetitlecombo', ImageTitleCombo())], required=False)
 #----------Basic Blocks Ends------------------
 
 
@@ -581,4 +600,43 @@ class CollaborateBlock(StructBlock):
 
     class Meta:
         template = "blocks/collaborate.html"
-    
+
+
+class OurServicesBlock(StructBlock):
+    sidetitle = CharBlock(classname ="sidetitle", required=False)
+    title = CharBlock(classname= "title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    content = CharBlock(classname="content", required=False)
+    card = StreamBlock([('servicesbasiccard',ServicesBasicCard())], required=False)
+
+    class Meta:
+        template = "blocks/ourservices.html"
+
+
+class TechnologiesusedBlock(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    tooltipgroup = CharBlock(classname="tooltipgroup", required=False)
+
+    class Meta:
+        template = "blocks/technologiesused.html"
+
+class EngagmentBlock(StructBlock):
+    sidetitle = CharBlock(classname = "sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    card = StreamBlock([('servicesbasiccard', ServicesBasicCard())], requried=False)
+
+    class Meta:
+        template = "blocks/engagment.html"
+
+class CardservicesBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    sidebar_background = CharBlock(classname="", required=False)
+    title = CharBlock(classname="title", required=False)
+    container_background = CharBlock(classname="container_background", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    card = StreamBlock([('servicebasicscard', CustomServicesBasicCard())], required=False)
+
+    class Meta:
+        template = "blocks/cardscroller.html"

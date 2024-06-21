@@ -3,9 +3,11 @@ from wagtail.models import Page, Orderable, ClusterableModel, StreamField
 from wagtail.fields import RichTextField
 from wagtail.blocks import StreamBlock
 from modelcluster.fields import ParentalKey
+from datetime import datetime
+from django.urls import reverse
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, ContactModelBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesofferedBlock, ServicesDatasectionBlock, ServicesWhychooseusBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesDatasectionBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock,OurServicesBlock, TechnologiesusedBlock, EngagmentBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -98,6 +100,7 @@ class HomePage(Page):
     @property
     def cardstestimonial(self):
         return self.testimonial_cards.all()
+
     
 
 class HomeServiceCard(Orderable):
@@ -239,6 +242,7 @@ class BlogPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
+
 class CareerPage(Page):
     body = StreamField(
         [('herosection', HeroSectionBlock()),
@@ -263,6 +267,7 @@ class CareerPage(Page):
         ObjectList(body_panels, heading= 'Body'),
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
+
 
 
 class OurworksPage(Page):
@@ -321,6 +326,7 @@ class ContactusPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
+
 class PersonalblogPage(Page):
     blogheader = StreamField([('blogheader', BlogHeaderBlock())], null = True)
     blogbody = StreamField([('blogbody', BlogBodyBlock())], null = True)
@@ -334,6 +340,7 @@ class PersonalblogPage(Page):
         ObjectList(blogbody_panels, heading= 'BlogBody'),
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
+
 
 
 
@@ -355,7 +362,6 @@ class ThankyouPage(Page):
          ('OurworksDisplay', OurWorksDisplayBlock()),
          ('ContactusTesimonial', ContactUsTestimonialBlock()),
          ('thankyoublock', ThankyouBlock()),
-         
         ], null = True)
     
     body_panels = [FieldPanel('body')]
@@ -382,17 +388,19 @@ class PrivacypolicyPage(Page):
         ObjectList(Page.promote_panels, heading='Promote'),
     ])
 
+
 class CustomServicesPage(Page):
     body = StreamField(
         [('herosection', ServicesHeroSectionBlock()),
          ('coverImage', CoverImageBlock()),
-         ('servicesoffered', ServicesofferedBlock()),
          ('datasection', ServicesDatasectionBlock()),
-         ('whychooseussection', ServicesWhychooseusBlock()),
          ('casestudies', ServicesCasestudiesBlock()),
          ('generictestimonial', TestimonialGenericBlock()),
          ('faqsection', FaqBlock()),
          ('collaboratesection', CollaborateBlock()),
+         ('ourservicesblock', OurServicesBlock()),
+         ('technologiesused', TechnologiesusedBlock()),
+         ('engagementmodel', EngagmentBlock()),
         ], null = True)
     
     body_panels = [FieldPanel('body')]
