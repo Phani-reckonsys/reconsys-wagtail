@@ -142,6 +142,16 @@ class ServicesBasicCard(StructBlock):
     title = CharBlock(classname="title", required=False)
     content = CharBlock(classname="content", required=False)
 
+class CustomServicesBasicCard(StructBlock):
+    icon = ImageChooserBlock(required=False)
+    background = CharBlock(classname="background", required=False)
+    padding_top = CharBlock(classname="padding_top", required=False)
+    padding_right = CharBlock(classname="padding_right", required=False)
+    padding_bottom = CharBlock(classname="padding_bottom", required=False)
+    padding_left = CharBlock(classname = "padding_left", required=False)
+    title = CharBlock(classname="title", required=False)
+    content = CharBlock(classname="content", required=False)
+
 class MultipleBasicImageTitle(StructBlock):
     title = CharBlock(classname="title", required=False)
     tooltip = StreamBlock([('imagetitlecombo', ImageTitleCombo())], required=False)
@@ -619,3 +629,14 @@ class EngagmentBlock(StructBlock):
 
     class Meta:
         template = "blocks/engagment.html"
+
+class CardservicesBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    sidebar_background = CharBlock(classname="", required=False)
+    title = CharBlock(classname="title", required=False)
+    container_background = CharBlock(classname="container_background", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    card = StreamBlock([('servicebasicscard', CustomServicesBasicCard())], required=False)
+
+    class Meta:
+        template = "blocks/cardscroller.html"
