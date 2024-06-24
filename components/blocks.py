@@ -630,7 +630,7 @@ class EngagmentBlock(StructBlock):
     class Meta:
         template = "blocks/engagment.html"
 
-class CardservicesBlock(StructBlock):
+class CardscrollerBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
     sidebar_background = CharBlock(classname="", required=False)
     title = CharBlock(classname="title", required=False)
