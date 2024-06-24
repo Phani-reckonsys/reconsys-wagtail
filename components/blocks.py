@@ -641,3 +641,12 @@ class CardscrollerBlock(StructBlock):
 
     class Meta:
         template = "blocks/cardscroller.html"
+
+class ServicesWhyReckonsysBlock(StructBlock):
+    sidebar = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    card = StreamBlock([('servicebasiccard', ServicesBasicCard())], required=False)
+
+    class Meta:
+        template = "blocks/services_whyreckonsys.html"

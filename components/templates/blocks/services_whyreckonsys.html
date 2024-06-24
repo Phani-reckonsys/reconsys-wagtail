@@ -1,0 +1,24 @@
+{%load wagtailimages_tags%} {% load wagtailcore_tags %}
+<section>
+  <div class="sidebar pt-20">
+    <h5 class="t-25">{{self.sidetitle}}</h5>
+  </div>
+  <!-- Engagmnt model section starts -->
+  <div class="whyreckonsys-section pl-54 pr-54 pt-100 pb-180 w-container">
+    <div class="whyreckonsys-header">
+      <h4 class="mb-20 ft-20">{{self.title}}</h4>
+      <h2 class="w-70 mb-54">{{self.subtitle}}</h2>
+      <p class="mb-32 lh-140 elementanim">{{self.content}}</p>
+    </div>
+    <div class="cards-wrapper">
+      {% for card in self.card %}
+      <div class="whyreckonsys-card">
+        {% image whyreckonsys_card.value.icon class="mb-22" max-3000x1500 %}
+        <h4 class="mb-16">{{whyreckonsys_card.value.title}}</h4>
+        <p>{{whyreckonsys_card.value.subtitle}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- Engagmnt model section End -->
+</section>
