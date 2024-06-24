@@ -145,6 +145,7 @@ class ServicesBasicCard(StructBlock):
 class CustomServicesBasicCard(StructBlock):
     icon = ImageChooserBlock(required=False)
     background = CharBlock(classname="background", required=False)
+    width = CharBlock(classname="width", required=False)
     padding_top = CharBlock(classname="padding_top", required=False)
     padding_right = CharBlock(classname="padding_right", required=False)
     padding_bottom = CharBlock(classname="padding_bottom", required=False)

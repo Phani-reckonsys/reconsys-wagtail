@@ -34,13 +34,13 @@
             <div class="cardscroller-body">
                 <div class="engagement-cards-wrapper">
                 {% for card in self.card %}
-                    <div class="cardscroller-card" style="background-color:#{{card.value.background}}; padding: {{card.value.padding_top}}rem {{card.value.padding_right}}rem {{card.value.padding_bottom}}rem {{card.value.padding_left}}rem; ">
-                        {% image cardscroller_card.value.icon class="mb-22" max-3000x1500 %}
+                    <div class="cardscroller-card" style="background-color:#{{card.value.background}}; width:{{card.value.width}}rem; padding: {{card.value.padding_top}}rem {{card.value.padding_right}}rem {{card.value.padding_bottom}}rem {{card.value.padding_left}}rem; ">
+                        {% image card.value.icon class="mb-22" max-3000x1500 %}
                         <h4 class="mb-16">
-                            {{cardscroller_card.value.title}}
+                            {{card.value.title}}
                         </h4>
                         <p>
-                            {{cardscroller_card.value.subtitle}}
+                            {{card.value.content}}
                         </p>
                     </div>
                 {% endfor %}

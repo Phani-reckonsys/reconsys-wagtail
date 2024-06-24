@@ -1,19 +1,25 @@
-.cardscroller-section .cardscroller-body .engagement-cards-wrapper {
+.cardscroller-section .cardscroller-header{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 5rem;
+    align-items: center;
+  }
+
+  .cardscroller-section .cardscroller-header .right{
+    display: flex;
+    gap: 2rem;
+  }
+  .cardscroller-section .cardscroller-body {
+    overflow-x: hidden;
+  }
+.cardscroller-section .cardscroller-body .engagement-cards-wrapper {
+    display: flex;
+    width: fit-content;
+    gap: 3.2rem;
   }
   .cardscroller-section .cardscroller-body .engagement-cards-wrapper .cardscroller-card {
     width: 38rem;
   }
-  .cardscroller-section .cardscroller-body .engagement-cards-wrapper .cardscroller-card img {
-    width: 100%;
-    height: auto;
-  }
-  .cardscroller-section .cardscroller-body .engagement-cards-wrapper .cardscroller-card h4, .cardscroller-section .cardscroller-body .engagement-cards-wrapper .cardscroller-card p {
-    padding-left: 2rem;
-  }
+
 
 
   @media only screen and (max-width: 992px) {
