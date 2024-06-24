@@ -634,8 +634,9 @@ class CardscrollerBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
     sidebar_background = CharBlock(classname="", required=False)
     title = CharBlock(classname="title", required=False)
-    container_background = CharBlock(classname="container_background", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
+    content = CharBlock(classname="content", required=False)
+    container_background = CharBlock(classname="container_background", required=False)
     card = StreamBlock([('servicebasicscard', CustomServicesBasicCard())], required=False)
 
     class Meta:
