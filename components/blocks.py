@@ -616,7 +616,7 @@ class OurServicesBlock(StructBlock):
 class TechnologiesusedBlock(StructBlock):
     title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
-    tooltipgroup = CharBlock(classname="tooltipgroup", required=False)
+    tooltipgroup = StreamBlock([('multiplebasicimagetitle', MultipleBasicImageTitle())],required=False)
 
     class Meta:
         template = "blocks/technologiesused.html"
