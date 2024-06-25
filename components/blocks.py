@@ -626,6 +626,7 @@ class EngagmentBlock(StructBlock):
     sidetitle = CharBlock(classname = "sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
+    content = CharBlock(classname="content", required=False)
     card = StreamBlock([('servicesbasiccard', ServicesBasicCard())], requried=False)
 
     class Meta:
@@ -647,6 +648,7 @@ class ServicesWhyReckonsysBlock(StructBlock):
     sidebar = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
+    content = CharBlock(classname="content", required=False)
     card = StreamBlock([('servicebasiccard', ServicesBasicCard())], required=False)
 
     class Meta:
