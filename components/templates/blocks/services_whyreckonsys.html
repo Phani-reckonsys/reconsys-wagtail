@@ -14,6 +14,7 @@
       {% for card in self.card %}
       <div class="whyreckonsys-card">
         {% image whyreckonsys_card.value.icon class="mb-22" max-3000x1500 %}
+        <h2 class="gradient-text">{{whyreckonsys_card.value.number}}</h2>
         <h4 class="mb-16">{{whyreckonsys_card.value.title}}</h4>
         <p>{{whyreckonsys_card.value.subtitle}}</p>
       </div>

@@ -142,6 +142,11 @@ class ServicesBasicCard(StructBlock):
     title = CharBlock(classname="title", required=False)
     content = CharBlock(classname="content", required=False)
 
+class ServicesTextCard(StructBlock):
+    number = CharBlock(classname="number", required=False)
+    title = CharBlock(classname="title", required=False)
+    content = CharBlock(classname="content", required=False)
+
 class CustomServicesBasicCard(StructBlock):
     icon = ImageChooserBlock(required=False)
     background = CharBlock(classname="background", required=False)
@@ -649,7 +654,7 @@ class ServicesWhyReckonsysBlock(StructBlock):
     title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
     content = CharBlock(classname="content", required=False)
-    card = StreamBlock([('servicebasiccard', ServicesBasicCard())], required=False)
+    card = StreamBlock([('servicebasiccard', ServicesTextCard())], required=False)
 
     class Meta:
         template = "blocks/services_whyreckonsys.html"
