@@ -64,7 +64,7 @@
                     <div class="carousal-image-wrapper">
                         {% for card in self.cards %}
                             <a href="{{card.value.blog_link.get_url}}" class="carousal-image">
-                                    {% image card.value.image max-3000x1500 class="elementanim"%}
+                                    {% image card.value.image max-3000x1500 class="elementanim" loading="lazy"%}
                             </a>
                         {% endfor %}       
                     </div>

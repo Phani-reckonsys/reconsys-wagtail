@@ -12,7 +12,7 @@
             <div class="wellness-card-wrapper w-90">
             {% for card in self.cards %}
                 <div class="wellness-card one elementanim">
-                    {%image card.value.image max-3000x1500 class="mb-30"%}
+                    {%image card.value.image max-3000x1500 class="mb-30" loading="lazy"%}
                     <h2 class="ft-32 mb-30 ">{{card.value.title}}</h2>
                     <p >{{card.value.subtitle}}</p>
                 </div>
