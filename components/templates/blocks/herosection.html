@@ -11,9 +11,9 @@
   {% for content in self.content %}
       <div class="row herosection active">
       <div class="herosection-content">
-        <h1 class="mb-20 ft-20 lh-110 category-title elementanim">{{content.value.title}}</h1>
+        <h2 class="mb-20 ft-20 lh-110 category-title elementanim">{{content.value.title}}</h2>
         
-        <h1 class="mb-36 hero w-80 title elementanim">{{content.value.subtitle}}</h1>
+        <h1 class="hero-title" >{{content.value.subtitle}}</h1>
         <a href="{% if content.value.include_url_button %}{{content.value.btn_url_link}}{% else %}{{content.value.btn_link.get_url}}{% endif %}"  class="primary-btn elementanim">
             {{content.value.btn_title}}
             

@@ -15,10 +15,41 @@
     top:0;
     left:0;
     /* transition: corousalfade 1s ease; */
+    /* animation-name: corouselfade;
+    animation-duration: 1s; */
+    width: 100%;
+    display: none;
+  }
+  .herosection-wrapper .herosection-height .herosection {
+    /* display: flex; */
+    position: absolute;
+    top:0;
+    left:0;
+    /* transition: corousalfade 1s ease; */
+    /* animation-name: corouselfade;
+    animation-duration: 1s; */
+    width: 100%;
+    display: none;
+  }
+  .herosection-wrapper .herosection-height .herosection:nth-child(2) {
+    /* display: flex; */
+    position: absolute;
+    top:0;
+    left:0;
+    transition: corousalfade 1s ease; 
     animation-name: corouselfade;
     animation-duration: 1s;
     width: 100%;
-    display: none;
+  }
+  .herosection-wrapper .herosection-height .herosection:nth-child(3) {
+    /* display: flex; */
+    position: absolute;
+    top:0;
+    left:0;
+    transition: corousalfade 1s ease; 
+    animation-name: corouselfade;
+    animation-duration: 1s;
+    width: 100%;
   }
 
   @keyframes corouselfade{
