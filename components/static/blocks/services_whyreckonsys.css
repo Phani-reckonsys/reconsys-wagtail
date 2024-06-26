@@ -1,0 +1,51 @@
+.whyreckonsys-section .cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+  .whyreckonsys-section .cards-wrapper .whyreckonsys-card {
+    width: 38rem;
+  }
+  .whyreckonsys-section .cards-wrapper .whyreckonsys-card img {
+    width: 100%;
+    height: auto;
+  }
+  .whyreckonsys-section .cards-wrapper .whyreckonsys-card h4, .whyreckonsys-section  .cards-wrapper .whyreckonsys-card p {
+    padding-left: 2rem;
+  }
+
+
+  @media only screen and (max-width: 992px) {
+    
+  }
+  @media only screen and (max-width: 768px) {
+    .whyreckonsys-section h2 {
+      width: 100%;
+    }
+    .whyreckonsys-section .cards-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    .whyreckonsys-section {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+    .whyreckonsys-section h2{
+      margin-bottom: 4rem;
+    }
+    .whyreckonsys-process-card-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    .whyreckonsys-process-card-wrapper .whyreckonsys-process-card {
+      width: 28rem;
+      display: none;
+    }
+    .whyreckonsys-process-card-wrapper .whyreckonsys-process-card:first-child {
+      display: block;
+    }
+  }

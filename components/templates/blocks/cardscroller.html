@@ -14,14 +14,17 @@
                     <h2 class="w-70 mb-54">
                         {{self.subtitle}}
                     </h2>
+                    <p class="mb-32 lh-140 elementanim">
+                        {{self.content}}
+                    </p>
                 </div>
                 <div class="right">
-                    <div id="industries-corousel-left-arrow" class="outline-btn carousal-outline-btn">
+                    <div id="cardscroller-left-arrow" class="outline-btn carousal-outline-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
                             <path d="M14 1L2 13.1732L14 23" stroke="#333333" stroke-width="2"/>
                         </svg>
                     </div>
-                    <div id="industries-corousel-right-arrow" class="outline-btn carousal-outline-btn">
+                    <div id="cardscroller-right-arrow" class="outline-btn carousal-outline-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
                             <path d="M1 1L13 13.1732L1 23" stroke="#333333" stroke-width="2"/>
                         </svg>
@@ -31,13 +34,13 @@
             <div class="cardscroller-body">
                 <div class="engagement-cards-wrapper">
                 {% for card in self.card %}
-                    <div class="cardscroller-card" style="background-color:#{{card.value.background}}; padding: {{card.value.padding_top}}rem {{card.value.padding_right}rem {{card.value.padding_bottom}}rem {{card.value.padding_left}}rem; } ">
-                        {% image cardscroller_card.value.icon class="mb-22" max-3000x1500 %}
+                    <div class="cardscroller-card" style="background-color:#{{card.value.background}}; width:{{card.value.width}}rem; padding: {{card.value.padding_top}}rem {{card.value.padding_right}}rem {{card.value.padding_bottom}}rem {{card.value.padding_left}}rem; ">
+                        {% image card.value.icon class="mb-22" max-3000x1500 %}
                         <h4 class="mb-16">
-                            {{cardscroller_card.value.title}}
+                            {{card.value.title}}
                         </h4>
                         <p>
-                            {{cardscroller_card.value.subtitle}}
+                            {{card.value.content}}
                         </p>
                     </div>
                 {% endfor %}
@@ -46,3 +49,12 @@
         </div>
         <!-- Engagmnt model section End -->
     </section>
+
+    <script>
+        const cardScrollerLeft = document.querySelector("#cardscroller-left-arrow");
+        const cardScrollerRight = document.querySelector("#cardscroller-right-arrow");
+
+        let currentIndex = 0;
+
+        const 
+    </script>

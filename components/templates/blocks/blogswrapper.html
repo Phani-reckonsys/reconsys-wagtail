@@ -11,7 +11,7 @@
                 {% for card in self.cards %}
                 <a href ="{{card.value.pagelink.get_url}}"class="blog-card elementanim">
                     <div class="image-wrapper mb-20">
-                        {% image card.value.image max-3000x1500 %}
+                        {% image card.value.image max-3000x1500 loading="lazy"%}
                     </div>
                     <div class="blog-content-body">
                         <h6 class="mb-8 gradient-text  card-category ">{{card.value.category}}</h6>

@@ -9,7 +9,7 @@
                 <h2 class="elementanim">{{self.title}}</h2>
                 <div class="badges-wrapper">
                     {% for badge in self.badgefield %}
-                        {% image badge.value.image max-3000x1500 class="elementanim"%}
+                        {% image badge.value.image max-3000x1500 class="elementanim" loading="lazy"%}
                     {% endfor %}
                 </div>
             </div>

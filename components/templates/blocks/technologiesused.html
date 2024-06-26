@@ -1,21 +1,25 @@
+{% load static %}
+{% load wagtailimages_tags%}
+{% load wagtailcore_tags%}
+  
   <!-- Process section starts -->
     <section class="technologies-section">
-      <div class="sidebar dark-section">
+      <div class="sidebar">
         <h5 class="color-white t-15"></h5>
       </div>
       <!-- complete process section wrapper -->
       <div class="technologies-main pl-54 pr-54 w-container">
         <div class="technologies">
-          <h5 class="color-white mb-12 lh-110 elementanim">
+          <h5 class="mb-12 lh-110 elementanim">
             {{self.title}}
           </h5>
-          <p class="color-light-white ft-16 lh-110 elementanim">
-            {{self.content}}
+          <p class=" ft-16 lh-110 elementanim">
+            {{self.subtitle}}
           </p>
           <div class="technology-stack-wrapper">
           {% for tooltipgroup in self.tooltipgroup%}
             <div class="technology-stack elementanim">
-              <h5 class="color-white mb-14 o-5 ft-12">
+              <h5 class="mb-14 o-5 ft-12">
                 {{tooltipgroup.value.title}}
               </h5>
               <div class="logos-array">
