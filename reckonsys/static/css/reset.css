@@ -22,6 +22,14 @@ body {
 .font-pink {
   color: #d2112b;
 }
+.hero-title{
+  margin-bottom: 3.6rem;
+  font-size: 7.2rem;
+  font-family: "Satoshi-Bold";
+  color: #333;
+  line-height: 120%;
+  width: 80%;
+}
 
 h1 {
   font-size: 6.4rem;
