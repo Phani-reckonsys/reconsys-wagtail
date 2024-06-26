@@ -57,9 +57,9 @@
         </script>
         <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7P3SS65ZJ"></script>
-{% comment %} <script
+<script
   type="text/javascript"
-  src="https://app.termly.io/resource-blocker/7ebc9ed3-6420-4714-bec9-3cde61220daa?autoBlock=on"></script> {% endcomment %}
+  src="https://app.termly.io/resource-blocker/7ebc9ed3-6420-4714-bec9-3cde61220daa?autoBlock=on"></script> 
 <script async src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL'></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -92,33 +92,10 @@
         
         {% block extra_js %}
         {# Override this in templates to add extra javascript #}
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-        <script type="module">
-        gsap.registerPlugin(ScrollTrigger);
-          document.addEventListener('DOMContentLoaded', function() {
-
-             const elements = document.querySelectorAll('.elementanim');
-
-            elements.forEach(element => {
-              gsap.fromTo(element, 
-                { opacity: 0, y: 30 }, // Initial state
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    delay: 0,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: element,
-                        start: 'top 90%',
-                        markers: false,
-                        toggleActions: 'play none none reset', 
-                    }
-                }
-             );
-           });})
-        </script>
+        
         {% endblock %}
     </body>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        
 </html>
