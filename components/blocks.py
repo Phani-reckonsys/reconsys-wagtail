@@ -88,6 +88,10 @@ class TestimonialCard(StructBlock):
 class Image(StructBlock):
     image = ImageChooserBlock(required=False)
 
+class CustomImage(StructBlock):
+    image = ImageChooserBlock(required=False)
+    width = CharBlock(classname="title", required=False)
+
 class Text(StructBlock):
     text = CharBlock(classname="title", required=True)
 
@@ -496,14 +500,15 @@ new_table_options = {
 class CustomRichTextBlock(StructBlock):
     blog_text = RichTextBlock(classname="title", required=True, features=['h2', 'h3' , 'h4' , 'p' , 'bold', 'hr', 'italic','code','ol','ul','link','image','blockquote'])
     
-    class Meta: 
+    class Meta:
         template = "basic_blocks/richtext_block.html"
 
 class TableBlock(StructBlock): 
     table = TableBlock(table_options=new_table_options, required=False)
-    
-    class Meta: 
+
+    class Meta:
         template = "basic_blocks/table_block.html"
+    
 
 class BlogTabledBody(StructBlock):
     profile_image = ImageChooserBlock(required=False)
@@ -514,7 +519,7 @@ class BlogTabledBody(StructBlock):
     linkedin_url = URLBlock(classname="link", required=False)
     facebook_url = URLBlock(classname="link", required=False)
     url = URLBlock(classname="link", required=True)
-    blog_text = StreamBlock([('richtext', RichTextBlock()), ('tableblock', TableBlock())])
+    blog_text = StreamBlock([('richtext', RichTextBlock()), ('tableblock', TableBlock()), ('image', CustomImage())])
     
     class Meta: 
         template = "blocks/blogtabledbody.html"
@@ -528,7 +533,7 @@ class BlogBodyBlock(StructBlock):
     linkedin_url = URLBlock(classname="link", required=False)
     facebook_url = URLBlock(classname="link", required=False)
     url = URLBlock(classname="link", required=True)
-    blog_content = StreamBlock([('richtext', CustomRichTextBlock()), ('tableblock', TableBlock())])
+    blog_content = StreamBlock([('richtext', CustomRichTextBlock()), ('tableblock', TableBlock()), ('image', CustomImage()) ])
 
     class Meta:
         template = "blocks/blogbody.html"
