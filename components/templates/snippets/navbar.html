@@ -1,5 +1,7 @@
  {% load static %}
+ {% load wagtail_cache %}
 
+{% wagtailcache 500 "navbar-normal" %}
  <div class="company-logo">
       <svg
         width="29"
@@ -255,3 +257,4 @@ gsap.registerPlugin(ScrollTrigger);
 
  
 </script>
+{% endwagtailcache %}
