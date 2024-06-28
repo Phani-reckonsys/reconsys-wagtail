@@ -90,7 +90,10 @@ class Image(StructBlock):
 
 class CustomImage(StructBlock):
     image = ImageChooserBlock(required=False)
-    width = CharBlock(classname="title", required=False)
+    width = CharBlock(classname="width", required=False)
+
+    class Meta:
+        template="basic_blocks/image_basic_block.html"
 
 class Text(StructBlock):
     text = CharBlock(classname="title", required=True)
