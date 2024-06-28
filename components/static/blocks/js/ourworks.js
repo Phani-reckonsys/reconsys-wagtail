@@ -1,72 +1,74 @@
-const showMoreBtn = document.querySelector(".ourwork-display .outline-btn-white");
-const showMoreBtnText = document.querySelector(".ourwork-display .outline-btn-white h4");
-let ourWorkCardVisibleCount = 8;
-const ourWorkCards = document.querySelectorAll(".our-works-card");  // All cards selector
-function setOurWorksCardCount(count) {
-  ourWorkCardVisibleCount = count;
-  for (const [index, card] of ourWorkCards.entries()) {
-    if (index < count) {
-      card.classList.remove("hidecard");
-      showMoreBtnText.textContent = "Show Less"
-    } else {
-      card.classList.add("hidecard");
-      showMoreBtnText.textContent = "show more"
-    }
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the necessary DOM elements
+  const showMoreBtn = document.querySelector(".ourwork-display .outline-btn-white");
+  const showMoreBtnText = document.querySelector(".ourwork-display .outline-btn-white h4");
+  const ourWorkCards = document.querySelectorAll(".our-works-card");
+  const allBtn = document.querySelector(".all-btn");
+  const csdBtn = document.querySelector(".csd-btn");
+  const uiBtn = document.querySelector(".ui-btn");
+
+  // Initial count of visible cards
+  let ourWorkCardVisibleCount = 8;
+
+  // Function to set the number of visible cards and update button text
+  function setOurWorksCardCount(count) {
+      ourWorkCardVisibleCount = count;
+      ourWorkCards.forEach((card, index) => {
+          // Toggle the hidecard class based on the count
+          card.classList.toggle("hidecard", index >= count);
+      });
+      // Update button text based on the number of visible cards
+      showMoreBtnText.textContent = (ourWorkCardVisibleCount > 20) ? "Show Less" : "Show More";
   }
-}
 
-setOurWorksCardCount(8);
-showMoreBtn.addEventListener("click", () => {
-  if (ourWorkCardVisibleCount > 20) setOurWorksCardCount(8);
-  else setOurWorksCardCount(50);
-});
+  // Initially set the count of visible cards to 8
+  setOurWorksCardCount(8);
 
-const allBtn = document.querySelector(".all-btn");
-const csdBtn = document.querySelector(".csd-btn");
-const uiBtn = document.querySelector(".ui-btn");
-allBtn.classList.add("active");
-const csdCards = document.querySelectorAll(".our-works-card.csd");  // All cards selector
-const uiCards = document.querySelectorAll(".our-works-card.ui");  // All cards selector
+  // Add click event listener to the show more/less button
+  showMoreBtn.addEventListener("click", () => {
+      // Toggle between showing 8 and 50 cards
+      setOurWorksCardCount(ourWorkCardVisibleCount > 20 ? 8 : 50);
+  });
 
-allBtn.addEventListener('click', () => {
+  // Function to filter cards based on their class
+  function filterCards(filterClass) {
+      ourWorkCards.forEach(card => {
+          // Toggle the none class to hide/show cards
+          card.classList.toggle("none", !card.classList.contains(filterClass) && filterClass !== 'all');
+      });
+  }
+
+  // Add click event listener to the 'all' button
+  allBtn.addEventListener('click', () => {
+      // Set the active class to the 'all' button and remove from others
+      allBtn.classList.add("active");
+      csdBtn.classList.remove("active");
+      uiBtn.classList.remove("active");
+      // Show all cards
+      filterCards('all');
+  });
+
+  // Add click event listener to the 'csd' button
+  csdBtn.addEventListener('click', () => {
+      // Set the active class to the 'csd' button and remove from others
+      csdBtn.classList.add("active");
+      allBtn.classList.remove("active");
+      uiBtn.classList.remove("active");
+      // Show only csd cards
+      filterCards('csd');
+  });
+
+  // Add click event listener to the 'ui' button
+  uiBtn.addEventListener('click', () => {
+      // Set the active class to the 'ui' button and remove from others
+      uiBtn.classList.add("active");
+      allBtn.classList.remove("active");
+      csdBtn.classList.remove("active");
+      // Show only ui cards
+      filterCards('ui');
+  });
+
+  // Set the initial state to show all cards and mark the 'all' button as active
   allBtn.classList.add("active");
-  uiBtn.classList.remove("active");
-  csdBtn.classList.remove("active");
-  ourWorkCards.forEach(card => {
-    card.classList.remove("none");
-    card.classList.remove("active");
-  });
+  filterCards('all');
 });
-
-csdBtn.addEventListener('click', () => {
-  allBtn.classList.remove("active");
-  uiBtn.classList.remove("active");
-  csdBtn.classList.add("active");
-  ourWorkCards.forEach(card => {
-    card.classList.remove("none");
-    card.classList.remove("active");
-  });
-  uiCards.forEach(card => {
-    card.classList.add("none");
-  });
-  csdCards.forEach(card => {
-    card.classList.add("active");
-  });
-});
-
-uiBtn.addEventListener('click', () => {
-  uiBtn.classList.add("active");
-  allBtn.classList.remove("active");
-  csdBtn.classList.remove("active");
-  ourWorkCards.forEach(card => {
-    card.classList.remove("none");
-    card.classList.remove("active");
-  });
-  uiCards.forEach(card => {
-    card.classList.add("active");
-  });
-  csdCards.forEach(card => {
-    card.classList.add("none");
-  });
-});
-

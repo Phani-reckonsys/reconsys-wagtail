@@ -1,0 +1,11 @@
+{%load wagtailimages_tags%}
+
+{% image self.image max-3000x1500 class="custom-image"  %}
+
+<style>
+.custom-image{
+    margin-bottom: 3rem;
+    height: fit-content;
+    width: {{self.width}}%;
+}
+</style>
