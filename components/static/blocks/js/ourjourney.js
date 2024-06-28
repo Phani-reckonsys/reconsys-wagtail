@@ -23,8 +23,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       markers: false,
     },
   });
-});
-const sliderMarker = document.querySelector(".slider-marker");
+  const sliderMarker = document.querySelector(".slider-marker");
 const ourjourneyWrapper2 = document.querySelector(".our-journey-card-wrapper");
 gsap.to(sliderMarker, {
   width: "100%",
@@ -45,4 +44,7 @@ gsap.to(flag, {
     end: "+=3000",
     scrub: 1,
   },
+});
+
+
 });

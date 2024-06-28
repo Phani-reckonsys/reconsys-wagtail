@@ -1,39 +1,65 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Sort country data and populate dropdown
+  // Function to update the dropdown with sorted and filtered data
   function dialCodesData(data) {
+      // Sort the data by country name
       data.sort((a, b) => a.name.localeCompare(b.name));
 
-      const countryDropdown = document.querySelector("#country-code");
+      var countryDropdown = document.querySelector("#country-code");
 
+      // Function to update the dropdown options
       function updateDropdown(filteredData) {
+          // Clear existing options
           countryDropdown.innerHTML = "";
 
-          filteredData.forEach(country => {
-              const option = document.createElement("option");
+          // Add options for filtered countries
+          filteredData.forEach((country) => {
+              var option = document.createElement("option");
               option.value = country.dial_code;
               option.text = `${country.dial_code} ${country.name} ${country.flag}`;
               countryDropdown.add(option);
           });
 
+          // Set the default value to "+91"
           countryDropdown.value = "+91";
       }
 
+      // Initial population of dropdown
       updateDropdown(data);
   }
 
-  // Validate email format
+  // Function to fetch country data
+  function fetchCountryData() {
+      fetch('https://restcountries.com/v3.1/all')
+          .then(response => response.json())
+          .then(data => {
+              const countries = data.map(country => ({
+                  name: country.name.common,
+                  dial_code: country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : ''),
+                  flag: country.flags[0] // Assuming this is the flag URL
+              }));
+              dialCodesData(countries);
+          })
+          .catch(error => {
+              console.error('Error fetching country data:', error);
+          });
+  }
+
+  // Fetch country data when the page loads
+  fetchCountryData();
+
+  // Function to validate email format
   function validateEmail(email) {
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailPattern.test(email);
   }
 
-  // Validate phone number format (example: XXX-XXXXXXX)
+  // Function to validate phone number format
   function validatePhoneNumber(phoneNumber) {
       const phonePattern = /^\d{10}$/;
       return phonePattern.test(phoneNumber);
   }
 
-  // Show error message
+  // Function to show error message
   function showError(field, message) {
       field.classList.add("error");
       const errorElement = field.nextElementSibling;
@@ -41,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
       errorElement.textContent = message;
   }
 
-  // Hide error message
+  // Function to hide error message
   function hideError(field) {
       field.classList.remove("error");
       const errorElement = field.nextElementSibling;
@@ -49,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
       errorElement.textContent = "";
   }
 
-  // Submit contact details
+  // Function to submit contact details
   function submitContactDetails(token) {
       const nameField = document.querySelector("#name");
       const emailField = document.querySelector("#email");
