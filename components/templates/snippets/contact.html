@@ -108,12 +108,3 @@
     <!-- contact and Footer section Ends -->
 
 <script src="{% static 'blocks/js/contactus-min.js' %}"></script>
-
-<script>
-fetch("{% static 'blocks/js/countries.json' %}")
-  .then((response) => response.json())
-  .then((data) => {
-    dialCodesData(data);
-  })
-  .catch((error) => console.error("Error fetching country data:", error));
-</script>

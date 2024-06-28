@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
           filteredData.forEach((country) => {
               var option = document.createElement("option");
               option.value = country.dial_code;
-              option.text = `${country.dial_code} ${country.name} ${country.flag}`;
+              option.text = `${country.dial_code} ${country.name}`;
               countryDropdown.add(option);
           });
 
