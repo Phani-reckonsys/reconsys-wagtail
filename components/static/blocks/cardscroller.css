@@ -5,8 +5,11 @@
   }
 
   .cardscroller-section .cardscroller-header .right{
-    display: flex;
+    display: none;
     gap: 2rem;
+  }
+  .cardscroller-section .cardscroller-header .right.active{
+    display: flex;
   }
   .cardscroller-section .cardscroller-body {
     overflow-x: hidden;

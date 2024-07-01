@@ -18,7 +18,10 @@
                         {{self.content}}
                     </p>
                 </div>
-                <div class="right">
+                <div class="right " 
+                {% if self.include_buttons %}
+                  id = "active"
+                {% endif %}>
                     <div id="cardscroller-left-arrow" class="outline-btn carousal-outline-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
                             <path d="M14 1L2 13.1732L14 23" stroke="#333333" stroke-width="2"/>

@@ -652,6 +652,7 @@ class CardscrollerBlock(StructBlock):
     sidebar_background = CharBlock(classname="", required=False)
     title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
+    include_buttons = BooleanBlock(required=False)
     content = CharBlock(classname="content", required=False)
     container_background = CharBlock(classname="container_background", required=False)
     card = StreamBlock([('servicebasicscard', CustomServicesBasicCard())], required=False)
@@ -668,6 +669,17 @@ class ServicesWhyReckonsysBlock(StructBlock):
 
     class Meta:
         template = "blocks/services_whyreckonsys.html"
+
+#OurProcess Block
+class OurJourneyBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
+    title = CharBlock(classname="title", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
+    content = RichTextBlock(classname="content", required=True)
+    ourprocesscards = StreamBlock([('servicebasiccard', ServicesTextCard())])
+
+    class Meta:
+        template = "blocks/ourprocess.html"
 
 
 class OursuccessBlock(StructBlock):
