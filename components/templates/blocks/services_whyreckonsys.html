@@ -1,4 +1,5 @@
-{%load wagtailimages_tags%} {% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
 <section>
   <div class="sidebar pt-20">
     <h5 class="t-25">{{self.sidebar}}</h5>
@@ -16,7 +17,7 @@
         {% image card.value.icon class="mb-22" max-3000x1500 %}
         <h2 class="mb-12 w-70">{{card.value.number}}</h2>
         <h4 class="mb-14">{{card.value.title}}</h4>
-        <p>{{card.value.content}}</p>
+        <p class="ft-16 o-8">{{card.value.content}}</p>
       </div>
       {% endfor %}
     </div>

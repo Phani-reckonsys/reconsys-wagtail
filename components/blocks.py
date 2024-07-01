@@ -671,7 +671,7 @@ class ServicesWhyReckonsysBlock(StructBlock):
         template = "blocks/services_whyreckonsys.html"
 
 #OurProcess Block
-class OurJourneyBlock(StructBlock):
+class OurProcessBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = RichTextBlock(classname="subtitle", required=True)
@@ -680,7 +680,6 @@ class OurJourneyBlock(StructBlock):
 
     class Meta:
         template = "blocks/ourprocess.html"
-
 
 class OursuccessBlock(StructBlock):
     sidebar = CharBlock(classname="sidetitle", required=False)
