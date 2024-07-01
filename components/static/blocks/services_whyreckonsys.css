@@ -1,19 +1,24 @@
 .whyreckonsys-section .cards-wrapper {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 7rem;
   }
   .whyreckonsys-section .cards-wrapper .whyreckonsys-card {
-    width: 38rem;
+    width: 43rem;
+    margin-bottom: 1.6rem;
   }
   .whyreckonsys-section .cards-wrapper .whyreckonsys-card img {
     width: 100%;
     height: auto;
   }
-  .whyreckonsys-section .cards-wrapper .whyreckonsys-card h4, .whyreckonsys-section  .cards-wrapper .whyreckonsys-card p {
-    padding-left: 2rem;
+
+  .whyreckonsys-section .cards-wrapper .whyreckonsys-card h2{
+    background: var(--rec---gradint, linear-gradient(180deg, #EF7160 0%, #941209 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+  
 
 
   @media only screen and (max-width: 992px) {
