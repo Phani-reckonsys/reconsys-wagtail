@@ -675,7 +675,7 @@ class OurProcessBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = RichTextBlock(classname="subtitle", required=True)
-    content = RichTextBlock(classname="content", required=True)
+    content = CharBlock(classname="content", required=True)
     ourprocesscards = StreamBlock([('servicebasiccard', ServicesTextCard())])
 
     class Meta:
