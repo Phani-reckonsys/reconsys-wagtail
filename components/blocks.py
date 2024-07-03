@@ -707,3 +707,6 @@ class OurmethodologiesBlock(StructBlock):
     content = CharBlock(classname="content", required=False)
     selectors = StreamBlock([("imagetitlecombo", ImageTitleCombo())], required=False)
     contentdisplay = StreamBlock([("imagetitlecombo", ImageTitleCombo())], required=False)
+
+    class Meta:
+        template = "blocks/ourmethodologies.html"
