@@ -698,3 +698,12 @@ class OursuccessBlock(StructBlock):
 
     class Meta:
         template = "blocks/oursuccess.html"
+
+
+class OurmethodologiesBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", reduired=False)
+    title = CharBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    content = CharBlock(classname="content", required=False)
+    selectors = StreamBlock([("imagetitlecombo", ImageTitleCombo())], required=False)
+    contentdisplay = StreamBlock([("imagetitlecombo", ImageTitleCombo())], required=False)

@@ -1,0 +1,23 @@
+{%load wagtailimages_tags%} {% load wagtailcore_tags %}
+<section>
+  <div class="sidebar pt-20">
+    <h5 class="t-25">{{self.sidebar}}</h5>
+  </div>
+  <!-- Engagmnt model section starts -->
+  <div class="oursuccess-section pl-54 pr-54 pt-100 pb-180 w-container">
+    <div class="oursuccess">
+      <div class="left">
+        {% for selector in self.selectors %}
+            <div class="selector-group">
+                {% image selector.value.image class="sector-icon" max-300x150%}
+                <h4>{{selector.value.title}}</h4>
+            </div>
+        {% endfor %}
+      </div>
+      <div class="right">
+
+      </div>
+    </div>
+  </div>
+  <!-- Engagmnt model section End -->
+</section>
