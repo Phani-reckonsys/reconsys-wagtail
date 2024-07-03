@@ -652,6 +652,7 @@ class CardscrollerBlock(StructBlock):
     sidebar_background = CharBlock(classname="", required=False)
     title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
+    include_buttons = BooleanBlock(required=False)
     content = CharBlock(classname="content", required=False)
     container_background = CharBlock(classname="container_background", required=False)
     card = StreamBlock([('servicebasicscard', CustomServicesBasicCard())], required=False)
@@ -669,8 +670,40 @@ class ServicesWhyReckonsysBlock(StructBlock):
     class Meta:
         template = "blocks/services_whyreckonsys.html"
 
+#OurProcess Block
+class OurProcessBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
+    title = CharBlock(classname="title", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
+    content = CharBlock(classname="content", required=True)
+    ourprocesscards = StreamBlock([('servicebasiccard', ServicesTextCard())])
+
+    class Meta:
+        template = "blocks/ourprocess.html"
 
 class OursuccessBlock(StructBlock):
     sidebar = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
+    halfcardtitle1 = CharBlock(classname="halfcardtitle1", required=False)
+    data1 = CharBlock(classname="data1", required=False)
+    halfcardtitle2 = CharBlock(classname="halfcardtitle", required=False)
+    data2 = CharBlock(classname="data2", required=False)
+    cardimage = ImageChooserBlock(required=False)
+    fullcardtitle1 = CharBlock(classname="fullcardtitle1", required=False)
+    data3 = CharBlock(classname="data3", required=False)
+    btn_title = CharBlock(classname="btntitle", required=False)
+    pagelink = PageChooserBlock(can_choose_root= True, required=False)
+
+
+    class Meta:
+        template = "blocks/oursuccess.html"
+
+
+class OurmethodologiesBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", reduired=False)
+    title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
+    content = CharBlock(classname="content", required=False)
+    selectors = StreamBlock([("imagetitlecombo", ImageTitleCombo())], required=False)
+    contentdisplay = StreamBlock([("imagetitlecombo", ImageTitleCombo())], required=False)

@@ -5,8 +5,11 @@
   }
 
   .cardscroller-section .cardscroller-header .right{
-    display: flex;
+    display: none;
     gap: 2rem;
+  }
+  .cardscroller-section .cardscroller-header .right.active{
+    display: flex;
   }
   .cardscroller-section .cardscroller-body {
     overflow-x: hidden;
@@ -19,8 +22,6 @@
   .cardscroller-section .cardscroller-body .engagement-cards-wrapper .cardscroller-card {
     width: 38rem;
   }
-
-
 
   @media only screen and (max-width: 992px) {
     
