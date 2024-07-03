@@ -1,11 +1,14 @@
 {%load wagtailimages_tags%} {% load wagtailcore_tags %}
 <section>
   <div class="sidebar pt-20">
-    <h5 class="t-25">{{self.sidebar}}</h5>
+    <h5 class="t-25">{{self.sidetitle}}</h5>
   </div>
   <!-- Engagmnt model section starts -->
-  <div class="oursuccess-section pl-54 pr-54 pt-100 pb-180 w-container">
-    <div class="oursuccess">
+  <div class="our-methodologies-section pl-54 pr-54 pt-100 pb-180 w-container">
+    <h3 class="lh-110 mb-20 ">{{self.title}}</h3>
+    <h2 class="lh-125 mb-32 w-50">{{self.subtitle}}</h2>
+    <p class="w-70">{{self.content}}</p>
+    <div class="our-methodologies">
       <div class="left">
         {% for selector in self.selectors %}
             <div class="selector-group">
@@ -15,7 +18,12 @@
         {% endfor %}
       </div>
       <div class="right">
-
+        {% for display in self.contentdisplay %}
+            <div class="contentdisplay">
+                {% image display.value.image class="display-image" max-3000x1500 %}
+                <p>{{display.value.title}}</p>
+            </div>
+        {% endfor %}
       </div>
     </div>
   </div>
