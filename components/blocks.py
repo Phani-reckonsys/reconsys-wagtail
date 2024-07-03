@@ -684,4 +684,17 @@ class OurProcessBlock(StructBlock):
 class OursuccessBlock(StructBlock):
     sidebar = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
-    subtitle = CharBlock(classname="subtitle", required=False)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
+    halfcardtitle1 = CharBlock(classname="halfcardtitle1", required=False)
+    data1 = CharBlock(classname="data1", required=False)
+    halfcardtitle2 = CharBlock(classname="halfcardtitle", required=False)
+    data2 = CharBlock(classname="data2", required=False)
+    cardimage = ImageChooserBlock(required=False)
+    fullcardtitle1 = CharBlock(classname="fullcardtitle1", required=False)
+    data3 = CharBlock(classname="data3", required=False)
+    btn_title = CharBlock(classname="btntitle", required=False)
+    pagelink = PageChooserBlock(can_choose_root= True, required=False)
+
+
+    class Meta:
+        template = "blocks/oursuccess.html"
