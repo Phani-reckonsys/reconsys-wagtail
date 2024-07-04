@@ -1,5 +1,6 @@
  {%load wagtailimages_tags%}
  {% load wagtailcore_tags %}
+ {% load static %}
 <section>
         <div class="sidebar pt-20" style="background-color:#{{self.sidebar_background}}">
             <h5 class="t-20">{{self.sidetitle}}</h5>
@@ -52,3 +53,5 @@
         </div>
         <!-- Engagmnt model section End -->
     </section>
+
+        <script src="{% static 'blocks/js/cardscroller-min.js' %}"></script>
