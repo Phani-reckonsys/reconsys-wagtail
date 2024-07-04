@@ -1,20 +1,24 @@
 {% load wagtailimages_tags %}
 
 <section>
-    <div class="sidebar">
-        <h5 class="t-15">{{self.sidetitle}}</h5>
+    <div class="sidebar pt-20" style="background-color: #{{self.backgroundcolor}}">
+        <h5 class="t-20" style="color: #{{self.maintextcolor}}">{{self.sidetitle}}</h5>
     </div>
-    <div class="collaborate-section pl-54 pr-54 w-container">
-        <div class="collaborate-wrapper">
+    <div class="collaborate-section pl-54 pt-100 pr-54 w-container" style="background-color: #{{self.backgroundcolor}}">
+        <div class="collaborate-wrapper" >
             <div class="image-wrapper">
                 {% image self.image class="w-100" max-3000x1500 %}
             </div>
             <div class="content">
                 <div class="dash-decor"></div>
-                <h2 class="mb-40">{{self.title}}</h2>
+                <h2 class="mb-40" style="color: #{{self.maintextcolor}}">{{self.title}}</h2>
                 {% for button in self.button %}
                     {{button}}
                 {% endfor %}
+                <svg class="decor-ring" width="168" height="271" viewBox="0 0 168 271" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M271 135.5C271 210.335 210.335 271 135.5 271C60.6654 271 0 210.335 0 135.5C0 60.6654 60.6654 0 135.5 0C210.335 0 271 60.6654 271 135.5ZM66.4344 135.5C66.4344 173.644 97.3561 204.566 135.5 204.566C173.644 204.566 204.566 173.644 204.566 135.5C204.566 97.3561 173.644 66.4344 135.5 66.4344C97.3561 66.4344 66.4344 97.3561 66.4344 135.5Z" fill="#F6F6F6"/>
+                </svg>
+
             </div>
         </div>
     </div>

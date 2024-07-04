@@ -17,6 +17,13 @@
 
 .collaborate-wrapper .content{
     width: 50%;
+    position: relative;
+}
+
+.collaborate-wrapper .content .decor-ring{
+    position: absolute;
+    bottom: 0;
+    right: -5.4rem;
 }
 
 .collaborate-wrapper .content .dash-decor{
