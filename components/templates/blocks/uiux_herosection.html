@@ -2,31 +2,30 @@
 
 <!-- Herosection starts -->
 <section>
-  <div class="sidebar">
-    <h5 class="t-30">{{self.sidetitle}}</h5>
+  <div class="sidebar theme-darkgreen">
+    <h5 class="t-25 color-white">{{self.sidetitle}}</h5>
   </div>
 
   <div class="herosection-wrapper pl-54 pr-54 w-container">
     <div class="herosection-height">
       <div class="row herosection active">
         <div class="herosection-content">
-        <h6 class="mb-24 breadcrump-services fw-500 elementanim">
-          <a href="{{self.services_url.get_url}}"><h6>Services</h6></a>
+        <h6 class="mb-24 breadcrump-services fw-500">
+          <a href="{{self.services_url.get_url}}"><h6 class="color-white">Services</h6></a>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M9.51562 7.03479L14.4811 12.0003L9.51562 16.9658" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.51562 7.03479L14.4811 12.0003L9.51562 16.9658" stroke="#fff" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
           </svg> 
-          <span class="o-4">{{self.sidetitle}}</span>
+          <span class="o-4 color-white">{{self.sidetitle}}</span>
         </h6>
-          <h1 class="mb-20 ft-20 lh-110 category-title elementanim">
+          <h1 class="mb-20 ft-20 lh-110 category-title color-white">
             {{self.title}}
           </h1>
-          <h1 class="mb-36 hero w-95 title elementanim">{{self.subtitle}}</h1>
+          <h1 class="mb-36 hero w-70 title color-white">{{self.subtitle}}</h1>
           <a
                 href="{% if self.include_url_button %}{{self.btn_url_link}}{% else %}{{self.btn_link.get_url}}{% endif %}"
                 class="primary-btn elementanim"
                 >
-            {{self.btn_title}} {% comment %} {% image self.btn_icon
-            max-300x200%} {% endcomment %}
+            {{self.btn_title}}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"

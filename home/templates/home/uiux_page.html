@@ -6,11 +6,11 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'snippets/navbar-min.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/navbargreen-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/welcomebackmodel-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/footer-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/contact-min.css' %}">
-<link rel="stylesheet" href="{% static 'blocks/services_herosection-min.css' %}">
+<link rel="stylesheet" href="{% static 'blocks/uiux_herosection-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/servicesoffered-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/services_datasection-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/services_whychooseus-min.css' %}">
@@ -30,7 +30,7 @@
 {% endblock extra_css %}
 
 {% block content %}
-    {% navbar %}
+    {% navbargreen %}
     {{page.body}}
     {% contact %}
     {% footer %}

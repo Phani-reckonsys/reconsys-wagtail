@@ -720,7 +720,7 @@ class UiuxHerosectionBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     services_url = PageChooserBlock(required = False)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     btn_title = CharBlock(classname = "title", required = True)
     btn_icon = ImageChooserBlock(required = False)
     btn_link = PageChooserBlock(can_choose_root= True)
