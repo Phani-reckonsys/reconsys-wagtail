@@ -714,3 +714,25 @@ class OurmethodologiesBlock(StructBlock):
 
     class Meta:
         template = "blocks/ourmethodologies.html"
+
+
+class UiuxHerosectionBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
+    title = CharBlock(classname="title", required=True)
+    services_url = PageChooserBlock(required = False)
+    subtitle = CharBlock(classname="subtitle", required=True)
+    btn_title = CharBlock(classname = "title", required = True)
+    btn_icon = ImageChooserBlock(required = False)
+    btn_link = PageChooserBlock(can_choose_root= True)
+    btn_url_link = URLBlock(classname="link", required=False)
+    include_fullimage = BooleanBlock(required=False)
+    include_url_button = BooleanBlock(required = False)
+    image_cover = ImageChooserBlock(required = False)
+    image_decor = ImageChooserBlock(required = False)
+    include_companies = BooleanBlock(required=False)
+    company_image = StreamBlock([('image', Image())], required=False)
+    
+
+    class Meta:
+        icon = "title"
+        template = "blocks/uiux_herosection.html"
