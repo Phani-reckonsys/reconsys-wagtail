@@ -1,4 +1,7 @@
-{%load wagtailimages_tags%} {% load wagtailcore_tags %}
+{% load static %}
+{% load wagtailimages_tags %} 
+{% load wagtailcore_tags %}
+
 <section>
   <div class="sidebar pt-20">
     <h5 class="t-25">{{self.sidetitle}}</h5>
@@ -10,12 +13,14 @@
     <p class="w-70">{{self.content}}</p>
     <div class="our-methodologies">
       <div class="left">
-        {% for selector in self.selectors %}
-            <div class="selector-group">
-                {% image selector.value.image class="sector-icon" max-300x150%}
-                <h4>{{selector.value.title}}</h4>
-            </div>
-        {% endfor %}
+        <div class="selector-group-container">
+          {% for selector in self.selectors %}
+              <div class="selector-group">
+                  {% image selector.value.image class="sector-icon" max-300x150%}
+                  <h4>{{selector.value.title}}</h4>
+              </div>
+          {% endfor %}
+        </div>
       </div>
       <div class="right">
         {% for display in self.contentdisplay %}
@@ -29,3 +34,5 @@
   </div>
   <!-- Engagmnt model section End -->
 </section>
+
+<script src="{% static 'blocks/js/ourmethodologies-min.js' %}"></script>

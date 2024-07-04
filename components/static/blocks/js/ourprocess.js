@@ -1,18 +1,15 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-    console.log("test");
-    gsap.registerPlugin(ScrollTrigger);
-  
-    const ourjourneyCards = gsap.utils.toArray(".our-process-card");
-    const ourjourneyCardsWidth = gsap.utils.toArray(".our-process-card-width");
-    const ourjourneyWrapper = document.querySelector(".our-process-card-wrapper");
-    const ourjourneyWidth = document.querySelector(".our-process-card-width");
-  
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const ourjourneyCards = gsap.utils.toArray(".our-process-card");
+  const ourjourneyCardsWidth = gsap.utils.toArray(".our-process-card-width");
+  const ourjourneyWrapper = document.querySelector(".our-process-card-wrapper");
+  const ourjourneyWidth = document.querySelector(".our-process-card-width");
+
+  if (ourjourneyWrapper && ourjourneyWidth) {
     const { scrollWidth, clientWidth } = ourjourneyWrapper;
-    console.log(scrollWidth);
-    console.log(clientWidth);
-  
     const scrollRatio = Math.max((scrollWidth - clientWidth) / clientWidth, 0);
-    console.log(scrollRatio);
+
     gsap.to(ourjourneyWidth, {
       x: -scrollWidth + clientWidth,
       scrollTrigger: {
@@ -23,29 +20,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
         markers: false,
       },
     });
-    const sliderMarker = document.querySelector(".slider-marker");
-  const ourjourneyWrapper2 = document.querySelector(".our-process-card-wrapper");
-  gsap.to(sliderMarker, {
-    width: "100%",
-    scrollTrigger: {
-      trigger: ourjourneyWrapper2,
-      start: "top left",
-      end: "+=3000",
-      scrub: 1,
-    },
-  });
+  }
+
+  const sliderMarker = document.querySelector(".slider-marker");
+  if (sliderMarker && ourjourneyWrapper) {
+    gsap.to(sliderMarker, {
+      width: "100%",
+      scrollTrigger: {
+        trigger: ourjourneyWrapper,
+        start: "top left",
+        end: "+=3000",
+        scrub: 1,
+      },
+    });
+  }
+
   const flag = document.querySelector(".indicator-flag");
-  const ourjourneyWrapper3 = document.querySelector(".our-process-card-wrapper");
-  gsap.to(flag, {
-    left: "98%",
-    scrollTrigger: {
-      trigger: ourjourneyWrapper3,
-      start: "top left",
-      end: "+=3000",
-      scrub: 1,
-    },
-  });
-  
-  
-  });
-  
+  if (flag && ourjourneyWrapper) {
+    gsap.to(flag, {
+      left: "98%",
+      scrollTrigger: {
+        trigger: ourjourneyWrapper,
+        start: "top left",
+        end: "+=3000",
+        scrub: 1,
+      },
+    });
+  }
+});
