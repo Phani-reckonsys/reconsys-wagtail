@@ -661,6 +661,8 @@ class CardscrollerBlock(StructBlock):
         template = "blocks/cardscroller.html"
 
 class ServicesWhyReckonsysBlock(StructBlock):
+    backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
+    maintextcolor = CharBlock(classname="maintextcolor", required=False)
     sidebar = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)

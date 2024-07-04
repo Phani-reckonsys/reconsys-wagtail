@@ -1,3 +1,19 @@
+.whyreckonsys-section{
+  display: flex;
+}
+
+.decor-rectangles-container {
+  height: 100%;
+}
+
+.decor-rectangles {
+  position: sticky;
+  top: 5rem;
+  width: 16rem; 
+  height: 31rem;
+  z-index: 10;
+}
+
 .whyreckonsys-section .cards-wrapper {
     display: flex;
     flex-wrap: wrap;
