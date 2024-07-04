@@ -170,6 +170,13 @@ class CustomServicesBasicCard(StructBlock):
 class MultipleBasicImageTitle(StructBlock):
     title = CharBlock(classname="title", required=False)
     tooltip = StreamBlock([('imagetitlecombo', ImageTitleCombo())], required=False)
+
+class Uiuxparallaxcard(StructBlock):
+    title = CharBlock(classname = "title", required=False)
+    subtitle = CharBlock(classname = "title", required=False)
+    number_image = ImageChooserBlock(required=False)
+    main_image = ImageChooserBlock(required=False)
+    decor_image = ImageChooserBlock(required=False)
 #----------Basic Blocks Ends------------------
 
 
@@ -736,3 +743,13 @@ class UiuxHerosectionBlock(StructBlock):
     class Meta:
         icon = "title"
         template = "blocks/uiux_herosection.html"
+
+class UiuxWedoBlock(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
+    content = CharBlock(classname="content", required=False)
+    card = StreamBlock([('uiuxparallaxcard', Uiuxparallaxcard())])
+
+    class Meta:
+        icon = "title"
+        template = "blocks/uiux_wedo.html"
