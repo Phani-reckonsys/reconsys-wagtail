@@ -33,7 +33,12 @@
           </div>
         </div>
         <div class="cards-container">
-          
+          {% for point in self.points %}
+            <div class="point">
+                {% image point.value.image max-300x150 class="icon"%}
+                <h4 class="color-white">{{point.value.title}}</h4>
+            </div>
+          {% endfor %}
         </div>
       </div>
     </section>
