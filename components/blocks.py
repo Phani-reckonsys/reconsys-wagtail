@@ -770,3 +770,10 @@ class UiuxworkBlock(StructBlock):
     
     class Meta:
         template = "blocks/uiux_work.html"
+
+class UiuxtestimonialBlock(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    testimonialscard = StreamBlock([('testimonialcard', TitleGroupBasicBlock())])
+
+    class Meta:
+        template = "blocks/uiux_testimonial.html"
