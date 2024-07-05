@@ -3,14 +3,14 @@
 {% load wagtailcore_tags%}
  
  <!-- Case Studies section starts -->
-    <section class="case-studies-section">
+    <section class="uiux-success-section">
       <div class="sidebar">
         <h5 class=" spaced-word t-15">{{self.sidetitle}}</h5>
       </div>
       <div
-        class="case-studies-main pl-54 pr-54 pt-100 pb-180 w-container"
+        class="uiux-success-main pl-54 pr-54 pt-100 pb-180 w-container"
       >
-        <div class="case-studies-header d-flex align-items-center mb-54 row">
+        <div class="uiux-success-header d-flex align-items-center mb-54 row">
           <div class="left col-md-10">
             <h4 class="mb-20 ft-20 lh-110 elementanim">
             {{self.title}}
@@ -36,7 +36,7 @@
           <div class="cards-wrapper">
           {% for casestudies_card in self.card %}
             <div class="case-study-card elementanim">
-              <div class="content" style='background-color: #{{casestudies_card.value.bgcolor}};'>
+              <div class="content" style='background-color: #{{casestudies_card.value.bgcolor}}'>
                 <h3 class="color-white mb-27 ft-32 w-80 lh-115">
                   {{casestudies_card.value.title}}
                 </h3>

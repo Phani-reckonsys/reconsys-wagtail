@@ -753,3 +753,12 @@ class UiuxWedoBlock(StructBlock):
     class Meta:
         icon = "title"
         template = "blocks/uiux_wedo.html"
+
+class UiuxsuccessBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    content = RichTextBlock(classname = "content", required=False)
+    card = StreamBlock([('casestudycardbasic', CasestudyCardBasic())], required=False)
+    
+    class Meta:
+        template = "blocks/uiux_success.html"
