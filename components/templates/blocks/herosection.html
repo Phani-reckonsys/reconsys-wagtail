@@ -24,15 +24,15 @@
       </div>
       <div class="geometric-shapes">
       {% if content.value.include_fullimage %}
-      <figure class="geometric-connection custom-hero-fullimage elementanim">
+      <figure class="geometric-connection custom-hero-fullimage">
       {{content.value.image_cover|safe}}
       </figure>
         {% comment %} {% image content.value.image_cover max-3000x1500 class="geometric-connection custom-hero-fullimage elementanim" %} {% endcomment %}
       {% else %}
-      <figure class="geometric-connection elementanim">
+      <figure class="geometric-connection">
       {{content.value.image_cover|safe}}
       </figure>
-      <figure class="geometric-wave elementanim">
+      <figure class="geometric-wave">
       {{content.value.image_decor|safe}}
       </figure>
         {% comment %} {% image content.value.image_cover max-3000x1500 class="geometric-connection elementanim" loading="lazy"%}

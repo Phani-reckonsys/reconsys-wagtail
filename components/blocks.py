@@ -60,8 +60,6 @@ class HeroContentBasicBlock(StructBlock):
     btn_url_link = URLBlock(classname="link", required=False)
     include_fullimage = BooleanBlock(required=False)
     include_url_button = BooleanBlock(required = False)
-    # image_cover = ImageChooserBlock(required = False)
-    # image_decor = ImageChooserBlock(required = False)
     image_cover = CharBlock(classname = "imagecover", required=False)
     image_decor = CharBlock(classname = "imagedecor", required=False)
 
@@ -174,9 +172,9 @@ class MultipleBasicImageTitle(StructBlock):
 class Uiuxparallaxcard(StructBlock):
     title = CharBlock(classname = "title", required=False)
     subtitle = CharBlock(classname = "title", required=False)
-    number_image = ImageChooserBlock(required=False)
+    number_image = CharBlock(classname="numberimage",required=False)
     main_image = ImageChooserBlock(required=False)
-    decor_image = ImageChooserBlock(required=False)
+    decor_image = CharBlock(classname="decorimage", required=False)
 #----------Basic Blocks Ends------------------
 
 
@@ -734,8 +732,8 @@ class UiuxHerosectionBlock(StructBlock):
     btn_url_link = URLBlock(classname="link", required=False)
     include_fullimage = BooleanBlock(required=False)
     include_url_button = BooleanBlock(required = False)
-    image_cover = ImageChooserBlock(required = False)
-    image_decor = ImageChooserBlock(required = False)
+    image_cover = CharBlock(classname = "imagecover", required=False)
+    image_decor = CharBlock(classname = "imagedecor", required=False)
     include_companies = BooleanBlock(required=False)
     company_image = StreamBlock([('image', Image())], required=False)
     
