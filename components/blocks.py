@@ -762,3 +762,11 @@ class UiuxsuccessBlock(StructBlock):
     
     class Meta:
         template = "blocks/uiux_success.html"
+
+class UiuxworkBlock(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    content = RichTextBlock(classname = "content", required=False)
+    point = StreamBlock([('imagetitlecombo', ImageTitleCombo())], required=False)
+    
+    class Meta:
+        template = "blocks/uiux_work.html"

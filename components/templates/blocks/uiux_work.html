@@ -1,0 +1,40 @@
+{% load static %}
+{% load wagtailimages_tags%}
+{% load wagtailcore_tags%}
+ 
+ <!-- Case Studies section starts -->
+    <section class="case-studies-section">
+      <div class="sidebar">
+        <h5 class=" spaced-word t-15">{{self.sidetitle}}</h5>
+      </div>
+      <div
+        class="case-studies-main pl-54 pr-54 pt-100 pb-180 w-container"
+      >
+        <div class="case-studies-header d-flex align-items-center mb-54 row">
+          <div class="left col-md-10">
+            <h4 class="mb-20 ft-20 lh-110 elementanim">
+            {{self.title}}
+            </h4>
+            <h2 class="w-90 elementanim">
+             {{self.content}}
+            </h2>
+          </div>
+          <div class="right d-flex col-md-2">
+          <div id="caseStudies-left-arrow" class="outline-btn carousal-outline-btn caseStudies-left-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
+                <path d="M14 1L2 13.1732L14 23" stroke="#333" stroke-width="2"/>
+              </svg>
+            </div>
+            <div id="caseStudies-right-arrow" class="outline-btn carousal-outline-btn ml-12 caseStudies-right-arrow">
+             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
+                <path d="M1 1L13 13.1732L1 23" stroke="#333" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="cards-container">
+          
+        </div>
+      </div>
+    </section>
+    <!-- Case Studies section Ends -->
