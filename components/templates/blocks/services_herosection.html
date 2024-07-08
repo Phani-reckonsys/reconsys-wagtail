@@ -41,14 +41,14 @@
         <div class="geometric-shapes">
           {% if self.include_fullimage %} 
             <figure class="geometric-connection custom-hero-fullimage">
-              {{content.value.image_cover|safe}}
+              {{self.image_cover|safe}}
             </figure>         
           {% else %} 
             <figure class="geometric-connection">
-              {{content.value.image_cover|safe}}
+              {{self.image_cover|safe}}
             </figure>
             <figure class="geometric-wave">
-              {{content.value.image_decor|safe}}
+              {{self.image_decor|safe}}
             </figure> 
           {% endif %}
         </div>
