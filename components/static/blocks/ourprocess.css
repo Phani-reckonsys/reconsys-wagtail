@@ -13,7 +13,7 @@
   display: flex;
   gap: 6rem;
   margin-bottom: 4rem;
-  padding-top: 38vh;
+  padding-top: 42vh;
 }
 
 .our-process-main
@@ -72,7 +72,7 @@
   .our-process-card-wrapper
   .our-process-card
   h2 {
-  margin-bottom: 9rem;
+  margin-bottom: 7rem;
   background: var(
     --rec---gradint,
     linear-gradient(180deg, #ef7160 0%, #941209 100%)
