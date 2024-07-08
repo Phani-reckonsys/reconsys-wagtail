@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     checks.forEach((check) => {
       if (check.classList.contains("active")) {
-        console.log("working");
   
         let sectorCardInterval;
         const sectorCardWrapper = document.querySelector(".cardscroller-body");
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
           // Adding [sectorCards.length] because of js modulo giving negative.
           index = (index + sectorCards.length) % sectorCards.length;
           currentSectorCardIndex = index;
-  
           const scrollLeftValue =
             sectorCards[index].offsetLeft - sectorCardWrapper.offsetLeft;
   
@@ -35,15 +33,17 @@ document.addEventListener("DOMContentLoaded", () => {
   
         startSectorCardInterval();
   
-        const sectorCardsLeftButton = document.querySelector(".carousal-outline-btn-left");
-        if (sectorCardsLeftButton) {
-          sectorCardsLeftButton.addEventListener("click", () => {
-            scrollToSectorCard(currentSectorCardIndex - 1);
-            stopSectorCardInterval();
-            startSectorCardInterval();
-          });
-        }
-  
+        const sectorCardsLeftButtons = document.querySelectorAll(".carousal-outline-btn-left");
+        sectorCardsLeftButtons.forEach((sectorCardsLeftButton) => {
+            if (sectorCardsLeftButton) {
+            sectorCardsLeftButton.addEventListener("click", () => {
+                scrollToSectorCard(currentSectorCardIndex - 1);
+                stopSectorCardInterval();
+                startSectorCardInterval();
+            });
+            }
+        })
+        
         const sectorCardsRightButton = document.querySelector(".carousal-outline-btn-right");
         if (sectorCardsRightButton) {
           sectorCardsRightButton.addEventListener("click", () => {
