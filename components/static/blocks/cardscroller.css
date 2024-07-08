@@ -8,7 +8,7 @@
     display: none;
     gap: 2rem;
   }
-  .cardscroller-section .cardscroller-header .right#active{
+  .cardscroller-section .cardscroller-header .right.active{
     display: flex;
   }
   .cardscroller-section .cardscroller-body {
