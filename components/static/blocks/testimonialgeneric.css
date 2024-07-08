@@ -12,8 +12,10 @@
   }
   .testimonialgeneric-section .testimonial-wrapper .geometric-image {
     position: absolute;
-    top: 16rem;
-    right: 20rem;
+    top: 11rem;
+    right: 10rem;
+    width: 12rem;
+    height: fit-content;
   }
   .testimonialgeneric-section .testimonial-wrapper .left {
     flex-basis: 35%;

@@ -558,8 +558,8 @@ class ServicesHeroSectionBlock(StructBlock):
     btn_url_link = URLBlock(classname="link", required=False)
     include_fullimage = BooleanBlock(required=False)
     include_url_button = BooleanBlock(required = False)
-    image_cover = ImageChooserBlock(required = False)
-    image_decor = ImageChooserBlock(required = False)
+    image_cover = CharBlock(classname = "imagecover", required=False)
+    image_decor = CharBlock(classname = "imagedecor", required=False)
     include_companies = BooleanBlock(required=False)
     company_image = StreamBlock([('image', Image())], required=False)
     
