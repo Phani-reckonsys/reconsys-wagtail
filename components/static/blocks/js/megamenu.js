@@ -1,5 +1,8 @@
+
+document.addEventListener("DOMContentLoaded", function () {
 // service mega menu interactivity part starts
 const servicebtn = document.getElementsByClassName("navitems-links")[1];
+console.log(servicebtn);
 const serviceModal = document.getElementById("services-modal");
 const closeModal = document.getElementById("close-btn");
 
@@ -14,3 +17,4 @@ closeModal.addEventListener("click", (event) => {
     serviceModal.style.transform = "translateY(-100%)";
 });
 //service mega menu interactivity part ends
+})
