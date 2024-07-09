@@ -97,8 +97,20 @@ class NavItemGrey(Orderable, models.Model):
     navbar = ParentalKey(NavbarGrey, on_delete = models.CASCADE, related_name="navitemsgrey")
     panels = [FieldPanel("name"), PageChooserPanel("link")] 
 
-# @register_snippet
-# class ServicesMegamenu(ClusterableModel):
+@register_snippet
+class Servicesmegamenu(ClusterableModel):    
+    service_page_text = models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
+    service_page_link = models.ForeignKey("wagtailcore.page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
+    panels = [InlinePanel('servicesmenuitems', heading="servicesmegaitems"), FieldPanel("service_page_text"), FieldPanel("service_page_link"), FieldPanel("image")]
+
+class ServicesMenuItems(Orderable, models.Model):
+    name = models.CharField(max_length = 255, blank=True, help_text="Navigation Link")
+    link = models.ForeignKey("wagtailcore.Page", null=True, help_text = "page link", on_delete = models.SET_NULL)
+
+    megamenu = ParentalKey(Servicesmegamenu, on_delete=models.CASCADE, related_name="servicesmenuitems")
+    panels = [FieldPanel("name"), PageChooserPanel("link")]
 
 @register_snippet
 class Welcomebackmodel(ClusterableModel):

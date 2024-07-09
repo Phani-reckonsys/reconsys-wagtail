@@ -1,5 +1,5 @@
 from django import template
-from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey, Welcomebackmodel
+from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey, Welcomebackmodel, Servicesmegamenu
 
 register = template.Library()
 # ...
@@ -62,4 +62,15 @@ def welcomebackmodel(context):
     return{
         'welcomebackmodel': Welcomebackmodel.objects.first(),
         'request': context['request'],
+    }
+
+
+@register.inclusion_tag('snippets/servicesmegamenu.html', takes_context=True)
+def servicesmegamenu(context):
+    servicesmegamenu = Servicesmegamenu.objects.first()
+    return{
+        'servicesmegamenu': Servicesmegamenu.objects.first(),
+        'servicesmenuitems': servicesmegamenu.servicesmenuitems.all(),
+        'request': context['request'],
+        'path': context.request.path,
     }
