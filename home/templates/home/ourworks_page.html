@@ -7,6 +7,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'snippets/navbargreen-min.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/services_megamenu.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/footer-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/welcomebackmodel-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/contact-min.css' %}">
@@ -26,6 +27,7 @@
 {% endblock extra_css %}
 
 {% block content %}
+    {% servicesmegamenu %}
     {% navbargreen %}
     {{page.body}}
     {% contact %}

@@ -1,5 +1,7 @@
 .faq-section {
     position: relative;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
   }
   .faq-section .geometric-circles {
     position: absolute;

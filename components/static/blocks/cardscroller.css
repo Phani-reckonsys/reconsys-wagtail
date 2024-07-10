@@ -1,3 +1,7 @@
+.cardscroller-section {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
 .cardscroller-section .cardscroller-header{
     display: flex;
     justify-content: space-between;

@@ -1,10 +1,9 @@
 .testimonialgeneric-section {
-    
-    padding-bottom: 15rem;
+    padding-bottom: 12rem;
   }
   .testimonialgeneric-section .testimonial-wrapper {
     border-top: 1px solid #544e4e;
-    padding-top: 16rem;
+    padding-top: 12rem;
     width: 100%;
     position: relative;
     display: flex;
@@ -12,7 +11,7 @@
   }
   .testimonialgeneric-section .testimonial-wrapper .geometric-image {
     position: absolute;
-    top: 11rem;
+    top: 6rem;
     right: 10rem;
     width: 12rem;
     height: fit-content;

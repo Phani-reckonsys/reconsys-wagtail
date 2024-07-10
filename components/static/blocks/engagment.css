@@ -1,3 +1,7 @@
+.engagment-section{
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
 .engagment-section .engagment-body .engagement-cards-wrapper {
     display: flex;
     justify-content: space-between;

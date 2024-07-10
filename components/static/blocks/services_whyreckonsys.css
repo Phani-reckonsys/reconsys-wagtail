@@ -1,5 +1,7 @@
 .whyreckonsys-section{
   display: flex;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 }
 
 .decor-rectangles-container {
