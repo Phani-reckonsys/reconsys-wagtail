@@ -116,7 +116,7 @@
     </div>
     <div class="navigation">
       {% for navitem in navitemsgreen %}
-      <h5>
+      <h5 class="navitems-links">
         <a
           href="{{navitem.link.get_url}}"
           class="color-white {% if navitem.link.get_url == path %}active{% endif %}"
