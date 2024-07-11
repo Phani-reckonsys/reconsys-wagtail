@@ -174,7 +174,7 @@ class Uiuxparallaxcard(StructBlock):
     subtitle = CharBlock(classname = "title", required=False)
     number_image = CharBlock(classname="numberimage",required=False)
     main_image = ImageChooserBlock(required=False)
-    decor_image = CharBlock(classname="decorimage", required=False)
+    decor_image = ImageChooserBlock(required=False)
 #----------Basic Blocks Ends------------------
 
 
