@@ -599,7 +599,7 @@ class ServicesWhychooseusBlock(StructBlock):
 class ServicesCasestudiesBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
-    content = RichTextBlock(classname = "content", required=False)
+    content = CharBlock(classname = "content", required=False)
     card = StreamBlock([('casestudycardbasic', CasestudyCardBasic())], required=False)
     
     class Meta:
@@ -609,7 +609,7 @@ class FaqBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
     backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
     color = CharBlock(classname="backgroundcolor", required=False)
-    title = RichTextBlock(classname="title", required=False)
+    title = CharBlock(classname="title", required=False)
     faq = StreamBlock([('faqbasicblock', FaqBasicBlock())], required=False)
 
     class Meta:
@@ -685,7 +685,7 @@ class ServicesWhyReckonsysBlock(StructBlock):
 class OurProcessBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = RichTextBlock(classname="subtitle", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
     content = CharBlock(classname="content", required=True)
     ourprocesscards = StreamBlock([('servicebasiccard', ServicesTextCard())])
 
