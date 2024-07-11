@@ -618,7 +618,7 @@ class CollaborateBlock(StructBlock):
     maintextcolor = CharBlock(classname="maintextcolor", required=False)
     sidetitle = CharBlock(classname="sidetitle", required=False)
     image = ImageChooserBlock(required=False)
-    title = RichTextBlock(classname="title", required=False)
+    title = CharBlock(classname="title", required=False)
     button = StreamBlock([('primarybutton', PrimaryButtonBlock())], required=False)
 
     class Meta:
@@ -672,7 +672,7 @@ class ServicesWhyReckonsysBlock(StructBlock):
     maintextcolor = CharBlock(classname="maintextcolor", required=False)
     sidebar = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
-    subtitle = RichTextBlock(classname="subtitle", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
     content = CharBlock(classname="content", required=False)
     card = StreamBlock([('servicebasiccard', ServicesTextCard())], required=False)
 
