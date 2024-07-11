@@ -57,4 +57,3 @@
     // Initial update
     updateLogoBackground();
   }, 2000); // 2 seconds delay
-

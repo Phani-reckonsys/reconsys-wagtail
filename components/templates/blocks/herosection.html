@@ -75,6 +75,7 @@
 
 <script>
   let herosectionTitleCount = {{self.content | length}};
+  if(herosectionTitleCount > 1){
   const categoryHeadings = document.querySelectorAll(".herosection");
   const headingIndicator = document.querySelectorAll(".hero-carousel-indicator-group > *");
 
@@ -112,5 +113,7 @@
   }
 
   setActiveHeading(currentHeading);
+
+  }
 </script> 
 

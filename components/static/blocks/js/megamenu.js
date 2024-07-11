@@ -1,4 +1,5 @@
 // service mega menu interactivity part starts
+
 const servicebtn = document.getElementsByClassName("navitems-links")[1];
 console.log(servicebtn);
 const serviceModal = document.getElementById("services-modal");
