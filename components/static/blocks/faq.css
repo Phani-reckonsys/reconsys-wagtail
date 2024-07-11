@@ -2,11 +2,12 @@
     position: relative;
     padding-top: 12rem;
     padding-bottom: 12rem;
+    padding-left: 16.2rem;
   }
   .faq-section .geometric-circles {
     position: absolute;
     top: 5rem;
-    left: -25rem;
+    left: -10rem;
   }
   .faq-section .faq-wrapper {
     cursor: pointer;
