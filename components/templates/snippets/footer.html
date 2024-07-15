@@ -129,29 +129,29 @@
           </div>
         </div>
         <div class="custom-col-group">
-        <div class="custom-col footer-social">
-          <h3 class="color-white ft-16 mb-22 ft-900"><a href="#"></a>Social</h3>
-          {% for socialitem in socialitems %}
-          <h3 class="color-light-white ft-16 mb-16 f-400">
-            <a
-              href="{{socialitem.url}}"
-              target="_blank"
-              class="color-light-white"
-              >{{socialitem.name}}</a
-            >
-          </h3>
-          {% endfor %}
-        </div>
-        <div class="custom-col footer-nav">
-          <h3 class="color-white ft-16 mb-22 ft-900">Company</h3>
-          {% for footeritem in footeritems %}
-          <a href="{{footeritem.url.get_url}}">
+          <div class="custom-col footer-nav">
+            <h3 class="color-white ft-16 mb-22 ft-900">Company</h3>
+            {% for footeritem in footeritems %}
+            <a href="{{footeritem.url.get_url}}">
+              <h3 class="color-light-white ft-16 mb-16 f-400">
+                {{footeritem.name}}
+              </h3>
+            </a>
+            {% endfor %}
+          </div>
+          <div class="custom-col footer-social">
+            <h3 class="color-white ft-16 mb-22 ft-900"><a href="#"></a>Social</h3>
+            {% for socialitem in socialitems %}
             <h3 class="color-light-white ft-16 mb-16 f-400">
-              {{footeritem.name}}
+              <a
+                href="{{socialitem.url}}"
+                target="_blank"
+                class="color-light-white"
+                >{{socialitem.name}}</a
+              >
             </h3>
-          </a>
-          {% endfor %}
-        </div>
+            {% endfor %}
+          </div>
         </div>
         
         

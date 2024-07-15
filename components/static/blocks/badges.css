@@ -1,3 +1,12 @@
+.sidebar-badges{
+    position: relative;
+    z-index: 10;
+    background: #Fff;
+}
+.badgesection-container .badge-container{
+    overflow: hidden;
+    width: 100%;
+}
 .badgesection-container .badgesection-wrapper{
     display: flex;
     flex-direction: column;
@@ -14,15 +23,25 @@
 
 .badgesection-container .badgesection-wrapper .badges-wrapper{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    gap: 3.4rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: fit-content;
+    flex-wrap: nowrap;
+    animation: slideimages 30s linear infinite;
+    position: relative;
+    z-index: 5;
 }
+@keyframes slideimages{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-50%);
+    }
+  }
 
 .badgesection-container .badgesection-wrapper .badges-wrapper img{
-    height: 19rem;
+    height: 10rem;
     width: fit-content;
     object-fit: contain;
 }
