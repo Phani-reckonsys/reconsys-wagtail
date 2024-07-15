@@ -110,6 +110,24 @@
           </h3>
           <h3 class="color-white ft-14 f-400">© 2024 RECKONSYS TECH LABS</h3>
         </div>
+        <div class="custom-2col-group">
+          <div class="custom-2col footer-services">
+            <h3 class="color-white ft-16 mb-22 ft-900"><a href="#"></a>Services</h3>
+            <div class="footer-links">
+              {% for servicesitem in servicesitems %}
+              <h3 class="color-light-white ft-16 mb-16 f-400">
+                <a
+                  href="{{servicesitem.url}}"
+                  target="_blank"
+                  class="color-light-white"
+                  >{{servicesitem.name}}</a
+                >
+              </h3>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="custom-col-group">
         <div class="custom-col footer-social">
           <h3 class="color-white ft-16 mb-22 ft-900"><a href="#"></a>Social</h3>
           {% for socialitem in socialitems %}
@@ -133,6 +151,8 @@
           </a>
           {% endfor %}
         </div>
+        </div>
+        
         
         <div class="custom-col footer-badges">
           {% for footerimage in footerimages %} 

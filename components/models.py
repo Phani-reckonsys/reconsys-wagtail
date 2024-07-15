@@ -26,7 +26,7 @@ class Footer(ClusterableModel):
     # navbar content variables
     ourworks_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     
-    panels = [InlinePanel('socialitems', heading='socialitems'), InlinePanel('footeritems', heading='footeritems'), InlinePanel('footerimages', heading='footerimages'), FieldPanel("ourworks_page_link")]
+    panels = [InlinePanel('servicesitems', heading='servicesitems'), InlinePanel('socialitems', heading='socialitems'), InlinePanel('footeritems', heading='footeritems'), InlinePanel('footerimages', heading='footerimages'), FieldPanel("ourworks_page_link")]
    
     
 class FooterImages(Orderable,models.Model):
@@ -49,6 +49,15 @@ class FooterItems(Orderable, models.Model):
 
     navbar = ParentalKey(Footer, on_delete = models.CASCADE, related_name="footeritems")
     panels = [FieldPanel("name"), PageChooserPanel("url")]
+
+class ServicesItems(Orderable, models.Model):
+    name = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
+    url = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
+    navbar = ParentalKey(Footer, on_delete = models.CASCADE, related_name="servicesitems")
+    panels = [FieldPanel("name"), PageChooserPanel("url")]
+
+
 
 
 @register_snippet
