@@ -40,6 +40,7 @@ def contact(context):
     return {
         'contact': Contact.objects.first(),
         'servicesoptions': contact.servicesoptions.all(),
+        'reviewcards': contact.reviewcards.all(),
         'request': context['request'],
         'path': context.request.path,
     }

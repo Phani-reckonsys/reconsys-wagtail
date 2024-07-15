@@ -8,6 +8,32 @@
 .contact-main .contact-container .left {
   flex-basis: 40%;
 }
+
+.contact-main .contact-container .left .review-card-group{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.contact-main .contact-container .left .review-card-group .review-card{
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+}
+
+.contact-main .contact-container .left .review-card-group .review-card .header{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.contact-main .contact-container .left .review-card-group .review-card .review-company{
+  width: 7.5rem;
+  height: fit-content;
+  object-fit: cover;
+}
+
 .contact-main .contact-container .contact-form {
   flex-basis: 60%;
   padding-right: 10%;

@@ -63,13 +63,22 @@ class ServicesItems(Orderable, models.Model):
 @register_snippet
 class Contact(ClusterableModel):
    ourworks_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
-   panels = [InlinePanel('servicesoptions', heading="ServicesOptions"), FieldPanel('ourworks_page_link')]
+   panels = [InlinePanel('servicesoptions', heading="ServicesOptions"), InlinePanel('reviewcards'), FieldPanel('ourworks_page_link')]
 
 class SevicesOptions(Orderable,models.Model):
     service = models.CharField(max_length = 255, blank=True, help_text = "Services Offred")
 
     contact = ParentalKey(Contact, on_delete = models.CASCADE, related_name="servicesoptions")
     panels = [FieldPanel("service")]
+
+class ReviewCards(Orderable, models.Model):
+    rating =models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
+    text =models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
+    image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
+    reviewcards = ParentalKey(Contact, on_delete = models.CASCADE, related_name="reviewcards")
+    panels = [FieldPanel("rating"), FieldPanel("text"), FieldPanel("image")]
+
 
 
 @register_snippet
