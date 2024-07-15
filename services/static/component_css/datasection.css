@@ -78,7 +78,6 @@
   @media only screen and (max-width: 576px) {
     .services-stats-section {
       position: relative;
-      padding-top: 0rem;
     }
     .services-stats-section h2 {
       width: 100% !important;

@@ -43,6 +43,9 @@
     
   }
   @media only screen and (max-width: 768px) {
+    .whyreckonsys-section {
+      padding-right: 3.6rem;
+    }
     .whyreckonsys-section h2 {
       width: 100%;
     }
@@ -50,6 +53,12 @@
       display: flex;
       flex-direction: column;
       gap: 4rem;
+    }
+    .whyreckonsys-section .left {
+      width: 100%;
+    }
+    .whyreckonsys-section .cards-wrapper .whyreckonsys-card {
+      width: 100%;
     }
   }
   @media only screen and (max-width: 576px) {
