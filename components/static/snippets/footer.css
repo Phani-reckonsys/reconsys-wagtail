@@ -31,20 +31,30 @@
   .custom-footer .navigation-footer .custom-col:last-child {
     gap: 2rem;
   }
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription {
+  .footer-newsletter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    background-color: #181616;
+    margin-bottom: 10rem;
+  }
+  .newsletter-subscription {
+    
     position: relative;
     height: fit-content;
     width: fit-content;
   }
 
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-input{
+  .newsletter-subscription .newsletter-subscription-input{
     display: flex;
     align-items: center;
     gap: 3rem;
     position: relative;
   }
 
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-input .subscription-error-message{
+  .newsletter-subscription .newsletter-subscription-input .subscription-error-message{
     position: absolute;
     left: 0;
     bottom: -2rem;
@@ -53,11 +63,11 @@
     font-size: 1.2rem;
   }
 
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-input .subscription-error-message.active{
+  .newsletter-subscription .newsletter-subscription-input .subscription-error-message.active{
     display: flex;
   }
 
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-input input {
+  .newsletter-subscription .newsletter-subscription-input input {
     width: 29rem;
     display: flex;
     padding: 1.6rem;
@@ -68,28 +78,28 @@
     color: #fff;
     font-size: 1.8rem;
   }
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription input:focus {
+  .newsletter-subscription input:focus {
     outline: none;
     border: 1px solid #ED7F5C;
   }
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription input.error {
+  .newsletter-subscription input.error {
     outline: none;
     border: 1px solid #d40c0c;
   }
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription input::-moz-placeholder {
+  .newsletter-subscription input::-moz-placeholder {
     color: #fff;
     font-size: 1.6rem;
   }
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription input::placeholder {
+  .newsletter-subscription input::placeholder {
     color: #fff;
     font-size: 1.6rem;
   }
 
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-input .newsletter-submit{
+  .newsletter-subscription .newsletter-subscription-input .newsletter-submit{
     padding: 1.6rem 2rem;
     height: 5.3rem;
   }
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-thankyou{
+  .newsletter-subscription .newsletter-subscription-thankyou{
     display: none;
     align-items: center;
     gap: 3rem;
@@ -102,14 +112,14 @@
     justify-content: center;
     background-color: #3F3F3F;
   }
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-thankyou .thankyou-text{
+  .newsletter-subscription .newsletter-subscription-thankyou .thankyou-text{
     display: flex;
     align-items: center;
     gap: 1rem;
     justify-content: center;
   }
 
-  .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-thankyou.active{
+  .newsletter-subscription .newsletter-subscription-thankyou.active{
     display: flex;
   }
    
@@ -144,11 +154,11 @@
     .custom-footer .navigation-footer .custom-col.footer-badges{
       order: 4;
     }
-    .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-input{
+    .newsletter-subscription .newsletter-subscription-input{
       width: 90%;
       gap: 2rem;
     }
-    .custom-footer .navigation-footer .custom-col .newsletter-subscription .newsletter-subscription-input .newsletter-email{
+    .newsletter-subscription .newsletter-subscription-input .newsletter-email{
       width: 75%;
     }
   }
