@@ -276,7 +276,7 @@
   .newsletter-subscription .newsletter-subscription-thankyou.active{
     display: flex;
   }
-   
+}  
 
   @media only screen and (max-width: 576px) {
     .custom-footer .navigation-footer {
@@ -315,5 +315,5 @@
     .newsletter-subscription .newsletter-subscription-input .newsletter-email{
       width: 75%;
     }
-  }
 
+  }
