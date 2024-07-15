@@ -91,6 +91,23 @@
   nav .navigation-wrapper .navigation h5:hover a svg path {
     stroke: #f0493e;
   }
+  nav .navigation-wrapper .navigation h5 a .down-chevoron{
+    display: none;
+  }
+
+  nav .navigation-wrapper .navigation h5:nth-child(2) a .down-chevoron{
+    display: inline-flex;
+  }
+
+  nav .navigation-wrapper .navigation h5:hover a {
+    color: #f0493e;
+  }
+  nav .navigation-wrapper .navigation h5 a.active svg path {
+    stroke: #f0493e !important;
+  }
+  nav .navigation-wrapper .navigation h5 a.active {
+    color: #f0493e !important;
+  }
   nav .navigation-wrapper .contactus {
     padding: 2rem 2.8rem;
     border-left: 1px solid #604D4D;
@@ -193,6 +210,9 @@
       display: block;
       width: 2rem;
       height: 2rem;
+    }
+    nav .navigation-wrapper .navigation h5:nth-child(2) a .menu-arrow{
+      display: none;
     }
     nav .navigation-wrapper .navigation h5 a .menu-arrow path {
       stroke: #333;
@@ -309,6 +329,9 @@
       line-height: 100%;
       width: 100%;
       padding-bottom: 1rem;
+    }
+    nav .navigation-wrapper .navigation h5:nth-child(2) a .menu-arrow{
+      display: none;
     }
     nav .navigation-wrapper .navigation h5 a .menu-arrow {
       display: block;

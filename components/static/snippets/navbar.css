@@ -232,7 +232,8 @@
       padding-bottom: 1rem;
     }
 
-    nav .navigation-wrapper .navigation h5:nth-child(2) a .down-chevoron{
+    
+    nav .navigation-wrapper .navigation h5:nth-child(2) a .menu-arrow{
       display: none;
     }
     nav .navigation-wrapper .navigation h5 a .menu-arrow {
@@ -356,7 +357,7 @@
       width: 100%;
       padding-bottom: 1rem;
     }
-    nav .navigation-wrapper .navigation h5:nth-child(2) a .down-chevoron{
+    nav .navigation-wrapper .navigation h5:nth-child(2) a .menu-arrow{
       display: none;
     }
     nav .navigation-wrapper .navigation h5 a .menu-arrow {
