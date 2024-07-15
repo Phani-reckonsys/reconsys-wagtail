@@ -332,6 +332,7 @@ class BlogsWrapperBlock(StructBlock):
 
 #Cover Image Block
 class CoverImageBlock(StructBlock):
+    backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
     image = ImageChooserBlock(required = False)
 
     class Meta: 
