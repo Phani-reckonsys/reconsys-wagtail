@@ -38,6 +38,10 @@
   display: flex;
   flex-basis: 50%;
 }
+
+.custom-footer .navigation-footer .custom-2col .footer-links h3:hover a {
+  color: #f0493e !important;
+}
 .custom-footer .navigation-footer .custom-col a h3:hover {
   color: #f0493e !important;
 }
