@@ -39,6 +39,7 @@
     }
     .herosection-wrapper .herosection-height .herosection .herosection-content .breadcrump-services{
         display: flex;
+        align-items: center;
       }
   
     .herosection-wrapper .herosection-height .hero-carousel-indicator-group {

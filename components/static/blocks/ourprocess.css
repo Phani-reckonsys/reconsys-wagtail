@@ -100,4 +100,7 @@
     .our-process-card-wrapper-content {
     min-width: 30rem;
   }
+  .our-process-card-wrapper-content p.color-light-white {
+    display: none;
+  }
 }
