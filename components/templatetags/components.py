@@ -40,6 +40,7 @@ def contact(context):
     return {
         'contact': Contact.objects.first(),
         'servicesoptions': contact.servicesoptions.all(),
+        'reviewcards': contact.reviewcards.all(),
         'request': context['request'],
         'path': context.request.path,
     }
@@ -52,6 +53,8 @@ def footer(context):
         'footerimages': footer.footerimages.all(),
         'footeritems': footer.footeritems.all(),
         'socialitems': footer.socialitems.all(),
+        'socialitems': footer.socialitems.all(),
+        'servicesitems': footer.servicesitems.all(),
         'request': context['request'],
         'path': context.request.path,
     }
