@@ -9,7 +9,7 @@
 }
 
 .cardscroller-section .cardscroller-header .right {
-  display: none;
+  display: flex;
   gap: 2rem;
 }
 .cardscroller-section .cardscroller-header .right.active {
@@ -28,6 +28,7 @@
   .engagement-cards-wrapper
   .cardscroller-card {
   width: 38rem;
+  flex-shrink: 0;
 }
 
 @media only screen and (max-width: 992px) {
@@ -41,7 +42,7 @@
     width: 100%;
   }
   .cardscroller-section .cardscroller-body .engagement-cards-wrapper {
-    gap: 4rem;
+    gap: 2rem;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -62,5 +63,13 @@
   }
   .cardscroller-process-card-wrapper .cardscroller-process-card:first-child {
     display: block;
+  }
+  .cardscroller-card {
+
+    flex-shrink: 0;
+    width: 100% !important;
+  }
+  .cardscroller-section .cardscroller-body .engagement-cards-wrapper {
+    width: auto;
   }
 }

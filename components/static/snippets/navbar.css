@@ -403,7 +403,6 @@
     .services-modal .services-modal-wrapper {
       flex-direction: column;
       justify-content: flex-start;
-      gap: 4rem;
     }
     .services-modal .services-modal-wrapper .side-header h4 a {
       display: flex;
