@@ -610,7 +610,7 @@ class FaqBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
     backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
     color = CharBlock(classname="backgroundcolor", required=False)
-    categorytitle = CharBlock(classname="title", required=False)
+    maintitle = CharBlock(classname="title", required=False)
     title = CharBlock(classname="title", required=False)
     faq = StreamBlock([('faqbasicblock', FaqBasicBlock())], required=False)
 
