@@ -118,8 +118,7 @@
               {% for servicesitem in servicesitems %}
               <h3 class="color-light-white ft-16 mb-16 f-400">
                 <a
-                  href="{{servicesitem.url}}"
-                  target="_blank"
+                  href="{{servicesitem.url.get_url}}"
                   class="color-light-white"
                   >{{servicesitem.name}}</a
                 >
