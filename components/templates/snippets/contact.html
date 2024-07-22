@@ -76,11 +76,12 @@
             <div class="cf-row">
               <div class="phone-number div-input-50">
                 <label for="phone-number">Phone Number</label>
-                <p class="error-message phn-error-message"></p>
+                
                 <div class="countrycode-phnno">
                   <select name="country-code" id="country-code">
                     {% comment %} get data from countries.json {% endcomment %}
                   </select>
+                  <p class="error-message phn-error-message"></p>
                   <input
                     type="number"
                     id="phone-number"

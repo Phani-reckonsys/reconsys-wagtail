@@ -84,7 +84,7 @@ input[type="number"] {
 }
 .contact-main .contact-container .contact-form .cf-row .div-input-50.phone-number .error-message{
   position: absolute;
-  left:10.5rem;
+  left:6.5rem;
   bottom: -2rem;
   color:#d40c0c;
   display: none;
@@ -153,6 +153,7 @@ input[type="number"] {
   flex-basis: 50%;
   display: flex;
   gap: 1rem;
+  position: relative;
 }
 .contact-main
   .contact-container
@@ -265,6 +266,14 @@ input[type="number"] {
   flex-direction: column;
   margin-bottom: 3rem;
   position: relative;
+}
+.contact-main .contact-container .contact-form  .phn-error-message{
+  position: absolute;
+  left:0;
+  bottom: 2rem;
+  color:#d40c0c;
+  display: none;
+  font-size: 1.2rem;
 }
 .contact-main .contact-container .contact-form .services .error-message{
   position: absolute;
