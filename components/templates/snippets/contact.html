@@ -18,7 +18,7 @@
             </h4> {% endcomment %}
             <div class="review-card-group">
             {% for reviewcard in reviewcards %}
-              <a href="{{cardlink.url}}" class="review-card">
+              <a href="{{reviewcard.cardlink}}" class="review-card">
                 <div class="header">
                   <h4 class="color-white">{{reviewcard.rating}}/5</h4>
                   <div class="stars">

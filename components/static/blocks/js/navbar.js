@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", (event) => {
   setTimeout(() => {
     const navbar = document.querySelector(".navigation-wrapper");
     const darkSections = document.querySelectorAll(".dark-section");
@@ -56,4 +57,6 @@
 
     // Initial update
     updateLogoBackground();
-  }, 2000); // 2 seconds delay
+  },2000); // 2 seconds delay
+
+})
