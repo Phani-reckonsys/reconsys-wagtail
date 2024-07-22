@@ -278,13 +278,18 @@
     .category-title {
     line-height: 140% !important;
   }
+
   .herosection-wrapper
-    .herosection-height
-    .herosection
-    .herosection-content
-    .title {
-    font-size: 3.6rem;
-  }
+  .herosection-height
+  .herosection
+  .herosection-content
+  h1
+  p {
+  font-size: 3.6rem !important;
+  font-family: "Satoshi-Bold";
+  line-height: 120%;
+  color: #fff;
+}
   .herosection-wrapper .herosection-height .hero-carousel-indicator-group {
     display: none;
   }

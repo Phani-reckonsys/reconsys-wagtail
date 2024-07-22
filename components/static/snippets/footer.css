@@ -186,6 +186,8 @@
   }
   .footer-newsletter {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: space-between;
     align-items: center;
     padding-top: 1.8rem;
@@ -278,4 +280,18 @@
   .newsletter-subscription .newsletter-subscription-thankyou.active {
     display: flex;
   }
+
+.custom-footer .navigation-footer .custom-2col-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.custom-footer .navigation-footer .custom-col-group {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-between;
+  gap: 5rem;
+}
 }

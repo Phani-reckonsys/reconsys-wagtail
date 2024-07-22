@@ -21,5 +21,10 @@
     align-items: center;
 }
 
+@media only screen and (max-width: 576px){
+  .uiux_work-main .cards-container .point{
+    width: 100%;
+  }
+}
 
 

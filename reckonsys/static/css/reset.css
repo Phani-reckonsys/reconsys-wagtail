@@ -948,7 +948,7 @@ img {
     font-size: 7.7px;
   }
   h1.hero {
-    font-size: 3.4rem;
+    font-size: 3.4rem !important;
   }
   h2 {
     font-size: 3rem;
