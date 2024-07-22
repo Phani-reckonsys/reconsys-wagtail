@@ -72,6 +72,7 @@ class SevicesOptions(Orderable,models.Model):
     panels = [FieldPanel("service")]
 
 class ReviewCards(Orderable, models.Model):
+    cardlink = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     rating =models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
     text =models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
     image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")

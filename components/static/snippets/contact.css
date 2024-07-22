@@ -28,6 +28,11 @@
   margin-bottom: 0.2rem;
 }
 
+.contact-main .contact-container .left .review-card-group .review-card .header .stars svg{
+  width: 1.5rem;
+  height: fit-content;
+}
+
 .contact-main .contact-container .left .review-card-group .review-card .review-company{
   width: auto;
   height: 4.7rem;
