@@ -1,5 +1,5 @@
 from django import template
-from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey, Welcomebackmodel, Servicesmegamenu
+from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey, Welcomebackmodel, Servicesmegamenu, Badgessnippet
 
 register = template.Library()
 # ...
@@ -64,6 +64,15 @@ def welcomebackmodel(context):
     welcomebackmodel = Welcomebackmodel.objects.first()
     return{
         'welcomebackmodel': Welcomebackmodel.objects.first(),
+        'request': context['request'],
+    }
+
+@register.inclusion_tag('snippets/badgessnippet.html', takes_context=True)
+def badgessnippet(context):
+    badgessnippet = Badgessnippet.objects.first()
+    return{
+        'badgessnippet': Badgessnippet.objects.first(),
+        'badges': badgessnippet.badges.all(),
         'request': context['request'],
     }
 

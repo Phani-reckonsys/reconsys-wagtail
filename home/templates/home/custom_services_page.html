@@ -28,12 +28,15 @@
 <link rel="stylesheet" href="{%static 'blocks/ourprocess-min.css'%}">
 <link rel="stylesheet" href="{%static 'blocks/oursuccess-min.css'%}">
 <link rel="stylesheet" href="{%static 'blocks/ourmethodologies-min.css'%}">
+<link rel="stylesheet" href="{% static 'blocks/badges-min.css' %}">
+
 {% endblock extra_css %}
 
 {% block content %}
     {% servicesmegamenu %}
     {% navbar %}
     {{page.body}}
+    {%badgessnippet%}
     {% contact %}
     {% footer %}
     {% welcomebackmodel %}

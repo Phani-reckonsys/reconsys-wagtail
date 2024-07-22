@@ -132,6 +132,18 @@ class ServicesMenuItems(Orderable, models.Model):
     panels = [FieldPanel("name"), PageChooserPanel("link")]
 
 @register_snippet
+class Badgessnippet(ClusterableModel):
+    title = models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
+
+    panels = [InlinePanel('badges', heading="badges"), FieldPanel("title")]
+
+class Badges(Orderable, models.Model):
+    image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
+    badges = ParentalKey(Badgessnippet, on_delete=models.CASCADE, related_name="badges")
+    panels = [FieldPanel("image")]
+
+@register_snippet
 class Welcomebackmodel(ClusterableModel):
     headline = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
     content = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
