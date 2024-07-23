@@ -1,0 +1,27 @@
+{% load static %}
+{% load wagtailimages_tags%}
+{% load wagtailcore_tags%}
+ 
+ <!-- Case Studies section starts -->
+    <section class="case-studies-section">
+      <div class="sidebar">
+        <h5 class=" spaced-word t-15">{{self.sidetitle}}</h5>
+      </div>
+      <div class="case-studies-main pl-54 pr-54 pt-100 pb-180 w-container">
+        <div class="main-content">
+            <h2 class="color-white">{{self.title}}</h2>
+            <div class="card-container">
+                <div class="card-wrapper">
+                    {% for card in self.testimonialscard%}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="25" viewBox="0 0 34 25" fill="none">
+                            <path d="M30.495 18.24C30.495 15.01 28.12 13.11 25.175 13.11C24.415 13.11 23.56 13.205 23.275 13.395C24.225 9.405 28.5 5.415 33.06 4.56L34.01 0C24.32 0.665003 17.195 8.93 17.195 17.765C17.195 22.23 20.14 24.7 23.655 24.7C27.74 24.7 30.495 21.945 30.495 18.24ZM13.3 18.24C13.3 15.01 10.925 13.11 7.98 13.11C7.22 13.11 6.365 13.205 6.08 13.395C7.03 9.405 11.305 5.415 15.865 4.56L16.815 0C7.125 0.665003 0 8.93 0 17.765C0 22.23 2.945 24.7 6.46 24.7C10.545 24.7 13.3 21.945 13.3 18.24Z" fill="#DD4545"/>
+                        </svg>
+                        <p class="color-white">{{card.value.text1}}</p>
+                        <h4 class="color-white">{{card.value.title}}</h4>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- Case Studies section Ends -->

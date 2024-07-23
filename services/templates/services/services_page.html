@@ -7,6 +7,7 @@
 {% block extra_css %}
 
 <link rel="stylesheet" href="{% static 'snippets/navbar-min.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/services_megamenu.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/herosection-min.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/banner-min.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/servicesoffered-min.css' %}">
@@ -21,6 +22,7 @@
 {% endblock extra_css %}
 
 {% block content %}
+{% servicesmegamenu %}
 {% navbar %}
 {{page.body}}
 {% include "componentservice/banner.html"%}

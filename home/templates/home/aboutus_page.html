@@ -11,6 +11,7 @@
 Delete the line below if you're just getting started and want to remove the welcome screen!
 {% endcomment %}
 <link rel="stylesheet" href="{% static 'snippets/navbar-min.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/services_megamenu.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/welcomebackmodel-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/footer-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/contact-min.css' %}">
@@ -21,11 +22,14 @@ Delete the line below if you're just getting started and want to remove the welc
 <link rel="stylesheet" href="{% static 'blocks/ourjourney-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/ourgallery-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/ourtestimonial-min.css' %}">
+<link rel="stylesheet" href="{% static 'blocks/badges-min.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
+    {% servicesmegamenu %}
     {% navbar %}
     {{page.body}}
+    {%badgessnippet%}
     {% contact %}
     {% footer %}
     {% welcomebackmodel %}

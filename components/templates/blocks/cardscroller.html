@@ -1,33 +1,31 @@
  {%load wagtailimages_tags%}
  {% load wagtailcore_tags %}
+ {% load static %}
 <section>
         <div class="sidebar pt-20" style="background-color:#{{self.sidebar_background}}">
             <h5 class="t-25">{{self.sidetitle}}</h5>
         </div>
         <!-- Engagmnt model section starts -->
-        <div class="cardscroller-section pl-54 pr-54 pt-100 pb-180 w-container" style="background-color:#{{self.container_background}}; ">
+        <div class="cardscroller-section pl-54 pr-54 w-container" style="background-color:#{{self.container_background}}; ">
             <div class="cardscroller-header">
                 <div class="left">
                     <h4 class="mb-20 ft-20">
                         {{self.title}}
                     </h4>
-                    <h2 class="w-70 mb-54">
+                    <h2 class="w-70 mb-32">
                         {{self.subtitle}}
                     </h2>
-                    <p class="mb-32 lh-140 elementanim">
+                    <p class="mb-32 lh-140 w-70 ">
                         {{self.content}}
                     </p>
                 </div>
-                <div class="right " 
-                {% if self.include_buttons %}
-                  id = "active"
-                {% endif %}>
-                    <div id="cardscroller-left-arrow" class="outline-btn carousal-outline-btn">
+                <div class="right cardscroller-buttons">
+                    <div id="cardscroller-left-arrow" class="outline-btn carousal-outline-btn carousal-outline-btn-left">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
                             <path d="M14 1L2 13.1732L14 23" stroke="#333333" stroke-width="2"/>
                         </svg>
                     </div>
-                    <div id="cardscroller-right-arrow" class="outline-btn carousal-outline-btn">
+                    <div id="cardscroller-right-arrow" class="outline-btn carousal-outline-btn carousal-outline-btn-right">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
                             <path d="M1 1L13 13.1732L1 23" stroke="#333333" stroke-width="2"/>
                         </svg>
@@ -53,11 +51,4 @@
         <!-- Engagmnt model section End -->
     </section>
 
-    <script>
-        const cardScrollerLeft = document.querySelector("#cardscroller-left-arrow");
-        const cardScrollerRight = document.querySelector("#cardscroller-right-arrow");
-
-        let currentIndex = 0;
-
-        const 
-    </script>
+        

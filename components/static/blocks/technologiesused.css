@@ -4,7 +4,7 @@
    .technologies-section .technologies-main .technologies .technology-stack-wrapper {
     display: flex;
     gap: 2.6rem;
-    padding: 3.2rem 0 4.6rem 0;
+    padding: 3.2rem 0 7rem 0;
     flex-wrap: wrap;
   }
    .technologies-section .technologies-main .technologies .technology-stack-wrapper .technology-stack {

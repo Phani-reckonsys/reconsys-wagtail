@@ -45,22 +45,23 @@
             ]
             }
         </script>
+
+        
         <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B7P3SS65ZJ"></script>
-{% comment %} <script
-  type="text/javascript"
-  src="https://app.termly.io/resource-blocker/7ebc9ed3-6420-4714-bec9-3cde61220daa?autoBlock=on"></script>  {% endcomment %}
-<script async src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL'></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B7P3SS65ZJ');
-</script>
-{% block extra_head %}
-       
-    
-    {% endblock %}
+        {% comment %} <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7P3SS65ZJ"></script> {% endcomment %}
+        {% comment %} <script
+        type="text/javascript"
+        src="https://app.termly.io/resource-blocker/7ebc9ed3-6420-4714-bec9-3cde61220daa?autoBlock=on"></script>  {% endcomment %}
+        <script async src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL'></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-B7P3SS65ZJ');
+        </script>
+        {% block extra_head %}
+            
+        {% endblock %}
         <meta name="google-site-verification" content="zv7DL6vmJ75FRIGKzXH63lOLaG3UQDJ58d3vfnRKCLo" />
         <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BQQLR9FPB7'); </script>
         {# Global stylesheets #}
@@ -75,14 +76,12 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
-
-        {% block content %}{% endblock %}
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/reckonsys.js' %}"></script>
-        
+        {% block content %}
+        {% endblock %}        
         {% block extra_js %}
-        {# Override this in templates to add extra javascript #}
-        
+            {# Override this in templates to add extra javascript #}
+            
+
         {% endblock %}
     </body>
         

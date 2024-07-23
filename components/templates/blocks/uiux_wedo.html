@@ -1,0 +1,47 @@
+ {%load wagtailimages_tags%}
+ {% load wagtailcore_tags %}
+ {% load static %}
+<section>
+        <div class="sidebar pt-20 theme-darkgreen">
+            <h5 class="t-20"></h5>
+        </div>
+        <!-- Engagmnt model section starts -->
+        <div class="uiux-wedo-section pl-54  pt-100 pb-180 w-container theme-darkgreen">
+            <h4 class="mb-20 ft-20 color-white">
+                {{self.title}}
+            </h4>
+            <h2 class="w-60 mb-32 color-white">
+                {{self.subtitle}}
+            </h2>
+            <p class="mb-54 w-60 lh-140 color-light-white">
+                {{self.content}}
+              </p>
+            <div class="uiux-wedo-body">
+                <div class="uiux-wedo-cards-wrapper">
+                {% for uiux_card in self.card%}
+                    <div class="uiux-card">
+                        <div class="left">
+                            <h2 class="mb-16 color-white">
+                            {{uiux_card.value.title}}
+                            </h2>
+                            <p class="ft-16 o-8 color-white">
+                            {{uiux_card.value.subtitle}}
+                            </p>
+                        </div>
+                        <div class="right">
+                            <figure class="number-image">
+                                {{uiux_card.value.number_image|safe}}
+                            </figure>
+                            {% image uiux_card.value.main_image class="main-image" max-3000x1500 %}
+                            {% image uiux_card.value.decor_image class="decor-image" max-3000x1500 %}
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Engagmnt model section End -->
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" ></script>
+    <script src="{% static 'blocks/js/uiux_wedo-min.js' %}" ></script>

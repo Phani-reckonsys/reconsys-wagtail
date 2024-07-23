@@ -11,6 +11,7 @@
 Delete the line below if you're just getting started and want to remove the welcome screen!
 {% endcomment %}
 <link rel="stylesheet" href="{% static 'snippets/navbar-min.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/services_megamenu.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/welcomebackmodel-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/footer-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/herosection-min.css' %}">
@@ -23,6 +24,7 @@ Delete the line below if you're just getting started and want to remove the welc
 {% endblock extra_css %}
 
 {% block content %}
+    {% servicesmegamenu %}
     {% navbar %}
     {{page.herosection}}
     {% include "components/homecontent.html"%}
@@ -33,5 +35,5 @@ Delete the line below if you're just getting started and want to remove the welc
 {% endblock content %}
 
 {% block extra_js%}
-    <script src="{% static 'js/home-min.js' %}"></script>
+    <script src="{% static 'js/home.js' %}" ></script>
 {% endblock extra_js%}

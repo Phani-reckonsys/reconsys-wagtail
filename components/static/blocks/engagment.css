@@ -1,7 +1,10 @@
+.engagment-section{
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
 .engagment-section .engagment-body .engagement-cards-wrapper {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 5rem;
   }
   .engagment-section .engagment-body .engagement-cards-wrapper .engagment-card {
@@ -15,10 +18,6 @@
     padding-left: 2rem;
   }
 
-
-  @media only screen and (max-width: 992px) {
-    
-  }
   @media only screen and (max-width: 768px) {
     .engagment-section h2 {
       width: 100%;
@@ -27,6 +26,9 @@
       display: flex;
       flex-direction: column;
       gap: 4rem;
+    }
+    .engagment-section .engagment-body .engagement-cards-wrapper .engagment-card {
+      width: 100%;
     }
   }
   @media only screen and (max-width: 576px) {

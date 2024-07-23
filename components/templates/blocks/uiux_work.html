@@ -1,0 +1,31 @@
+{% load static %}
+{% load wagtailimages_tags%}
+{% load wagtailcore_tags%}
+ 
+ <!-- Case Studies section starts -->
+    <section class="uiux_work-section">
+      <div class="sidebar theme-darkgreen">
+        <h5 class=" spaced-word t-15">{{self.sidetitle}}</h5>
+      </div>
+      <div
+        class="uiux_work-main pl-54 pr-54 w-container theme-darkgreen"
+      >
+        <div class="uiux_work-header d-flex align-items-centerrow">
+            <h4 class="mb-20 ft-20 lh-110 color-white">
+            {{self.title}}
+            </h4>
+            <h2 class="w-70 color-light-white">
+             {{self.content}}
+            </h2>
+        </div>
+        <div class="cards-container">
+          {% for point in self.points %}
+            <div class="point">
+                {% image point.value.image max-300x150 class="icon"%}
+                <h4 class="color-white">{{point.value.title}}</h4>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- Case Studies section Ends -->

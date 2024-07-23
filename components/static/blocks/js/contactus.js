@@ -59,10 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
       return phonePattern.test(phoneNumber);
   }
 
+
   // Function to show error message
   function showError(field, message) {
       field.classList.add("error");
-      const errorElement = field.nextElementSibling;
+      const errorElement = field.parentElement.querySelector(".error-message");
       errorElement.classList.add("active");
       errorElement.textContent = message;
   }
@@ -70,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to hide error message
   function hideError(field) {
       field.classList.remove("error");
-      const errorElement = field.nextElementSibling;
+      const errorElement = field.parentElement.querySelector(".error-message");
       errorElement.classList.remove("active");
       errorElement.textContent = "";
   }

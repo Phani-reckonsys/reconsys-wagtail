@@ -1,3 +1,4 @@
+{%load wagtailimages_tags%} 
 {% load static %}
  <!-- contact and Footer section Starts -->
     <section class="contact-section">
@@ -8,13 +9,41 @@
         <div class="contact-container" id="contact-container">
           <div class="left">
             <h4 class="color-white mb-16">Let’s collaborate</h4>
-            <h2 class="color-white mb-16">
+            <h2 class="color-white mb-54">
               <span class="gradient-text-light">Need assistance</span> or have
               questions?
             </h2>
-            <h4 class="ft-26 fw-500 color-light-white">
+            {% comment %} <h4 class="ft-26 fw-500 color-light-white">
               Want cutting-edge solutions minus the headaches? Contact us to shape your digital future.
-            </h4>
+            </h4> {% endcomment %}
+            <div class="review-card-group">
+            {% for reviewcard in reviewcards %}
+              <a href="{{reviewcard.cardlink}}" class="review-card">
+                <div class="header">
+                  <h4 class="color-white">{{reviewcard.rating}}/5</h4>
+                  <div class="stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.56424 0.717773L8.09682 5.43457H13.0564L9.04401 8.3497L10.5766 13.0665L6.56424 10.1514L2.5519 13.0665L4.08448 8.3497L0.0721354 5.43457H5.03166L6.56424 0.717773Z" fill="#CF534B"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.56424 0.717773L8.09682 5.43457H13.0564L9.04401 8.3497L10.5766 13.0665L6.56424 10.1514L2.5519 13.0665L4.08448 8.3497L0.0721354 5.43457H5.03166L6.56424 0.717773Z" fill="#CF534B"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.56424 0.717773L8.09682 5.43457H13.0564L9.04401 8.3497L10.5766 13.0665L6.56424 10.1514L2.5519 13.0665L4.08448 8.3497L0.0721354 5.43457H5.03166L6.56424 0.717773Z" fill="#CF534B"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.56424 0.717773L8.09682 5.43457H13.0564L9.04401 8.3497L10.5766 13.0665L6.56424 10.1514L2.5519 13.0665L4.08448 8.3497L0.0721354 5.43457H5.03166L6.56424 0.717773Z" fill="#CF534B"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.56424 0.717773L8.09682 5.43457H13.0564L9.04401 8.3497L10.5766 13.0665L6.56424 10.1514L2.5519 13.0665L4.08448 8.3497L0.0721354 5.43457H5.03166L6.56424 0.717773Z" fill="#CF534B"/>
+                  </svg>
+                  </div>
+                </div>
+                <h5 class="ft-12 color-white mb-20">{{reviewcard.text}}</h5>
+                {% image reviewcard.image max-3000x1500 class="review-company" %}
+              </a>
+            {% endfor %}
+            </div>
           </div>
           <form class="contact-form" >
             {% csrf_token %}
@@ -47,11 +76,12 @@
             <div class="cf-row">
               <div class="phone-number div-input-50">
                 <label for="phone-number">Phone Number</label>
-                <p class="error-message phn-error-message"></p>
+                
                 <div class="countrycode-phnno">
                   <select name="country-code" id="country-code">
                     {% comment %} get data from countries.json {% endcomment %}
                   </select>
+                  <p class="error-message phn-error-message"></p>
                   <input
                     type="number"
                     id="phone-number"
@@ -107,4 +137,4 @@
     </section>
     <!-- contact and Footer section Ends -->
 
-<script src="{% static 'blocks/js/contactus-min.js' %}"></script>
+<script src="{% static 'blocks/js/contactus-min.js' %}" ></script>
