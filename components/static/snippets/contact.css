@@ -1,27 +1,54 @@
-.contact-main {
-  padding-bottom: 12rem;
-}
+
 .contact-main .contact-container {
   display: flex;
   width: 100%;
   gap: 10rem;
   padding-bottom: 16rem;
-  border-bottom: 1px solid #544e4e;
 }
 .contact-main .contact-container .left {
-  flex-basis: 40%;
+  flex-basis: 45%;
 }
+
+.contact-main .contact-container .left .review-card-group{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.contact-main .contact-container .left .review-card-group .review-card{
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+}
+
+.contact-main .contact-container .left .review-card-group .review-card .header{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.contact-main .contact-container .left .review-card-group .review-card .header .stars svg{
+  width: 1.5rem;
+  height: fit-content;
+}
+
+.contact-main .contact-container .left .review-card-group .review-card .review-company{
+  width: auto;
+  height: 4.7rem;
+}
+
 .contact-main .contact-container .contact-form {
-  flex-basis: 60%;
+  flex-basis: 55%;
   padding-right: 10%;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  margin: 0; /* Optional - adjust as needed */
+  margin: 0;
 }
 input[type="number"] {
-  -moz-appearance: textfield; /* Firefox */
+  -moz-appearance: textfield; 
 }
 @media only screen and (max-width: 768px) {
   .contact-main .contact-container .contact-form {
@@ -57,7 +84,7 @@ input[type="number"] {
 }
 .contact-main .contact-container .contact-form .cf-row .div-input-50.phone-number .error-message{
   position: absolute;
-  left:10.5rem;
+  left:6.5rem;
   bottom: -2rem;
   color:#d40c0c;
   display: none;
@@ -126,6 +153,7 @@ input[type="number"] {
   flex-basis: 50%;
   display: flex;
   gap: 1rem;
+  position: relative;
 }
 .contact-main
   .contact-container
@@ -238,6 +266,14 @@ input[type="number"] {
   flex-direction: column;
   margin-bottom: 3rem;
   position: relative;
+}
+.contact-main .contact-container .contact-form  .phn-error-message{
+  position: absolute;
+  left:0;
+  bottom: 2rem;
+  color:#d40c0c;
+  display: none;
+  font-size: 1.2rem;
 }
 .contact-main .contact-container .contact-form .services .error-message{
   position: absolute;

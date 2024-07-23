@@ -1,5 +1,5 @@
 from django import template
-from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey, Welcomebackmodel
+from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey, Welcomebackmodel, Servicesmegamenu, Badgessnippet
 
 register = template.Library()
 # ...
@@ -40,6 +40,7 @@ def contact(context):
     return {
         'contact': Contact.objects.first(),
         'servicesoptions': contact.servicesoptions.all(),
+        'reviewcards': contact.reviewcards.all(),
         'request': context['request'],
         'path': context.request.path,
     }
@@ -52,6 +53,8 @@ def footer(context):
         'footerimages': footer.footerimages.all(),
         'footeritems': footer.footeritems.all(),
         'socialitems': footer.socialitems.all(),
+        'socialitems': footer.socialitems.all(),
+        'servicesitems': footer.servicesitems.all(),
         'request': context['request'],
         'path': context.request.path,
     }
@@ -62,4 +65,24 @@ def welcomebackmodel(context):
     return{
         'welcomebackmodel': Welcomebackmodel.objects.first(),
         'request': context['request'],
+    }
+
+@register.inclusion_tag('snippets/badgessnippet.html', takes_context=True)
+def badgessnippet(context):
+    badgessnippet = Badgessnippet.objects.first()
+    return{
+        'badgessnippet': Badgessnippet.objects.first(),
+        'badges': badgessnippet.badges.all(),
+        'request': context['request'],
+    }
+
+
+@register.inclusion_tag('snippets/servicesmegamenu.html', takes_context=True)
+def servicesmegamenu(context):
+    servicesmegamenu = Servicesmegamenu.objects.first()
+    return{
+        'servicesmegamenu': Servicesmegamenu.objects.first(),
+        'servicesmenuitems': servicesmegamenu.servicesmenuitems.all(),
+        'request': context['request'],
+        'path': context.request.path,
     }

@@ -109,9 +109,9 @@
         </div>
         <div class="navigation">
         {% for navitem in navitems %}
-          <h5>
+          <h5 class="navitems-links">
             <a href="{{navitem.link.get_url}}"
-              {% if navitem.link.get_url in path %}
+              {% if navitem.link.get_url in path and navitem.link.get_url != '/' or navitem.link.get_url == path %}
                   class = "active"
               {% endif %}>
               {{navitem.name}}
@@ -128,6 +128,9 @@
                   stroke="#333333"
                   stroke-width="2"
                 />
+              </svg>
+              <svg class="down-chevoron" xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
+                <path d="M1.5 1.5L5.5 5.5L9.5 1.5" stroke="#333333" stroke-width="2"/>
               </svg>
             </a>
           </h5>
@@ -154,4 +157,4 @@
     </nav>
     <!-- Navigation Bars Ends -->
 
- <script src="{% static 'blocks/js/navbar-min.js' %}"></script>
+ <script src="{% static 'blocks/js/navbar-min.js'%}" ></script>

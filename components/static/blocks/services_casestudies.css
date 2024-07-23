@@ -1,3 +1,7 @@
+.case-studies-main{
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
 .case-studies-main .case-studies-header {
     display: flex;
     align-items: center;

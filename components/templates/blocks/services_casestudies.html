@@ -8,7 +8,7 @@
         <h5 class=" spaced-word t-15">{{self.sidetitle}}</h5>
       </div>
       <div
-        class="case-studies-main pl-54 pr-54 pt-100 pb-180 w-container"
+        class="case-studies-main pl-54 pr-54 w-container"
       >
         <div class="case-studies-header d-flex align-items-center mb-54 row">
           <div class="left col-md-10">
@@ -33,10 +33,10 @@
           </div>
         </div>
         <div class="cards-container">
-          <div class="cards-wrapper">
+          <div class="cards-wrapper cards-wrapper-main" >
           {% for casestudies_card in self.card %}
-            <div class="case-study-card elementanim" >
-              <div class="content" style='background-color: #{{casestudies_card.value.bgcolor}}'>
+            <div class="case-study-card elementanim">
+              <div class="content" style='background-color: #{{casestudies_card.value.bgcolor}};'>
                 <h3 class="color-white mb-27 ft-32 w-80 lh-115">
                   {{casestudies_card.value.title}}
                 </h3>
@@ -64,3 +64,5 @@
       </div>
     </section>
     <!-- Case Studies section Ends -->
+
+    <script src="{% static 'blocks/js/services_casestudies.js' %}"></script>

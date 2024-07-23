@@ -1,5 +1,3 @@
-
-  
   //industries section corousel'
   const industriesLeftArrow = document.querySelector(
     ".industries-corousel-left-arrow"
@@ -10,14 +8,16 @@
   
   // CaseStudies Section Corousel
   let caseStudiesInterval;
-  const carousalImageWrapper = document.querySelector(".case-study-card");
-  const carousalContentWrapper = document.querySelector(".cards-wrapper");
+  const carousalImageWrapper = document.querySelector(".case-studies-section .case-study-card");
+  const carousalContentWrapper = document.querySelector(".case-studies-section .cards-wrapper");
   
-  const carousalLeftArrow = document.querySelector(".caseStudies-left-arrow");
-  const carousalRightArrow = document.querySelector(".caseStudies-right-arrow");
+  const carousalLeftArrow = document.querySelector(".case-studies-section .caseStudies-left-arrow");
+  const carousalRightArrow = document.querySelector(".case-studies-section .caseStudies-right-arrow");
   
-  const carouselIndicator = document.querySelectorAll(".indicator");
-  
+  const carouselIndicator = document.querySelectorAll(".case-studies-section .indicator");
+  const carousalStudyCards = document.querySelectorAll(".case-studies-section .case-study-card");
+  carousalContentWrapper.style.width = `${carousalStudyCards.length*100}%`;
+
   let corouselIndex = 0;
   
   const moveToCorouselIndex = (index) => {

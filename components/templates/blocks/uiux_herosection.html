@@ -1,0 +1,77 @@
+{%load wagtailimages_tags%}
+
+<!-- Herosection starts -->
+<section>
+  <div class="sidebar theme-darkgreen">
+    <h5 class="t-25 color-white">{{self.sidetitle}}</h5>
+  </div>
+
+  <div class="herosection-wrapper pl-54 pr-54 w-container">
+    <div class="herosection-height">
+      <div class="row herosection active">
+        <div class="herosection-content">
+        <h6 class="mb-24 breadcrump-services fw-500">
+          <a href="{{self.services_url.get_url}}"><h6 class="color-white">Services</h6></a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M9.51562 7.03479L14.4811 12.0003L9.51562 16.9658" stroke="#fff" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> 
+          <span class="o-4 color-white">{{self.sidetitle}}</span>
+        </h6>
+          <h1 class="mb-20 ft-20 lh-110 category-title color-white">
+            {{self.title}}
+          </h1>
+          <h1 class="mb-36 hero w-70 title color-white">{{self.subtitle}}</h1>
+          <a
+                href="{% if self.include_url_button %}{{self.btn_url_link}}{% else %}{{self.btn_link.get_url}}{% endif %}"
+                class="primary-btn elementanim"
+                >
+            {{self.btn_title}}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="11"
+              viewBox="0 0 28 11"
+              fill="none"
+            >
+              <path d="M0 1H25L17.9577 10" stroke="#F7F5F4" stroke-width="2" />
+            </svg>
+          </a>
+        </div>
+        <div class="geometric-shapes">
+          {% if self.include_fullimage %} 
+            <figure class="geometric-connection custom-hero-fullimage">
+            {{self.image_cover|safe}}
+            </figure> 
+          {% else %} 
+            <figure class="geometric-connection">
+              {{self.image_cover|safe}}
+            </figure>
+            <figure class="geometric-wave">
+              {{self.image_decor|safe}}
+            </figure>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if self.include_companies %}
+    <!-- Quick testimonials Starts-->
+    <div class="quick-testimonials elementanim">
+      <h5 class="lh-110 elementanim">Trusted by global enterprises</h5>
+      <div class="client-logos-wrapper">
+        <div class="client-logos elementanim">
+          {% for logo in self.company_image %} 
+          {% image logo.value.image max-3000x1500 %} 
+          {% endfor %} 
+          {% for logo in self.company_image %} 
+          {% image logo.value.image max-3000x1500 %} 
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- quick testimonials ends -->
+    {% endif %}
+  </div>
+</section>
+<!-- Herosection Ends -->
+

@@ -60,8 +60,6 @@ class HeroContentBasicBlock(StructBlock):
     btn_url_link = URLBlock(classname="link", required=False)
     include_fullimage = BooleanBlock(required=False)
     include_url_button = BooleanBlock(required = False)
-    # image_cover = ImageChooserBlock(required = False)
-    # image_decor = ImageChooserBlock(required = False)
     image_cover = CharBlock(classname = "imagecover", required=False)
     image_decor = CharBlock(classname = "imagedecor", required=False)
 
@@ -170,6 +168,13 @@ class CustomServicesBasicCard(StructBlock):
 class MultipleBasicImageTitle(StructBlock):
     title = CharBlock(classname="title", required=False)
     tooltip = StreamBlock([('imagetitlecombo', ImageTitleCombo())], required=False)
+
+class Uiuxparallaxcard(StructBlock):
+    title = CharBlock(classname = "title", required=False)
+    subtitle = CharBlock(classname = "title", required=False)
+    number_image = CharBlock(classname="numberimage",required=False)
+    main_image = ImageChooserBlock(required=False)
+    decor_image = ImageChooserBlock(required=False)
 #----------Basic Blocks Ends------------------
 
 
@@ -327,6 +332,7 @@ class BlogsWrapperBlock(StructBlock):
 
 #Cover Image Block
 class CoverImageBlock(StructBlock):
+    backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
     image = ImageChooserBlock(required = False)
 
     class Meta: 
@@ -553,8 +559,8 @@ class ServicesHeroSectionBlock(StructBlock):
     btn_url_link = URLBlock(classname="link", required=False)
     include_fullimage = BooleanBlock(required=False)
     include_url_button = BooleanBlock(required = False)
-    image_cover = ImageChooserBlock(required = False)
-    image_decor = ImageChooserBlock(required = False)
+    image_cover = CharBlock(classname = "imagecover", required=False)
+    image_decor = CharBlock(classname = "imagedecor", required=False)
     include_companies = BooleanBlock(required=False)
     company_image = StreamBlock([('image', Image())], required=False)
     
@@ -594,7 +600,7 @@ class ServicesWhychooseusBlock(StructBlock):
 class ServicesCasestudiesBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
-    content = RichTextBlock(classname = "content", required=False)
+    content = CharBlock(classname = "content", required=False)
     card = StreamBlock([('casestudycardbasic', CasestudyCardBasic())], required=False)
     
     class Meta:
@@ -602,13 +608,18 @@ class ServicesCasestudiesBlock(StructBlock):
 
 class FaqBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
-    title = RichTextBlock(classname="title", required=False)
+    backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
+    color = CharBlock(classname="backgroundcolor", required=False)
+    maintitle = CharBlock(classname="title", required=False)
+    title = CharBlock(classname="title", required=False)
     faq = StreamBlock([('faqbasicblock', FaqBasicBlock())], required=False)
 
     class Meta:
         template = "blocks/faq.html"
 
 class CollaborateBlock(StructBlock):
+    backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
+    maintextcolor = CharBlock(classname="maintextcolor", required=False)
     sidetitle = CharBlock(classname="sidetitle", required=False)
     image = ImageChooserBlock(required=False)
     title = CharBlock(classname="title", required=False)
@@ -661,6 +672,8 @@ class CardscrollerBlock(StructBlock):
         template = "blocks/cardscroller.html"
 
 class ServicesWhyReckonsysBlock(StructBlock):
+    backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
+    maintextcolor = CharBlock(classname="maintextcolor", required=False)
     sidebar = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
@@ -674,7 +687,7 @@ class ServicesWhyReckonsysBlock(StructBlock):
 class OurProcessBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = RichTextBlock(classname="subtitle", required=True)
+    subtitle = CharBlock(classname="subtitle", required=True)
     content = CharBlock(classname="content", required=True)
     ourprocesscards = StreamBlock([('servicebasiccard', ServicesTextCard())])
 
@@ -710,3 +723,59 @@ class OurmethodologiesBlock(StructBlock):
 
     class Meta:
         template = "blocks/ourmethodologies.html"
+
+
+class UiuxHerosectionBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
+    title = CharBlock(classname="title", required=True)
+    services_url = PageChooserBlock(required = False)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
+    btn_title = CharBlock(classname = "title", required = True)
+    btn_icon = ImageChooserBlock(required = False)
+    btn_link = PageChooserBlock(can_choose_root= True)
+    btn_url_link = URLBlock(classname="link", required=False)
+    include_fullimage = BooleanBlock(required=False)
+    include_url_button = BooleanBlock(required = False)
+    image_cover = CharBlock(classname = "imagecover", required=False)
+    image_decor = CharBlock(classname = "imagedecor", required=False)
+    include_companies = BooleanBlock(required=False)
+    company_image = StreamBlock([('image', Image())], required=False)
+    
+
+    class Meta:
+        icon = "title"
+        template = "blocks/uiux_herosection.html"
+
+class UiuxWedoBlock(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
+    content = CharBlock(classname="content", required=False)
+    card = StreamBlock([('uiuxparallaxcard', Uiuxparallaxcard())])
+
+    class Meta:
+        icon = "title"
+        template = "blocks/uiux_wedo.html"
+
+class UiuxsuccessBlock(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    content = RichTextBlock(classname = "content", required=False)
+    card = StreamBlock([('casestudycardbasic', CasestudyCardBasic())], required=False)
+    
+    class Meta:
+        template = "blocks/uiux_success.html"
+
+class UiuxworkBlock(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    content = RichTextBlock(classname = "content", required=False)
+    points = StreamBlock([('imagetitlecombo', ImageTitleCombo())], required=False)
+    
+    class Meta:
+        template = "blocks/uiux_work.html"
+
+class UiuxtestimonialBlock(StructBlock):
+    title = CharBlock(classname="title", required=False)
+    testimonialscard = StreamBlock([('testimonialcard', TitleGroupBasicBlock())])
+
+    class Meta:
+        template = "blocks/uiux_testimonial.html"

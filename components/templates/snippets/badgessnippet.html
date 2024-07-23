@@ -1,0 +1,25 @@
+{%load wagtailimages_tags%}
+
+    <section>
+        <div class="sidebar sidebar-badges">
+            <h5 class="t-20"></h5>
+        </div>
+        <div class="badgesection-container w-container">
+            <div class="badgesection-wrapper pl-54 pr-54">
+                <h2 class="elementanim">{{badgessnippet.title}}</h2>
+                <div class="badge-container">
+                    <div class="badges-wrapper">
+                        {% for badge in badges %}
+                            {% image badge.image max-3000x1500 class="elementanim" loading="lazy"%}
+                        {% endfor %}
+                        {% for badge in badges %}
+                            {% image badge.image max-3000x1500 class="elementanim" loading="lazy"%}
+                        {% endfor %}
+                        {% for badge in badges %}
+                            {% image badge.image max-3000x1500 class="elementanim" loading="lazy"%}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
