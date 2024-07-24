@@ -5,12 +5,15 @@ const innerWrappers = document.querySelectorAll(".engagement-cards-wrapper");
 const innerWrappersCount = document.querySelectorAll(
   ".engagement-cards-wrapper"
 ).length;
-console.log(screenwidth);
 console.log(innerWrappers);
 console.log(outerWrapper);
 
 innerWrappers.forEach((innerWrapper, i) => {
+  console.log(`${i} innerwrapper`)
+  console.log(innerWrapper);
   const cardScrollerButton = innerWrappers[i].parentElement.parentElement.querySelector(".cardscroller-buttons");
+  console.log("cardScrollerButton")
+  console.log(cardScrollerButton);
   if (outerWrapper < innerWrapper.offsetWidth) {
     console.log("active");
     cardScrollerButton.classList.add("active");
