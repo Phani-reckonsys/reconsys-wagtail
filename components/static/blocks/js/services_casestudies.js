@@ -1,14 +1,17 @@
  // CaseStudies Section Corousel
+ document.addEventListener("DOMContentLoaded", (event) => {
  let caseStudiesInterval;
- const carousalImageWrapper = document.querySelector(".case-studies-section .case-study-card");
- const carousalContentWrapper = document.querySelector(".case-studies-section .cards-wrapper-main");
- 
- const carousalLeftArrow = document.querySelector(".case-studies-section .caseStudies-left-arrow");
- const carousalRightArrow = document.querySelector(".case-studies-section .caseStudies-right-arrow");
- const carouselIndicator = document.querySelectorAll(".case-studies-section .indicator");
- const carousalStudyCards = document.querySelectorAll(".case-studies-section .case-study-card");
+ const carousalImageWrapper = document.querySelector(".case-study-card");
+ const carousalContentWrapper = document.querySelector(".cards-wrapper-main");
+ console.log(carousalContentWrapper);
+ console.log(carousalImageWrapper);
+ const carousalLeftArrow = document.querySelector(".caseStudies-left-arrow");
+ const carousalRightArrow = document.querySelector(".caseStudies-right-arrow");
+ const carousalStudyCards = document.querySelectorAll(".case-study-card");
  const carousalStudyCardsLength = carousalStudyCards.length;
-carousalContentWrapper.style.width = `${carousalStudyCards.length*100}%`;
+ console.log(carousalContentWrapper);
+ carousalContentWrapper.style.width = `${carousalStudyCards.length*100}%`;
+
 
  let corouselIndex = 0;
  
@@ -43,3 +46,5 @@ carousalContentWrapper.style.width = `${carousalStudyCards.length*100}%`;
 function stopCaseStudiesCarouselInterval() {
    clearInterval(caseStudiesInterval);
 }
+
+ })

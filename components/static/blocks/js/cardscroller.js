@@ -1,4 +1,5 @@
-let screenwidth = window.innerWidth;
+
+document.addEventListener("DOMContentLoaded", (event) => {
 const outerWrapper = document.querySelector(".cardscroller-body").offsetWidth;
 const innerWrappers = document.querySelectorAll(".engagement-cards-wrapper");
 const innerWrappersCount = document.querySelectorAll(
@@ -9,9 +10,7 @@ console.log(innerWrappers);
 console.log(outerWrapper);
 
 innerWrappers.forEach((innerWrapper, i) => {
-  const cardScrollerButton = innerWrappers[
-    i
-  ].parentElement.parentElement.querySelector(".cardscroller-buttons");
+  const cardScrollerButton = innerWrappers[i].parentElement.parentElement.querySelector(".cardscroller-buttons");
   if (outerWrapper < innerWrapper.offsetWidth) {
     console.log("active");
     cardScrollerButton.classList.add("active");
@@ -68,3 +67,4 @@ innerWrappers.forEach((innerWrapper, i) => {
     });
   }
 });
+})
