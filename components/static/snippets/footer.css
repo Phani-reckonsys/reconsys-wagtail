@@ -165,6 +165,12 @@
   display: flex;
 }
 
+.custom-footer .navigation-footer .custom-col.footer-social{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
 @media only screen and (max-width: 576px) {
   .custom-footer .navigation-footer {
     gap: 5rem;
