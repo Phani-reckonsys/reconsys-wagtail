@@ -17,7 +17,6 @@
   display: flex;
   gap: 5rem;
   padding: 3.6rem;
-  overflow-y: auto;
 }
 
 .services-modal .services-modal-wrapper .side-header{
@@ -174,4 +173,28 @@
   position: absolute;
   bottom: 0;
   left: 40rem;
+}
+
+@media only screen and (max-width: 576px){
+  .services-modal .services-modal-wrapper {
+    overflow-y: auto;
+  }
+  .services-modal .services-modal-wrapper .side-header{
+    width: 100%;
+  }
+  .services-modal .services-modal-wrapper .side-header h1 {
+    font-size: 3.6rem;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+  }
+  .services-modal .services-modal-wrapper .services-wrapper {
+    margin-top: 0rem ;
+    width: 90% ;
+  }
+  .services-modal .services-modal-wrapper .rectangle {
+    display: none;
+  }
+  .services-modal .services-modal-wrapper .triangle {
+    display: none;
+  }
 }
