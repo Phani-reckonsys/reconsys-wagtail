@@ -191,4 +191,10 @@
     margin-top: 0rem ;
     width: 90% ;
   }
+  .services-modal .services-modal-wrapper .rectangle {
+    display: none;
+  }
+  .services-modal .services-modal-wrapper .triangle {
+    display: none;
+  }
 }
