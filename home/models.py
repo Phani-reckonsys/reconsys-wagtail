@@ -7,7 +7,7 @@ from datetime import datetime
 from django.urls import reverse
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesDatasectionBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock,OurServicesBlock, TechnologiesusedBlock, EngagmentBlock, CardscrollerBlock, ServicesWhyReckonsysBlock, OurProcessBlock, OursuccessBlock, OurmethodologiesBlock,UiuxHerosectionBlock,UiuxWedoBlock,UiuxsuccessBlock, UiuxworkBlock, UiuxtestimonialBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesDatasectionBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock,OurServicesBlock, TechnologiesusedBlock, EngagmentBlock, CardscrollerBlock, ServicesWhyReckonsysBlock, OurProcessBlock, OursuccessBlock, OurmethodologiesBlock,UiuxHerosectionBlock,UiuxWedoBlock,UiuxsuccessBlock, UiuxworkBlock, UiuxtestimonialBlock, CsrHerosection, TextimageBlock, EmpoweringBlock
 
 class HomePage(Page):
     herosection = StreamField(
@@ -438,6 +438,24 @@ class UiuxPage(Page):
          ('ourprocessblock', OurProcessBlock()),
          ('oursuccessblock', OursuccessBlock()),
          ('ourmethodologiesblock', OurmethodologiesBlock()),
+        ], null = True)
+    
+    body_panels = [FieldPanel('body')]
+
+    edit_handler = TabbedInterface([
+        ObjectList(Page.content_panels, heading= 'Content'),
+        ObjectList(body_panels, heading= 'Body'),
+        ObjectList(Page.promote_panels, heading='Promote'),
+    ])
+
+class CsrPage(Page):
+    body = StreamField(
+        [('herosection', CsrHerosection()),
+         ('CardsSection', CardscrollerBlock()),
+         ('EngagementSection', EngagmentBlock()),
+         ('TextImageBlock', TextimageBlock()),
+         ('empoweringblock', EmpoweringBlock()),
+         ('cardscrollerblock', CardscrollerBlock()),
         ], null = True)
     
     body_panels = [FieldPanel('body')]

@@ -779,3 +779,33 @@ class UiuxtestimonialBlock(StructBlock):
 
     class Meta:
         template = "blocks/uiux_testimonial.html"
+
+
+class CsrHerosection(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="title", required=False)
+    include_fullimage = BooleanBlock(required=False)
+    image_cover = CharBlock(classname = "imagecover", required=False)
+    image_decor = CharBlock(classname = "imagedecor", required=False)
+
+    class Meta:
+        template = "blocks/csrherosection.html"
+
+
+class TextimageBlock(StructBlock):
+    text = RichTextBlock(classname="text", required=False)
+    image = ImageChooserBlock(required=False)
+
+    class Meta:
+        template = "blocks/textimage.html"
+
+class EmpoweringBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
+    title = CharBlock(classname="title", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
+    content = RichTextBlock(classname="content", required=False)
+    image = ImageChooserBlock(required=False)
+
+    class Meta:
+        template = "blocks/empowering.html"
