@@ -453,6 +453,7 @@ class CsrPage(Page):
         [('herosection', CsrHerosection()),
          ('CardsSection', CardscrollerBlock()),
          ('EngagementSection', EngagmentBlock()),
+         ('culture', CultureBlock()),
          ('TextImageBlock', TextimageBlock()),
          ('empoweringblock', EmpoweringBlock()),
          ('cardscrollerblock', CardscrollerBlock()),

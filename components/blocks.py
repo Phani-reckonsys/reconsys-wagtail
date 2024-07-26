@@ -343,6 +343,7 @@ class CultureBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = RichTextBlock(classname="subtitle", required=True)
+    content = RichTextBlock(classname="content", required=False)
     gallery = StreamBlock([('gallery', ListBlock(ImageChooserBlock()))])
 
     class Meta:
