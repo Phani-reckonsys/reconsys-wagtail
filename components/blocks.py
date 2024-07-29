@@ -633,7 +633,7 @@ class CollaborateBlock(StructBlock):
 class OurServicesBlock(StructBlock):
     sidetitle = CharBlock(classname ="sidetitle", required=False)
     title = CharBlock(classname= "title", required=False)
-    subtitle = CharBlock(classname="subtitle", required=False)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
     content = CharBlock(classname="content", required=False)
     card = StreamBlock([('servicesbasiccard',ServicesBasicCard())], required=False)
 
