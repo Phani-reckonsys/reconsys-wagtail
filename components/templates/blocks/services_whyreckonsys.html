@@ -9,7 +9,7 @@
     <div class="left">
       <div class="whyreckonsys-header">
         <h4 class="mb-20 ft-20" style="color: #{{self.maintextcolor}}">{{self.title}}</h4>
-        <h2 class="w-70 mb-32" style="color: #{{self.maintextcolor}}">{{self.subtitle}}</h2>
+        <h2 class="w-70 mb-32 {% if self.maintextcolor == 'ffffff' %}color-white{% endif %}" style="color: #{{self.maintextcolor}}">{{self.subtitle}}</h2>
         <p class="mb-54 lh-140 w-80" style="color: #{{self.maintextcolor}}">{{self.content}}</p>
       </div>
       <div class="cards-wrapper">
