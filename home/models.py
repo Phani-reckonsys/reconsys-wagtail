@@ -204,6 +204,7 @@ class AboutusPage(Page):
         [('herosection', HeroSectionBlock()),
          ('ourmission', OurMissionBlock()),
          ('ourvision', OurVisionBlock()),
+         ('collaborate', CollaborateBlock()),
          ('ourvalues', OurValuesBlock()),
          ('ourjourney', OurJourneyBlock()),
          ('ourgallery', OurGalleryBlock()),
