@@ -28,7 +28,7 @@
                     </g>
                     </svg>
                 <h4 class="mb-20 elementanim w-60 ft-20" style="color:#{{self.color}}">{{self.maintitle}}</h4>
-                <h2 class="mb-40 elementanim w-60" style="color:#{{self.color}}">{{self.title}}</h2>
+                <h2 class="mb-40 elementanim w-60 {% if self.color == 'ffffff' %}color-white{% endif %}" style="color:#{{self.color}}">{{self.title}}</h2>
                 {% for faqsection_faq in self.faq%}
                 <div class="faq-wrapper mb-24 pt-24 elementanim w-70">
                     <div class="question-wrapper ">

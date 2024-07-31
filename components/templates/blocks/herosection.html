@@ -27,7 +27,6 @@
       <figure class="geometric-connection custom-hero-fullimage">
       {{content.value.image_cover|safe}}
       </figure>
-        {% comment %} {% image content.value.image_cover max-3000x1500 class="geometric-connection custom-hero-fullimage elementanim" %} {% endcomment %}
       {% else %}
       <figure class="geometric-connection">
       {{content.value.image_cover|safe}}
@@ -35,8 +34,6 @@
       <figure class="geometric-wave">
       {{content.value.image_decor|safe}}
       </figure>
-        {% comment %} {% image content.value.image_cover max-3000x1500 class="geometric-connection elementanim" loading="lazy"%}
-        {% image content.value.image_decor max-3000x1500 class="geometric-wave elementanim" loading="lazy"%} {% endcomment %}
       {% endif %}
       </div>
     </div>

@@ -11,7 +11,7 @@
             </div>
             <div class="content">
                 <div class="dash-decor hidden lg-block"></div>
-                <h2 class="mb-40" style="color: #{{self.maintextcolor}}">{{self.title}}</h2>
+                <h2 class="mb-40 {% if self.maintextcolor == 'ffffff' %}color-white{% endif %}" style="color: #{{self.maintextcolor}}">{{self.title}}</h2>
                 {% for button in self.button %}
                     {{button}}
                 {% endfor %}

@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const countryCode = countryCodeField.value;
       const phoneNumber = phoneNumberField.value.trim();
       const company = companyField.value.trim();
-      const service = serviceField.value;
+      const service = serviceField.value.trim();
 
       let hasError = false;
 
