@@ -21,6 +21,14 @@
   position: relative;
 }
 
+.collaborate-wrapper .content h2{
+  font-size: 4rem !important;
+}
+
+.collaborate-wrapper .content h2 p{
+  font-size: 4rem !important;
+}
+
 .collaborate-wrapper .content .decor-ring {
   position: absolute;
   bottom: 0;
