@@ -343,6 +343,7 @@ class CultureBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
     subtitle = RichTextBlock(classname="subtitle", required=True)
+    content = RichTextBlock(classname="content", required=False)
     gallery = StreamBlock([('gallery', ListBlock(ImageChooserBlock()))])
 
     class Meta:
@@ -600,7 +601,7 @@ class ServicesWhychooseusBlock(StructBlock):
 class ServicesCasestudiesBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
-    content = CharBlock(classname = "content", required=False)
+    content = RichTextBlock(classname = "content", required=False)
     card = StreamBlock([('casestudycardbasic', CasestudyCardBasic())], required=False)
     
     class Meta:
@@ -611,7 +612,7 @@ class FaqBlock(StructBlock):
     backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
     color = CharBlock(classname="backgroundcolor", required=False)
     maintitle = CharBlock(classname="title", required=False)
-    title = CharBlock(classname="title", required=False)
+    title = RichTextBlock(classname="title", required=False)
     faq = StreamBlock([('faqbasicblock', FaqBasicBlock())], required=False)
 
     class Meta:
@@ -622,7 +623,7 @@ class CollaborateBlock(StructBlock):
     maintextcolor = CharBlock(classname="maintextcolor", required=False)
     sidetitle = CharBlock(classname="sidetitle", required=False)
     image = ImageChooserBlock(required=False)
-    title = CharBlock(classname="title", required=False)
+    title = RichTextBlock(classname="title", required=False)
     button = StreamBlock([('primarybutton', PrimaryButtonBlock())], required=False)
 
     class Meta:
@@ -632,7 +633,7 @@ class CollaborateBlock(StructBlock):
 class OurServicesBlock(StructBlock):
     sidetitle = CharBlock(classname ="sidetitle", required=False)
     title = CharBlock(classname= "title", required=False)
-    subtitle = CharBlock(classname="subtitle", required=False)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
     content = CharBlock(classname="content", required=False)
     card = StreamBlock([('servicesbasiccard',ServicesBasicCard())], required=False)
 
@@ -651,7 +652,7 @@ class TechnologiesusedBlock(StructBlock):
 class EngagmentBlock(StructBlock):
     sidetitle = CharBlock(classname = "sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
-    subtitle = CharBlock(classname="subtitle", required=False)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
     content = CharBlock(classname="content", required=False)
     card = StreamBlock([('servicesbasiccard', ServicesBasicCard())], requried=False)
 
@@ -662,7 +663,7 @@ class CardscrollerBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
     sidebar_background = CharBlock(classname="", required=False)
     title = CharBlock(classname="title", required=False)
-    subtitle = CharBlock(classname="subtitle", required=False)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
     include_buttons = BooleanBlock(required=False)
     content = CharBlock(classname="content", required=False)
     container_background = CharBlock(classname="container_background", required=False)
@@ -676,7 +677,7 @@ class ServicesWhyReckonsysBlock(StructBlock):
     maintextcolor = CharBlock(classname="maintextcolor", required=False)
     sidebar = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
-    subtitle = CharBlock(classname="subtitle", required=False)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
     content = CharBlock(classname="content", required=False)
     card = StreamBlock([('servicebasiccard', ServicesTextCard())], required=False)
 
@@ -687,7 +688,7 @@ class ServicesWhyReckonsysBlock(StructBlock):
 class OurProcessBlock(StructBlock):
     sidetitle = CharBlock(classname="title", required=True)
     title = CharBlock(classname="title", required=True)
-    subtitle = CharBlock(classname="subtitle", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=True)
     content = CharBlock(classname="content", required=True)
     ourprocesscards = StreamBlock([('servicebasiccard', ServicesTextCard())])
 
@@ -716,7 +717,7 @@ class OursuccessBlock(StructBlock):
 class OurmethodologiesBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", reduired=False)
     title = CharBlock(classname="title", required=False)
-    subtitle = CharBlock(classname="subtitle", required=False)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
     content = CharBlock(classname="content", required=False)
     selectors = StreamBlock([("imagetitlecombo", ImageTitleCombo())], required=False)
     contentdisplay = StreamBlock([("imagetitlecombo", ImageTitleCombo())], required=False)
@@ -779,3 +780,33 @@ class UiuxtestimonialBlock(StructBlock):
 
     class Meta:
         template = "blocks/uiux_testimonial.html"
+
+
+class CsrHerosection(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
+    title = CharBlock(classname="title", required=True)
+    subtitle = CharBlock(classname="title", required=False)
+    include_fullimage = BooleanBlock(required=False)
+    image_cover = CharBlock(classname = "imagecover", required=False)
+    image_decor = CharBlock(classname = "imagedecor", required=False)
+
+    class Meta:
+        template = "blocks/csrherosection.html"
+
+
+class TextimageBlock(StructBlock):
+    text = RichTextBlock(classname="text", required=False)
+    image = ImageChooserBlock(required=False)
+
+    class Meta:
+        template = "blocks/textimage.html"
+
+class EmpoweringBlock(StructBlock):
+    sidetitle = CharBlock(classname="title", required=True)
+    title = CharBlock(classname="title", required=True)
+    subtitle = RichTextBlock(classname="subtitle", required=False)
+    content = RichTextBlock(classname="content", required=False)
+    image = ImageChooserBlock(required=False)
+
+    class Meta:
+        template = "blocks/empowering.html"

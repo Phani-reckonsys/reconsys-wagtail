@@ -1,0 +1,17 @@
+{% load wagtailimages_tags %}
+
+<section>
+    <div class="sidebar pt-20">
+        <h5 class="t-20">{{self.sidetitle}}</h5>
+    </div>
+    <div class="textimage-section pl-54 pr-54 w-container" >
+        <div class="textimage-wrapper">
+            <div class="content">
+               {{self.text}}
+            </div>
+            <div class="image-wrapper">
+                {% image self.image class="w-100" max-3000x1500 %}
+            </div>
+        </div>
+    </div>
+</section>

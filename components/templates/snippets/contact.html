@@ -105,16 +105,12 @@
               </div>
             </div>
             <div class="services">
-              <label for="services">Services</label>
+              <label for="services">Message</label>
               <p class="error-message services-error-message"></p>
-              <select name="services" id="services">
-                {% for service in servicesoptions %}
-                  <option value="{{service.service}}">{{service.service}}</option>
-                {% endfor %}
-                
-              </select>
+              <textarea name="services" id="services">
+
+              </textarea>
             </div>
-             {% comment %} <input type="submit" value="Submit!" class="primary-btn"/> {% endcomment %}
             <button type="submit" class="primary-btn" id="submit-btn">
               Get in Touch
               <svg
