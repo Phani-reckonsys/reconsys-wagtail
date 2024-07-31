@@ -5,6 +5,10 @@
     padding-top: 12rem;
     margin-bottom: 12rem;
   }
+
+  .textimage-wrapper .content h2{
+    font-size: 3rem !important;
+  }
   
   .textimage-wrapper .content p{
     font-size: 1.8rem;
