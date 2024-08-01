@@ -20,7 +20,6 @@ class NavItem(Orderable, models.Model):
     navbar = ParentalKey(Navbar, on_delete = models.CASCADE, related_name="navitems")
     panels = [FieldPanel("name"), PageChooserPanel("link")]
 
-
 @register_snippet
 class Footer(ClusterableModel):
     # navbar content variables
