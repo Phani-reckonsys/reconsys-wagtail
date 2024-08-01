@@ -104,12 +104,13 @@ class HomePage(Page):
     
 
 class HomeServiceCard(Orderable):
+    card_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     card_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     description = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
 
     page = ParentalKey(HomePage, on_delete = models.CASCADE, related_name = "service_cards")
-    panels = [FieldPanel('card_icon'),FieldPanel('title'), FieldPanel('description')]
+    panels = [FieldPanel('card_link'), FieldPanel('card_icon'),FieldPanel('title'), FieldPanel('description')]
 
 class HomeProcessCard(Orderable):
     pointer_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")

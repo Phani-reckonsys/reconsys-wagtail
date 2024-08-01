@@ -1,578 +1,459 @@
-    {%load wagtailimages_tags%}
-    {% load wagtailcore_tags %}
-    {% load static %}
-    <!-- Services Starts -->
-    <section>
-      <div class="sidebar">
-        <h5 class="t-15">{{page.home_service_sidetitle}}</h5>
-      </div>
-      <!-- complete service section wrapper -->
-      <div class="services-main w-container">
-        <!-- services we offer section starts -->
-        <div class="software-services pl-54 pr-54">
-          <!-- content part of service section -->
-          <div class="left">
-            <div class="software-services-content">
-              <h4 class="mb-20 ft-20 lh-110 elementanim">{{page.home_service_title}}</h4>
-              <h2 class="mb-32 elementanim">
-                {{page.home_service_subtitle|richtext}}
-              </h2>
-              <p class="mb-32 lh-140 elementanim">
-                {{page.home_service_content}}
-              </p>
-              {% for button in page.outline_grey_button %}
-                {{button}}
-              {% endfor %}
-            </div>
-
-            <!-- Geometric circular shape with lines positioned at left bottom end of services section -->
-            <svg
-              class="software-services-geometric-shape"
-              width="275"
-              height="290"
-              viewBox="0 0 275 290"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_4584_3008)">
-                <g opacity="0.3">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M68.3982 115.444C42.8729 115.444 22.1805 136.629 22.1805 162.763C22.1805 188.896 42.8729 210.081 68.3982 210.081C93.9235 210.081 114.616 188.896 114.616 162.763C114.616 136.629 93.9235 115.444 68.3982 115.444ZM24.19 162.763C24.19 137.766 43.9827 117.501 68.3982 117.501C92.8137 117.501 112.606 137.766 112.606 162.763C112.606 187.76 92.8137 208.024 68.3982 208.024C43.9827 208.024 24.19 187.76 24.19 162.763Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M68.3982 107.729C38.7111 107.729 14.645 132.368 14.645 162.763C14.645 193.157 38.7111 217.796 68.3982 217.796C98.0853 217.796 122.151 193.157 122.151 162.763C122.151 132.368 98.0853 107.729 68.3982 107.729ZM16.6545 162.763C16.6545 133.505 39.8209 109.786 68.3982 109.786C96.9755 109.786 120.142 133.505 120.142 162.763C120.142 192.02 96.9755 215.739 68.3982 215.739C39.8209 215.739 16.6545 192.02 16.6545 162.763Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7.10952 162.763C7.10952 128.108 34.5494 100.014 68.3982 100.014C102.247 100.014 129.687 128.108 129.687 162.763C129.687 197.418 102.247 225.511 68.3982 225.511C34.5494 225.511 7.10952 197.418 7.10952 162.763ZM68.3982 102.071C35.6592 102.071 9.11898 129.244 9.11898 162.763C9.11898 196.281 35.6592 223.454 68.3982 223.454C101.137 223.454 127.677 196.281 127.677 162.763C127.677 129.244 101.137 102.071 68.3982 102.071Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-0.42598 162.763C-0.42598 123.847 30.3877 92.2992 68.3982 92.2992C106.409 92.2992 137.222 123.847 137.222 162.763C137.222 201.678 106.409 233.226 68.3982 233.226C30.3877 233.226 -0.42598 201.678 -0.42598 162.763ZM68.3982 94.3565C31.4975 94.3565 1.58349 124.983 1.58349 162.763C1.58349 200.542 31.4975 231.169 68.3982 231.169C105.299 231.169 135.213 200.542 135.213 162.763C135.213 124.983 105.299 94.3565 68.3982 94.3565Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-7.96147 162.763C-7.96147 119.586 26.2259 84.5842 68.3982 84.5842C110.57 84.5842 144.758 119.586 144.758 162.763C144.758 205.939 110.57 240.941 68.3982 240.941C26.2259 240.941 -7.96147 205.939 -7.96147 162.763ZM68.3982 86.6416C27.3357 86.6416 -5.952 120.722 -5.952 162.763C-5.952 204.803 27.3357 238.884 68.3982 238.884C109.461 238.884 142.748 204.803 142.748 162.763C142.748 120.722 109.461 86.6416 68.3982 86.6416Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M68.3982 76.8693C22.0642 76.8693 -15.497 115.325 -15.497 162.763C-15.497 210.2 22.0642 248.656 68.3982 248.656C114.732 248.656 152.293 210.2 152.293 162.763C152.293 115.325 114.732 76.8693 68.3982 76.8693ZM-13.4875 162.763C-13.4875 116.461 23.174 78.9266 68.3982 78.9266C113.622 78.9266 150.284 116.461 150.284 162.763C150.284 209.064 113.622 246.599 68.3982 246.599C23.174 246.599 -13.4875 209.064 -13.4875 162.763Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-23.0325 162.763C-23.0325 111.064 17.9024 69.1543 68.3982 69.1543C118.894 69.1543 159.829 111.064 159.829 162.763C159.829 214.461 118.894 256.371 68.3982 256.371C17.9024 256.371 -23.0325 214.461 -23.0325 162.763ZM68.3982 71.2116C19.0122 71.2116 -21.023 112.2 -21.023 162.763C-21.023 213.325 19.0122 254.314 68.3982 254.314C117.784 254.314 157.819 213.325 157.819 162.763C157.819 112.2 117.784 71.2116 68.3982 71.2116Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M68.3982 61.4393C13.7407 61.4393 -30.568 106.803 -30.568 162.763C-30.568 218.722 13.7407 264.086 68.3982 264.086C123.056 264.086 167.364 218.722 167.364 162.763C167.364 106.803 123.056 61.4393 68.3982 61.4393ZM-28.5585 162.763C-28.5585 107.94 14.8505 63.4967 68.3982 63.4967C121.946 63.4967 165.355 107.94 165.355 162.763C165.355 217.586 121.946 262.028 68.3982 262.028C14.8505 262.028 -28.5585 217.586 -28.5585 162.763Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-38.1034 162.763C-38.1034 102.542 9.57896 53.7244 68.3982 53.7244C127.217 53.7244 174.9 102.542 174.9 162.763C174.9 222.983 127.217 271.801 68.3982 271.801C9.57896 271.801 -38.1034 222.983 -38.1034 162.763ZM68.3982 55.7817C10.6888 55.7817 -36.094 103.679 -36.094 162.763C-36.094 221.846 10.6888 269.743 68.3982 269.743C126.108 269.743 172.89 221.846 172.89 162.763C172.89 103.679 126.108 55.7817 68.3982 55.7817Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M68.3982 46.0094C5.41723 46.0094 -45.6389 98.2816 -45.6389 162.763C-45.6389 227.244 5.41723 279.516 68.3982 279.516C131.379 279.516 182.435 227.244 182.435 162.763C182.435 98.2816 131.379 46.0094 68.3982 46.0094ZM-43.6295 162.763C-43.6295 99.4178 6.52702 48.0667 68.3982 48.0667C130.269 48.0667 180.426 99.4178 180.426 162.763C180.426 226.107 130.269 277.458 68.3982 277.458C6.52702 277.458 -43.6295 226.107 -43.6295 162.763Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-53.1744 162.763C-53.1744 94.0207 1.25549 38.2944 68.3982 38.2944C135.541 38.2944 189.971 94.0207 189.971 162.763C189.971 231.504 135.541 287.231 68.3982 287.231C1.25549 287.231 -53.1744 231.504 -53.1744 162.763ZM68.3982 40.3518C2.36529 40.3518 -51.165 95.1569 -51.165 162.763C-51.165 230.368 2.36529 285.173 68.3982 285.173C134.431 285.173 187.961 230.368 187.961 162.763C187.961 95.1569 134.431 40.3518 68.3982 40.3518Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M68.3982 30.5795C-2.90625 30.5795 -60.7099 89.7599 -60.7099 162.763C-60.7099 235.765 -2.90625 294.946 68.3982 294.946C139.703 294.946 197.506 235.765 197.506 162.763C197.506 89.7599 139.703 30.5795 68.3982 30.5795ZM-58.7005 162.763C-58.7005 90.8961 -1.79646 32.6368 68.3982 32.6368C138.593 32.6368 195.497 90.8961 195.497 162.763C195.497 234.629 138.593 292.888 68.3982 292.888C-1.79646 292.888 -58.7005 234.629 -58.7005 162.763Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-68.2454 162.763C-68.2454 85.499 -7.06799 22.8645 68.3982 22.8645C143.864 22.8645 205.042 85.499 205.042 162.763C205.042 240.026 143.864 302.661 68.3982 302.661C-7.06799 302.661 -68.2454 240.026 -68.2454 162.763ZM68.3982 24.9218C-5.95819 24.9218 -66.236 86.6352 -66.236 162.763C-66.236 238.89 -5.95819 300.603 68.3982 300.603C142.755 300.603 203.032 238.89 203.032 162.763C203.032 86.6352 142.755 24.9218 68.3982 24.9218Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M68.3982 15.1495C-11.2297 15.1495 -75.7809 81.2381 -75.7809 162.763C-75.7809 244.287 -11.2297 310.376 68.3982 310.376C148.026 310.376 212.577 244.287 212.577 162.763C212.577 81.2381 148.026 15.1495 68.3982 15.1495ZM-73.7714 162.763C-73.7714 82.3744 -10.1199 17.2069 68.3982 17.2069C146.916 17.2069 210.568 82.3744 210.568 162.763C210.568 243.151 146.916 308.318 68.3982 308.318C-10.1199 308.318 -73.7714 243.151 -73.7714 162.763Z"
-                    fill="#B6B6B6"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-83.3164 162.763C-83.3164 76.9773 -15.3915 7.43457 68.3982 7.43457C152.188 7.43457 220.113 76.9773 220.113 162.763C220.113 248.548 152.188 318.091 68.3982 318.091C-15.3915 318.091 -83.3164 248.548 -83.3164 162.763ZM68.3982 9.49189C-14.2817 9.49189 -81.3069 78.1135 -81.3069 162.763C-81.3069 247.412 -14.2817 316.033 68.3982 316.033C151.078 316.033 218.103 247.412 218.103 162.763C218.103 78.1135 151.078 9.49189 68.3982 9.49189Z"
-                    fill="#B6B6B6"
-                  />
-                </g>
-              </g>
-              <defs>
-                <clipPath id="clip0_4584_3008">
-                  <rect width="275" height="290" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-          <!-- End of content part of service section -->
-
-          <!-- Right side Service cards group -->
-          <div class="service-card-group">
-            <!-- service card 1 starts -->
-            {% for service_card in page.cardservice %}
-                <div class="services-card elementanim">
-                {% image service_card.card_icon max-3000x1500 class="mb-14" loading="lazy"%}
-              <h4 class="mb-14 lh-125">
-                {{service_card.title}}
-              </h4>
-              <p class="ft-16 lh-140 o-8">
-                {{service_card.description}}
-              </p>
-            </div>
-            {% endfor %}
-          </div>
-          <!-- End of Right side service card group -->
-        </div>
-        <!-- services we offer section starts -->
-      </div>
-      <!-- End of complete service section wrapper -->
-    </section>
-    <!-- Services Ends -->
-
-    <!-- Process section starts -->
-    <section class="process-section">
-      <div class="sidebar dark-section">
-        <h5 class="color-white t-15">{{page.home_process_sidetitle}}</h5>
-      </div>
-      <!-- complete process section wrapper -->
-      <div class="process-main pl-54 pr-54 w-container">
-        <svg
-          class="decor-squares"
-          width="169"
-          height="272"
-          viewBox="0 0 169 272"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            x="164.758"
-            y="2.12207"
-            width="202"
-            height="179"
-            transform="rotate(45 164.758 2.12207)"
-            fill="#F86638"
-          />
-          <rect
-            x="124.449"
-            width="202"
-            height="176"
-            transform="rotate(45 124.449 0)"
-            fill="#D51919"
-          />
-        </svg>
-        <h4 class="mb-20 color-white ft-20 lh-110 elementanim">{{page.home_process_title}}</h4>
-        <h2 class="color-white w-80 elementanim">
-          {{page.home_process_subtitle|richtext}}
-        </h2>
-        <div class="process-map">
-            {% for process_card in page.cardprocess %}
-            <div class="process-map-card elementanim">
-                     <h6>{{process_card.title}}</h6>
-                     <svg
-              class="ul-connecting-line elementanim"
-              width="1"
-              height="181"
-              viewBox="0 0 1 181"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                x1="0.5"
-                y1="2.18557e-08"
-                x2="0.499992"
-                y2="181"
-                stroke="white"
-                stroke-opacity="0.31"
-                stroke-dasharray="5 5"
-              />
-            </svg>
-                    <ul>
-                        <li>
-                            {% image process_card.pointer_icon max-3000x1500 loading="lazy"%}
-                            <p class="ft-20 color-white lh-140">{{process_card.point1}}</p>
-                        </li>
-                        <li>
-                            {% image process_card.pointer_icon max-3000x1500 loading="lazy"%}
-                             <p class="ft-20 color-white lh-140">{{process_card.point2}}</p>
-                        </li>
-                        <li>
-                            {% image process_card.pointer_icon max-3000x1500 loading="lazy"%}
-                             <p class="ft-20 color-white lh-140">{{process_card.point3}}</p>
-                        </li>
-                        <li>
-                            {% image process_card.final_pointer_icon max-3000x1500 loading="lazy"%}
-                            <p class="ft-20 color-white lh-140">{{process_card.point4}}</p>
-                        </li>
-                    </ul>
-                </div>
-            {% endfor %}
-            {% image page.dotted_mesh class='dotted-mesh' max-3000x1500 loading="lazy"%}
-        </div>
-
-        <div class="technologies">
-          <h5 class="color-white mb-12 lh-110 elementanim">
-            {{page.home_process_technology_title}}
-          </h5>
-          <p class="color-light-white ft-16 lh-110 elementanim">
-            {{page.home_process_technology_content}}
+{%load wagtailimages_tags%}
+{% load wagtailcore_tags %}
+{% load static %}
+<!-- Services Starts -->
+<section>
+  <div class="sidebar">
+    <h5 class="t-15">{{page.home_service_sidetitle}}</h5>
+  </div>
+  <!-- complete service section wrapper -->
+  <div class="services-main w-container">
+    <!-- services we offer section starts -->
+    <div class="software-services pl-54 pr-54">
+      <!-- content part of service section -->
+      <div class="left">
+        <div class="software-services-content">
+          <h4 class="mb-20 ft-20 lh-110 elementanim">{{page.home_service_title}}</h4>
+          <h2 class="mb-32 elementanim">
+            {{page.home_service_subtitle|richtext}}
+          </h2>
+          <p class="mb-32 lh-140 elementanim">
+            {{page.home_service_content}}
           </p>
-          <div class="technology-stack-wrapper">
-          {% for technologies_stack in page.stacktechnologies%}
-            <div class="technology-stack elementanim">
-              <h5 class="color-white mb-14 o-5 ft-12">
-                {{technologies_stack.title}}
-              </h5>
-              <div class="logos-array">
-              
-                {% for technologies in technologies_stack.technology%}
-                <div class="tooltip-wrapper">
-                  {% image technologies.icon max-3000x1500 loading="lazy"%}
-                  <div class="tooltip-text-wrapper">
-                    <p class="tooltip-text">{{technologies.text}}</p>
-                    <p class="tooltip-text">{{technologies.subtext}}</p>
-                  </div>
-                </div>
-                {% endfor %}
-                
-              </div>
-            </div>
+          {% for button in page.outline_grey_button %}
+          {{button}}
           {% endfor %}
-          </div>
         </div>
-      </div>
-      <!-- End of complete process section wrapper -->
-    </section>
-    <!-- process section ends -->
 
-    <!-- Indutries section starts -->
-    <section class="industries-section">
-      <div class="sidebar">
-        <h5 class="t-15">{{page.home_industries_sidetitle}}</h5>
-      </div>
-      <!-- complete industries section wrapper -->
-      <div class="industries-main pl-54 pr-54 w-container">
-        <div class="industries-header">
-          <div class="left">
-            <h4 class="lh-110 ft-20 mb-20 elementanim">{{page.home_industries_title}}</h4>
-            <h2 class="elementanim">
-              {{page.home_industries_subtitle|richtext}}
-            </h2>
-          </div>
-          <div class="middle">
-            <p class="w-80 lh-140 elementanim">
-              {{page.home_industries_content}}
-            </p>
-          </div>
-          <div class="right">
-            <div id="industries-corousel-left-arrow" class="outline-btn carousal-outline-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
-                <path d="M14 1L2 13.1732L14 23" stroke="#333333" stroke-width="2"/>
-              </svg>
-            </div>
-            <div id="industries-corousel-right-arrow" class="outline-btn carousal-outline-btn">
-             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
-                <path d="M1 1L13 13.1732L1 23" stroke="#333333" stroke-width="2"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="sector-card-container">
-          <div class="sector-card-group-wrapper">
-            <div class="sector-card-group">
-            {% for industries_cards in page.cardindustries%}
-              <div class="sector-card elementanim">
-              
-                <div class="sector-card-content">
-                  <div class="sector-card-header">
-                    {% image industries_cards.card_icon max-3000x1500 loading="lazy"%}
-                    <h3 class="lh-125">{{industries_cards.card_title}}</h3>
-                  </div>
-                  <ul>
-                        <li>
-                        {% image industries_cards.pointer_icon max-3000x1500 loading="lazy"%}
-                          <p class="ft-16 lh-145 o-8">
-                          {{industries_cards.point1}}
-                          </p>
-                        </li> 
-                        <li>
-                        {% image industries_cards.pointer_icon max-3000x1500 loading="lazy"%}
-                          <p class="ft-16 lh-145 o-8">
-                          {{industries_cards.point2}}
-                          </p>
-                        </li> 
-                        <li>
-                        {% image industries_cards.pointer_icon max-3000x1500 loading="lazy"%}
-                          <p class="ft-16 lh-145 o-8">
-                          {{industries_cards.point3}}
-                          </p>
-                        </li> 
-                        <li>
-                        {% image industries_cards.pointer_icon max-3000x1500 loading="lazy"%}
-                          <p class="ft-16 lh-145 o-8">
-                          {{industries_cards.point4}}
-                          </p>
-                        </li> 
-                        <li>
-                        {% image industries_cards.pointer_icon max-3000x1500 loading="lazy"%}
-                          <p class="ft-16 lh-145 o-8">
-                          {{industries_cards.point5}}
-                          </p>
-                        </li> 
-                  </ul>
-                </div>
-                <div class="sector-card-footer">
-                {% image industries_cards.footer_testimonial1 max-3000x1500 loading="lazy"%}
-                {% image industries_cards.footer_testimonial2 max-3000x1500 loading="lazy"%}
-                </div>
-              </div>
-              {% endfor %}
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End of comlete industries section wrapper -->
-    </section>
-    <!-- Industries section Ends -->
-
-    <!-- Why Reckonsys Section Starts -->
-    <section class="why-reckonsys-section">
-      <div class="sidebar dark-section">
-        <h5 class="color-white spaced-word t-20">{{page.home_whyreckonsys_sidetitle}}</h5>
-      </div>
-      <div
-        class="why-reckonsys-main pl-54 pr-54 pt-100 pb-180 w-container c-dark row"
-      >
-        <div class="left col-md-6">
-          <div class="left-content-wrapper sticky-class">
-            <h4 class="color-white mb-20 ft-20 lh-110 elementanim">
-            {{page.home_whyreckonsys_title}}
-            </h4>
-            <h2 class="w-80 mb-14 color-white elementanim">
-             {{page.home_whyreckonsys_subtitle|richtext}}
-            </h2>
-            <p class="ft-24 w-80 color-white mb-106 elementanim">
-              {{page.home_whyreckonsys_content}}
-            </p>
-          </div>
-          <svg
-            class="sticky-class geometric-circle"
-            width="376"
-            height="371"
-            viewBox="0 0 376 371"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g opacity="0.2">
-              <path
-                d="M114.159 1.53942C115.362 1.01378 116.571 0.500585 117.786 0H258.214C259.429 0.500585 260.638 1.01378 261.841 1.53942H114.159Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M85.9012 16.9336C86.6846 16.4147 87.472 15.9015 88.2634 15.3942H287.737C288.528 15.9015 289.315 16.4147 290.099 16.9336H85.9012Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M65.7477 32.3278C66.3379 31.811 66.9312 31.2978 67.5277 30.7884H308.472C309.069 31.2978 309.662 31.811 310.252 32.3278H65.7477Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M50.0857 47.722C50.5535 47.2062 51.024 46.6931 51.4973 46.1826H324.503C324.976 46.6931 325.447 47.2062 325.914 47.722H50.0857Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M37.5106 63.1162C37.8889 62.601 38.2696 62.0879 38.6527 61.5768H337.347C337.73 62.0879 338.111 62.601 338.489 63.1162H37.5106Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M27.3042 78.5104C27.6111 77.9956 27.9203 77.4825 28.2318 76.971H347.768C348.08 77.4825 348.389 77.9956 348.696 78.5104H27.3042Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M19.0445 93.9046C19.2912 93.3901 19.5402 92.877 19.7913 92.3651H356.209C356.46 92.877 356.709 93.3901 356.956 93.9046H19.0445Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M12.4625 109.299C12.6566 108.785 12.8527 108.271 13.0509 107.759H362.949C363.147 108.271 363.343 108.785 363.537 109.299H12.4625Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M7.37837 124.693C7.52463 124.179 7.67293 123.666 7.82326 123.154H368.177C368.327 123.666 368.475 124.179 368.622 124.693H7.37837Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M3.66809 140.087C3.77006 139.573 3.87402 139.06 3.97998 138.548H372.02C372.126 139.06 372.23 139.573 372.332 140.087H3.66809Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M1.24588 155.481C1.30594 154.968 1.36798 154.454 1.43199 153.942H374.568C374.632 154.454 374.694 154.968 374.754 155.481H1.24588Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M0.0532463 170.876C0.0729975 170.362 0.0947169 169.849 0.118397 169.336H375.882C375.905 169.849 375.927 170.362 375.947 170.876H0.0532463Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M0.0532463 186.27C0.0335348 185.757 0.0157836 185.244 0 184.73H376C375.984 185.244 375.966 185.757 375.947 186.27H0.0532463Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M1.24588 201.664C1.18597 201.151 1.12802 200.638 1.07206 200.124H374.928C374.872 200.638 374.814 201.151 374.754 201.664H1.24588Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M3.66809 217.058C3.56642 216.546 3.46674 216.033 3.36906 215.519H372.631C372.533 216.033 372.434 216.546 372.332 217.058H3.66809Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M7.37837 232.452C7.23261 231.94 7.08888 231.427 6.94719 230.913H369.053C368.911 231.427 368.767 231.94 368.622 232.452H7.37837Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M12.4625 247.846C12.2693 247.334 12.0782 246.821 11.8891 246.307H364.111C363.922 246.821 363.731 247.334 363.537 247.846H12.4625Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M19.0445 263.241C18.7989 262.729 18.5555 262.216 18.3143 261.701H357.686C357.445 262.216 357.201 262.729 356.956 263.241H19.0445Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M27.3042 278.635C26.9992 278.123 26.6964 277.61 26.396 277.095H349.604C349.304 277.61 349.001 278.123 348.696 278.635H27.3042Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M37.5106 294.029C37.1353 293.518 36.7625 293.005 36.392 292.49H339.608C339.238 293.005 338.865 293.518 338.489 294.029H37.5106Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M50.0857 309.423C49.6227 308.913 49.1623 308.4 48.7046 307.884H327.295C326.838 308.4 326.377 308.913 325.914 309.423H50.0857Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M65.7477 324.817C65.1658 324.308 64.587 323.795 64.0113 323.278H311.989C311.413 323.795 310.834 324.308 310.252 324.817H65.7477Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M85.9012 340.212C85.1349 339.704 84.3725 339.191 83.614 338.672H292.386C291.628 339.191 290.865 339.704 290.099 340.212H85.9012Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M114.159 355.606C113.011 355.104 111.869 354.591 110.732 354.066H265.268C264.131 354.591 262.989 355.104 261.841 355.606H114.159Z"
-                fill="#C39E9E"
-              />
-              <path
-                d="M211.906 369.461C204.077 370.476 196.098 371 188 371C179.902 371 171.923 370.476 164.094 369.461H211.906Z"
-                fill="#C39E9E"
-              />
+        <!-- Geometric circular shape with lines positioned at left bottom end of services section -->
+        <svg class="software-services-geometric-shape" width="275" height="290" viewBox="0 0 275 290" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_4584_3008)">
+            <g opacity="0.3">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M68.3982 115.444C42.8729 115.444 22.1805 136.629 22.1805 162.763C22.1805 188.896 42.8729 210.081 68.3982 210.081C93.9235 210.081 114.616 188.896 114.616 162.763C114.616 136.629 93.9235 115.444 68.3982 115.444ZM24.19 162.763C24.19 137.766 43.9827 117.501 68.3982 117.501C92.8137 117.501 112.606 137.766 112.606 162.763C112.606 187.76 92.8137 208.024 68.3982 208.024C43.9827 208.024 24.19 187.76 24.19 162.763Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M68.3982 107.729C38.7111 107.729 14.645 132.368 14.645 162.763C14.645 193.157 38.7111 217.796 68.3982 217.796C98.0853 217.796 122.151 193.157 122.151 162.763C122.151 132.368 98.0853 107.729 68.3982 107.729ZM16.6545 162.763C16.6545 133.505 39.8209 109.786 68.3982 109.786C96.9755 109.786 120.142 133.505 120.142 162.763C120.142 192.02 96.9755 215.739 68.3982 215.739C39.8209 215.739 16.6545 192.02 16.6545 162.763Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.10952 162.763C7.10952 128.108 34.5494 100.014 68.3982 100.014C102.247 100.014 129.687 128.108 129.687 162.763C129.687 197.418 102.247 225.511 68.3982 225.511C34.5494 225.511 7.10952 197.418 7.10952 162.763ZM68.3982 102.071C35.6592 102.071 9.11898 129.244 9.11898 162.763C9.11898 196.281 35.6592 223.454 68.3982 223.454C101.137 223.454 127.677 196.281 127.677 162.763C127.677 129.244 101.137 102.071 68.3982 102.071Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M-0.42598 162.763C-0.42598 123.847 30.3877 92.2992 68.3982 92.2992C106.409 92.2992 137.222 123.847 137.222 162.763C137.222 201.678 106.409 233.226 68.3982 233.226C30.3877 233.226 -0.42598 201.678 -0.42598 162.763ZM68.3982 94.3565C31.4975 94.3565 1.58349 124.983 1.58349 162.763C1.58349 200.542 31.4975 231.169 68.3982 231.169C105.299 231.169 135.213 200.542 135.213 162.763C135.213 124.983 105.299 94.3565 68.3982 94.3565Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M-7.96147 162.763C-7.96147 119.586 26.2259 84.5842 68.3982 84.5842C110.57 84.5842 144.758 119.586 144.758 162.763C144.758 205.939 110.57 240.941 68.3982 240.941C26.2259 240.941 -7.96147 205.939 -7.96147 162.763ZM68.3982 86.6416C27.3357 86.6416 -5.952 120.722 -5.952 162.763C-5.952 204.803 27.3357 238.884 68.3982 238.884C109.461 238.884 142.748 204.803 142.748 162.763C142.748 120.722 109.461 86.6416 68.3982 86.6416Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M68.3982 76.8693C22.0642 76.8693 -15.497 115.325 -15.497 162.763C-15.497 210.2 22.0642 248.656 68.3982 248.656C114.732 248.656 152.293 210.2 152.293 162.763C152.293 115.325 114.732 76.8693 68.3982 76.8693ZM-13.4875 162.763C-13.4875 116.461 23.174 78.9266 68.3982 78.9266C113.622 78.9266 150.284 116.461 150.284 162.763C150.284 209.064 113.622 246.599 68.3982 246.599C23.174 246.599 -13.4875 209.064 -13.4875 162.763Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M-23.0325 162.763C-23.0325 111.064 17.9024 69.1543 68.3982 69.1543C118.894 69.1543 159.829 111.064 159.829 162.763C159.829 214.461 118.894 256.371 68.3982 256.371C17.9024 256.371 -23.0325 214.461 -23.0325 162.763ZM68.3982 71.2116C19.0122 71.2116 -21.023 112.2 -21.023 162.763C-21.023 213.325 19.0122 254.314 68.3982 254.314C117.784 254.314 157.819 213.325 157.819 162.763C157.819 112.2 117.784 71.2116 68.3982 71.2116Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M68.3982 61.4393C13.7407 61.4393 -30.568 106.803 -30.568 162.763C-30.568 218.722 13.7407 264.086 68.3982 264.086C123.056 264.086 167.364 218.722 167.364 162.763C167.364 106.803 123.056 61.4393 68.3982 61.4393ZM-28.5585 162.763C-28.5585 107.94 14.8505 63.4967 68.3982 63.4967C121.946 63.4967 165.355 107.94 165.355 162.763C165.355 217.586 121.946 262.028 68.3982 262.028C14.8505 262.028 -28.5585 217.586 -28.5585 162.763Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M-38.1034 162.763C-38.1034 102.542 9.57896 53.7244 68.3982 53.7244C127.217 53.7244 174.9 102.542 174.9 162.763C174.9 222.983 127.217 271.801 68.3982 271.801C9.57896 271.801 -38.1034 222.983 -38.1034 162.763ZM68.3982 55.7817C10.6888 55.7817 -36.094 103.679 -36.094 162.763C-36.094 221.846 10.6888 269.743 68.3982 269.743C126.108 269.743 172.89 221.846 172.89 162.763C172.89 103.679 126.108 55.7817 68.3982 55.7817Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M68.3982 46.0094C5.41723 46.0094 -45.6389 98.2816 -45.6389 162.763C-45.6389 227.244 5.41723 279.516 68.3982 279.516C131.379 279.516 182.435 227.244 182.435 162.763C182.435 98.2816 131.379 46.0094 68.3982 46.0094ZM-43.6295 162.763C-43.6295 99.4178 6.52702 48.0667 68.3982 48.0667C130.269 48.0667 180.426 99.4178 180.426 162.763C180.426 226.107 130.269 277.458 68.3982 277.458C6.52702 277.458 -43.6295 226.107 -43.6295 162.763Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M-53.1744 162.763C-53.1744 94.0207 1.25549 38.2944 68.3982 38.2944C135.541 38.2944 189.971 94.0207 189.971 162.763C189.971 231.504 135.541 287.231 68.3982 287.231C1.25549 287.231 -53.1744 231.504 -53.1744 162.763ZM68.3982 40.3518C2.36529 40.3518 -51.165 95.1569 -51.165 162.763C-51.165 230.368 2.36529 285.173 68.3982 285.173C134.431 285.173 187.961 230.368 187.961 162.763C187.961 95.1569 134.431 40.3518 68.3982 40.3518Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M68.3982 30.5795C-2.90625 30.5795 -60.7099 89.7599 -60.7099 162.763C-60.7099 235.765 -2.90625 294.946 68.3982 294.946C139.703 294.946 197.506 235.765 197.506 162.763C197.506 89.7599 139.703 30.5795 68.3982 30.5795ZM-58.7005 162.763C-58.7005 90.8961 -1.79646 32.6368 68.3982 32.6368C138.593 32.6368 195.497 90.8961 195.497 162.763C195.497 234.629 138.593 292.888 68.3982 292.888C-1.79646 292.888 -58.7005 234.629 -58.7005 162.763Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M-68.2454 162.763C-68.2454 85.499 -7.06799 22.8645 68.3982 22.8645C143.864 22.8645 205.042 85.499 205.042 162.763C205.042 240.026 143.864 302.661 68.3982 302.661C-7.06799 302.661 -68.2454 240.026 -68.2454 162.763ZM68.3982 24.9218C-5.95819 24.9218 -66.236 86.6352 -66.236 162.763C-66.236 238.89 -5.95819 300.603 68.3982 300.603C142.755 300.603 203.032 238.89 203.032 162.763C203.032 86.6352 142.755 24.9218 68.3982 24.9218Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M68.3982 15.1495C-11.2297 15.1495 -75.7809 81.2381 -75.7809 162.763C-75.7809 244.287 -11.2297 310.376 68.3982 310.376C148.026 310.376 212.577 244.287 212.577 162.763C212.577 81.2381 148.026 15.1495 68.3982 15.1495ZM-73.7714 162.763C-73.7714 82.3744 -10.1199 17.2069 68.3982 17.2069C146.916 17.2069 210.568 82.3744 210.568 162.763C210.568 243.151 146.916 308.318 68.3982 308.318C-10.1199 308.318 -73.7714 243.151 -73.7714 162.763Z"
+                fill="#B6B6B6" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M-83.3164 162.763C-83.3164 76.9773 -15.3915 7.43457 68.3982 7.43457C152.188 7.43457 220.113 76.9773 220.113 162.763C220.113 248.548 152.188 318.091 68.3982 318.091C-15.3915 318.091 -83.3164 248.548 -83.3164 162.763ZM68.3982 9.49189C-14.2817 9.49189 -81.3069 78.1135 -81.3069 162.763C-81.3069 247.412 -14.2817 316.033 68.3982 316.033C151.078 316.033 218.103 247.412 218.103 162.763C218.103 78.1135 151.078 9.49189 68.3982 9.49189Z"
+                fill="#B6B6B6" />
             </g>
+          </g>
+          <defs>
+            <clipPath id="clip0_4584_3008">
+              <rect width="275" height="290" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <!-- End of content part of service section -->
+
+      <!-- Right side Service cards group -->
+      <div class="service-card-group">
+        <!-- service card 1 starts -->
+        {% for service_card in page.cardservice %}
+        <a href="{{service_card.card_link.get_url}}" class="services-card elementanim">
+          {% image service_card.card_icon max-3000x1500 class="mb-14" loading="lazy"%}
+          <h4 class="mb-14 lh-125">
+            {{service_card.title}}
+          </h4>
+          <p class="ft-16 lh-140 o-8">
+            {{service_card.description}}
+          </p>
+        </a>
+        {% endfor %}
+      </div>
+      <!-- End of Right side service card group -->
+    </div>
+    <!-- services we offer section starts -->
+  </div>
+  <!-- End of complete service section wrapper -->
+</section>
+<!-- Services Ends -->
+
+<!-- Process section starts -->
+<section class="process-section">
+  <div class="sidebar dark-section">
+    <h5 class="color-white t-15">{{page.home_process_sidetitle}}</h5>
+  </div>
+  <!-- complete process section wrapper -->
+  <div class="process-main pl-54 pr-54 w-container">
+    <svg class="decor-squares" width="169" height="272" viewBox="0 0 169 272" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <rect x="164.758" y="2.12207" width="202" height="179" transform="rotate(45 164.758 2.12207)" fill="#F86638" />
+      <rect x="124.449" width="202" height="176" transform="rotate(45 124.449 0)" fill="#D51919" />
+    </svg>
+    <h4 class="mb-20 color-white ft-20 lh-110 elementanim">{{page.home_process_title}}</h4>
+    <h2 class="color-white w-80 elementanim">
+      {{page.home_process_subtitle|richtext}}
+    </h2>
+    <div class="process-map">
+      {% for process_card in page.cardprocess %}
+      <div class="process-map-card elementanim">
+        <h6>{{process_card.title}}</h6>
+        <svg class="ul-connecting-line elementanim" width="1" height="181" viewBox="0 0 1 181" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <line x1="0.5" y1="2.18557e-08" x2="0.499992" y2="181" stroke="white" stroke-opacity="0.31"
+            stroke-dasharray="5 5" />
+        </svg>
+        <ul>
+          <li>
+            {% image process_card.pointer_icon max-3000x1500 loading="lazy"%}
+            <p class="ft-20 color-white lh-140">{{process_card.point1}}</p>
+          </li>
+          <li>
+            {% image process_card.pointer_icon max-3000x1500 loading="lazy"%}
+            <p class="ft-20 color-white lh-140">{{process_card.point2}}</p>
+          </li>
+          <li>
+            {% image process_card.pointer_icon max-3000x1500 loading="lazy"%}
+            <p class="ft-20 color-white lh-140">{{process_card.point3}}</p>
+          </li>
+          <li>
+            {% image process_card.final_pointer_icon max-3000x1500 loading="lazy"%}
+            <p class="ft-20 color-white lh-140">{{process_card.point4}}</p>
+          </li>
+        </ul>
+      </div>
+      {% endfor %}
+      {% image page.dotted_mesh class='dotted-mesh' max-3000x1500 loading="lazy"%}
+    </div>
+
+    <div class="technologies">
+      <h5 class="color-white mb-12 lh-110 elementanim">
+        {{page.home_process_technology_title}}
+      </h5>
+      <p class="color-light-white ft-16 lh-110 elementanim">
+        {{page.home_process_technology_content}}
+      </p>
+      <div class="technology-stack-wrapper">
+        {% for technologies_stack in page.stacktechnologies%}
+        <div class="technology-stack elementanim">
+          <h5 class="color-white mb-14 o-5 ft-12">
+            {{technologies_stack.title}}
+          </h5>
+          <div class="logos-array">
+
+            {% for technologies in technologies_stack.technology%}
+            <div class="tooltip-wrapper">
+              {% image technologies.icon max-3000x1500 loading="lazy"%}
+              <div class="tooltip-text-wrapper">
+                <p class="tooltip-text">{{technologies.text}}</p>
+                <p class="tooltip-text">{{technologies.subtext}}</p>
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- End of complete process section wrapper -->
+</section>
+<!-- process section ends -->
+
+<!-- Indutries section starts -->
+<section class="industries-section">
+  <div class="sidebar">
+    <h5 class="t-15">{{page.home_industries_sidetitle}}</h5>
+  </div>
+  <!-- complete industries section wrapper -->
+  <div class="industries-main pl-54 pr-54 w-container">
+    <div class="industries-header">
+      <div class="left">
+        <h4 class="lh-110 ft-20 mb-20 elementanim">{{page.home_industries_title}}</h4>
+        <h2 class="elementanim">
+          {{page.home_industries_subtitle|richtext}}
+        </h2>
+      </div>
+      <div class="middle">
+        <p class="w-80 lh-140 elementanim">
+          {{page.home_industries_content}}
+        </p>
+      </div>
+      <div class="right">
+        <div id="industries-corousel-left-arrow" class="outline-btn carousal-outline-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
+            <path d="M14 1L2 13.1732L14 23" stroke="#333333" stroke-width="2" />
           </svg>
         </div>
-        <div class="right col-md-6">
-        {% for whyreckonsys_card in page.cardswhyreckonsys%}
-          <div class="card mb-106 elementanim">
-            {% image whyreckonsys_card.image class="mb-32 why-reckonsys-image elementanim" max-3000x1500 loading="lazy"%}
-            {{whyreckonsys_card.description|richtext}}
-            {% comment %} <p class="color-white w-70 ft-20">
-              {{whyreckonsys_card.description}}
-            </p> {% endcomment %}
-          </div>
-        {% endfor %}
+        <div id="industries-corousel-right-arrow" class="outline-btn carousal-outline-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
+            <path d="M1 1L13 13.1732L1 23" stroke="#333333" stroke-width="2" />
+          </svg>
         </div>
       </div>
-    </section>
-    <!-- Why Reckonsys Section Starts -->
+    </div>
+    <div class="sector-card-container">
+      <div class="sector-card-group-wrapper">
+        <div class="sector-card-group">
+          {% for industries_cards in page.cardindustries%}
+          <div class="sector-card elementanim">
 
-    <!-- Case Studies section starts -->
-    <section class="case-studies-section">
-      <div class="sidebar dark-section">
-        <h5 class="color-white spaced-word t-15">{{page.home_casestudies_sidetitle}}</h5>
-      </div>
-      <div
-        class="case-studies-main pl-54 pr-54 pt-100 pb-180 w-container c-dark"
-      >
-        <div class="case-studies-header d-flex align-items-center mb-54 row">
-          <div class="left col-md-10">
-            <h4 class="color-white mb-20 ft-20 lh-110 elementanim">
-            {{page.home_casestudies_title}}
-            </h4>
-            <h2 class="color-white w-90 elementanim">
-             {{page.home_casestudies_subtitle|richtext}}
-            </h2>
-          </div>
-          <div class="right d-flex col-md-2">
-          <div id="caseStudies-left-arrow" class="outline-btn-white carousal-outline-btn caseStudies-left-arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
-                <path d="M14 1L2 13.1732L14 23" stroke="#fff" stroke-width="2"/>
-              </svg>
-            </div>
-            <div id="caseStudies-right-arrow" class="outline-btn-white carousal-outline-btn ml-12 caseStudies-right-arrow">
-             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
-                <path d="M1 1L13 13.1732L1 23" stroke="#fff" stroke-width="2"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="cards-container">
-          <div class="cards-wrapper">
-          {% for casestudies_card in page.cardscasestudy%}
-            <div class="case-study-card elementanim" >
-              <div class="content" style='background-color: #{{casestudies_card.bgcolor}}'>
-                <h3 class="color-white mb-27 ft-32 w-80 lh-115">
-                  {{casestudies_card.title}}
-                </h3>
-                <p class="color-white mb-27">
-                  {{casestudies_card.subtitle|richtext}}
-                </p>
-                <div class="data-value-wrapper">
-                  <div class="data-value">
-                    <h3 class="mb-8 color-white ft-32 lh-115">{{casestudies_card.data1}}</h3>
-                    <p class="color-white">{{casestudies_card.label1}}</p>
-                  </div>
-                  <div class="data-value">
-                    <h3 class="mb-8 color-white ft-32 lh-115">{{casestudies_card.data2}}</h3>
-                    <p class="color-white">{{casestudies_card.label2}}</p>
-                  </div>
-                </div>
+            <div class="sector-card-content">
+              <div class="sector-card-header">
+                {% image industries_cards.card_icon max-3000x1500 loading="lazy"%}
+                <h3 class="lh-125">{{industries_cards.card_title}}</h3>
               </div>
-              <div class="image-wrapper">
-                {% comment %} <img src="./res/images/case-study-kid-image.png" alt="" /> {% endcomment %}
-                {% image casestudies_card.cover_image max-3000x1500 loading="lazy"%}
-              </div>
+              <ul>
+                <li>
+                  {% image industries_cards.pointer_icon max-3000x1500 loading="lazy"%}
+                  <p class="ft-16 lh-145 o-8">
+                    {{industries_cards.point1}}
+                  </p>
+                </li>
+                <li>
+                  {% image industries_cards.pointer_icon max-3000x1500 loading="lazy"%}
+                  <p class="ft-16 lh-145 o-8">
+                    {{industries_cards.point2}}
+                  </p>
+                </li>
+                <li>
+                  {% image industries_cards.pointer_icon max-3000x1500 loading="lazy"%}
+                  <p class="ft-16 lh-145 o-8">
+                    {{industries_cards.point3}}
+                  </p>
+                </li>
+                <li>
+                  {% image industries_cards.pointer_icon max-3000x1500 loading="lazy"%}
+                  <p class="ft-16 lh-145 o-8">
+                    {{industries_cards.point4}}
+                  </p>
+                </li>
+                <li>
+                  {% image industries_cards.pointer_icon max-3000x1500 loading="lazy"%}
+                  <p class="ft-16 lh-145 o-8">
+                    {{industries_cards.point5}}
+                  </p>
+                </li>
+              </ul>
             </div>
+            <div class="sector-card-footer">
+              {% image industries_cards.footer_testimonial1 max-3000x1500 loading="lazy"%}
+              {% image industries_cards.footer_testimonial2 max-3000x1500 loading="lazy"%}
+            </div>
+          </div>
           {% endfor %}
-          </div>
+
         </div>
       </div>
-    </section>
-    <!-- Case Studies section Ends -->
+    </div>
+  </div>
+  <!-- End of comlete industries section wrapper -->
+</section>
+<!-- Industries section Ends -->
+
+<!-- Why Reckonsys Section Starts -->
+<section class="why-reckonsys-section">
+  <div class="sidebar dark-section">
+    <h5 class="color-white spaced-word t-20">{{page.home_whyreckonsys_sidetitle}}</h5>
+  </div>
+  <div class="why-reckonsys-main pl-54 pr-54 pt-100 pb-180 w-container c-dark row">
+    <div class="left col-md-6">
+      <div class="left-content-wrapper sticky-class">
+        <h4 class="color-white mb-20 ft-20 lh-110 elementanim">
+          {{page.home_whyreckonsys_title}}
+        </h4>
+        <h2 class="w-80 mb-14 color-white elementanim">
+          {{page.home_whyreckonsys_subtitle|richtext}}
+        </h2>
+        <p class="ft-24 w-80 color-white mb-106 elementanim">
+          {{page.home_whyreckonsys_content}}
+        </p>
+      </div>
+      <svg class="sticky-class geometric-circle" width="376" height="371" viewBox="0 0 376 371" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.2">
+          <path
+            d="M114.159 1.53942C115.362 1.01378 116.571 0.500585 117.786 0H258.214C259.429 0.500585 260.638 1.01378 261.841 1.53942H114.159Z"
+            fill="#C39E9E" />
+          <path
+            d="M85.9012 16.9336C86.6846 16.4147 87.472 15.9015 88.2634 15.3942H287.737C288.528 15.9015 289.315 16.4147 290.099 16.9336H85.9012Z"
+            fill="#C39E9E" />
+          <path
+            d="M65.7477 32.3278C66.3379 31.811 66.9312 31.2978 67.5277 30.7884H308.472C309.069 31.2978 309.662 31.811 310.252 32.3278H65.7477Z"
+            fill="#C39E9E" />
+          <path
+            d="M50.0857 47.722C50.5535 47.2062 51.024 46.6931 51.4973 46.1826H324.503C324.976 46.6931 325.447 47.2062 325.914 47.722H50.0857Z"
+            fill="#C39E9E" />
+          <path
+            d="M37.5106 63.1162C37.8889 62.601 38.2696 62.0879 38.6527 61.5768H337.347C337.73 62.0879 338.111 62.601 338.489 63.1162H37.5106Z"
+            fill="#C39E9E" />
+          <path
+            d="M27.3042 78.5104C27.6111 77.9956 27.9203 77.4825 28.2318 76.971H347.768C348.08 77.4825 348.389 77.9956 348.696 78.5104H27.3042Z"
+            fill="#C39E9E" />
+          <path
+            d="M19.0445 93.9046C19.2912 93.3901 19.5402 92.877 19.7913 92.3651H356.209C356.46 92.877 356.709 93.3901 356.956 93.9046H19.0445Z"
+            fill="#C39E9E" />
+          <path
+            d="M12.4625 109.299C12.6566 108.785 12.8527 108.271 13.0509 107.759H362.949C363.147 108.271 363.343 108.785 363.537 109.299H12.4625Z"
+            fill="#C39E9E" />
+          <path
+            d="M7.37837 124.693C7.52463 124.179 7.67293 123.666 7.82326 123.154H368.177C368.327 123.666 368.475 124.179 368.622 124.693H7.37837Z"
+            fill="#C39E9E" />
+          <path
+            d="M3.66809 140.087C3.77006 139.573 3.87402 139.06 3.97998 138.548H372.02C372.126 139.06 372.23 139.573 372.332 140.087H3.66809Z"
+            fill="#C39E9E" />
+          <path
+            d="M1.24588 155.481C1.30594 154.968 1.36798 154.454 1.43199 153.942H374.568C374.632 154.454 374.694 154.968 374.754 155.481H1.24588Z"
+            fill="#C39E9E" />
+          <path
+            d="M0.0532463 170.876C0.0729975 170.362 0.0947169 169.849 0.118397 169.336H375.882C375.905 169.849 375.927 170.362 375.947 170.876H0.0532463Z"
+            fill="#C39E9E" />
+          <path
+            d="M0.0532463 186.27C0.0335348 185.757 0.0157836 185.244 0 184.73H376C375.984 185.244 375.966 185.757 375.947 186.27H0.0532463Z"
+            fill="#C39E9E" />
+          <path
+            d="M1.24588 201.664C1.18597 201.151 1.12802 200.638 1.07206 200.124H374.928C374.872 200.638 374.814 201.151 374.754 201.664H1.24588Z"
+            fill="#C39E9E" />
+          <path
+            d="M3.66809 217.058C3.56642 216.546 3.46674 216.033 3.36906 215.519H372.631C372.533 216.033 372.434 216.546 372.332 217.058H3.66809Z"
+            fill="#C39E9E" />
+          <path
+            d="M7.37837 232.452C7.23261 231.94 7.08888 231.427 6.94719 230.913H369.053C368.911 231.427 368.767 231.94 368.622 232.452H7.37837Z"
+            fill="#C39E9E" />
+          <path
+            d="M12.4625 247.846C12.2693 247.334 12.0782 246.821 11.8891 246.307H364.111C363.922 246.821 363.731 247.334 363.537 247.846H12.4625Z"
+            fill="#C39E9E" />
+          <path
+            d="M19.0445 263.241C18.7989 262.729 18.5555 262.216 18.3143 261.701H357.686C357.445 262.216 357.201 262.729 356.956 263.241H19.0445Z"
+            fill="#C39E9E" />
+          <path
+            d="M27.3042 278.635C26.9992 278.123 26.6964 277.61 26.396 277.095H349.604C349.304 277.61 349.001 278.123 348.696 278.635H27.3042Z"
+            fill="#C39E9E" />
+          <path
+            d="M37.5106 294.029C37.1353 293.518 36.7625 293.005 36.392 292.49H339.608C339.238 293.005 338.865 293.518 338.489 294.029H37.5106Z"
+            fill="#C39E9E" />
+          <path
+            d="M50.0857 309.423C49.6227 308.913 49.1623 308.4 48.7046 307.884H327.295C326.838 308.4 326.377 308.913 325.914 309.423H50.0857Z"
+            fill="#C39E9E" />
+          <path
+            d="M65.7477 324.817C65.1658 324.308 64.587 323.795 64.0113 323.278H311.989C311.413 323.795 310.834 324.308 310.252 324.817H65.7477Z"
+            fill="#C39E9E" />
+          <path
+            d="M85.9012 340.212C85.1349 339.704 84.3725 339.191 83.614 338.672H292.386C291.628 339.191 290.865 339.704 290.099 340.212H85.9012Z"
+            fill="#C39E9E" />
+          <path
+            d="M114.159 355.606C113.011 355.104 111.869 354.591 110.732 354.066H265.268C264.131 354.591 262.989 355.104 261.841 355.606H114.159Z"
+            fill="#C39E9E" />
+          <path
+            d="M211.906 369.461C204.077 370.476 196.098 371 188 371C179.902 371 171.923 370.476 164.094 369.461H211.906Z"
+            fill="#C39E9E" />
+        </g>
+      </svg>
+    </div>
+    <div class="right col-md-6">
+      {% for whyreckonsys_card in page.cardswhyreckonsys%}
+      <div class="card mb-106 elementanim">
+        {% image whyreckonsys_card.image class="mb-32 why-reckonsys-image elementanim" max-3000x1500 loading="lazy"%}
+        {{whyreckonsys_card.description|richtext}}
+        {% comment %} <p class="color-white w-70 ft-20">
+          {{whyreckonsys_card.description}}
+        </p> {% endcomment %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- Why Reckonsys Section Starts -->
+
+<!-- Case Studies section starts -->
+<section class="case-studies-section">
+  <div class="sidebar dark-section">
+    <h5 class="color-white spaced-word t-15">{{page.home_casestudies_sidetitle}}</h5>
+  </div>
+  <div class="case-studies-main pl-54 pr-54 pt-100 pb-180 w-container c-dark">
+    <div class="case-studies-header d-flex align-items-center mb-54 row">
+      <div class="left col-md-10">
+        <h4 class="color-white mb-20 ft-20 lh-110 elementanim">
+          {{page.home_casestudies_title}}
+        </h4>
+        <h2 class="color-white w-90 elementanim">
+          {{page.home_casestudies_subtitle|richtext}}
+        </h2>
+      </div>
+      <div class="right d-flex col-md-2">
+        <div id="caseStudies-left-arrow" class="outline-btn-white carousal-outline-btn caseStudies-left-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
+            <path d="M14 1L2 13.1732L14 23" stroke="#fff" stroke-width="2" />
+          </svg>
+        </div>
+        <div id="caseStudies-right-arrow" class="outline-btn-white carousal-outline-btn ml-12 caseStudies-right-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
+            <path d="M1 1L13 13.1732L1 23" stroke="#fff" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="cards-container">
+      <div class="cards-wrapper">
+        {% for casestudies_card in page.cardscasestudy%}
+        <div class="case-study-card elementanim">
+          <div class="content" style='background-color: #{{casestudies_card.bgcolor}}'>
+            <h3 class="color-white mb-27 ft-32 w-80 lh-115">
+              {{casestudies_card.title}}
+            </h3>
+            <p class="color-white mb-27">
+              {{casestudies_card.subtitle|richtext}}
+            </p>
+            <div class="data-value-wrapper">
+              <div class="data-value">
+                <h3 class="mb-8 color-white ft-32 lh-115">{{casestudies_card.data1}}</h3>
+                <p class="color-white">{{casestudies_card.label1}}</p>
+              </div>
+              <div class="data-value">
+                <h3 class="mb-8 color-white ft-32 lh-115">{{casestudies_card.data2}}</h3>
+                <p class="color-white">{{casestudies_card.label2}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            {% image casestudies_card.cover_image max-3000x1500 loading="lazy"%}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Case Studies section Ends -->
