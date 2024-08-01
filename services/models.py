@@ -100,9 +100,11 @@ class ServicesOffered(Orderable):
     answer = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
     service_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     plus_icon = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    card_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
 
     page = ParentalKey(ServicesPage, on_delete=models.CASCADE, related_name = "services_offered")
-    panels = [FieldPanel('question'), FieldPanel('answer'), FieldPanel('service_icon'), FieldPanel('plus_icon')]
+    panels = [FieldPanel('card_link'), FieldPanel('question'), FieldPanel('answer'), FieldPanel('service_icon'), FieldPanel('plus_icon')]
 
 class BusinessHelpedCard(ClusterableModel):
     title = models.CharField(max_length = 255, blank=True, help_text = "Services Navigation Link")
