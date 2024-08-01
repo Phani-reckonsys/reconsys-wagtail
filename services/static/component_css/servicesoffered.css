@@ -50,6 +50,12 @@
     margin-top: -2rem;
     padding-bottom: 2rem;
   }
+
+  .accordians-section .accordians-wrapper .custom-accordian .custom-answer .know-more{
+    color: #c01211;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
 /* .accordians-section .accordians-wrapper .custom-accordian .custom-answer.active {
     max-height: 20rem;
     margin-top: -2rem;
