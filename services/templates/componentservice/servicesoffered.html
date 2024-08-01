@@ -15,7 +15,7 @@
                 </h2>
                 <div class="accordians-wrapper">
                     {% for servicesoffered in page.offeredservices %}
-                        <div class="custom-accordian elementanim">
+                        <a href="{{servicesoffered.card_link.get_url}}" class="custom-accordian elementanim">
                             <div class="header ">
                                 {% image servicesoffered.service_icon max-3000x1500 %}
                                 <div class="content">
@@ -31,8 +31,9 @@
                                     <p class="ft-16">
                                         {{servicesoffered.answer}}
                                     </p>
+                                    <p class="know-more">Know more</p>
                             </div>
-                        </div>
+                        </a>
                     {% endfor %}
                 </div>
             </div>
