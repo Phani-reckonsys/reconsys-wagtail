@@ -151,6 +151,8 @@ class ServicesBasicCard(StructBlock):
 
 class ServicesTextCard(StructBlock):
     number = CharBlock(classname="number", required=False)
+    include_icon = BooleanBlock(required=False)
+    icon = ImageChooserBlock(required = False)
     title = CharBlock(classname="title", required=False)
     content = CharBlock(classname="content", required=False)
 
