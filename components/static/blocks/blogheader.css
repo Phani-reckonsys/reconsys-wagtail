@@ -22,6 +22,7 @@
 .blogheader .left .left-margin .tags-container{
     display: flex;
     gap: 1.6rem;
+    flex-wrap: wrap;
 }
 .blogheader .left .left-margin .tags-container .tag{
     background: rgba(175, 175, 175, 0.31);
