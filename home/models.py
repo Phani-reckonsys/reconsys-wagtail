@@ -16,7 +16,7 @@ class HomePage(Page):
          
         ], null = True)
     # services section content
-    home_service_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services Side Title")
+    home_service_sidetitle = models.CharField(max_length = 255, blank=True, help_text = "Services side Title")
     home_service_title = models.CharField(max_length = 255, blank=True, help_text = "Services Title")
     home_service_subtitle = RichTextField(max_length = 255, blank=True, help_text = "Services Subtitle")
     home_service_content = models.CharField(max_length = 255, blank=True, help_text = "Services Content")
@@ -392,6 +392,7 @@ class PrivacypolicyPage(Page):
 
 
 class CustomServicesPage(Page):
+    faq_script = models.CharField(max_length = 5000, blank=True, help_text = "FAQ Script")
     body = StreamField(
         [('herosection', ServicesHeroSectionBlock()),
          ('coverImage', CoverImageBlock()),
@@ -411,11 +412,14 @@ class CustomServicesPage(Page):
         ], null = True)
     
     body_panels = [FieldPanel('body')]
+    promote_panels = Page.promote_panels + [
+        FieldPanel('faq_script')
+    ]
 
     edit_handler = TabbedInterface([
         ObjectList(Page.content_panels, heading= 'Content'),
         ObjectList(body_panels, heading= 'Body'),
-        ObjectList(Page.promote_panels, heading='Promote'),
+        ObjectList(promote_panels, heading='Promote'),
     ])
 
 
