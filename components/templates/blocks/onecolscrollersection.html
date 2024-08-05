@@ -19,10 +19,10 @@
                 
             </div>
             <div class="right">
-            {% for card in self.cards %}
-                {%image card.value.image max-3000x1500 class="creators elementanim"%}
-                <h2 class="elementanim">{{card.value.title}}</h2>
-            {% endfor %}
+                {% for card in self.cards %}
+                    {%image card.value.image max-3000x1500 class="creators elementanim"%}
+                    <h2 class="elementanim">{{card.value.title}}</h2>
+                {% endfor %}
             </div>
         </div>
     </section>

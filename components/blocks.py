@@ -177,6 +177,13 @@ class Uiuxparallaxcard(StructBlock):
     number_image = CharBlock(classname="numberimage",required=False)
     main_image = ImageChooserBlock(required=False)
     decor_image = ImageChooserBlock(required=False)
+
+class CustomisedSolutionCard(StructBlock):
+    icon = ImageChooserBlock(required = False)
+    title = CharBlock(classname = "title", required=False)
+    subtitle = CharBlock(classname = "subtitle", required=False)
+    content = CharBlock(classname = "content", required=False)
+
 #----------Basic Blocks Ends------------------
 
 
@@ -812,3 +819,14 @@ class EmpoweringBlock(StructBlock):
 
     class Meta:
         template = "blocks/empowering.html"
+
+class CustomisedSolution(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    subtitle = CharBlock(required=False)
+    cards = StreamBlock([('customisedsolutionscard', CustomisedSolutionCard())])
+    url = PageChooserBlock(required=False)
+    btntext = CharBlock(classname="subtitle", required=False)
+
+    class Meta:
+        template = "blocks/customised_solutions.html"
