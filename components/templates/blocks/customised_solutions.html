@@ -1,0 +1,35 @@
+{%load wagtailimages_tags%}
+
+<!-- customised-solution section Starts -->
+   <section>
+       <div class="sidebar dark-section">
+           <h5 class="color-white t-25">{{self.sidetitle}}</h5>
+       </div>
+       <div class="customised-solution-main w-container pl-54 pr-54 pb-180 pt-70 c-dark">
+           <div class="left pt-70 pb-180">
+               <div class="left-wrapper">
+                   <h2 class="mb-20 color-white elementanim">{{self.title}}</h2>
+                   <p class="mb-30 color-light-white elementanim w-80">{{self.subtitle}}</p>
+                   {% image self.image max-3000x1500 %}
+               </div>
+               
+           </div>
+           <div class="right">
+           {% for card in self.cards %}
+                <div class="card">
+                    {% image card.value.icon max-3000x1500 class="icon elementanim" %}
+                    <div class="content">
+                        <h3 class="title ft-20 mb-16">{{card.value.title}}</h3>
+                        <h4 class="subtitle ft-24 mb-16">{{card.value.subtitle}}</h4>
+                        <p class="content ft-16 mb-58">{{card.value.content}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            <a href="{{self.url}}" target="_blank" class="outline-btn-white elementanim">{{self.btntext}} <svg width="27" height="11" viewBox="0 0 27 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1H25L17.9577 10" stroke="#F7F5F4"/>
+                </svg>
+            </a>
+           </div>
+       </div>
+   </section>
+   <!-- customised-solution section Ends -->

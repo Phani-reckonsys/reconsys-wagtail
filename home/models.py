@@ -7,7 +7,7 @@ from datetime import datetime
 from django.urls import reverse
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesDatasectionBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock,OurServicesBlock, TechnologiesusedBlock, EngagmentBlock, CardscrollerBlock, ServicesWhyReckonsysBlock, OurProcessBlock, OursuccessBlock, OurmethodologiesBlock,UiuxHerosectionBlock,UiuxWedoBlock,UiuxsuccessBlock, UiuxworkBlock, UiuxtestimonialBlock, CsrHerosection, TextimageBlock, EmpoweringBlock
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesDatasectionBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock,OurServicesBlock, TechnologiesusedBlock, EngagmentBlock, CardscrollerBlock, ServicesWhyReckonsysBlock, OurProcessBlock, OursuccessBlock, OurmethodologiesBlock,UiuxHerosectionBlock,UiuxWedoBlock,UiuxsuccessBlock, UiuxworkBlock, UiuxtestimonialBlock, CsrHerosection, TextimageBlock, EmpoweringBlock, CustomisedSolution
 
 class HomePage(Page):
     herosection = StreamField(
@@ -471,4 +471,36 @@ class CsrPage(Page):
         ObjectList(Page.content_panels, heading= 'Content'),
         ObjectList(body_panels, heading= 'Body'),
         ObjectList(Page.promote_panels, heading='Promote'),
+    ])
+
+class TechnologyPage(Page):
+    faq_script = models.CharField(max_length = 5000, blank=True, help_text = "FAQ Script")
+    body = StreamField(
+        [('herosection', ServicesHeroSectionBlock()),
+         ('coverImage', CoverImageBlock()),
+         ('datasection', ServicesDatasectionBlock()),
+         ('casestudies', ServicesCasestudiesBlock()),
+         ('customisedsolutions', CustomisedSolution()),
+         ('generictestimonial', TestimonialGenericBlock()),
+         ('faqsection', FaqBlock()),
+         ('collaboratesection', CollaborateBlock()),
+         ('ourservicesblock', OurServicesBlock()),
+         ('technologiesused', TechnologiesusedBlock()),
+         ('engagementmodel', EngagmentBlock()),
+         ('cardscrollerblock', CardscrollerBlock()),
+         ('whyreckonsys', ServicesWhyReckonsysBlock()),
+         ('ourprocessblock', OurProcessBlock()),
+         ('oursuccessblock', OursuccessBlock()),
+         ('ourmethodologiesblock', OurmethodologiesBlock()),
+        ], null = True)
+    
+    body_panels = [FieldPanel('body')]
+    promote_panels = Page.promote_panels + [
+        FieldPanel('faq_script')
+    ]
+
+    edit_handler = TabbedInterface([
+        ObjectList(Page.content_panels, heading= 'Content'),
+        ObjectList(body_panels, heading= 'Body'),
+        ObjectList(promote_panels, heading='Promote'),
     ])
