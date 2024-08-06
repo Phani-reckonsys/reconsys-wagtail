@@ -830,3 +830,15 @@ class CustomisedSolution(StructBlock):
 
     class Meta:
         template = "blocks/customised_solutions.html"
+
+class ServicesBannerCard(StructBlock):
+    image = ImageChooserBlock(required=False)
+    title = RichTextBlock(classname="title", required=False)
+
+class ServicesBanner(StructBlock):
+    sidetitle = CharBlock(classname = "sidetitle", required=False)
+    title = CharBlock(classname="title",required=False)
+    card = StreamBlock([('servicesbanner', ServicesBannerCard())])
+
+    class Meta:
+        template = "blocks/services_banner.css"

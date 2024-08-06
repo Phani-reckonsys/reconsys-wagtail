@@ -1,5 +1,6 @@
  .technologies-section .technologies-main .technologies {
     padding: 5rem 0 2.6rem 0;
+    border-top: 1px solid #cac8c8;
   }
    .technologies-section .technologies-main .technologies .technology-stack-wrapper {
     display: flex;
