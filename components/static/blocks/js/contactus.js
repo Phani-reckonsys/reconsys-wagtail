@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (!service) {
-            showError(serviceField, "Please enter your company name");
+            showError(serviceField, "Please enter your message");
             hasError = true;
         } else {
             hideError(serviceField);
