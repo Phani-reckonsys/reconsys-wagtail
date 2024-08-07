@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const countryCodeField = document.querySelector("#country-code");
         const phoneNumberField = document.querySelector("#phone-number");
         const companyField = document.querySelector("#company");
-        console.log(companyField);
         const serviceField = document.querySelector("#services");
 
         const name = nameField.value.trim();
@@ -134,6 +133,13 @@ document.addEventListener('DOMContentLoaded', function () {
             hasError = true;
         } else {
             hideError(companyField);
+        }
+
+        if (!service) {
+            showError(serviceField, "Please enter your company name");
+            hasError = true;
+        } else {
+            hideError(serviceField);
         }
 
         if (hasError) return;
