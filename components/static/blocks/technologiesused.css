@@ -1,5 +1,6 @@
  .technologies-section .technologies-main .technologies {
     padding: 5rem 0 2.6rem 0;
+    border-top: 1px solid #cac8c8;
   }
    .technologies-section .technologies-main .technologies .technology-stack-wrapper {
     display: flex;
@@ -9,7 +10,7 @@
   }
    .technologies-section .technologies-main .technologies .technology-stack-wrapper .technology-stack {
     padding-right: 2.6rem;
-    border-right: 1px solid #656565;
+    border-right: 1px solid #cac8c8;
   }
 
    .technologies-section .technologies-main .technologies .technology-stack-wrapper .technology-stack:last-child {
@@ -38,6 +39,10 @@
     transform:scale(0);
     transition:all 0.3s ease;
     transform-origin: 0% 100%;
+  }
+  .technologies-section .technologies-main .technologies .technology-stack-wrapper .technology-stack .logos-array .tooltip-wrapper img{ 
+    border-radius: 3rem;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.05);
   }
 
    .technologies-section .technologies-main .technologies .technology-stack-wrapper .technology-stack .logos-array .tooltip-wrapper .tooltip-text-wrapper p{ 
