@@ -651,6 +651,9 @@ class OurServicesBlock(StructBlock):
 
 
 class TechnologiesusedBlock(StructBlock):
+    backgroundcolor = CharBlock(classname = "backgroundcolor", required=False)
+    color = CharBlock(classname = "color", required=False)
+    bordercolor = CharBlock(classname="bordercolor", required=False)
     title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
     tooltipgroup = StreamBlock([('multiplebasicimagetitle', MultipleBasicImageTitle())],required=False)
