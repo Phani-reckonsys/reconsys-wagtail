@@ -48,7 +48,7 @@
   }
 
   .customised-solution-main .right .outline-btn-white::after {
-    content: "-------------------";
+    content: "-------------";
     display: flex;
     color: #fff;
     position: absolute;
@@ -58,6 +58,7 @@
 
   .customised-solution-main .right .card .content h3{
     color: #F77B46;
+    padding-top: 1.6rem;
   }
 
   .customised-solution-main .right .card .content h4{

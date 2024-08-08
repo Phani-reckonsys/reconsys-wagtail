@@ -20,7 +20,7 @@ innerWrappers.forEach((innerWrapper, i) => {
   const scrollToSectorCard = (index) => {
     // Make sure the index does not go out of bounds.
     // Adding [sectorCards.length] because of js modulo giving negative.
-    index = (index + sectorCards.length) % sectorCards.length;
+    index = (index + (sectorCards.length-2)) % (sectorCards.length-2);
     currentSectorCardIndex = index;
     const scrollLeftValue =
       sectorCards[index].offsetLeft - sectorCardWrapper.offsetLeft;
