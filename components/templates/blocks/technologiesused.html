@@ -3,12 +3,12 @@
 {% load wagtailcore_tags%}
   
   <!-- Process section starts -->
-    <section class="technologies-section" style="background-color: #{{self.backgroundcolor}}">
-      <div class="sidebar">
+    <section class="technologies-section" >
+      <div class="sidebar" style="background-color: #{{self.backgroundcolor}}; border-right: 1px solid #{{self.bordercolor}}">
         <h5 class="color-white t-15" style="color: #{{self.color}}"></h5>
       </div>
       <!-- complete process section wrapper -->
-      <div class="technologies-main pl-54 pr-54 w-container" style="background-color: #{{self.backgroundcolor}}; border-right: 1px solid #{{self.bordercolor}}">
+      <div class="technologies-main pl-54 pr-54 w-container" style="background-color: #{{self.backgroundcolor}}; >
         <div class="technologies">
           <h5 class="mb-12 lh-110 elementanim" style="color: #{{self.color}}">
             {{self.title}}
