@@ -841,4 +841,4 @@ class ServicesBanner(StructBlock):
     card = StreamBlock([('servicesbanner', ServicesBannerCard())])
 
     class Meta:
-        template = "blocks/services_banner.css"
+        template = "blocks/services_banner.html"
