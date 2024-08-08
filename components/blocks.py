@@ -837,7 +837,7 @@ class ServicesBannerCard(StructBlock):
 
 class ServicesBanner(StructBlock):
     sidetitle = CharBlock(classname = "sidetitle", required=False)
-    title = CharBlock(classname="title",required=False)
+    title = RichTextBlock(classname="title",required=False)
     card = StreamBlock([('servicesbanner', ServicesBannerCard())])
 
     class Meta:
