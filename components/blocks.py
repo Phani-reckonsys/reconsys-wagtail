@@ -618,6 +618,7 @@ class ServicesCasestudiesBlock(StructBlock):
 
 class FaqBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
+    bordercolor = CharBlock(classname="bordercolor", required=False)
     backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
     color = CharBlock(classname="backgroundcolor", required=False)
     maintitle = CharBlock(classname="title", required=False)
@@ -629,6 +630,7 @@ class FaqBlock(StructBlock):
 
 class CollaborateBlock(StructBlock):
     backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
+    bordercolor = CharBlock(classname="bordercolor", required=False)
     maintextcolor = CharBlock(classname="maintextcolor", required=False)
     sidetitle = CharBlock(classname="sidetitle", required=False)
     image = ImageChooserBlock(required=False)
@@ -651,6 +653,9 @@ class OurServicesBlock(StructBlock):
 
 
 class TechnologiesusedBlock(StructBlock):
+    backgroundcolor = CharBlock(classname = "backgroundcolor", required=False)
+    color = CharBlock(classname = "color", required=False)
+    bordercolor = CharBlock(classname="bordercolor", required=False)
     title = CharBlock(classname="title", required=False)
     subtitle = CharBlock(classname="subtitle", required=False)
     tooltipgroup = StreamBlock([('multiplebasicimagetitle', MultipleBasicImageTitle())],required=False)
@@ -669,6 +674,7 @@ class EngagmentBlock(StructBlock):
         template = "blocks/engagment.html"
 
 class CardscrollerBlock(StructBlock):
+    bordercolor = CharBlock(classname="bordercolor", required=False)
     sidetitle = CharBlock(classname="sidetitle", required=False)
     sidebar_background = CharBlock(classname="", required=False)
     title = CharBlock(classname="title", required=False)
@@ -684,6 +690,7 @@ class CardscrollerBlock(StructBlock):
 class ServicesWhyReckonsysBlock(StructBlock):
     backgroundcolor = CharBlock(classname="backgroundcolor", required=False)
     maintextcolor = CharBlock(classname="maintextcolor", required=False)
+    bordercolor = CharBlock(classname="bordercolor", required=False)
     sidebar = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
     subtitle = RichTextBlock(classname="subtitle", required=False)
@@ -837,8 +844,8 @@ class ServicesBannerCard(StructBlock):
 
 class ServicesBanner(StructBlock):
     sidetitle = CharBlock(classname = "sidetitle", required=False)
-    title = CharBlock(classname="title",required=False)
+    title = RichTextBlock(classname="title",required=False)
     card = StreamBlock([('servicesbanner', ServicesBannerCard())])
 
     class Meta:
-        template = "blocks/services_banner.css"
+        template = "blocks/services_banner.html"

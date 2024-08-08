@@ -10,9 +10,9 @@
 }
 
 .culture .gallery-container .gallery-wrapper .image{
-    height: 26rem;
+    width: 31.5%;
     object-fit: cover;
-    width: fit-content;
+    height: fit-content;
 }
 
 @media only screen and (max-width: 992px) {

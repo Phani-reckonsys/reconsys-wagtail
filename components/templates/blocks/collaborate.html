@@ -1,7 +1,7 @@
 {% load wagtailimages_tags %}
 
 <section>
-    <div class="sidebar pt-20" style="background-color: #{{self.backgroundcolor}}; border-right: 1px solid #{% if self.backgroundcolor != 'ffffff' and self.backgroundcolor != 'f3f3f3' %}544e4e {% endif %}">
+    <div class="sidebar pt-20" style="background-color: #{{self.backgroundcolor}}; border-right: 1px solid #{{self.bordercolor}};">
         <h5 class="t-20" style="color: #{{self.maintextcolor}}">{{self.sidetitle}}</h5>
     </div>
     <div class="collaborate-section pl-54 pr-54 w-container" style="background-color: #{{self.backgroundcolor}}; ">

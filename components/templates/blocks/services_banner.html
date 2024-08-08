@@ -3,7 +3,7 @@
 <!-- Herosection starts -->
     <section>
         <div class="sidebar">
-            <h5>{{page.banner_sidetitle}}</h5>
+            <h5>{{self.sidetitle}}</h5>
         </div>
         <!-- Banner Section Starts -->
             <div class="banner-section pl-54 pr-54 pb-100 pt-100 w-container">
@@ -13,16 +13,16 @@
                     </svg>
                                     
                 <h2 class="mb-36 w-70 elementanim">
-                    {{page.banner_title|richtext}}
+                    {{self.title}}
                 </h2>
                 <div class="banner-section-body w-80">
-                    {% for banner_row in page.rowbanner%}
+                    {% for card in self.card %}
                     <div class="custom-row">
-                        {% image banner_row.banner_image max-3000x1500 class="elementanim"%}
+                        {% image card.value.image max-3000x1500 class="elementanim"%}
                         <div class="right elementanim">
                             <div class="dash elementanim"></div>
                             <p class="elementanim">
-                            {{banner_row.banner_text|richtext}}
+                            {{card.value.title}}
                             </p>
                         </div> 
                     </div>
