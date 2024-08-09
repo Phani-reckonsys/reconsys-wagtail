@@ -40,9 +40,10 @@
     transition:all 0.3s ease;
     transform-origin: 0% 100%;
   }
+  
   .technologies-section .technologies-main .technologies .technology-stack-wrapper .technology-stack .logos-array .tooltip-wrapper img{ 
     border-radius: 3rem;
-    border: 1px solid #f8f7f7;
+    border: 1px solid #e7e7e7;
   }
 
    .technologies-section .technologies-main .technologies .technology-stack-wrapper .technology-stack .logos-array .tooltip-wrapper .tooltip-text-wrapper p{ 
