@@ -25,6 +25,7 @@
   gap: 2.4rem;
 }
 .services-stats-section .stats-wrapper .stat-card .stats {
+  font-size: 6.4rem;
   background: linear-gradient(180deg, #ef7160 0%, #941209 100%);
   background-clip: text;
   -webkit-background-clip: text;
