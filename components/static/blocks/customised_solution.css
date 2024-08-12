@@ -34,9 +34,10 @@
     height: fit-content;
   }
   .customised-solution-main .right .card::before {
-    content: "----------------------------------------------------------------------------";
+    content: "--------------------------";
     display: flex;
-    color: #fff;
+    font-size: 3rem;
+    color: #AEA9A9;
     transform: rotate(90deg);
     position: absolute;
     top: 17rem;
@@ -48,9 +49,10 @@
   }
 
   .customised-solution-main .right .outline-btn-white::after {
-    content: "-------------";
+    content: "------------";
+    font-size: 1.6rem;
     display: flex;
-    color: #fff;
+    color: #AEA9A9;
     position: absolute;
     top: 1rem;
     left: -107px;
