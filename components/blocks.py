@@ -559,7 +559,8 @@ class BlogBodyBlock(StructBlock):
 
 
 class ServicesHeroSectionBlock(StructBlock):
-    sidetitle = CharBlock(classname="title", required=True)
+    parentpage = CharBlock(classname="parentpage", required=False)
+    sidetitle = CharBlock(classname="sidetitle", required=True)
     title = CharBlock(classname="title", required=True)
     services_url = PageChooserBlock(required = False)
     subtitle = CharBlock(classname="subtitle", required=True)
