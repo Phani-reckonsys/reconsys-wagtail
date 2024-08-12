@@ -46,16 +46,17 @@
 
   .customised-solution-main .right .outline-btn-white{
     position: relative;
+    left: -5.2rem;
   }
 
   .customised-solution-main .right .outline-btn-white::after {
-    content: "------------";
+    content: "------";
     font-size: 1.6rem;
     display: flex;
     color: #AEA9A9;
     position: absolute;
     top: 1rem;
-    left: -107px;
+    left: -54px;
   }
 
   .customised-solution-main .right .card .content h3{
