@@ -109,6 +109,10 @@
     display: none;
   }
 
+  nav .navigation-wrapper.dark-navbar .navigation h5 a .down-chevoron path{
+    stroke: #fff;
+  }
+
   nav .navigation-wrapper .navigation h5:nth-child(2) a .down-chevoron{
     display: inline-flex;
   }
