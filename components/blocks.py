@@ -830,7 +830,7 @@ class EmpoweringBlock(StructBlock):
 
 class CustomisedSolution(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
-    title = CharBlock(classname="title", required=False)
+    title = RichTextBlock(classname="title", required=False)
     subtitle = CharBlock(required=False)
     cards = StreamBlock([('customisedsolutionscard', CustomisedSolutionCard())])
     url = PageChooserBlock(required=False)
