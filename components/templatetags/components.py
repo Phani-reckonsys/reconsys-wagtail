@@ -55,6 +55,7 @@ def footer(context):
         'socialitems': footer.socialitems.all(),
         'socialitems': footer.socialitems.all(),
         'servicesitems': footer.servicesitems.all(),
+        'technologyitems': footer.technologyitems.all(),
         'request': context['request'],
         'path': context.request.path,
     }

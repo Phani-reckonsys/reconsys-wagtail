@@ -126,6 +126,20 @@
               {% endfor %}
             </div>
           </div>
+          <div class="custom-2col footer-technology">
+            <h3 class="color-white ft-16 mb-22 ft-900"><a href="#"></a>Technology</h3>
+            <div class="footer-links">
+              {% for servicesitem in technologyitems %}
+              <h3 class="color-light-white ft-16 mb-16 f-400">
+                <a
+                  href="{{servicesitem.url.get_url}}"
+                  class="color-light-white"
+                  >{{servicesitem.name}}</a
+                >
+              </h3>
+              {% endfor %}
+            </div>
+          </div>
         </div>
         <div class="custom-col-group">
           <div class="custom-col footer-nav">

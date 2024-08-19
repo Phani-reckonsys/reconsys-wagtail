@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="{% static 'snippets/navbar-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/services_megamenu-min.css' %}">
+<link rel="stylesheet" href="{% static 'snippets/technology_megamenu-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/herosection-min.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/banner-min.css' %}">
 <link rel="stylesheet" href="{% static 'component_css/servicesoffered-min.css' %}">
@@ -22,18 +23,19 @@
 {% endblock extra_css %}
 
 {% block content %}
-{% servicesmegamenu %}
-{% navbar %}
-{{page.body}}
-{% include "componentservice/banner.html"%}
-{% include "componentservice/servicesoffered.html"%}
-{% include "componentservice/businesshelped.html"%}
-{% include "componentservice/engagmentmodel.html"%}
-{% include "componentservice/datasection.html"%}
-{% include "componentservice/testimonials.html"%}
-{% include "componentservice/faqsection.html"%}
-{% contact %}
-{% footer %}
+        {% technologymegamenu %}
+        {% servicesmegamenu %}
+        {% navbar %}
+        {{page.body}}
+        {% include "componentservice/banner.html"%}
+        {% include "componentservice/servicesoffered.html"%}
+        {% include "componentservice/businesshelped.html"%}
+        {% include "componentservice/engagmentmodel.html"%}
+        {% include "componentservice/datasection.html"%}
+        {% include "componentservice/testimonials.html"%}
+        {% include "componentservice/faqsection.html"%}
+        {% contact %}
+        {% footer %}
 {% endblock content %}
 
 {% block extra_js%}
