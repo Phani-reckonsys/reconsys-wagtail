@@ -68,6 +68,10 @@
   .herosection-wrapper .herosection-height .herosection .herosection-content{
     width: 90%;
   }
+  .herosection-wrapper .herosection-height .herosection .herosection-content h1{
+    position: relative;
+    z-index: 10;
+  }
 
   .herosection-wrapper .herosection-height .hero-carousel-indicator-group {
     position: absolute;
