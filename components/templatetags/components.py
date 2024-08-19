@@ -1,5 +1,5 @@
 from django import template
-from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey, Welcomebackmodel, Servicesmegamenu, Badgessnippet
+from components.models import Navbar, Contact, Footer, NavbarGreen, NavbarGrey, Welcomebackmodel, Servicesmegamenu, Badgessnippet, Technologymegamenu
 
 register = template.Library()
 # ...
@@ -83,6 +83,16 @@ def servicesmegamenu(context):
     return{
         'servicesmegamenu': Servicesmegamenu.objects.first(),
         'servicesmenuitems': servicesmegamenu.servicesmenuitems.all(),
+        'request': context['request'],
+        'path': context.request.path,
+    }
+
+@register.inclusion_tag('snippets/technologymegamenu.html', takes_context=True)
+def technologymegamenu(context):
+    technologymegamenu = Technologymegamenu.objects.first()
+    return{
+        'technologymegamenu': Technologymegamenu.objects.first(),
+        'technologymenuitems': technologymegamenu.technologymenuitems.all(),
         'request': context['request'],
         'path': context.request.path,
     }

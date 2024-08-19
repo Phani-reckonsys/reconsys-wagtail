@@ -84,7 +84,7 @@
   }
   nav .navigation-wrapper .navigation {
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: space-around;
     align-items: center;
   }
@@ -114,6 +114,10 @@
   }
 
   nav .navigation-wrapper .navigation h5:nth-child(2) a .down-chevoron{
+    display: inline-flex;
+  }
+
+  nav .navigation-wrapper .navigation h5:nth-child(3) a .down-chevoron{
     display: inline-flex;
   }
 
