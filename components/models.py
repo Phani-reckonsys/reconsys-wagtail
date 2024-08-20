@@ -25,7 +25,7 @@ class Footer(ClusterableModel):
     # navbar content variables
     ourworks_page_link = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
     
-    panels = [InlinePanel('servicesitems', heading='servicesitems'), InlinePanel('socialitems', heading='socialitems'), InlinePanel('footeritems', heading='footeritems'), InlinePanel('footerimages', heading='footerimages'), FieldPanel("ourworks_page_link")]
+    panels = [InlinePanel('servicesitems', heading='servicesitems'),InlinePanel('technologyitems', heading='technologyitems'), InlinePanel('socialitems', heading='socialitems'), InlinePanel('footeritems', heading='footeritems'), InlinePanel('footerimages', heading='footerimages'), FieldPanel("ourworks_page_link")]
    
     
 class FooterImages(Orderable,models.Model):
@@ -54,6 +54,13 @@ class ServicesItems(Orderable, models.Model):
     url = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
 
     navbar = ParentalKey(Footer, on_delete = models.CASCADE, related_name="servicesitems")
+    panels = [FieldPanel("name"), PageChooserPanel("url")]
+
+class TechnologyItems(Orderable, models.Model):
+    name = models.CharField(max_length = 255, blank=True, help_text = "Navigation link")
+    url = models.ForeignKey("wagtailcore.Page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
+    techologyitems = ParentalKey(Footer, on_delete = models.CASCADE, related_name="technologyitems")
     panels = [FieldPanel("name"), PageChooserPanel("url")]
 
 
@@ -130,6 +137,7 @@ class ServicesMenuItems(Orderable, models.Model):
     megamenu = ParentalKey(Servicesmegamenu, on_delete=models.CASCADE, related_name="servicesmenuitems")
     panels = [FieldPanel("name"), PageChooserPanel("link")]
 
+
 @register_snippet
 class Badgessnippet(ClusterableModel):
     title = models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
@@ -152,3 +160,19 @@ class Welcomebackmodel(ClusterableModel):
 
 
     panels = [ FieldPanel("headline"), FieldPanel("content"), FieldPanel("btn_text"), PageChooserPanel("sideimage"), PageChooserPanel("contactus_page_link")]
+
+
+@register_snippet
+class Technologymegamenu(ClusterableModel):    
+    technology_page_text = models.CharField(max_length = 255, blank=True, help_text = "contactus Link")
+    technology_page_link = models.ForeignKey("wagtailcore.page", null = True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+    image = models.ForeignKey('wagtailimages.Image', null=True, blank = True, on_delete = models.SET_NULL, related_name = "+")
+
+    panels = [InlinePanel('technologymenuitems', heading="technologymegaitems"), FieldPanel("technology_page_text"), FieldPanel("technology_page_link"), FieldPanel("image")]
+
+class TechnologyMenuItems(Orderable, models.Model):
+    name = models.CharField(max_length = 255, blank=True, help_text="Navigation Link")
+    link = models.ForeignKey("wagtailcore.Page", null=True, help_text = "page link", on_delete = models.SET_NULL)
+
+    megamenu = ParentalKey(Technologymegamenu, on_delete=models.CASCADE, related_name="technologymenuitems")
+    panels = [FieldPanel("name"), PageChooserPanel("link")]

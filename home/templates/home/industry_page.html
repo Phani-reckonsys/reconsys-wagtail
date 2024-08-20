@@ -6,6 +6,7 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block extra_css %}
+
 <link rel="stylesheet" href="{% static 'snippets/navbar-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/services_megamenu-min.css' %}">
 <link rel="stylesheet" href="{% static 'snippets/technology_megamenu-min.css' %}">
@@ -15,20 +16,22 @@
 <link rel="stylesheet" href="{% static 'blocks/services_herosection-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/servicesoffered-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/services_datasection-min.css' %}">
+<link rel="stylesheet" href="{% static 'blocks/services_banner-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/services_whychooseus-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/services_casestudies-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/testimonialgeneric-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/coverimage-min.css' %}">
+<link rel="stylesheet" href="{% static 'blocks/customised_solution-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/technologiesused-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/ourservices-min.css' %}">
 <link rel="stylesheet" href="{% static 'blocks/faq-min.css' %}">
-<link rel="stylesheet" href="{%static 'blocks/collaborate-min.css'%}">
-<link rel="stylesheet" href="{%static 'blocks/cardscroller-min.css'%}">
-<link rel="stylesheet" href="{%static 'blocks/engagment-min.css'%}">
-<link rel="stylesheet" href="{%static 'blocks/services_whyreckonsys-min.css'%}">
-<link rel="stylesheet" href="{%static 'blocks/ourprocess-min.css'%}">
-<link rel="stylesheet" href="{%static 'blocks/oursuccess-min.css'%}">
-<link rel="stylesheet" href="{%static 'blocks/ourmethodologies-min.css'%}">
+<link rel="stylesheet" href="{% static 'blocks/collaborate-min.css'%}">
+<link rel="stylesheet" href="{% static 'blocks/cardscroller-min.css'%}">
+<link rel="stylesheet" href="{% static 'blocks/engagment-min.css'%}">
+<link rel="stylesheet" href="{% static 'blocks/services_whyreckonsys-min.css'%}">
+<link rel="stylesheet" href="{% static 'blocks/ourprocess-min.css'%}">
+<link rel="stylesheet" href="{% static 'blocks/oursuccess-min.css'%}">
+<link rel="stylesheet" href="{% static 'blocks/ourmethodologies-min.css'%}">
 <link rel="stylesheet" href="{% static 'blocks/badges-min.css' %}">
 
 {% endblock extra_css %}
@@ -44,8 +47,8 @@
     {% welcomebackmodel %}
 {% endblock content %}
 
-{% block extra_js%}
+{% block extra_js %}
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="{% static 'blocks/js/cardscroller-min.js' %}" ></script>
-{% endblock extra_js%}
+{% endblock extra_js %}
