@@ -149,7 +149,7 @@ class DatasectionStat(Orderable):
 
 class faqsectionfaq(Orderable):
     question = models.CharField(max_length = 255, blank=True, help_text = "data")
-    answer = models.CharField(max_length = 255, blank=True, help_text = "title")
+    answer = models.CharField(max_length = 3000, blank=True, help_text = "title")
 
     page = ParentalKey(ServicesPage, on_delete=models.CASCADE, related_name = "faqsection_faq")
     panels = [FieldPanel('question'), FieldPanel('answer')]
