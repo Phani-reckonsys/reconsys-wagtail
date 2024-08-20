@@ -612,6 +612,7 @@ class ServicesCasestudiesBlock(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
     title = CharBlock(classname="title", required=False)
     content = RichTextBlock(classname = "content", required=False)
+    removebuttons = BooleanBlock(required=False)
     card = StreamBlock([('casestudycardbasic', CasestudyCardBasic())], required=False)
     
     class Meta:

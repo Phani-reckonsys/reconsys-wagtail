@@ -19,7 +19,7 @@
              {{self.content}}
             </h2>
           </div>
-          <div class="right d-flex col-md-2">
+          <div class="right d-flex col-md-2" {% if self.removebuttons %}style="display: none;"{% endif %}>
           <div id="caseStudies-left-arrow" class="outline-btn carousal-outline-btn caseStudies-left-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 15 24" fill="none">
                 <path d="M14 1L2 13.1732L14 23" stroke="#333" stroke-width="2"/>
