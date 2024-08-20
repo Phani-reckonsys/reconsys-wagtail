@@ -62,7 +62,7 @@
   }
   nav .navigation-wrapper .navigation {
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: space-around;
     align-items: center;
   }
@@ -80,6 +80,17 @@
   }
   nav .navigation-wrapper .navigation h5:hover a svg path {
     stroke: #f0493e !important;
+  }
+  nav .navigation-wrapper .navigation h5 a .down-chevoron{
+    display: none;
+  }
+
+  nav .navigation-wrapper .navigation h5:nth-child(2) a .down-chevoron{
+    display: inline-flex;
+  }
+
+  nav .navigation-wrapper .navigation h5:nth-child(3) a .down-chevoron{
+    display: inline-flex;
   }
   nav .navigation-wrapper .contactus {
     padding: 2rem 2.8rem;
@@ -313,6 +324,13 @@
     nav .navigation-wrapper .navigation h5 a svg {
       display: block;
       margin-left: auto;
+    }
+    nav .navigation-wrapper .navigation h5:nth-child(2) a .menu-arrow{
+      display: none;
+    }
+  
+    nav .navigation-wrapper .navigation h5:nth-child(3) a .menu-arrow{
+      display: none;
     }
     nav .navigation-wrapper .contactus {
       border: 0;

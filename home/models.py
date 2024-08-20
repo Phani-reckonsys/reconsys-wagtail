@@ -505,3 +505,32 @@ class TechnologyPage(Page):
         ObjectList(body_panels, heading= 'Body'),
         ObjectList(promote_panels, heading='Promote'),
     ])
+
+class IndustryPage(Page):
+    body = StreamField(
+        [('herosection', ServicesHeroSectionBlock()),
+         ('servicesbanner', ServicesBanner()),
+         ('coverImage', CoverImageBlock()),
+         ('datasection', ServicesDatasectionBlock()),
+         ('casestudies', ServicesCasestudiesBlock()),
+         ('customisedsolutions', CustomisedSolution()),
+         ('generictestimonial', TestimonialGenericBlock()),
+         ('faqsection', FaqBlock()),
+         ('collaboratesection', CollaborateBlock()),
+         ('ourservicesblock', OurServicesBlock()),
+         ('technologiesused', TechnologiesusedBlock()),
+         ('engagementmodel', EngagmentBlock()),
+         ('cardscrollerblock', CardscrollerBlock()),
+         ('whyreckonsys', ServicesWhyReckonsysBlock()),
+         ('ourprocessblock', OurProcessBlock()),
+         ('oursuccessblock', OursuccessBlock()),
+         ('ourmethodologiesblock', OurmethodologiesBlock()),
+        ], null = True)
+    
+    body_panels = [FieldPanel('body')]
+
+    edit_handler = TabbedInterface([
+        ObjectList(Page.content_panels, heading= 'Content'),
+        ObjectList(body_panels, heading= 'Body'),
+        ObjectList(Page.promote_panels, heading='Promote'),
+    ])
