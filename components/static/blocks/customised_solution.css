@@ -105,4 +105,19 @@
       margin-top: 2rem;
       margin-bottom: 6rem;
     }
+    .customised-solution-main .right .card {
+      width: 100%;
+    }
+    .customised-solution-main .right .card::before {
+      content: "---------------------------------";
+      top: 18rem;
+      left: -13.5rem;
+    }
+    .customised-solution-main .right .outline-btn-white {
+      position: relative;
+      left: -0.2rem;
+  }
+  .customised-solution-main .right {
+    padding-top: 4rem;
+}
   }
