@@ -71,5 +71,6 @@
   }
   .cardscroller-section .cardscroller-body .engagement-cards-wrapper {
     width: auto;
+    flex-direction: column;
   }
 }
