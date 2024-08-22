@@ -108,12 +108,12 @@
     .customised-solution-main .right .card {
       width: 100%;
     }
-    .customised-solution-main .right .card::before {
+    /* .customised-solution-main .right .card::before {
       content: "-----------------------------------";
       top: 20rem;
       left: -13.3rem;
-    }
-    .customised-solution-main .right .card:last-of-type:before {
+    } */
+    .customised-solution-main .right .card::before {
       display: none;
     }
     .customised-solution-main .right .outline-btn-white::after {
@@ -127,7 +127,7 @@
     padding-top: 4rem;
 }
   }
-  @media only screen and (max-width: 412px) {
+  /* @media only screen and (max-width: 412px) {
     .customised-solution-main {
       flex-direction: column;
       padding-bottom: 4rem;
@@ -167,4 +167,4 @@
   .customised-solution-main .right {
     padding-top: 4rem;
 }
-  }
+  } */
