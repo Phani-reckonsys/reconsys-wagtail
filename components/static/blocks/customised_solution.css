@@ -121,3 +121,40 @@
     padding-top: 4rem;
 }
   }
+
+  @media only screen and (max-width: 400px) {
+    .customised-solution-main {
+      flex-direction: column;
+      padding-bottom: 4rem;
+    }
+    .customised-solution-main .left {
+      padding-bottom: 8rem;
+    }
+    .customised-solution-main .right img{
+      height: 20rem;
+      width: fit-content;
+    }
+    .customised-solution-main .right h2{
+      background: linear-gradient(180deg, #EF7160 0%, #941209 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 2rem;
+      margin-bottom: 6rem;
+    }
+    .customised-solution-main .right .card {
+      width: 100%;
+    }
+    .customised-solution-main .right .card::before {
+      content: "--------------------------------------";
+      top: 20rem;
+      left: -15.5rem;
+    }
+    .customised-solution-main .right .outline-btn-white {
+      position: relative;
+      top: 2rem;
+      left: 2.8rem;
+    }
+    .customised-solution-main .right {
+      padding-top: 4rem;
+    }
+  }
