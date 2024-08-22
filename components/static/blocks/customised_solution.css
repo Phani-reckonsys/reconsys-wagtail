@@ -111,7 +111,7 @@
     .customised-solution-main .right .card::before {
       content: "-----------------------------------";
       top: 20rem;
-      left: -14.3rem;
+      left: -15.3rem;
     }
     .customised-solution-main .right .card:last-of-type:before {
       display: none;
