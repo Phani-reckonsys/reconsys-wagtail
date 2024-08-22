@@ -851,3 +851,15 @@ class ServicesBanner(StructBlock):
 
     class Meta:
         template = "blocks/services_banner.html"
+
+
+class Industrieswhychoose(StructBlock):
+    maintitle = CharBlock(classname="maintitle", required=False)
+    mainsubtitle = CharBlock(classname="mainsubtitle", required=False)
+    image = ImageChooserBlock(required=False)
+    title = RichTextBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    button = StreamBlock([('primarybutton', PrimaryButtonBlock())], required=False)
+
+    class Meta:
+        template = "blocks/industrieswhychoose.html"
