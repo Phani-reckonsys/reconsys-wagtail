@@ -144,14 +144,14 @@
       width: 100%;
     }
     .customised-solution-main .right .card::before {
-      content: "----------------------------------------";
+      content: "------------------------------------------";
       top: 20rem;
-      left: -16.5rem;
+      left: -17.5rem;
     }
     .customised-solution-main .right .outline-btn-white {
       position: relative;
-      top: 2rem;
-      left: 1.2rem;
+        top: 1rem;
+        left: 1.7rem;
     }
     .customised-solution-main .right {
       padding-top: 4rem;
@@ -186,8 +186,8 @@
     }
     .customised-solution-main .right .outline-btn-white {
       position: relative;
-      top: 2rem;
-      left: 2.8rem;
+      top: -1rem;
+      left: 2rem;
     }
     .customised-solution-main .right {
       padding-top: 4rem;
