@@ -1,0 +1,31 @@
+{%load wagtailimages_tags%}
+
+<!-- Herosection starts -->
+<section>
+  <div class="sidebar theme-darkgreen">
+    <h5 class="color-white t-15">{{self.sidetitle}}</h5>
+  </div>
+
+  <div class="casestudiesherosection-wrapper pl-54 pr-54 w-container theme-darkgreen">
+    <div class="left">
+        <h6 class="mb-36 breadcrump-services fw-500">
+            <a href="{{self.ourworks_url.get_url}}"><h6 class="color-white">Our Works</h6></a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9.51562 7.03479L14.4811 12.0003L9.51562 16.9658" stroke="#fff" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg> 
+            <span class="o-4 color-white">{{self.sidetitle}}</span>
+        </h6>
+        <h1 class="mb-36 w-95 title color-white">{{self.title}}</h1>
+        <p class="mb-24 subtitle color-white ft-28 o-8 mb-54 w-80">{{self.subtitle}}</p>
+        {% image self.image max-3000x1500 class="casestudies-herosection-image" %}
+    </div>
+    <div class="right">
+        <h5 class="color-light-white ft-14 mb-20 o-6">{{self.sectionmaintitle}}</h5>
+        <h5 class="color-white ft-16 mb-8" >{{self.sectiontitle1}}</h5>
+        <h5 class="color-white ft-16 mb-8" >{{self.sectiontitle2}}</h5>
+        <h5 class="color-white ft-16" >{{self.sectiontitle3}}</h5> 
+    </div>
+  </div>
+</section>
+<!-- Herosection Ends -->
+

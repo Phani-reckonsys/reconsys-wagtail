@@ -863,3 +863,17 @@ class Industrieswhychoose(StructBlock):
 
     class Meta:
         template = "blocks/industrieswhychoose.html"
+
+class Casestudiesherosection(StructBlock):
+    ourworks_url = PageChooserBlock(required=False)
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    image = ImageChooserBlock(required=False)
+    sectionmaintitle = CharBlock(classname="sectionmaintitle", required=False)
+    sectiontitle1 = CharBlock(classname="sectiontitle1", required=False)
+    sectiontitle2 = CharBlock(classname="sectiontitle2", required=False)
+    sectiontitle3 = CharBlock(classname="sectiontitle3", required=False)
+
+    class Meta:
+        template = "blocks/casestudiesherosection.html"
