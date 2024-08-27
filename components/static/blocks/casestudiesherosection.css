@@ -1,0 +1,51 @@
+.casestudiesherosection-wrapper{
+
+      padding-top: 16.2rem;
+      padding-bottom: 8rem;
+      display: flex;
+}
+
+.casestudiesherosection-wrapper .left{
+    flex-basis: 80%;
+}
+
+.casestudiesherosection-wrapper .right{
+    flex-basis: 20%;
+    margin-top: 32rem;
+    padding-left: 3rem;
+}
+
+.casestudiesherosection-wrapper .left .breadcrump-services{
+    display: flex;
+    align-items: center;
+}
+
+  .casestudiesherosection-wrapper .left .title{
+   font-size: 19.7rem;
+   line-height: 111%;
+  }
+
+  .casestudiesherosection-wrapper .left img{
+    width: 90%;
+    height: fit-content;
+    object-fit: contain;
+   }
+
+   @media only screen and (max-width: 576px) {
+    .casestudiesherosection-wrapper{
+        padding-top: 12rem;
+        flex-direction: column;
+    }
+    .casestudiesherosection-wrapper .left .title{
+        font-size: 12rem;
+        line-height: 111%;
+       }
+    .casestudiesherosection-wrapper .left img{
+        width: 100%;
+       }
+    .casestudiesherosection-wrapper .right{
+        flex-basis: 20%;
+        margin-top: 2rem;
+        padding-left: 0;
+    }
+   }

@@ -60,3 +60,8 @@
     width: 100%;
   }
 }
+@media only screen and (max-width: 992px) {
+.services-main .software-services {
+  padding-bottom: 10rem;
+}
+}

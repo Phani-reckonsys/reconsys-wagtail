@@ -89,10 +89,14 @@
   @media only screen and (max-width: 576px) {
     .customised-solution-main {
       flex-direction: column;
-      padding-bottom: 4rem;
+      padding-bottom: 8rem;
     }
     .customised-solution-main .left {
-      padding-bottom: 8rem;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .customised-solution-main .left .left-wrapper {
+     top: 0;
     }
     .customised-solution-main .right img{
       height: 20rem;
