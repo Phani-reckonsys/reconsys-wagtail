@@ -832,7 +832,7 @@ class EmpoweringBlock(StructBlock):
 class CustomisedSolution(StructBlock):
     sidetitle = CharBlock(classname="sidetitle", required=False)
     title = RichTextBlock(classname="title", required=False)
-    subtitle = CharBlock(required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
     cards = StreamBlock([('customisedsolutionscard', CustomisedSolutionCard())])
     url = PageChooserBlock(required=False)
     btntext = CharBlock(classname="subtitle", required=False)
@@ -851,3 +851,29 @@ class ServicesBanner(StructBlock):
 
     class Meta:
         template = "blocks/services_banner.html"
+
+
+class Industrieswhychoose(StructBlock):
+    maintitle = CharBlock(classname="maintitle", required=False)
+    mainsubtitle = CharBlock(classname="mainsubtitle", required=False)
+    image = ImageChooserBlock(required=False)
+    title = RichTextBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    button = StreamBlock([('primarybutton', PrimaryButtonBlock())], required=False)
+
+    class Meta:
+        template = "blocks/industrieswhychoose.html"
+
+class Casestudiesherosection(StructBlock):
+    ourworks_url = PageChooserBlock(required=False)
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    image = ImageChooserBlock(required=False)
+    sectionmaintitle = CharBlock(classname="sectionmaintitle", required=False)
+    sectiontitle1 = CharBlock(classname="sectiontitle1", required=False)
+    sectiontitle2 = CharBlock(classname="sectiontitle2", required=False)
+    sectiontitle3 = CharBlock(classname="sectiontitle3", required=False)
+
+    class Meta:
+        template = "blocks/casestudiesherosection.html"
