@@ -877,3 +877,14 @@ class Casestudiesherosection(StructBlock):
 
     class Meta:
         template = "blocks/casestudiesherosection.html"
+
+
+class Casestudiessinglegrid(StructBlock):
+    sidetitle = CharBlock(classname="sidetitle", required=False)
+    title = CharBlock(classname="title", required=False)
+    subtitle = CharBlock(classname="subtitle", required=False)
+    image1 = ImageChooserBlock(required=False)
+    image2 = ImageChooserBlock(required=False)
+
+    class Meta:
+        template = "blocks/casestudiessinglegrid.html"
