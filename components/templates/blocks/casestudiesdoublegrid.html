@@ -1,0 +1,22 @@
+{%load wagtailimages_tags%}
+
+<!-- Herosection starts -->
+<section>
+  <div class="sidebar theme-darkgreen">
+    <h5 class="color-white t-15">{{self.sidetitle}}</h5>
+  </div>
+  <div class="casestudiessinglegrid-wrapper pl-54 pr-54 w-container theme-darkgreen">
+        <h2 class="mb-36 w-95 title color-white">{{self.title}}</h2>
+        <div>
+            <p class="mb-24 subtitle color-white ft-28 o-8 mb-54 w-70">{{self.subtitle1}}</p>
+            <p class="mb-24 subtitle color-white ft-28 o-8 mb-54 w-70">{{self.subtitle2}}</p>
+        </div>
+        <div class="images-group">
+        {% image self.image1 max-3000x1500 class="casestudiessinglegridimage1" %}
+        {% image self.image2 max-3000x1500 class="casestudiessinglegridimage2" %}
+        {% image self.image3 max-3000x1500 class="casestudiessinglegridimage3" %}
+        {% image self.image4 max-3000x1500 class="casestudiessinglegridimage4" %}
+        </div>
+  </div>
+</section>
+<!-- Herosection Ends -->
