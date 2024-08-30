@@ -1,0 +1,34 @@
+.casestudiessinglegrid-wrapper {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.casestudiessinglegrid-wrapper .title {
+    font-size: 3.2rem;
+    line-height: 111%;
+}
+
+.casestudiessinglegrid-wrapper .subtitle {
+    font-size: 2.3rem;
+}
+
+.casestudiessinglegrid-wrapper .images-group{
+    display: flex;
+    gap: 2%;
+}
+
+.casestudiessinglegrid-wrapper .images-group .casestudiessinglegridimage1{
+    width: 49%;
+    height: fit-content;
+}
+
+.casestudiessinglegrid-wrapper .images-group .casestudiessinglegridimage2{
+    width: 49%;
+    height: fit-content;
+}
+
+@media only screen and (max-width:576px) {
+    .casestudiessinglegrid-wrapper img {
+        width: 100%
+    }
+}

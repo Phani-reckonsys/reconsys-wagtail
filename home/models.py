@@ -7,7 +7,7 @@ from datetime import datetime
 from django.urls import reverse
 from modelcluster.fields import ForeignKey
 from wagtail.admin.panels import TabbedInterface, ObjectList, FieldPanel, InlinePanel, TitleFieldPanel, MultiFieldPanel
-from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesDatasectionBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock,OurServicesBlock, TechnologiesusedBlock, EngagmentBlock, CardscrollerBlock, ServicesWhyReckonsysBlock, OurProcessBlock, OursuccessBlock, OurmethodologiesBlock,UiuxHerosectionBlock,UiuxWedoBlock,UiuxsuccessBlock, UiuxworkBlock, UiuxtestimonialBlock, CsrHerosection, TextimageBlock, EmpoweringBlock, CustomisedSolution, ServicesBanner, Casestudiesherosection
+from components.blocks import HeroSectionBlock, OurMissionBlock, OurVisionBlock, OurValuesBlock, OurJourneyBlock, OurGalleryBlock, OurTestimonialBlock, BlogsHerosection, BlogsWrapperBlock, CoverImageBlock, CultureBlock, OneColScrollerSection, BenifitsBlock, OurWorksHerosectionBlock, OurWorksDisplayBlock, HomeTestimonialsBlock, HomeBlogsBlock, ContactUsTestimonialBlock, OutlineGreyButtonBlock, PrivacyPolicyBlock, TestimonialGenericBlock, BadgesBlock, RatingBlock, ThankyouBlock, BlogHeaderBlock, BlogBodyBlock, ServicesHeroSectionBlock, ServicesDatasectionBlock, ServicesCasestudiesBlock,FaqBlock, CollaborateBlock,OurServicesBlock, TechnologiesusedBlock, EngagmentBlock, CardscrollerBlock, ServicesWhyReckonsysBlock, OurProcessBlock, OursuccessBlock, OurmethodologiesBlock,UiuxHerosectionBlock,UiuxWedoBlock,UiuxsuccessBlock, UiuxworkBlock, UiuxtestimonialBlock, CsrHerosection, TextimageBlock, EmpoweringBlock, CustomisedSolution, ServicesBanner, Casestudiesherosection, Casestudiessinglegrid
 
 class HomePage(Page):
     herosection = StreamField(
@@ -540,6 +540,7 @@ class IndustryPage(Page):
 class CasestudiesPage(Page):
     body = StreamField(
         [('casestudiesherosection', Casestudiesherosection()),
+         ('casestudiessinglegrid', Casestudiessinglegrid()),
          ('servicesbanner', ServicesBanner()),
          ('coverImage', CoverImageBlock()),
          ('datasection', ServicesDatasectionBlock()),
