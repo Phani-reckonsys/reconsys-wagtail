@@ -13,10 +13,11 @@
             {% if current_site and current_site.site_name %}-{{ current_site.site_name }}{% endif %}
             {% endblock %}
         </title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">  
+        <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap">  
+        <link rel="preload" src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7" as="script">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
+        <link rel="preload" href="https://www.clarity.ms" as="script" crossorigin>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
         <link rel="preconnect" href="https://profiles.dunsregistered.com" crossorigin>
         <link rel="preload" as="font" href="../../static/fonts/Satoshi-Regular.woff2" crossorigin>
@@ -37,33 +38,8 @@
         {% if request.in_preview_panel %}
         <base target="_blank">
         {% endif %} 
-        <script type="text/javascript" rel="preload" as="script">
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "md9na917za");
-        </script>
-        <script type="application/ld+json">
-            {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Reckonsys",
-            "url": "https://www.reckonsys.com/",
-            "logo": "https://www.reckonsys.com/",
-            "sameAs": [
-                "https://www.instagram.com/reckonsys?igsh=NnZwdzlrZTU3eThs",
-                "https://www.linkedin.com/company/reckonsys/"
-            ]
-            }
-        </script>
-
         
-        <!-- Google tag (gtag.js) -->
-        {% comment %} <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7P3SS65ZJ"></script> {% endcomment %}
-        {% comment %} <script
-        type="text/javascript"
-        src="https://app.termly.io/resource-blocker/7ebc9ed3-6420-4714-bec9-3cde61220daa?autoBlock=on"></script>  {% endcomment %}
+
         <script rel="preload" src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL' as="script"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -75,7 +51,7 @@
             
         {% endblock %}
         <meta name="google-site-verification" content="zv7DL6vmJ75FRIGKzXH63lOLaG3UQDJ58d3vfnRKCLo" />
-        <!-- Google tag (gtag.js) --> <script rel="preload" src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7" as="script"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BQQLR9FPB7'); </script>
+        <!-- Google tag (gtag.js) --> 
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/container-min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/reset-min.css' %}">
@@ -90,8 +66,28 @@
         {% endblock %}        
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
-            
-
+            <script rel="preload" src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7" as="script"></script> 
+            <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BQQLR9FPB7'); </script>
+            <script type="text/javascript" rel="preload" as="script">
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "md9na917za");
+            </script>
+            <script type="application/ld+json">
+                {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Reckonsys",
+                "url": "https://www.reckonsys.com/",
+                "logo": "https://www.reckonsys.com/",
+                "sameAs": [
+                    "https://www.instagram.com/reckonsys?igsh=NnZwdzlrZTU3eThs",
+                    "https://www.linkedin.com/company/reckonsys/"
+                ]
+                }
+            </script>
         {% endblock %}
     </body>
         
