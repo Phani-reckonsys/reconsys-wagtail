@@ -37,7 +37,7 @@
         {% if request.in_preview_panel %}
         <base target="_blank">
         {% endif %} 
-        <script type="text/javascript">
+        <script type="text/javascript" rel="preload" as="script">
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -64,7 +64,7 @@
         {% comment %} <script
         type="text/javascript"
         src="https://app.termly.io/resource-blocker/7ebc9ed3-6420-4714-bec9-3cde61220daa?autoBlock=on"></script>  {% endcomment %}
-        <script async src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL'></script>
+        <script rel="preload" src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL' as="script"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -75,7 +75,7 @@
             
         {% endblock %}
         <meta name="google-site-verification" content="zv7DL6vmJ75FRIGKzXH63lOLaG3UQDJ58d3vfnRKCLo" />
-        <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BQQLR9FPB7'); </script>
+        <!-- Google tag (gtag.js) --> <script rel="preload" src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7" as="script"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BQQLR9FPB7'); </script>
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/container-min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/reset-min.css' %}">
