@@ -13,13 +13,16 @@
             {% if current_site and current_site.site_name %}-{{ current_site.site_name }}{% endif %}
             {% endblock %}
         </title>
-        <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />
-        <link rel="dns-prefetch" href="https://www.clarity.ms/tag/" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com/" />
-        <link rel="preload" href="../../static/fonts/Satoshi-Regular.woff2">
-        <link rel="preload" href="../../static/fonts/Satoshi-Medium.woff2">
-        <link rel="preload" href="../../static/fonts/Satoshi-Bold.woff2">
-        <link rel="preload" href="../../static/fonts/Satoshi-Black.woff2">
+        <link rel="preconnect" href="https://fonts.googleapis.com">  
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+        <link rel="preconnect" href="https://profiles.dunsregistered.com" crossorigin>
+        <link rel="preload" as="font" href="../../static/fonts/Satoshi-Regular.woff2" crossorigin>
+        <link rel="preload" as="font" href="../../static/fonts/Satoshi-Medium.woff2" crossorigin>
+        <link rel="preload" as="font" href="../../static/fonts/Satoshi-Bold.woff2" crossorigin>
+        <link rel="preload" as="font" href="../../static/fonts/Satoshi-Black.woff2" crossorigin>
         {% if page.search_description %}
         <meta name="description" content="{{ page.search_description }}" />
         {% endif %}
