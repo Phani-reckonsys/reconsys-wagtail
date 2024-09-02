@@ -19,6 +19,7 @@
         <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
         <link rel="preload" href="https://www.clarity.ms" as="script" crossorigin>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+        <link rel="preload" src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL' as="script">
         <link rel="preconnect" href="https://profiles.dunsregistered.com" crossorigin>
         <link rel="preload" as="font" href="../../static/fonts/Satoshi-Regular.woff2" crossorigin>
         <link rel="preload" as="font" href="../../static/fonts/Satoshi-Medium.woff2" crossorigin>
@@ -40,13 +41,7 @@
         {% endif %} 
         
 
-        <script rel="preload" src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL' as="script"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-B7P3SS65ZJ');
-        </script>
+        
         {% block extra_head %}
             
         {% endblock %}
@@ -87,6 +82,13 @@
                     "https://www.linkedin.com/company/reckonsys/"
                 ]
                 }
+            </script>
+            <script rel="preload" src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL' as="script"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B7P3SS65ZJ');
             </script>
         {% endblock %}
     </body>
