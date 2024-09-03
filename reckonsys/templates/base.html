@@ -13,18 +13,17 @@
             {% if current_site and current_site.site_name %}-{{ current_site.site_name }}{% endif %}
             {% endblock %}
         </title>
-        <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap">  
-        <link rel="preload" src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7" as="script">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap" as="font">  
+        <link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7" as="script">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
-        <link rel="preload" href="https://www.clarity.ms" as="script" crossorigin>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-        <link rel="preload" src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL' as="script">
+        <link rel="dns-prefetch" href='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL'>
         <link rel="preconnect" href="https://profiles.dunsregistered.com" crossorigin>
-        <link rel="preload" as="font" href="../../static/fonts/Satoshi-Regular.woff2" crossorigin>
-        <link rel="preload" as="font" href="../../static/fonts/Satoshi-Medium.woff2" crossorigin>
-        <link rel="preload" as="font" href="../../static/fonts/Satoshi-Bold.woff2" crossorigin>
-        <link rel="preload" as="font" href="../../static/fonts/Satoshi-Black.woff2" crossorigin>
+        <link rel="preload"  href="../../static/fonts/Satoshi-Regular.woff2" as="font" crossorigin>
+        <link rel="preload"  href="../../static/fonts/Satoshi-Medium.woff2" as="font" crossorigin>
+        <link rel="preload"  href="../../static/fonts/Satoshi-Bold.woff2" as="font" crossorigin>
+        <link rel="preload"  href="../../static/fonts/Satoshi-Black.woff2" as="font" crossorigin>
         {% if page.search_description %}
         <meta name="description" content="{{ page.search_description }}" />
         {% endif %}
@@ -61,9 +60,9 @@
         {% endblock %}        
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
-            <script rel="preload" src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7" as="script"></script> 
+            <script src="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7"></script> 
             <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BQQLR9FPB7'); </script>
-            <script type="text/javascript" rel="preload" as="script">
+            <script type="text/javascript">
                 (function(c,l,a,r,i,t,y){
                     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                     t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -83,12 +82,12 @@
                 ]
                 }
             </script>
-            <script rel="preload" src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL' as="script"></script>
-            <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-B7P3SS65ZJ');
+            <script src='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL' async defer ></script>
+            <script async>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-B7P3SS65ZJ');
             </script>
         {% endblock %}
     </body>
