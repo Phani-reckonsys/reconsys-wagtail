@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
 
 @font-face {
   font-family: 'Satoshi-Variable';
   src: url('../fonts/Satoshi-Variable.woff2') format('woff2');
        font-weight: 300 900;
-       font-display: swap;
+       font-display: optional;
        font-style: normal;
 }
 
@@ -12,7 +11,7 @@
   font-family: 'Satoshi-VariableItalic';
   src: url('../fonts/Satoshi-VariableItalic.woff2') format('woff2');
        font-weight: 300 900;
-       font-display: swap;
+       font-display: optional;
        font-style: italic;
 }
 
@@ -21,7 +20,7 @@
   font-family: 'Satoshi-Light';
   src: url('../fonts/Satoshi-Light.woff2') format('woff2');
        font-weight: 300;
-       font-display: swap;
+       font-display: optional;
        font-style: normal;
 }
 
@@ -30,7 +29,7 @@
   font-family: 'Satoshi-LightItalic';
   src: url('../fonts/Satoshi-LightItalic.woff2') format('woff2');
        font-weight: 300;
-       font-display: swap;
+       font-display: optional;
        font-style: italic;
 }
 
@@ -39,7 +38,7 @@
   font-family: 'Satoshi-Regular';
   src: url('../fonts/Satoshi-Regular.woff2') format('woff2');
        font-weight: 400;
-       font-display: swap;
+       font-display: optional;
        font-style: normal;
 }
 
@@ -48,7 +47,7 @@
   font-family: 'Satoshi-Italic';
   src: url('../fonts/Satoshi-Italic.woff2') format('woff2');
        font-weight: 400;
-       font-display: swap;
+       font-display: optional;
        font-style: italic;
 }
 
@@ -57,7 +56,7 @@
   font-family: 'Satoshi-Medium';
   src: url('../fonts/Satoshi-Medium.woff2') format('woff2');
        font-weight: 500;
-       font-display: swap;
+       font-display: optional;
        font-style: normal;
 }
 
@@ -66,7 +65,7 @@
   font-family: 'Satoshi-MediumItalic';
   src: url('../fonts/Satoshi-MediumItalic.woff2') format('woff2');
        font-weight: 500;
-       font-display: swap;
+       font-display: optional;
        font-style: italic;
 }
 
@@ -75,7 +74,7 @@
   font-family: 'Satoshi-Bold';
   src: url('../fonts/Satoshi-Bold.woff2') format('woff2');
        font-weight: 700;
-       font-display: swap;
+       font-display: optional;
        font-style: normal;
 }
 
@@ -84,7 +83,7 @@
   font-family: 'Satoshi-BoldItalic';
   src: url('../fonts/Satoshi-BoldItalic.woff2') format('woff2');
        font-weight: 700;
-       font-display: swap;
+       font-display: optional;
        font-style: italic;
 }
 
@@ -93,7 +92,7 @@
   font-family: 'Satoshi-Black';
   src: url('../fonts/Satoshi-Black.woff2') format('woff2');
        font-weight: 900;
-       font-display: swap;
+       font-display: optional;
        font-style: normal;
 }
 
@@ -102,7 +101,7 @@
   font-family: 'Satoshi-BlackItalic';
   src: url('../fonts/Satoshi-BlackItalic.woff2') format('woff2');
        font-weight: 900;
-       font-display: swap;
+       font-display: optional;
        font-style: italic;
 }
 
