@@ -1,0 +1,18 @@
+.cover-image-block img{
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 992px) {
+   
+}
+@media only screen and (max-width: 768px) {
+  
+}
+@media only screen and (max-width: 576px) {
+    .cover-image-block {
+        margin-top: 0rem;
+        margin-bottom: -2rem;
+    }
+}

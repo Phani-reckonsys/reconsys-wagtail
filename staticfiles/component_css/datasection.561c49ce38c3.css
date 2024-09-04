@@ -1,0 +1,112 @@
+.services-stats-section {
+    position: relative;
+  }
+  .services-stats-section h4{
+    position: relative;
+    z-index: 10;
+  }
+  .services-stats-section h2{
+    position: relative;
+    z-index: 10;
+  }
+ .services-stats-section .geometric-circle {
+    position: absolute;
+    top: -13rem;
+    left: -5rem;
+  }
+.services-stats-section .geometric-rectangle {
+    position: absolute;
+    top: 10rem;
+    right: 5.4rem;
+  }
+.services-stats-section .stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+.services-stats-section .stats-wrapper .stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  .services-stats-section .stats-wrapper .stat-card .stats{
+    background: linear-gradient(180deg, #EF7160 0%, #941209 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  @media only screen and (max-width: 992px) {
+    
+  }
+  @media only screen and (max-width: 768px) {
+    .services-stats-section {
+      position: relative;
+    }
+    .services-stats-section h2 {
+      width: 100% !important;
+    }
+    .services-stats-section .geometric-circle {
+      width: 30rem;
+      height: auto;
+      position: absolute;
+      top: -13rem;
+      left: -5rem;
+    }
+    .services-stats-section .geometric-rectangle {
+      width: 5rem;
+      height: auto;
+      position: absolute;
+      top: 40rem;
+      right: 0rem;
+    }
+    .services-stats-section .stats-wrapper {
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+      justify-content: space-between;
+    }
+    .services-stats-section .stats-wrapper .stat-card {
+      width: 18rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+    
+  }
+  @media only screen and (max-width: 576px) {
+    .services-stats-section {
+      position: relative;
+    }
+    .services-stats-section h2 {
+      width: 100% !important;
+    }
+    .services-stats-section .geometric-circle {
+      width: 30rem;
+      height: auto;
+      position: absolute;
+      top: -13rem;
+      left: -5rem;
+    }
+    .services-stats-section .geometric-rectangle {
+      width: 5rem;
+      height: auto;
+      position: absolute;
+      top: 40rem;
+      right: 0rem;
+    }
+    .services-stats-section .stats-wrapper {
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+    }
+    .services-stats-section .stats-wrapper .stat-card {
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 2.4rem;
+    }
+  }

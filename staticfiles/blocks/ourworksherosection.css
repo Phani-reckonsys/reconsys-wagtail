@@ -1,0 +1,51 @@
+.ourwork-herosection-wrapper{
+    padding-top: 18.4rem;
+
+}
+.ourwork-herosection-wrapper > .herosection {
+    display: flex;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8rem;
+}
+
+.ourwork-herosection-wrapper > .herosection > .ourworks-heroimage-container {
+   position: relative;
+}
+
+.ourwork-herosection-wrapper > .herosection > .ourworks-heroimage-container > .ourworks-heroimage{
+    position: absolute;
+     top: -10rem;
+     left: -7.3rem;
+ }
+
+ @media only screen and (max-width: 992px) {
+   
+ }
+ @media only screen and (max-width: 768px) {
+     
+ }
+ @media only screen and (max-width: 576px) {
+    .ourwork-herosection-wrapper{
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    } 
+    .ourwork-herosection-wrapper > .herosection {
+        flex-direction: column;
+    } 
+    .ourwork-herosection-wrapper > .herosection > .herosection-content{
+        width: 100%;
+    } 
+    .ourwork-herosection-wrapper > .herosection > .herosection-content>h1{
+        font-size: 3.8rem;
+        margin-bottom: 4rem;
+    }
+    .ourwork-herosection-wrapper > .herosection > .herosection-content>p{
+        width: 100%;
+    } 
+    .ourwork-herosection-wrapper > .herosection > .ourworks-heroimage-container {
+       height: 0;
+     }
+     .ourwork-herosection-wrapper > .herosection > .ourworks-heroimage-container > .ourworks-heroimage{
+        display: none;
+     } 
+ }

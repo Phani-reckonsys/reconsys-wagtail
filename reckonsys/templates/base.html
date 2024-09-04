@@ -13,19 +13,24 @@
             {% if current_site and current_site.site_name %}-{{ current_site.site_name }}{% endif %}
             {% endblock %}
         </title>
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap" as="font">  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">  
         <link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-BQQLR9FPB7" as="script">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-        <link rel="dns-prefetch" href='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL'>
+        <link rel="preconnect" href='https://www.google.com/recaptcha/api.js?render=6Ldc9-spAAAAAIyosghMB05nLNStmWlCnEuzagPL'>
         <link rel="preconnect" href="https://profiles.dunsregistered.com" crossorigin>
-        <link rel="preload"  href="../../static/snippets/footer-min.css" as="text/css" onload="this.rel='stylesheet'">
-        <link rel="preload"  href="../../static/blocks/rating-min.css" as="text/css" onload="this.rel='stylesheet'">
-        <link rel="preload"  href="../../static/fonts/Satoshi-Regular.woff2" as="font" crossorigin>
-        <link rel="preload"  href="../../static/fonts/Satoshi-Medium.woff2" as="font" crossorigin>
-        <link rel="preload"  href="../../static/fonts/Satoshi-Bold.woff2" as="font" crossorigin>
-        <link rel="preload"  href="../../static/fonts/Satoshi-Black.woff2" as="font" crossorigin>
+        <link rel="preload"  href="{% static "snippets/footer-min.css" %}" onload="this.rel='stylesheet'" as="style">
+        <link rel="preload"  href="{% static "blocks/rating-min.css" %}"  onload="this.rel='stylesheet'" as="style">
+        <link rel="preload"  href="{% static "fonts/Satoshi-Regular.woff2" %}" as="font" crossorigin>
+        <link rel="preload"  href="{% static "fonts/Satoshi-Medium.woff2" %}" as="font" crossorigin>
+        <link rel="preload"  href="{% static "fonts/Satoshi-Bold.woff2" %}" as="font" crossorigin>
+        <link rel="preload"  href="{% static "fonts/Satoshi-Black.woff2" %}" as="font" crossorigin>
+        {% for image in pre_load_images %}
+        <link rel="preload"  href="{{image}}" as="font" crossorigin>
+        {% endfor %}
         {% if page.search_description %}
         <meta name="description" content="{{ page.search_description }}" />
         {% endif %}

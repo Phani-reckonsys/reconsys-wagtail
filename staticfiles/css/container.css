@@ -1,0 +1,138 @@
+section {
+    display: flex;
+  }
+
+  section > .c-dark {
+    background: #232020;
+  }
+
+  section > .theme-darkgreen{
+    background: #172125;
+  }
+
+  section > .c-cream {
+    background-color: #f3f3f3;
+  }
+
+  section > .w-container {
+    width: calc(100% - 6.6rem);
+  }
+
+  section > .sidebar {
+    width: 6.6rem;
+    padding-top: 15rem;
+    border-right: 1px solid #cac8c8;
+    
+  }
+
+  section > .sidebar.dark-section {
+    background: #232020;
+    border-right: 1px solid #544e4e;
+  }
+
+  section > .sidebar.z-class {
+    z-index: 1000;
+  }
+
+  section > .theme-darkgreen {
+    background: #172125 !important;
+    border-right: 1px solid #544e4e;
+  }
+
+  section > .sidebar.pt-20{
+    padding-top: 20rem;
+  }
+
+  section > .sidebar.pt-25{
+    padding-top: 25rem;
+  }
+
+  section > .sidebar.pt-30{
+    padding-top: 30rem;
+  }
+
+  section > .sidebar > h5 {
+    transform: rotate(270deg);
+    position: sticky;
+    top: 10rem;
+    z-index: 500;
+    white-space: nowrap;
+  }
+
+  section > .sidebar > h5.t-15{
+    top: 15rem;
+  }
+
+  section > .sidebar > h5.t-20{
+    top: 20rem;
+  }
+
+  section > .sidebar > h5.t-25{
+    top: 25rem;
+  }
+
+  section > .sidebar > h5.t-30{
+    top: 30rem;
+  }
+
+
+
+
+
+  
+  
+  .sticky-class {
+    position: sticky;
+    top: 10rem;
+    z-index: 100;
+  }
+
+
+  @media only screen and (max-width: 992px){
+    section{
+      .sidebar{
+        width: 5.6rem;
+      }
+      .w-container{
+        width: calc(100% - 5.6rem);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    section {
+        display: flex;
+        .sidebar {
+          display: none;
+        
+      }
+      .w-container {
+          width: 100vw;
+          overflow-x: hidden;
+        }
+    }
+    .sticky-class {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+  }
+
+  @media only screen and (max-width: 576px){
+    section {
+        display: flex;
+        .sidebar {
+          display: none;
+        
+      }
+      .w-container {
+          width: 100vw;
+          overflow-x: hidden;
+        }
+    }
+    .sticky-class {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+  }
