@@ -16,7 +16,6 @@ from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.contrib.table_block.blocks import TableBlock
 
-
 #-----------Basic Blocks Starts------------
 #Primary button Basic Block
 class PrimaryButtonBlock(StructBlock): 
